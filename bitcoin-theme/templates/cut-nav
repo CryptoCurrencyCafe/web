@@ -1,0 +1,26 @@
+          <div class="nav-collapse">
+            <ul class="nav">
+              {% for title, link in MENUITEMS %}
+                  <li><a href="{{ link }}">{{ title }}</a></li>
+              {% endfor %}
+              {% if DISPLAY_PAGES_ON_MENU %}
+              {% for page in PAGES %}
+                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+              {% endfor %}
+                          <li class="divider-vertical"></li>
+              {% endif %}
+              {% for cat, null in categories %}
+                  <li {% if cat == category %}class="active"{% endif %}>
+                    <a href="{{ SITEURL }}/{{ cat.url }}">
+						<i class="icon-folder-open icon-large"></i>{{ cat }}
+					</a>
+                  </li>
+              {% endfor %}
+
+                          <ul class="nav pull-right">
+                                <li><a href="{{ SITEURL }}/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->

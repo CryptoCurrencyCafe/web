@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{ page.title }}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="{{ AUTHOR }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css" />
+    <link rel="icon" type="image/ico" href="http://www.cs.virginia.edu/evans/favicon.ico"/>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Major');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['BA Computer Science', 18],
+          ['BS Computer Science', 62],
+          ['BS Computer Engineering', 32],
+          ['BS Electrical Engineering', 2],
+        ]);
+
+        // Set chart options
+        var options = {'title':'What is your primary major?',
+                       'width':700,
+                       'height':350,
+                       'slices': [{color: '#bd0026'}, {color: '#f03b20'}, {color: '#fd8d3c'}, {color: '#fecc5c'}]};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_majors_chart'));
+        chart.draw(data, options);
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Privilege');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['Yes', 19], 
+          ['No', 12],
+          ['Other', 2],
+        ]);
+
+        // Set chart options
+        var options = {'title':'Have you benefitted from implicit technical privilege? (Open Students)',
+                       'width':325,
+                       'height':350,
+                       'slices': [{color: '#2171b5'}, {color: '#6baed6'}, {color: '#eff3ff'}]};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_privilegej_chart'));
+        chart.draw(data, options);
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Privilege');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['Yes', 65], 
+          ['No', 44],
+          ['Other', 5],
+        ]);
+
+        // Set chart options
+        var options = {'title':'Have you benefitted from implicit technical privilege?',
+                       'width':325,
+                       'height':350,
+                       'slices': [{color: '#2171b5'}, {color: '#6baed6'}, {color: '#eff3ff'}]};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_privilege_chart'));
+        chart.draw(data, options);
+
+
+        // Set chart options
+        var options = {'title':'Have you suffered from stereotype threat? (Open Students)',
+                       'width':325,
+                       'height':350,
+                       'slices': [{color: '#2171b5'}, {color: '#6baed6'}, {color: '#eff3ff'}]};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_stereotypej_chart'));
+        chart.draw(data, options);
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Privilege');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['Yes', 9], 
+          ['No', 23],
+          ['Other', 1],
+        ]);
+
+
+        // Set chart options
+        var options = {'title':'Have you suffered from stereotype threat?',
+                       'width':325,
+                       'height':350,
+                       'slices': [{color: '#2171b5'}, {color: '#6baed6'}, {color: '#eff3ff'}]};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_stereotype_chart'));
+        chart.draw(data, options);
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Privilege');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['Yes', 39], 
+          ['No', 74],
+          ['Other', 1],
+        ]);
+
+
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Language');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['2 (two substantial assignments, then more time for the project)', 2],
+          ['3 problem sets, like this year', 16],
+          ['4 problem sets (add a problem set on file systems, but still have time for an open project)', 11],
+          ['4, but smaller problem sets with less time to work on them', 2],
+          ['5 problem sets (no time for an open project)', 1]
+        ]);
+
+        // Set chart options
+        var options = {'title':'How Many Problem Sets',
+                       'width':700,
+                       'height':350,
+                        'slices': [{color: '#f2f0f7'}, {color: '#cbc9e2'}, {color: '#9e9ac8'}, {color: '#756bb1'}, {color: '#54278f'}]};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_ps_chart'));
+        chart.draw(data, options);
+
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Language');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['Less than this year', 3],
+          ['About the same as this year', 19],
+          ['More than this year', 9]
+        ]);
+
+        // Set chart options
+        var options = {'title':'How Much Starting Code',
+                       'width':700,
+                       'height':350,
+                       'slices': [{color: '#cbc9e2'}, {color: '#9e9ac8'}, {color: '#6a51a3'}]};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_start_chart'));
+        chart.draw(data, options);
+
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Language');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['Mostly lectures (like this year)', 15],
+          ['Mix of 75% lectures, 25% group activities', 11], 
+          ['Mix of 25% lectures, 75% group activities', 1],
+          ['There shouldn\'t be any class time, just provide good materials and help for students to learn on their own', 2]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Using Class Time',
+                       'width':700,
+                       'height':350,
+                       'slices': [{color: '#2171b5'}, {color: '#6baed6'}, {color: '#bdd7e7'}, {color: '#eff3ff'}]};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_classtime_chart'));
+        chart.draw(data, options);
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Quizzes');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['No', 17],
+          ['Yes, have a quiz at the beginning of each class', 3],
+          ['Yes, have a quiz students do at home after class', 5]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Regular Quizzes',
+                       'width':700,
+                       'height':350,
+                       'slices': [{color: '#cbc9e2'}, {color: '#9e9ac8'}, {color: '#6a51a3'}]};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_quizzes_chart'));
+        chart.draw(data, options);
+
+
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Quizzes');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['Yes', 11],
+          ['No', 14]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Use Rust',
+                       'width':700,
+                       'height':350,
+                       'slices': [{color: '#a1d76a'}, {color: '#e9a3c9'}]};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_userust_chart'));
+        chart.draw(data, options);
+
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Future');
+        data.addColumn('number', 'Count');
+        data.addRows([
+         ['Strongly Agree', 6],
+         ['Agree', 7],
+         ['Neutral', 10],
+         ['Disagree', 7],
+         ['Strongly Disagree', 3]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Future Offerings of Course Should Use Rust',
+                       'width':700,
+                       'height':350,
+                       'slices': [{color: '#1a9641'}, {color: '#a6d96a'}, {color: '#ffffbf'}, {color: '#fdae61'}, {color: '#d7191c'}]
+      };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('div_future_chart'));
+        chart.draw(data, options);
+
+
+      }
+    </script>
+
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+     .about {
+        font-size: 8pt;
+        font-color: "gray";
+     }
+    </style>
+    <link href="{{ SITEURL }}/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/theme/css/font-awesome.css" rel="stylesheet">
+
+    <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ SITEURL }}/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ SITEURL }}/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ SITEURL }}/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="{{ SITEURL }}/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
+    {% if FEED_RSS %}
+    <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="{{ SITEURL }}/index.html">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              {% for title, link in MENUITEMS %}
+                  <li><a href="{{ link }}">{{ title }}</a></li>
+              {% endfor %}
+              {% if DISPLAY_PAGES_ON_MENU %}
+              {% for page in PAGES %}
+                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+              {% endfor %}
+                          <li class="divider-vertical"></li>
+              {% endif %}
+
+                          <ul class="nav pull-right">
+                                <li><a href="{{ SITEURL }}/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      {% block content %}
+<section id="content" class="body">
+        <h1 class="entry-title">{{ page.title }}</h1>
+        {% if PDF_PROCESSOR %}
+                <a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">
+                        get the pdf
+                </a>
+        {% endif %}
+        {{ page.content }}
+</section>
+
+      {% endblock %}
+      <hr>
+
+      <footer>
+	<div id="footer">
+        <address id="about">
+          <a href="http://www.cs.virginia.edu">University of Virginia Computer Science</a><br>
+          <a href="http://www.rust-class.org/">cs4414: Operating Systems</a>, Spring 2014<br>      
+	  <p align="right"><font color="grey" size="-2"> Site built using <a href="http://pelican.notmyidea.org/">Pelican</a>.  Theme uses <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome</a>.</p>
+        </address><!-- /#about -->
+	</div>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+    {% include 'analytics.html' %}
+    {% include 'piwik.html' %}
+    {% include 'disqus_script.html' %}
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ SITEURL }}/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+  </body>
+</html>

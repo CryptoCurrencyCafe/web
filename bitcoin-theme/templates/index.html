@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+{% block content %}
+	<section id="sidebar">
+          <p>
+	    <a href="http://www.virginia.edu"><b>University&nbsp;of&nbsp;Virginia</b></a>
+	    Spring&nbsp;2015<br>
+	    <a href="http://www.cs.virginia.edu/evans/">David&nbsp;Evans</a>
+	  </p>
+	  <p>
+	  <div class="separator"></div>
+<h3>
+<a href="https://www.google.com/calendar/embed?src=rmjagdrnmu3a9h2q5199lg4t28%40group.calendar.google.com&ctz=America/New_York">Calendar</a>
+</h3>
+<h3><a href="./pages/syllabus.html">Syllabus</a>
+</h3>
+
+<!--
+	  <div class="separator"></div>
+	  <h3>Problem Sets</h3>
+<ul>
+<li> 
+</ul>
+-->
+
+	  <div class="separator"></div>
+	  <h3><A href="./pages/classes.html">Classes</a></h3>
+<!--
+<ul>
+<li> &nbsp;<a href="./class-1-what-is-an-operating-system.html">1: OS</a>
+<li> &nbsp;<a href="./class-2-getting-rustified.html">2: Rust</a>
+<li> &nbsp;<a href="./class-3-zero-to-a-billion-in-486-years.html">3: First Billion</a>
+<li> &nbsp;<a href="./class-4-once-upon-a-process.html">4: Processes</a> 
+<li> &nbsp;<a href="./class-5-gash-has-no-privileges.html">5: Shells</a>
+<li> &nbsp;<a href="./class-6-making-a-process-virtualizing-memory.html">6: Virtualizing Memory</a>
+<li> &nbsp;<a href="./class-7-double-faults.html">7: Faults</a>
+<li> &nbsp;<a href="./class-8-managing-memory.html">8: Managing Memory</a>
+<li> &nbsp;<a href="./class-9-pointers-in-rust.html">9: Pointers in Rust</a>
+<li> <a href="./class-10-ssl-sharing-and-scheduling.html">10: goto fail;</a>
+<li> <a href="./class-11-smarter-scheduling.html">11: Scheduling</a>
+<li> <a href="./class-12-scheduling-in-linux-and-web-servers.html">12: Linux, Web Scheduling</a>
+<li> <a href="./class-13-the-internet.html">13: The Internet</a>
+<li> <a href="./class-14-entering-ring-naught.html">14: Kernel Development</a>
+<li> <a href="./class-15-ironkernel-developers.html">15: IronKernel</a>
+<li> <a href="./class-16-storage.html">16: Storage</a>
+<li> <a href="./class-17-flash.html">17: Flash!</a>
+<li> <a href="./class-18-system-calls.html">18: System Calls</a>
+<li> <a href="./class-19-synchronization.html">19: Synchronization</a>
+<li> <a href="./class-20-mutual-exclusion.html">20: Mutual Exclusion</a>
+<li> <a href="./class-21-bakers-and-philosophers.html">21: Bakers and Philosophers</a>
+<li> <a href="./class-22-microkernels-and-beyond.html">22: Microkernels</a>
+<li> <a href="./class-23-invent-the-future.html">23: The Future!</a>
+-->
+</ul>
+
+<ul>
+<li>
+<a href="./pages/using-materials.html">Using These Materials</a>
+</ul>
+
+	</section>
+</section>
+
+
+<section id="mainbody">
+
+
+<!--
+<div id="calendar">
+<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=7ibtm6lnt88vl00h7a0e8n0bc4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York" style=" border:solid 1px #777 " width="200" height="600" frameborder="0" scrolling="no">
+</iframe>
+</div>
+-->
+
+{% if articles %}
+        {% set num = 1 %}
+        {% for article in (articles_page.object_list if articles_page else articles) %}
+
+        <div class="article">
+                {% if num <= 2 %} 
+                   <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+                   <div class="well small">{% include "article_infos.html" %}</div>
+                   <div class="content">{{ article.content }}</div>
+                   <hr />
+                {% else %}
+                   <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> ({{ article.locale_date }})<br></br>
+
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="{{ SITEURL }}/{{ article.url }}">More...</a>                      
+                   </div>-->
+                {% endif %}
+                {% set num = num + 1 %}
+        </div>
+        {% endfor %}
+        <hr />
+{% endif %}
+
+        {% if articles_page and articles_paginator.num_pages > 1 %}
+        <div class="pagination">
+        <ul>
+                {% if articles_page.has_previous() %}
+                        {% set num = articles_page.previous_page_number() %}
+                        <li class="prev"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">&larr; Previous</a></li>
+                {% else %}
+                        <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+                {% endif %}
+                {% for num in range( 1, 1 + articles_paginator.num_pages ) %}
+                        <li class="{{ 'active' if num == articles_page.number else '' }}"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a></li>
+                {% endfor %}
+                {% if articles_page.has_next() %}
+                        <li class="next"><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">Next &rarr;</a></li>
+                {% else %}
+                        <li class="next disabled"><a href="#">&rarr; Next</a></li>
+                {% endif %}
+        </ul>
+        </div>
+
+{% else %}
+        {% if PAGES %}
+                <section id="content" class="body">
+                <h1>Pages</h1>
+
+                {% for page in PAGES %}
+                        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+                </section>
+        {% endif %}
+{% endif %}
+{% endblock content %}
+</section>

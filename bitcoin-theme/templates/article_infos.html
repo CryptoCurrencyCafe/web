@@ -1,0 +1,25 @@
+<footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="{{ article.date.isoformat() }}">
+    {{ article.locale_date }}
+</abbr>
+<!-- {% if article.author %}
+<span class="quietlabel">by</span>
+<a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+{% endif %}
+-->
+<!--
+<span class="label">Category</span>
+<a href="{{ SITEURL }}/{{ article.category.url }}"><i class="icon-folder-open"></i>{{ article.category }}</a>.
+-->
+
+{% if PDF_PROCESSOR %}
+<span class="label">
+<a href="{{ SITEURL }}/pdf/{{ article.slug }}.pdf">PDF</a>
+</span>
+{% endif %}
+<!--
+{% include 'taglist.html' %}
+{% include 'translations.html' %}
+-->
+</footer><!-- /.post-info -->
