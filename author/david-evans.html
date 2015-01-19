@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cryptocurrency Cafe - David Evans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="David Evans">
+    <link rel="icon" type="image/png" href="http://www.rust-class.org/static/images/logo.png" />  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+     .about {
+        font-size: 8pt;
+        font-color: "gray";
+     }
+    </style>
+    <link href="/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/theme/css/font-awesome.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Cryptocurrency Cafe ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="/index.html">Cryptocurrency Cafe </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                <li><a href="/pages/using-materials.html">Using Materials</a></li>
+                <li><a href="/pages/ps0.html">Problem Set 0</a></li>
+                <li><a href="/pages/resources.html">Resources</a></li>
+                <li><a href="/pages/schedule.html">Schedule</a></li>
+                <li><a href="/pages/syllabus.html">Syllabus</a></li>
+                          <li class="divider-vertical"></li>
+
+                          <ul class="nav pull-right">
+                                <li><a href="/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+	<section id="sidebar">
+          <p>
+	    <a href="http://www.virginia.edu"><b>University&nbsp;of&nbsp;Virginia</b></a>
+	    Spring&nbsp;2015<br>
+	    <a href="http://www.cs.virginia.edu/evans/">David&nbsp;Evans</a>
+	  </p>
+	  <p>
+	  <div class="separator"></div>
+<h3>
+<a href="https://www.google.com/calendar/embed?src=rmjagdrnmu3a9h2q5199lg4t28%40group.calendar.google.com&ctz=America/New_York">Calendar</a>
+</h3>
+<h3><a href="./pages/syllabus.html">Syllabus</a>
+</h3>
+
+<!--
+	  <div class="separator"></div>
+	  <h3>Problem Sets</h3>
+<ul>
+<li> 
+</ul>
+-->
+
+	  <div class="separator"></div>
+	  <h3><A href="./pages/classes.html">Classes</a></h3>
+<!--
+<ul>
+<li> &nbsp;<a href="./class-1-what-is-an-operating-system.html">1: OS</a>
+<li> &nbsp;<a href="./class-2-getting-rustified.html">2: Rust</a>
+<li> &nbsp;<a href="./class-3-zero-to-a-billion-in-486-years.html">3: First Billion</a>
+<li> &nbsp;<a href="./class-4-once-upon-a-process.html">4: Processes</a> 
+<li> &nbsp;<a href="./class-5-gash-has-no-privileges.html">5: Shells</a>
+<li> &nbsp;<a href="./class-6-making-a-process-virtualizing-memory.html">6: Virtualizing Memory</a>
+<li> &nbsp;<a href="./class-7-double-faults.html">7: Faults</a>
+<li> &nbsp;<a href="./class-8-managing-memory.html">8: Managing Memory</a>
+<li> &nbsp;<a href="./class-9-pointers-in-rust.html">9: Pointers in Rust</a>
+<li> <a href="./class-10-ssl-sharing-and-scheduling.html">10: goto fail;</a>
+<li> <a href="./class-11-smarter-scheduling.html">11: Scheduling</a>
+<li> <a href="./class-12-scheduling-in-linux-and-web-servers.html">12: Linux, Web Scheduling</a>
+<li> <a href="./class-13-the-internet.html">13: The Internet</a>
+<li> <a href="./class-14-entering-ring-naught.html">14: Kernel Development</a>
+<li> <a href="./class-15-ironkernel-developers.html">15: IronKernel</a>
+<li> <a href="./class-16-storage.html">16: Storage</a>
+<li> <a href="./class-17-flash.html">17: Flash!</a>
+<li> <a href="./class-18-system-calls.html">18: System Calls</a>
+<li> <a href="./class-19-synchronization.html">19: Synchronization</a>
+<li> <a href="./class-20-mutual-exclusion.html">20: Mutual Exclusion</a>
+<li> <a href="./class-21-bakers-and-philosophers.html">21: Bakers and Philosophers</a>
+<li> <a href="./class-22-microkernels-and-beyond.html">22: Microkernels</a>
+<li> <a href="./class-23-invent-the-future.html">23: The Future!</a>
+-->
+</ul>
+
+<ul>
+<li>
+<a href="./pages/using-materials.html">Using These Materials</a>
+</ul>
+
+	</section>
+</section>
+
+
+<section id="mainbody">
+
+
+<!--
+<div id="calendar">
+<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=7ibtm6lnt88vl00h7a0e8n0bc4%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FNew_York" style=" border:solid 1px #777 " width="200" height="600" frameborder="0" scrolling="no">
+</iframe>
+</div>
+-->
+
+
+        <div class="article">
+ 
+                   <h1><a href="/class-2-cryptography.html">Class 2: Cryptography</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2014-01-14T00:00:00-05:00">
+    Tue 14 January 2014
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="/category/class2.html"><i class="icon-folder-open"></i>class2</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><h2>Schedule</h2>
+<p><div class="todo">
+Before the next class (Wednesday, Jan 21):</p>
+<ol>
+<li>
+<p><strong>Read:</strong> 
+<a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch03.asciidoc"><em>Chapter 3: The Bitcoin Client</em></a>
+and
+<a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch04.asciidoc"><em>Chapter 4: Keys, Addresses, Wallets</em></a>
+from Andreas M. Antonopoulos, <a href="https://github.com/aantonop/bitcoinbook"><em>Mastering Bitcoin: Unlocking Digital
+Cryptocurrencies</em></a> book (also
+available <a href="http://www.amazon.com/Mastering-Bitcoin-Unlocking-Digital-Crypto-Currencies/dp/1449374042">in
+print</a>).  </p>
+</li>
+<li>
+<p>Pay attention to your email.  You should receive an email by Sunday,
+and it will include some other things to do before Wednesday's class.
+   </div></p>
+</li>
+</ol>
+<p><center> <iframe
+src="//www.slideshare.net/slideshow/embed_code/43552674" width="476"
+height="400" frameborder="0" marginwidth="0" marginheight="0"
+scrolling="no"></iframe><br> 
+<div class="caption"> Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you download the slides, they are present though.
+Hopefully, the player will be fixed someday.  </div></p>
+<p></center></p>
+<!--
+how is it possible to own something digital?
+
+- copyright!
+
+England
+
+1662 - Licensing of the Press Act
+
+guild of printers, "Stationer's Company" (formed in 1403, royal charter in 1557)
+granted monopoly on printing [cf. Chinese granting monopoly on salt production]
+exclusive right to print - responsible for censoring
+
+ended in 1694 - no restrictions        
+
+
+Act of Queen Anne
+-->
+
+<h2>Cryptography</h2>
+<p><em>kryptos</em> is a Greek root meaning hidden ("secret")</p>
+<p><em>crypto</em> + <em>graphy</em> = "secret writing"</p>
+<p><em>Decryption</em> is what the intended receiver does.<br />
+<em>Cryptanalysis</em> is what an attacker does.  </p>
+<p>How are cryptography and security related?
+<div class="gap"></p>
+</div>
+
+<h3>Simple Message Cryptosystem</h3>
+<p>Two functions:</p>
+<ul>
+<li>
+<p><strong>Encrypt:</strong> <span class="math"><em>E</em>(<em>m</em>: byte[]) &rarr; byte[]</span>.  The input is called the
+    <strong>plaintext</strong>; the output is called the <strong>ciphertext</strong>.</p>
+</li>
+<li>
+<p><strong>Decrypt:</strong> <span class="math"><em>D</em>(<em>c</em>: byte[]) &rarr; byte[]</span>.</p>
+</li>
+</ul>
+<p>Required properties:</p>
+<ul>
+<li><strong>Correctness:</strong> for all possible messages, <span class="math"><em>m</em>, <em>D</em>(<em>E</em>(<em>m</em>)) = <em>m</em></span></li>
+<li><strong>Security:</strong> given the output of <span class="math"><em>E</em>(<em>m</em>)</span>, it is "hard" to learn anything interesting about <span class="math"><em>m</em></span>.  </li>
+</ul>
+<p><a href="http://web.mit.edu/newsoffice/2013/goldwasser-and-micali-win-turing-award-0313.html"><em>Goldwasser and Micali win Turing Award: Team honored for
+‘revolutionizing the science of
+cryptography'</em></a>,
+MIT News, 13 March 2013. </p>
+<p>Their paper that introduced semantic security notions is:
+<a href="http://groups.csail.mit.edu/cis/pubs/shafi/1982-stoc.pdf"><em>Probabilistic Encryption and How to Play Mental Poker Keeping Secret
+All Partial
+Information</em></a>,
+ACM Symposium on Theory of Computing, 1982.  (We will not get into
+formal security definitions or proofs in this class, but you should take
+<a href="http://www.cs.virginia.edu/~mohammad/">Mohammad Mahmoody</a>'s class to
+learn them.)</p>
+<h3>Keyed Symmetric Cryptosystem</h3>
+<p>Claude Shannon, <a href="http://netlab.cs.ucla.edu/wiki/files/shannon1949.pdf"><em>Communication Theory of Secrecy Systems</em></a>, 1949 (work done during World War II, but declassified later).</p>
+<p>Two functions:</p>
+<ul>
+<li>
+<p><strong>Encrypt:</strong> <span class="math"><em>E</em>(<em><font color="red">k</font></em>: byte[], <em>m</em>: byte[]) &rarr; byte[]</span>. </p>
+</li>
+<li>
+<p><strong>Decrypt:</strong> <span class="math"><em>D</em>(<em><font color="red">k</font></em>, <em>c</em>: byte[]) &rarr; byte[]</span>.</p>
+</li>
+</ul>
+<p>Required properties:</p>
+<ul>
+<li><strong>Correctness:</strong> for all possible messages, <span class="math"><em>m</em></span>, and keys, <span class="math"><em>k</em></span>, <span class="math"><em>D</em>(<em><font color="red">k</font></em>, <em>E</em>(<em><font color="red">k</font></em>, <em>m</em>)) = <em>m</em></span>.</li>
+<li><strong>Security:</strong> given <span class="math"><em>E</em></span>, <span class="math"><em>D</em></span>, and the output of <span class="math"><em>E</em>(<font color="red"><em>k</em></font>, <em>m</em>)</span> it is "hard" to learn anything interesting about <span class="math"><em>m</em></span> (without knowing <span class="math"><font color="red"><em>k</em></font></span>).</li>
+</ul>
+<p>Are these properties enough to be secure against an active attacker?
+<div class="gap"></p>
+</div>
+
+<h3>Jefferson's Wheel Cipher</h3>
+<p>There are, of course, better ways to break a message encrypted using
+Jefferson's Wheel cipher than just trying all possible keys as in a
+brute force attack.  Here's how Geoff Stoker solved it: <a href="http://www.cs.virginia.edu/~evans/cs588-fall2001/challenges/wheel-solved.html"><em>Jefferson
+Wheel Challenge
+solved!</em></a>.</p>
+<p><strong>Keyspace:</strong> the set of all possible keys.  Assume (hopefully for
+  user!) that key is drawn randomly from this set.</p>
+<p><strong>Brute Force Attack:</strong> try for all possible keys, <span
+  class="math"><em>k<sub>i</sub></em></span>, computing <span
+  class="math"><em>D</em>(<em>k</em><sub>i</sub>)</span> and see if it looks like a
+  reasonable plaintext.  </p>
+<p>In order for a brute force attack to succeed, what properties are
+necessary about (1) the keyspace and (2) the message space?</p>
+<div class="gap">
+
+</div>
+
+<h3>Asymmetric Cryptosystems</h3>
+<p><strong>Asymmetric cryptosystems</strong> use <em>different functions</em> for encrypting
+  and decrypting, with the property that revealing the encryption
+  function does not reveal the decryption function.  With Kerckhoff's
+  Principle, this means there are different keys for encryption and
+  decryption.</p>
+<ul>
+<li>
+<p><strong>Generate:</strong> produce key pair, <span class="math">(<em><font color="green">KU<sub>X</sub></font></em>, <em><font color="red">KR<sub>X</sub></font></em>)</span>, and publish the public key, <span class="math"><em><font color="green">KU<sub>X</sub></font></em></span>.</p>
+</li>
+<li>
+<p><strong>Encrypt:</strong> <span class="math"><em>E</em>(<em><font color="green">KU<sub>X</sub></font></em>: byte[], <em>m</em>: byte[]) &rarr; byte[]</span>. </p>
+</li>
+<li>
+<p><strong>Decrypt:</strong> <span class="math"><em>D</em>(<em><font color="red">KR<sub>X</sub></font>, _c</em>: byte[]) &rarr; byte[]</span>.</p>
+</li>
+</ul>
+<p><strong>Messages:</strong> Sender encrypts a message with the recipient's public key.
+  Recipient decrypts the message using her private key.</p>
+<p><strong>Signatures:</strong> Signer encrypts a message with her own private key.
+  Verifier checks the message using the signer's public key.</p>
+<p>How can we use asymmetric cryptosystems to <em>prove</em> ownership?
+<div class="gap">
+</div></p>
+<p>How can we use asymmetric cryptosystems to <em>transfer</em> ownership?
+<div class="gap">
+</div></p>
+<p>Assuming we have a strong asymmetric cryptosystem, what hard problems are left
+to solve to make a cryptocurrency?</p>
+<div class="gap">
+</div>
+
+<h3>Martin Luther King at the University</h3>
+<p>There's no class on Monday to honor Martin Luther King day.  Students
+are encouraged to use the class time to read Paul Gaston's <a href="http://www.virginia.edu/woodson/pubs/aa.htm"><em>Honor to
+the Class of 1969</em></a> and to
+learn about <a href="https://web.archive.org/web/20100615104829/http://cti.itc.virginia.edu/~hius316/desegregation/deseghome50s.html"><em>Desegregation at the University of Virginia and its
+Surrounding
+Communities</em></a>
+(including <a href="https://web.archive.org/web/20070503051645/http://cti.itc.virginia.edu/~hius316/desegregation/pace1.html">President Darden's
+letter</a>).</p>
+<p>Why is <a href="http://www.nytimes.com/1997/08/26/us/e-f-shannon-jr-79-dies-forceful-chief-of-u-of-virginia.html">Edgar
+Shannon</a>
+the only past-president of UVa with nothing significant at the
+University named after him?  Why does the University still have
+courtyards and schools named after Colgate Darden and none for <a href="http://www.virginia.edu/woodson/projects/kenan/swanson/swanson.html">Gregory
+Swanson</a>
+or <a href="http://artsandsciences.virginia.edu/meredithwoo/blog/the-desegregated-heart/">Sarah Patton
+Boyle</a>?</p>
+<div class="gap">
+</div>
+
+<p>How do the actions of our current administration (especially in response
+to recent events) compare to those of the 1960s?  </p>
+<div class="gap">
+</div>
+
+<p>Will there be justification for an <em>Honor to the Class of
+2015/2016/2017/2018</em> essay?
+<div class="gap">
+</div></p></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
+                   <h1><a href="/class-1-why-are-these-buildings-burning-down.html">Class 1: Why are these buildings burning down?</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2014-01-12T00:00:00-05:00">
+    Sun 12 January 2014
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="/category/class1.html"><i class="icon-folder-open"></i>class1</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><h2>Schedule</h2>
+<p><div class="todo">
+Before 11:59pm tomorrow (Tuesday, 13 January):</p>
+<ol>
+<li>
+<p><strong>Read:</strong> <a href="/pages/syllabus.html">Course Syllabus</a></p>
+</li>
+<li>
+<p><strong>Read:</strong> <a href="/readings/magic_of_mining.pdf"><em>The Magic of
+Mining</em></a>, The Economist, 10
+January 2015.  </p>
+</li>
+<li>
+<p><strong>Read:</strong> 
+<a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch01.asciidoc"><em>Chapter 1: Introduction</em></a>
+and
+<a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch02.asciidoc"><em>Chapter 2: How Bitcoin Works</em></a>
+from Andreas M. Antonopoulos, <a href="https://github.com/aantonop/bitcoinbook"><em>Mastering Bitcoin: Unlocking Digital
+Cryptocurrencies</em></a> book (also
+available <a href="http://www.amazon.com/Mastering-Bitcoin-Unlocking-Digital-Crypto-Currencies/dp/1449374042">in
+print</a>).  </p>
+</li>
+<li>
+<p><strong>Setup</strong> a bitcoin wallet (if you don't already have one,
+<a href="https://multibit.org/">MultiBit</a> is a good choice for this).  After
+creating a wallet, you should find the Recieving Address, to use in PS0.
+Note that it is not necessary now, or at any time during this class, for
+you to actually buy bitcoins with your own money.  If you are inclined
+to do this, be careful, and don't use any funds you cannot afford to
+lose!</p>
+</li>
+<li>
+<p><strong>Submit</strong> <a href="/pages/ps0.html">Problem Set 0</a> before
+<strong>11:59pm tomorrow</strong> (Tuesday, 13 January).</p>
+</li>
+</ol>
+</div>
+
+<p><center>
+<iframe src="//www.slideshare.net/slideshow/embed_code/43441659"
+width="476" height="400" frameborder="0" marginwidth="0"
+marginheight="0" scrolling="no"></iframe>
+</center></p>
+<h2>Notes</h2>
+<p>What is currency?</p>
+<p><div class="gap"></div></p>
+<blockquote>
+<p><em>Every commodity admits two uses: (1) its proper use, (2) its use as an article of exchange.</em><br />
+Aristotle's <a href="https://play.google.com/books/reader?id=1J7N4eAKuhwC&amp;printsec=frontcover&amp;output=reader&amp;hl=en&amp;pg=GBS.PR13"><em>Politics</em></a></p>
+</blockquote>
+<p>What properties should a currency have?</p>
+<div class="gap"></div>
+
+<p>What is a <em>fiat currency</em>?</p>
+<div class="gap"></div>
+
+<blockquote>
+<p><em>All these pieces of paper are, issued with as much solemnity and authority as if they were of pure gold or silver... and indeed everybody takes them readily, for wheresoever a person may go throughout the Great Kaan's dominions he shall find these pieces of paper current, and shall be able to transact all sales and purchases of goods by means of them just as well as if they were coins of pure gold.</em><br />
+Macro Polo (on Yuan Dynasty paper money, 13th century)</p>
+</blockquote>
+<p>Was salt a fiat currency as used by the Romans?
+<div class="gap"></div></p>
+<p>Was salt a fiat currency as used by the Han Dynasty?</p>
+<div class="gap"></div>
+
+<p><a href="http://sinosphere.blogs.nytimes.com/2014/11/21/chinas-millenniums-old-salt-monopoly-no-match-for-economic-reform/"><em>China’s Millenniums-Old Salt Monopoly No Match for Economic Reform</em></a>, New York Times, 21 November 2014.</p>
+<p>What does it mean to <em>own</em> something digital?
+<div class="gap"></div></p>
+<h2>Questions</h2>
+<p>Why will bitcoin mining facilities continue to frequently burn down?</p>
+<div class="gap"></div>
+
+<p><a href="http://bravenewcoin.com/news/bitcoin-hashrate-jumps-then-drops-how/"><em>How $3.6 Million Worth Of Bitcoin Mining Equipment Went Up In Smoke</em></a>, Brave New Coin, 6 November 2014.</p>
+<p>Why are there <a href="https://angel.co/cryptocurrency-2">over 600 cryptocurrency startups</a>?</p>
+<div class="gap"></div></div>
+                   <hr />
+        </div>
+        <hr />
+
+                <section id="content" class="body">
+                <h1>Pages</h1>
+
+                        <li><a href="/pages/using-materials.html">Using Materials</a></li>
+                        <li><a href="/pages/ps0.html">Problem Set 0</a></li>
+                        <li><a href="/pages/resources.html">Resources</a></li>
+                        <li><a href="/pages/schedule.html">Schedule</a></li>
+                        <li><a href="/pages/syllabus.html">Syllabus</a></li>
+                </section>
+      <hr>
+
+      <footer>
+	<div id="footer">
+        <address id="about">
+          <a href="/">Cryptocurrency Cafe</a>, Spring 2015<br>      
+          <a href="http://www.cs.virginia.edu">University of Virginia Computer Science</a><br>
+	  <p align="right"><font color="grey" size="-2"> Site built using <a href="http://pelican.notmyidea.org/">Pelican</a>.  Theme uses <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome</a>.</p>
+        </address><!-- /#about -->
+	</div>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+  </body>
+</html>
