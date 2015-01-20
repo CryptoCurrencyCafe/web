@@ -1,11 +1,53 @@
-Title: Problem Set 4 - IronKernel
-Date: 2014-03-18
+Title: Project 1 - Bitcoin Transactions
+Date: 2015-01-19
 Category: PS
 Tags: Problem Sets, Kernel
-Slug: ps4
+Slug: project1
 
    <div class="due">
-   Thursday, 3 April at 11:59pm
+Friday, 30 January at 11:59pm
    </div>
 
 ## Purpose
+
+The goal of this assignment is for everyone in the class to understand
+how keys, addresses, and transactions work in bitcoin.  In addition,
+this assignment should help everyone get up-to-speed with the software
+tools we will use in later assignments.
+
+### Collaboration Policy
+
+For this assignment, everyone should submit their own assignment and
+should writeup their own answers to the questions as well as execute all
+the required transactions with your own keys.
+
+You may, and are encouraged to, discuss all of the problems with anyone
+else you want, and it is okay to share code with others so long as you
+understand everything in all of the code you use.
+
+# Getting Going
+
+You are free to use any programming language and open source bitcoin
+libraries and openly-licensed code you want for this assignment, but
+must follow the license requirements of any code you use and credit this
+code in your submission.  
+
+The directions we provide use the [BTC
+Suite](https://github.com/btcsuite) library for bitcoin, implemented in
+the [Go](https://golang.org/).  
+
+Hardly any of you have experience using Go already, but it is not a
+difficult language to learn coming from experience with Java (which all
+of you have), and although its not [my favorite programming
+language](http://rust-class.org) it is a language that nearly everyone
+who learns enjoys programming in.  The main reason we are using it for
+this, though, is because the [BTC library](https://github.com/btcsuite)
+is the best bitcoin library we are aware of, and it is written in Go.
+
+If you are comfortable learning a new programming language by diving
+right into moderately complex programs and figuring out things as you
+go, you should be able to jump right into this assignment.  If you
+prefer a more structured introduction to Go, there are many tutorials
+available, including the [Tour of
+Go](https://tour.golang.org/welcome/1).  For more documentation, visit
+[https://golang.org/doc/](https://golang.org/doc/).
