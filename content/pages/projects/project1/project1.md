@@ -223,7 +223,7 @@ searching for your vanity address at
 transaction ID for the next exercise.
  </div>
 
-<div>
+
 Once you have located the transaction that sends bitcoin to your vanity address
 you should notice several things. 
 If you can't find your transaction look at this [one](https://blockchain.info/tx/8b4b61f6c1a3be10c61edd449313920cc0666ce4a20d549674bd7c8b8a83356b).
@@ -232,7 +232,7 @@ Notice that the sum of the transaction inputs (the left side of the arrow) is sl
 
 Your wallet most likely sent bitcoins to your address _and_ back to a new address that only it controls.
 We call this second address the 'change' address. Notice that each output has an ordered position. This index (known as the vout) along with the transaction ID lets us uniquely identify transaction outputs. This is important if you want to use those outputs in a new transaction.
-</div>
+
 
 <div class="exercise">
 <b>Exercise 5.</b>
@@ -241,8 +241,8 @@ Transfer the coin from your vanity address back to your wallet. To do this you c
 </div>
 
 
-```bash
-root@robinhood $ go run spend.go \
+```shell
+> go run spend.go \
     -txid="6bf98ac2e1a25ea9c2951bb6a40262e054514236f864a3414c16fe6b3a5f3f62"\
     -vout=0\
     -privkey="8d66a9f85c4f737b231d1af0bd917c8e02f05d616f26c41f269a194a10c29029"\
@@ -258,9 +258,8 @@ The sending api responded with:
 
 ```
 
-<div>
 Notice that when the command above is run with these parameters it only works [once](https://blockchain.info/tx/8d1687cc05cd3264c8d41acf19efcd08ecd44b5b57d3105fe081fdfd4baa6b0b). If you tried to run it again or send the coins somewhere else the script would fail.
-</div>
+
 
 
 TODO: (Need one more) some questions to explore sending - what happens with no
