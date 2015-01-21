@@ -213,18 +213,48 @@ your choosing by explaining to me what you have learned about software
 development and or best practices.  It is not necessary to buy your own
 bitcoin, even if you lose all of the original transfer.)
 
-   <div class="exercise">
-<b>Exercise 4.</b> Make a **small** transfer from
-your wallet address to your vanity address.  You can do this using
+<div class="exercise">
+<b>Exercise 4.</b> 
+Make a **small** transfer from
+your wallet address to your vanity address (I suggest 0.001 BTC).  You can do this using
 MultiBit.  Find the transaction in the blockchain (you can do this by
 searching for your vanity address at
-[https://blockchain.info/](https://blockchain.info/)). You will need the
+[blockchain.info](https://blockchain.info/). You will need the
 transaction ID for the next exercise.
-  </div>
+ </div>
 
-TODO: explain how to use provided code to do a transfer
+<div>
+Once you have located the transaction that sends bitcoin to your vanity address
+you should notice several things. 
+If you can't find your transaction look at this [one](https://blockchain.info/tx/8b4b61f6c1a3be10c61edd449313920cc0666ce4a20d549674bd7c8b8a83356b).
+Notice that the sum of the transaction inputs (the left side of the arrow) is slightly less than the sum of the transaction outputs (the right side of the arrow). The difference is being collected as a processing fee.
+Your wallet most likely sent bitcoins to your address _and_ back to a new address that only it controls.
+We call this second address the 'change' address. Notice that each output has an ordered position. This index (known as the vout) along with the transaction ID lets us uniquely identify transaction outputs. This is important if you want to use those outputs in a new transaction.
+</div>
 
-TODO: some questions to explore sending - what happens with no
+<div class="exercise">
+<b>Exercise 5.</b>
+Transfer the coin from your vanity address back to your wallet. To do this you can use the command line script `spend.go` in  project1. You must fill out several parameters on your own for the transaction to work properly. If done correctly the script should look this when executed:
+</div>
+
+```bash
+root@robinhood $ go run spend.go \
+    -txid="6bf98ac2e1a25ea9c2951bb6a40262e054514236f864a3414c16fe6b3a5f3f62"\
+    -vout=0\
+    -privkey="8d66a9f85c4f737b231d1af0bd917c8e02f05d616f26c41f269a194a10c29029"\
+    -address="1DTFjSGeij6woxyaJFaYLMzciKCYP83ZNB"
+
+Here is your raw bitcoin transaction:
+0100000001623f5f3a6bfe164c41a364f836425154e06202a4b61b95c2a95ea2e1c28af96b000000006a47304402202487724e5e42e60b5d8d98636797339b09db8c70452959cf9c48a0be1a45aba302203465c00d34a190dd1294c9c1561af7c0bcc2b0d452ae74b6d126ad06e0f03624012103c4a967e4e04f32f6b25b723c4d994bcc5f1f6db2cd7757d25643af0d1a1b4c1effffffff01905f0100000000001976a91488989f2c91337ad5241abedeafe8ed96fa28940488ac00000000
+The sending api responded with:
+{"txid":"8d1687cc05cd3264c8d41acf19efcd08ecd44b5b57d3105fe081fdfd4baa6b0b"}
+
+```
+<div>
+Notice that when the command above is run with these parameters it only works [once](https://blockchain.info/tx/8d1687cc05cd3264c8d41acf19efcd08ecd44b5b57d3105fe081fdfd4baa6b0b). If you tried to run it again or send the coins somewhere else the script would fail.
+</div>
+
+TODO: (Need one more) some questions to explore sending - what happens with no
 transaction fee; what happens if you try to send more;
 
 <div class="discuss"> 
