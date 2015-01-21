@@ -15,8 +15,8 @@ Cryptocurrencies_](https://github.com/aantonop/bitcoinbook) book (also
 available [in
 print](http://www.amazon.com/Mastering-Bitcoin-Unlocking-Digital-Crypto-Currencies/dp/1449374042)).  
 
-2. Pay attention to your email.  You should receive an email by Sunday,
-and it will include some other things to do before Wednesday's class.
+2. Pay attention to your email.  <strike>You should receive an email by Sunday,
+and it will include some other things to do before Wednesday's class.</strike> [Change in plans: I haven't sent out the email yet.  I expect to do this Tuesday, and there will not be anything new due on Wednesday. Sorry for the delay!]
    </div>
 
 <center> <iframe

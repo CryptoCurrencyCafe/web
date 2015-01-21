@@ -20,7 +20,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 THEME = "./bitcoin-theme"
-# DISPLAY_PAGES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = False
 STATIC_PATHS = ['images', 'docs', 'resources', 'classes', 'pages', 'readings']
 
 # Blogroll
@@ -38,3 +38,6 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+DISQUS_SITENAME = "bitcoin-class"
+GOOGLE_ANALYTICS = "UA-3775212-12"
