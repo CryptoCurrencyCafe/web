@@ -695,8 +695,9 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 .exercise{display:block;padding:5px;margin-bottom:10px;margin-top:10px;background-color:#FFDAB9;border:1px
 solid #f55}
 .discussion{display:block;padding:5px;margin-bottom:10px;margin-top:10px;background-color:#B0E0E6;border:1px solid #55f}
+.discuss{display:block;padding:5px;margin-bottom:10px;margin-top:10px;background-color:#B0E0E6;border:1px solid #55f}
 .problem{display:block;padding:5px;margin-bottom:10px;margin-top:10px;background-color:#FFFAD2;border:1px solid #ffd700}
-
+.challenge{display:block;padding:5px;margin-bottom:10px;margin-top:10px;background-color:#F0F076;border:1px solid #f50}
 .todo {
   display:block;padding:5px;margin-bottom:10px;margin-top:10px;background-color:#FFEFD5;border:1px solid #FFD700;
 }
