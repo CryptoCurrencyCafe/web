@@ -13,20 +13,8 @@ coin to be distributed, how much did it cost in transaction fees, etc.
 Note that each of you had a different bitcoin address, so you all have
 different starting points for examining the transactions.
 
-Post interesting things you learn in the comments below. 
+Post interesting things you [here](|filename|../pages/discuss/keychase-discuss.md).
 
-<div class="disqus">
-<script type="text/javascript">
-    var disqus_shortname = '{{ DISQUS_SITENAME }}';
-    var disqus_url = 'http://www.bitcoin-class.org/key-chase.html';
-
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-</script>
-</div>
 
 
 
