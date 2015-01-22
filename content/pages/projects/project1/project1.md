@@ -343,8 +343,9 @@ the blockchain to demonstrate your results.
 Submit the [Project 1 Submission Form](http://goo.gl/forms/kdIbZ33ryo) (by 11:59pm
 on **Friday, 30 January**):
 
-<iframe src="https://docs.google.com/forms/d/1I2a2T9owqTvLx7GAT8EIVf-qAhR2NU2113cSvwVOOAE/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<iframe src="https://docs.google.com/forms/d/1I2a2T9owqTvLx7GAT8EIVf-qAhR2NU2113cSvwVOOAE/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
+<p><br></br></p>
 
 <div class="disqus">
 <div id="disqus_thread"></div>

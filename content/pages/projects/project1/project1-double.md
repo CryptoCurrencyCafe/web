@@ -11,8 +11,7 @@ transactions with at least one confirmation each?)
 Please don't try to actually rip anyone off; only attempt double
 spending with your own addresses (or those of willing classmates).  
 
-Post about your experiences on [the discussion
-page](|filename|project1-double.md).  Include links to transactions in
+Post about your experiences on below.  Include links to transactions in
 the blockchain to demonstrate your results.
 
 </div>
