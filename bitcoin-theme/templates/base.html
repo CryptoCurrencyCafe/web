@@ -91,6 +91,9 @@
     <div class="container-fluid">
       {% block content %}
       {% endblock %}
+
+    {% include 'disqus_script.html' %}
+
       <hr>
 
       <footer>
@@ -105,8 +108,6 @@
       </footer>
 
     </div><!--/.fluid-container-->
-
-    {% include 'disqus_script.html' %}
 
     {% include 'analytics.html' %}
     {% include 'piwik.html' %}

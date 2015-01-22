@@ -16,3 +16,7 @@ page](|filename|project1-double.md).  Include links to transactions in
 the blockchain to demonstrate your results.
 
 </div>
+
+<div class="disqus">
+<div id="disqus_thread"></div>
+</div>
