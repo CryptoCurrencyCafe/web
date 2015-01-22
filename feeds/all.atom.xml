@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2014-01-21T00:00:00-05:00</updated><entry><title>Class 3: Elliptic Curves</title><link href="http://bitcoin-class.org/class-3-elliptic-curves.html" rel="alternate"></link><updated>2014-01-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-21:class-3-elliptic-curves.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2014-01-22T00:00:00-05:00</updated><entry><title>Key Chase</title><link href="http://bitcoin-class.org/key-chase.html" rel="alternate"></link><updated>2014-01-22T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-22:key-chase.html</id><summary type="html">&lt;p&gt;As mentioned in class today, each of you should have received a small
+deposit in your wallet.  You will need this for Project 1, but should
+also use it as a starting point for attempting to learn as much as you
+can about how we transfered funds (and possibly solve the puzzle leading
+to something interesting).  You can try tracing the transaction both
+forward and backward, trying to learn things like: where did the initial
+coin come from and when did I buy it, how long did it take for all the
+coin to be distributed, how much did it cost in transaction fees, etc.&lt;/p&gt;
+&lt;p&gt;Note that each of you had a different bitcoin address, so you all have
+different starting points for examining the transactions.&lt;/p&gt;
+&lt;p&gt;Post interesting things you learn in the comments below. &lt;/p&gt;
+&lt;div class="disqus"&gt;
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;/div&gt;</summary></entry><entry><title>Class 3: Elliptic Curves</title><link href="http://bitcoin-class.org/class-3-elliptic-curves.html" rel="alternate"></link><updated>2014-01-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-21:class-3-elliptic-curves.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
    &lt;a href="http://bitcoin-class.org/classes/class3/class3.pdf"&gt;PDF version for printing&lt;/a&gt;
    &lt;/div&gt;&lt;/p&gt;
 &lt;h2&gt;Schedule&lt;/h2&gt;
@@ -118,19 +131,6 @@ intersection between the tangent of the curve.&lt;/p&gt;
 &lt;em&gt;P&lt;/em&gt; + ... + &lt;em&gt;P&lt;/em&gt;&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Is there a more efficient way to compute &lt;span class="math"&gt;9_P_&lt;/span&gt; than using 8 additions?&lt;br /&gt;
 &lt;div class="gap"&gt;&lt;/p&gt;
-&lt;/div&gt;</summary></entry><entry><title>Key Chase</title><link href="http://bitcoin-class.org/key-chase.html" rel="alternate"></link><updated>2014-01-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-21:key-chase.html</id><summary type="html">&lt;p&gt;As mentioned in class today, each of you should have received a small
-deposit in your wallet.  You will need this for Project 1, but should
-also use it as a starting point for attempting to learn as much as you
-can about how we transfered funds (and possibly solve the puzzle leading
-to something interesting).  You can try tracing the transaction both
-forward and backward, trying to learn things like: where did the initial
-coin come from and when did I buy it, how long did it take for all the
-coin to be distributed, how much did it cost in transaction fees, etc.&lt;/p&gt;
-&lt;p&gt;Note that each of you had a different bitcoin address, so you all have
-different starting points for examining the transactions.&lt;/p&gt;
-&lt;p&gt;Post interesting things you learn in the comments below. &lt;/p&gt;
-&lt;div class="disqus"&gt;
-&lt;div id="disqus_thread"&gt;&lt;/div&gt;
 &lt;/div&gt;</summary></entry><entry><title>Class 2: Cryptography</title><link href="http://bitcoin-class.org/class-2-cryptography.html" rel="alternate"></link><updated>2014-01-14T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-14:class-2-cryptography.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;p&gt;&lt;div class="todo"&gt;
 Before the next class (Wednesday, Jan 21):&lt;/p&gt;
