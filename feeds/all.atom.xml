@@ -10,8 +10,6 @@ coin to be distributed, how much did it cost in transaction fees, etc.&lt;/p&gt;
 &lt;p&gt;Note that each of you had a different bitcoin address, so you all have
 different starting points for examining the transactions.&lt;/p&gt;
 &lt;p&gt;Post interesting things you learn in the comments below. &lt;/p&gt;
-&lt;!-- need to put discuss manually here for url to work --&gt;
-
 &lt;div class="disqus"&gt;
 &lt;script type="text/javascript"&gt;
     var disqus_shortname = '{{ DISQUS_SITENAME }}';
