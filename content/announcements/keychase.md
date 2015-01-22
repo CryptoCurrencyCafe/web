@@ -15,8 +15,19 @@ different starting points for examining the transactions.
 
 Post interesting things you learn in the comments below. 
 
+<!-- need to put discuss manually here for url to work -->
+
 <div class="disqus">
-<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = '{{ DISQUS_SITENAME }}';
+    var disqus_url = 'http://www.bitcoin-class.org/key-chase.html';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+</script>
 </div>
 
 
