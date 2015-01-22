@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2014-01-21T00:00:00-05:00</updated><entry><title>Key Chase</title><link href="http://bitcoin-class.org/key-chase.html" rel="alternate"></link><updated>2014-01-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-21:key-chase.html</id><summary type="html">&lt;p&gt;As mentioned in class today, each of you should have received a small
+deposit in your wallet.  You will need this for Project 1, but should
+also use it as a starting point for attempting to learn as much as you
+can about how we transfered funds (and possibly solve the puzzle leading
+to something interesting).  You can try tracing the transaction both
+forward and backward, trying to learn things like: where did the initial
+coin come from and when did I buy it, how long did it take for all the
+coin to be distributed, how much did it cost in transaction fees, etc.&lt;/p&gt;
+&lt;p&gt;Note that each of you had a different bitcoin address, so you all have
+different starting points for examining the transactions.&lt;/p&gt;
+&lt;p&gt;Post interesting things you learn in the comments below. &lt;/p&gt;
+&lt;div class="disqus"&gt;
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;/div&gt;</summary></entry></feed>
