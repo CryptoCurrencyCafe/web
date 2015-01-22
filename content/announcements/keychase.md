@@ -15,8 +15,6 @@ different starting points for examining the transactions.
 
 Post interesting things you learn in the comments below. 
 
-<!-- need to put discuss manually here for url to work -->
-
 <div class="disqus">
 <script type="text/javascript">
     var disqus_shortname = '{{ DISQUS_SITENAME }}';
