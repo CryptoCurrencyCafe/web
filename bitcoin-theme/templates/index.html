@@ -57,10 +57,13 @@
         {% for article in (articles_page.object_list if articles_page else articles) %}
 
         <div class="article">
-                {% if num <= 2 %} 
+                {% if num <= 4 %} 
                    <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
                    <div class="well small">{% include "article_infos.html" %}</div>
                    <div class="content">{{ article.content }}</div>
+{% if DISQUS_SITENAME %}
+<p><small><a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" {% if not DISQUS_NO_ID %}data-disqus-identifier="{{ article.date|strftime('%Y-%m-') ~ article.slug if DISQUS_ID_PREFIX_SLUG else article.slug }}"{% endif %}>View comments</a>.</small></p>{% endif %}
+
                    <hr />
                 {% else %}
                    <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> ({{ article.locale_date }})<br></br>
