@@ -23,7 +23,7 @@ bitcoin paper, which is quite readable.
 
 <center> 
 <iframe src="//www.slideshare.net/slideshow/embed_code/43761680" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br>
-<div class="caption"><font size="-2">Note: due to a bug in
+<div class="caption">Note: due to a bug in
 slideshare's updated player, ink markings no longer appear in the
 viewer.  <br>If you download the slides, they are present though.
 Hopefully, the player will be fixed someday. </div>

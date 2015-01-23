@@ -13,7 +13,9 @@ coin to be distributed, how much did it cost in transaction fees, etc.
 Note that each of you had a different bitcoin address, so you all have
 different starting points for examining the transactions.
 
-Post interesting things you [here](|filename|../pages/discuss/keychase-discuss.md).
+Post interesting things you find about this in the discussion below.
+(Note: the discussion won't appear on the main index page.  Click on the
+title link to enter the article page that will include the discussion.)
 
 
 
