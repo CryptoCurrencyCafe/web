@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/class2.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2014-01-14T00:00:00-05:00</updated><entry><title>Class 2: Cryptography</title><link href="http://bitcoin-class.org/class-2-cryptography.html" rel="alternate"></link><updated>2014-01-14T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-14:class-2-cryptography.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/class2.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-01-14T00:00:00-05:00</updated><entry><title>Class 2: Cryptography</title><link href="http://bitcoin-class.org/class-2-cryptography.html" rel="alternate"></link><updated>2015-01-14T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-01-14:class-2-cryptography.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
+   &lt;a href="http://bitcoin-class.org/classes/class2/class2.pdf"&gt;PDF version for printing&lt;/a&gt;
+   &lt;/div&gt;&lt;/p&gt;
+&lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;p&gt;&lt;div class="todo"&gt;
 Before the next class (Wednesday, Jan 21):&lt;/p&gt;
 &lt;ol&gt;
