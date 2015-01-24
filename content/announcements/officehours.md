@@ -4,7 +4,7 @@ Date: 1-24-2015
 Here's the office hours schedule, starting this week:
 
 **David Evans**:  
-Mondays right ater class.  
+Mondays right after class.  
 Thursdays, 4-5pm in Rice 507.
 
 **Nick Skelsey**:  
