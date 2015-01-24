@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2014-01-23T00:00:00-05:00</updated><entry><title>Communication in Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/communication-in-cryptocurrency-cafe.html" rel="alternate"></link><updated>2014-01-23T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-23:communication-in-cryptocurrency-cafe.html</id><summary type="html">&lt;p&gt;Here's some information on how communication will be done for this course.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2014-01-24T00:00:00-05:00</updated><entry><title>Office Hours</title><link href="http://bitcoin-class.org/office-hours.html" rel="alternate"></link><updated>2014-01-24T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-24:office-hours.html</id><summary type="html">&lt;p&gt;Here's the office hours schedule, starting this week:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;David Evans&lt;/em&gt;:&lt;br /&gt;
+Mondays right ater class.&lt;br /&gt;
+Thursdays, 4-5pm in Rice 507.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Nick Skelsey&lt;/em&gt;:&lt;br /&gt;
+Monday nights from 5-7pm in Rice 442 (Dave's lab).
+Fridays from 12-2pm at &lt;a href="http://hackcville.com"&gt;Hackcville&lt;/a&gt; (#9 Elliewood Ave).&lt;/p&gt;
+&lt;p&gt;Note that you can see these, as well as other events in the class in the
+&lt;a href="https://www.google.com/calendar/embed?src=rmjagdrnmu3a9h2q5199lg4t28%40group.calendar.google.com&amp;amp;ctz=America/New_York"&gt;course
+calendar&lt;/a&gt;
+(which you should be able to embed in your own calendar).  When we need
+to canel or reschedule office hours, it will be updated on the course
+calendar.  &lt;/p&gt;</summary></entry><entry><title>Communication in Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/communication-in-cryptocurrency-cafe.html" rel="alternate"></link><updated>2014-01-23T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-23:communication-in-cryptocurrency-cafe.html</id><summary type="html">&lt;p&gt;Here's some information on how communication will be done for this course.&lt;/p&gt;
 &lt;p&gt;I prefer to avoid using email for group communication, so won't be email
 spamming the entire class except when it really seems necessary.
 Instead, nearly all (electronic) communication will be done through the
@@ -46,12 +58,7 @@ coin to be distributed, how much did it cost in transaction fees, etc.&lt;/p&gt;
 different starting points for examining the transactions.&lt;/p&gt;
 &lt;p&gt;Post interesting things you find about this in the discussion below.
 (Note: the discussion won't appear on the main index page.  Click on the
-title link to enter the article page that will include the discussion.)&lt;/p&gt;</summary></entry><entry><title>Office Hours</title><link href="http://bitcoin-class.org/office-hours.html" rel="alternate"></link><updated>2014-01-22T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-22:office-hours.html</id><summary type="html">&lt;p&gt;Here is the office hours schedule for the class as of Jan 24.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Dave Evans&lt;/em&gt;:
-TBA&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Nick Skelsey&lt;/em&gt;:&lt;/p&gt;
-&lt;p&gt;Monday nights from 5-7pm in Rice 442 (Dave's lab).
-Fridays from 12-2pm at &lt;a href="http://hackcville.com"&gt;Hackcville&lt;/a&gt; (#9 Elliewood Ave).&lt;/p&gt;</summary></entry><entry><title>Class 3: Elliptic Curves</title><link href="http://bitcoin-class.org/class-3-elliptic-curves.html" rel="alternate"></link><updated>2014-01-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-21:class-3-elliptic-curves.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
+title link to enter the article page that will include the discussion.)&lt;/p&gt;</summary></entry><entry><title>Class 3: Elliptic Curves</title><link href="http://bitcoin-class.org/class-3-elliptic-curves.html" rel="alternate"></link><updated>2014-01-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2014-01-21:class-3-elliptic-curves.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
    &lt;a href="http://bitcoin-class.org/classes/class3/class3.pdf"&gt;PDF version for printing&lt;/a&gt;
    &lt;/div&gt;&lt;/p&gt;
 &lt;h2&gt;Schedule&lt;/h2&gt;
