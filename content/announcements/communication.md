@@ -1,5 +1,5 @@
 Title: Communication in Cryptocurrency Cafe
-Date: 2014-01-23
+Date: 2015-01-23
 
 Here's some information on how communication will be done for this course.
 

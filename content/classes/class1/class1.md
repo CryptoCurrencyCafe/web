@@ -1,5 +1,9 @@
 Title: Class 1: Why are these buildings burning down?
-Date: 2014-01-12
+Date: 2015-01-12
+
+   <div class="phighlight">
+   [PDF version for printing](|filename|./class1.pdf)
+   </div>
 
 ## Schedule 
 

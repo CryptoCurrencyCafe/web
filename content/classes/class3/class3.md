@@ -1,5 +1,5 @@
 Title: Class 3: Elliptic Curves
-Date: 2014-01-21
+Date: 2015-01-21
 
    <div class="phighlight">
    [PDF version for printing](|filename|./class3.pdf)
