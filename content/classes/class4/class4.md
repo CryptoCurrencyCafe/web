@@ -7,8 +7,8 @@ Date: 2015-01-26
 [Project 1](|filename|../../pages/projects/project1/project1.md) is due **Friday, 30 January** (11:59pm).
 
 **Scheduled office hours:**  
-Dave --- after class Mondays, Thursdays 4-5pm (both in Rice 507)  
-Nick --- Mondays 5-7pm (in Rice 442), Fridays (noon-2pm in Hackcville, #9 Elliewood Ave)
+Dave: after class Mondays, Thursdays 4-5pm (both in Rice 507)  
+Nick: Mondays 5-7pm (in Rice 442), Fridays (noon-2pm in Hackcville, #9 Elliewood Ave)
    </div>
 
 

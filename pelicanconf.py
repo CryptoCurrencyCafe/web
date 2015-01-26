@@ -23,6 +23,15 @@ THEME = "./bitcoin-theme"
 DISPLAY_PAGES_ON_MENU = False
 STATIC_PATHS = ['images', 'docs', 'resources', 'classes', 'pages', 'readings']
 
+MENUITEMS = (
+#             ('Syllabus', 'http://rust-class.org/pages/syllabus.html'),
+             ('<b>Forum</b>', '/pages/forum.html'),
+             ('&middot', '/'),
+             ('PS0', '/pages/ps0.html'),
+             ('<b>Project 1</b>', '/pages/project1.html'),
+             ('&middot', 'http://rust-class.org/'),
+             ('<b>Calendar</b>', 'https://www.google.com/calendar/embed?src=rmjagdrnmu3a9h2q5199lg4t28%40group.calendar.google.com&ctz=America/New_York"'),
+             ('<b>Resources</b>', '/pages/resources.html'))
 # Blogroll
 LINKS = (# ('Pelican', 'http://getpelican.com/'),
          # ('Python.org', 'http://python.org/'),
