@@ -26,7 +26,7 @@ Nick --- Mondays 5-7pm (in Rice 442), Fridays (noon-2pm in Hackcville, #9 Elliew
 **Signing:**  
 &nbsp;&nbsp;&nbsp;pick random integer <span class="math">_k_</span> in <span class="math">[1, _n_-1]</span>  
 &nbsp;&nbsp;&nbsp;compute curve point: <span class="math">(_x_, _y_) = _kG_</span>  
-&nbsp;&nbsp;&nbsp;signature = <span class="math">(_x_ mod _n_, _k_<sup>-1</sup>(_z_ + _rd_) mod _n_)</span>
+&nbsp;&nbsp;&nbsp;signature = <span class="math">(_x_ mod _n_, _k_$^{-1}$(_z_ + _rd_) mod _n_)</span>
 
 What are the reasons for prefering ECC for signatures in bitcoin over RSA-based signature algorithms?
 <div class="gap>

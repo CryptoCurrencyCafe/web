@@ -1,6 +1,10 @@
 Title: Class 4: Verifiably Random?
 Date: 2015-01-26
 
+   <div class="phighlight">
+   [PDF version for printing](|filename|./class4.pdf)
+   </div>
+
 ## Schedule 
 
    <div class="todo">

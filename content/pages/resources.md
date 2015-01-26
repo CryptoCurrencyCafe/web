@@ -2,6 +2,7 @@ Title: Resources
 Date: 2015-01-10
 Category: Course
 
+A growing, but incomplete, list of useful resources for this class.
 
 - [https://bitcoin.org](https://bitcoin.org) &mdash; Bitcoin Foundation website.
 
@@ -38,10 +39,9 @@ print](http://www.amazon.com/Mastering-Bitcoin-Unlocking-Digital-Crypto-Currenci
 
 ### Proof-of-Work
 
-- Moni Naor's [_The Complexity of Fighting Spam _](http://www.wisdom.weizmann.ac.il/~naor/PAPERS/spam.html) page, including links to []
+- Moni Naor's [_The Complexity of Fighting Spam_](http://www.wisdom.weizmann.ac.il/~naor/PAPERS/spam.html) page.
 
-- Adam Back, [_Hashcash - A Denial of Service
-  Counter-Measure_](|filename|../readings/hashcash.pdf), 2002.  Summary
+- Adam Back, [_Hashcash - A Denial of Service Counter-Measure_](|filename|../readings/hashcash.pdf), 2002.  Summary
   of early uses of hash functions for proof-of-work.
 
 ## Bitcoin
