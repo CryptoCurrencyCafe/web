@@ -15,6 +15,13 @@ Dave: after class Mondays, Thursdays 4-5pm (both in Rice 507)
 Nick: Mondays 5-7pm (in Rice 442), Fridays (noon-2pm in Hackcville, #9 Elliewood Ave)
    </div>
 
+<center> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/43918186" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br>
+<div class="caption">Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you download the slides, they are present though.
+Hopefully, the player will be fixed someday. </div>
+</center>
 
 ## Signing with Elliptic Curves
 
