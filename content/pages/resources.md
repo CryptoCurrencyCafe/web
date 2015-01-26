@@ -23,6 +23,10 @@ Cryptocurrencies_](https://github.com/aantonop/bitcoinbook) (also
 available [in
 print](http://www.amazon.com/Mastering-Bitcoin-Unlocking-Digital-Crypto-Currencies/dp/1449374042)).  
 
+# APIs
+
+[Coinbase Exchange API](https://docs.exchange.coinbase.com/#api)
+
 # Papers
 
 ### Digital Cash
