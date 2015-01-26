@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/class4.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-01-26T00:00:00-05:00</updated><entry><title>Class 4: Verifiably Random?</title><link href="http://bitcoin-class.org/class-4-verifiably-random.html" rel="alternate"></link><updated>2015-01-26T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-01-26:class-4-verifiably-random.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/class4.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-01-26T00:00:00-05:00</updated><entry><title>Class 4: Verifiably Random?</title><link href="http://bitcoin-class.org/class-4-verifiably-random.html" rel="alternate"></link><updated>2015-01-26T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-01-26:class-4-verifiably-random.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
+   &lt;a href="http://bitcoin-class.org/classes/class4/class4.pdf"&gt;PDF version for printing&lt;/a&gt;
+   &lt;/div&gt;&lt;/p&gt;
+&lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;p&gt;&lt;div class="todo"&gt;
 &lt;a href="http://bitcoin-class.org/pages/project1.html"&gt;Project 1&lt;/a&gt; is due &lt;strong&gt;Friday, 30 January&lt;/strong&gt; (11:59pm).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Scheduled office hours:&lt;/strong&gt;&lt;br /&gt;
 Dave: after class Mondays, Thursdays 4-5pm (both in Rice 507)&lt;br /&gt;
 Nick: Mondays 5-7pm (in Rice 442), Fridays (noon-2pm in Hackcville, #9 Elliewood Ave)
    &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt; 
+&lt;iframe src="//www.slideshare.net/slideshow/embed_code/43918186" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"&gt;&lt;/iframe&gt;&lt;br&gt;
+&lt;div class="caption"&gt;Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  &lt;br&gt;If you download the slides, they are present though.
+Hopefully, the player will be fixed someday. &lt;/div&gt;
+&lt;/center&gt;&lt;/p&gt;
 &lt;h2&gt;Signing with Elliptic Curves&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Elliptic curve discrete logarithm problem:&lt;/strong&gt; given points &lt;span class="math"&gt;&lt;em&gt;P&lt;/em&gt;&lt;/span&gt; and &lt;span class="math"&gt;&lt;em&gt;Q&lt;/em&gt;&lt;/span&gt;
   on an elliptic curve, it is hard to find an integer &lt;span class="math"&gt;&lt;em&gt;k&lt;/em&gt;&lt;/span&gt; such that &lt;span class="math"&gt;&lt;em&gt;Q&lt;/em&gt; = &lt;em&gt;kP&lt;/em&gt;&lt;/span&gt;.&lt;/p&gt;
