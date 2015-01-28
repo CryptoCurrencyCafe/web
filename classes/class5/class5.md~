@@ -1,4 +1,4 @@
-Title: Class 5: Distributed Consensus
+draftTitle: Class 5: Distributed Consensus
 Date: 2015-01-28
 
 <!--
@@ -12,11 +12,10 @@ Date: 2015-01-28
    <div class="todo">
 [Project 1](|filename|../../pages/projects/project1/project1.md) is due **Friday, 30 January** (11:59pm).
 
-**Scheduled office hours:**  
-Dave: after class Mondays, Thursdays 4-5pm (both in Rice 507)  
-Nick: Mondays 5-7pm (in Rice 442), Fridays (noon-2pm in Hackcville, #9 Elliewood Ave)
+**Upcoming office hours:**  Thursday 4-5pm (Dave, Rice 507); Friday (Nick, noon-2pm in Hackcville).
    </div>
 
+<!--
 <center> 
 <iframe src="//www.slideshare.net/slideshow/embed_code/43918186" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br>
 <div class="caption">Note: due to a bug in
@@ -24,182 +23,108 @@ slideshare's updated player, ink markings no longer appear in the
 viewer.  <br>If you download the slides, they are present though.
 Hopefully, the player will be fixed someday. </div>
 </center>
+-->
 
-## Signing with Elliptic Curves
+## Cryptographic Hash Functions
 
-**Elliptic curve discrete logarithm problem:** given points <span class="math">_P_</span> and <span class="math">_Q_</span>
-  on an elliptic curve, it is hard to find an integer <span class="math">_k_</span> such that <span class="math">_Q_ = _kP_</span>.
+A _cryptographic hash function_, <span class="math">_H_(_x_)</span>, must satisfy these two properties:
 
-**Parameters:** curve, _G_ (a point on curve), (large) _n_ such that <span class="math">_nG_ = 0</span>. 
+- **one-way** (preimage resistance): given <span class="math">_h_= _H_(_x_)</span> it is hard to find preimage <span class="math">_x_</span>.
+- **strong collision-resistance**: hard to find any pair <span class="math">_x_</span> and <span class="math">_y_</span> where <span class="math">_H_(_x_) = _H_(_y_)</span>
 
-**Key pair:**  
-&nbsp;&nbsp;&nbsp;_Private key_: <span class="math">_d_</span> = pick a random integer in <span class="math">[1, _n_-1]</span>  
-&nbsp;&nbsp;&nbsp;_Public key_: point on the curve, <span class="math">_Q_ = _dG_</span>
-
-**Signing:**  
-&nbsp;&nbsp;&nbsp;pick random integer <span class="math">_k_</span> in <span class="math">[1, _n_-1]</span>  
-&nbsp;&nbsp;&nbsp;compute curve point: <span class="math">(_x_, _y_) = _kG_</span>  
-&nbsp;&nbsp;&nbsp;signature = <span class="math">(_x_ mod _n_, _k_<sup>-1</sup>(_z_ + _rd_) mod _n_)</span>
-
-What are the reasons for prefering ECC for signatures in bitcoin over RSA-based signature algorithms?
+If we use SHA-256 for <span class="math">_H_</span>, how many 258-bit
+messages would be expected to hash to a given value <span
+class="math">_x_</span>?
 <div class="gap">
 
 </div>
 
-For an interesting history of improvements in factoring, see Carl
-Pomerance, [_A Tale of Two
-Sieves_](http://www.ams.org/notices/199612/pomerance.pdf), Notices of
-the AMS, December 1996:
+## Signing Message Digests
 
-> _John Pollard in 1988 circulated a letter to several people outlining an idea of his
-> for factoring certain big numbers via algebraic number fields. His
-> original idea was not for any large composite, but for certain "pretty"
-> composites that had the property that they were close to powers and had
-> certain other nice properties as well. He illustrated the idea with a
-> factorization of the number_ <span class="math">2<sup>2<sup>7</sup></sup> + 1</span>_, the seventh Fermat number.
-> I must admit that at first I was not too keen on Pollard's method, since it seemed to be applicable
-> to only a few numbers. ... 
-> But what of general numbers? In the summer of 1989 I was to give a talk at the meeting of the
-> Canadian Number Theory Association in Vancouver. It was to be a survey talk on factoring,
-> and I figured it would be a good idea to mention Pollard's new method. On the plane on the way
-> to the meeting I did a complexity analysis of the method as to how it would work for general
-> numbers, assuming myriad technical difficulties did not exist and that it was possible to run
-> it for general numbers. I was astounded. The complexity for this algorithm-that-did-not-yet exist
-> was of the shape_ <span class="math">exp(_c_(log _n_)<sup>1/3</sup> (log log _n_)<sup>2/3</sup>). 
+**Sign:** Sign(<span class="math">m</span>) = <span class="math">_E_(_KR_<sub>A</sub>, _H_(_m_))</span>
 
-Erich Wenger and Paul Wolfger, [_Solving the Discrete Logarithm of a
-113-bit Koblitz Curve with an FPGA
-Cluster_](http://eprint.iacr.org/2014/368.pdf). 
+Given <span class="math">_KU_<sub>A</sub></span>, <span
+class="math">_m_</span>, and <span class="math">_S_</span>, how does Bob
+verify that <span class="math">_S_</span> is a valid signature from
+Alice for <span class="math">_m_</span>?
 
-> _It is possible to repeatedly fold a standard letter-sized sheet of
-> paper at the midway point about six to seven times. In 2012, some MIT
-> students were able to fold an 1.2 kilometer long toilet paper 13
-> times. And every time the paper was folded, the number of layers on
-> top of each other doubled. Therefore, the MIT students ended up with
-> 213 = 8192 layers of paper on top of each other.  And poor Eve’s job
-> was to manually count all layers one by one.  Similar principles apply
-> in cryptography, although bigger numbers are involved.  In Elliptic
-> Curve Cryptography (ECC), where_ <span class="math">log<sub>2</sub>
-> _n_</span>_-bit private keys are used, Eve does not have to iterate
-> through all possible_ <span class="math">_n_</span> _keys. Instead, Eve
-> would use the more efficient parallelizable Pollard’s rho algorithm
-> that finishes in approximately_ <span class="math">sqrt(_n_)</span>
-> _steps. The omnipresent question is how big _<span class="math">_n_</span> _has to be such that even
-> the most powerful adversaries are not able to reconstruct a private
-> key. Especially in embedded, cost-sensitive applications, it is
-> important to use keys that are only as large as necessary._
-
-
-## Bitcoin's Curve
-
-Standards for Efficient Cryptography: [_SEC 2: Recommended Elliptic
-Curve Domain Parameters_](http://www.secg.org/sec2-v2.pdf) (Certicom
-Research, 27 January 2010)
-
-> _Verifiably random parameters offer some additional conservative features. These parameters are
-> chosen from a seed using SHA-1 as specified in ANSI X9.62 [X9.62]. This process ensures that
-> the parameters cannot be predetermined. The parameters are therefore extremely unlikely to
-> be susceptible to future special-purpose attacks, and no trapdoors can have been placed in the
-> parameters during their generation. When elliptic curve domain parameters are chosen verifiably
-> at random, the seed S used to generate the parameters may optionally be stored along with the
-> parameters so that users can verify the parameters were chosen verifiably at random._
-
-What does it mean for parameters to be "verifiably random"?
 <div class="gap">
-
 </div>
 
-# Randomness
+A bitcoin address for public key _K_ is RIPEMD160(SHA256(_K_) where both
+RIPEMD160 and SHA256 are cryptographic hash functions.  
 
-**Kolmogorov Complexity:** <span class="math">_K_(_s_)</span> = the length of the shortest description of <span class="math">_s_</span>.
-
-**Kolmogorov's Definition of Random:** A sequence <span
-  class="math">_s_</span> is random, if <span class="math">_K_(_s_) =
-  |_s_| + _C_</span> 
-
-What is the Kolmogorov Complexity of the string `0001000010000011111111100111...`?
+Is this more or less secure than just using _K_?  
 <div class="gap">
-#
 </div>
 
-What is the Kolmogorov Complexity of the string: 1MRigEo5423vycLnUdSnA4C6Ts691fUiYu 18UikW89q9VgGDftQW3Gmuhe4sQDCFP5kD 19ZQwQmfAsgy47ErehfkW3SeSzNGFfH9iN 1AZCH1insc6JrT2Z9SiNvgtTugXg8sF8yd 15qYggRJvmyZfpchxvNqr6h3pNjw6bGBV9 1C943NwPPffUFY7VDzi3kt7KikXwc2vdkN 1JBhLLCgNYhR8f6AZcRS3mjfEAmMzPvwyf 1JvDrBSYm6o4ZTQUhwUE4FhPFxd2wuXWUR 1KcBM1RNhcp1oENycoD4AezA5Se4SrsZnA 16JZWC433XRxjWwR7X65uxRVFdLTmoPr4t 149LB8VYaT1BdMLyQUL92Kj6KrJfNwcp64 16zDGuzbwkHjW8dNYMw9stDjRbTzVSLZU1 1HfMaZn53ZDWKgmhWxk1UPZMjQ6QmpW6m 14gZWnuwKpRLTCUFCAgTZMciRaEdrkmEpr 1BZ2ateDPugmqLzYsXVy9EK5BguvXa2Bnj 1rCdRyMVcZHJaHA2LKUvRqYBcHqvAfQkc 1Ak8VwX6x4FPbA6aXTC3BQGQHnnhfaJuB8 129sBvF6Jternwdn5XcoA37LinQRcmAD5U1H2in 1HxEzSKHssPtog2krjFPiPfrKSiw4... ?
+Suppose someone finds a way to find collisions for RIPEMD160.  How
+serious of a risk would this pose to bitcoin?  
 
 <div class="gap">
 
 </div>
 
-
-Daniel J. Bernstein, Tung Chou, Chitchanok Chuengsatiansup, Andreas
-H&uuml;lsing, Tanja Lange, Ruben Niederhagen, and Christine van Vredendaal.
-[_How to Manipulate Curve Standards: A White Paper for the Black  Hat_](https://eprint.iacr.org/2014/571.pdf), 2014.
-
-
-How likely is it that the parameters for the secp256k1 curve used by bitcoin have a trapdoor?
+Suppose someone finds a way to find preimages for RIPEMD160.  How
+serious of a risk would this pose to bitcoin?
 <div class="gap">
 
 </div>
 
-How should ECC parameters be generated for an important curve in a standard?
-<div class="gap">  
-#
-#
-</div>
+## Untraceable Electronic Cash
 
-[_Root Zone DNSSEC KSK Ceremonies
-Guide_](http://www.root-dnssec.org/wp-content/uploads/2010/02/draft-icann-dnssec-ceremonies-00.txt).
-If you have a few hours to spare, you can watch a key signing for the
-DNSSEC (Domain Name System): [DNSSEC KSK Ceremony
-20](https://www.iana.org/dnssec/ceremonies/20)
+David Chaum, Amos Fiat, and Moni Naor.  [_Untraceable Electronic
+Cash_](|filename|./ecash.pdf).  CRYPTO 1988.
 
-## Dual-EC PRNG 
+**Simple RSA Signatures**  
+Public Key = (_e_, _n_)
+Private Key = _d_
 
-[NIST Special Publication 800-90A Recommendation for Random Number
-Generation Using Deterministic Random Bit
-Generators](http://csrc.nist.gov/publications/nistpubs/800-90A/SP800-90A.pdf)
+Identity: _M_<sup>_de_</sup> = _M_ mod _n_
 
-<span class="math">_P_</span> and <span class="math">_Q_</span> are points on the curve, specified by the standard (but not
-explained how <span class="math">_Q_</span> is choosen).  <span class="math">_P_</span> is a generator, so there exists some
-<span class="math">_e_</span> such that <span class="math">_Q_<sup>_e_</sup> = _P_</span>.
+Sign(_m_) = _m_<sup>_d_</sup> mod _n_
 
-<span class="math">_s_<sub>0</sub> = </span> initialize with seed randomness  
-<span class="math">_s_<sub>_i_+1</sub> = &phiv;(_s_<sub>_i_</sub> &times; _P_)</span>  
-<span class="math">_r_<sub>_i_</sub> = &phiv;(_s_<sub>_i_</sub> &times; _Q_)</span>  
-<span class="math">_o_<sub>_i_</sub> =</span> the low-order 16 bits of the <span class="math">_x_</span>-coordinate of <span class="math">_r_<sub>_i_</sub></span>.
+**Blind Signatures**
+Alice picks random _k_ in [1, _n_)  
+_t_ = _mk_<sup>_e_</sup> mod _n_  
+Sends _t_ to signer.
 
-Given <span class="math">_o_<sub>i</sub></span>, how much work is it to find all the possible <span class="math">_r_<sub>i</sub> = (_x_, _y_)</span> values?
+Signer returns _t_<sup>_d_</sup>
+
+_t_<sup>_d_</sup> = (_mk_<sup>_e_</sup> mod _n_)<sup>_d_</sup> mod _n_  
+&nbsp;&nbsp;&nbsp; = _m_<sup>_d_</sup>_k_<sup>_ed_</sup> mod _n_
+&nbsp;&nbsp;&nbsp; = _m_<sup>_d_</sup>_k_ mod _n_
+
+Dividing by _k_ gives Sign(_m_) = _m_<sup>_d_</sup> mod _n_.
+
+
+What should a signer know before signing a random-looking string?
 <div class="gap">
 
 </div>
 
-Given <span class="math">_e_</span>, what is <span class="math">&phiv;(_e_ &times; _A_)</span> where <span class="math">_A_</span> is a possible <span class="math">_r_<sub>_i_</sub></span> value?
-<div class="gap">
-
-</div>
+**Cut-and-Choose**  
 
 
-Dan Shumow, Niels Ferguson.  [_On the Possibility of a Back Door in the
-NIST SP800-90 Dual Ec Prng_](http://rump2007.cr.yp.to/15-shumow.pdf).
-CRYPTO 2007 Rump Session.
-
-Michael Wertheimer (NSA), [_Encryption and the NSA Role in International
-Standards_](http://www.ams.org/notices/201502/rnoti-p165.pdf), Notices
-of the American Mathematical Society, February 2015.
-
-Wertheimer's letter is an attempt to respond to [_Mathematicians Discuss the
-Snowden Revelations_](http://www.ams.org/notices/201406/rnoti-p623.pdf).
-
-> _The recent revelations about the NSA’s spying
-programs are both dismaying and encouraging.
-What is encouraging is that they might lead not
-just to a reform of the intelligence agencies but
-also to a more serious look at what the ongoing
-and inevitable erosion of privacy is doing to our
-society. What is dismaying is less the intrusive data
-collection itself and more what it reveals about the
-decision-making processes inside the government._ (Andrew Odlyzko)
+## Double Spending
 
 
-How satisfying is the NSA's response?  Are you more dismayed or encouraged?
-<div class="gap">
 
-</div>
+[High Trust Bank](https://www.fdic.gov/bank/individual/failed/hightrust.html)
+[Failed Banks](https://www.fdic.gov/bank/individual/failed/banklist.html)
+
+[Before Bitcoin: The Rise and Fall of DigiCash](http://globalcryptonews.com/before-bitcoin-the-rise-and-fall-of-digicash/)
+
+> _By all accounts Chaum was a charismatic leader with an interesting management style, but he refused to compromise his artistic vision in any area against the best advice of his employees. He was suspicious of everyone and 'paranoid' with a habit of suddenly changing his mind without warning. At one time, Microsoft had offered DigiCash $180 million to allow them to preinstall Ecash software on Windows computers and the deal was on the verge of completion, but Chaum suddenly decided that his product was worth more and the deal collapsed. If the deal had gone through, cryptocurrency would now be as ubiquitous as Internet Explorer._
+
+
+## Distributed Consensus
+
+Leslie Lamport, Robert Shostak, and Marshall Pease. [_The Byzantine
+Generals
+Problem_](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf). 1982.
+
+[$2M worth of pizza](http://www.forbes.com/sites/ericmack/2013/12/23/the-bitcoin-pizza-purchase-thats-worth-7-million-today/)
+
+
+**Two Generals Problem.**
