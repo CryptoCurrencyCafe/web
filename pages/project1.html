@@ -202,7 +202,7 @@ bitcoin.</p>
 <b>Exercise 1.</b> Find the <span class="math"><em>y</em><sup>2</sup> = <em>x</em><sup>3</sup> + 7</span> curve in this code.
    </div></p>
 <p>Elliptic curves for cryptography needs really big numbers.  The modulus for the <code>secp256k1</code> curve is found on <a href="https://github.com/btcsuite/btcec/blob/master/btcec.go#L672">line 672</a>:</p>
-<div class="highlight"><pre>   <span class="n">secp256k1</span><span class="p">.</span><span class="n">P</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">new</span><span class="p">(</span><span class="n">big</span><span class="p">.</span><span class="n">Int</span><span class="p">).</span><span class="n">SetString</span><span class="p">(</span><span class="s">&quot;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<div class="highlight"><pre> <span class="n">secp256k1</span><span class="p">.</span><span class="n">P</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">new</span><span class="p">(</span><span class="n">big</span><span class="p">.</span><span class="n">Int</span><span class="p">).</span><span class="n">SetString</span><span class="p">(</span><span class="s">&quot;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
 </pre></div>
 
 
