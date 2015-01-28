@@ -68,7 +68,7 @@
                   <li><a href="/">&middot</a></li>
                   <li><a href="/pages/ps0.html">PS0</a></li>
                   <li><a href="/pages/project1.html"><b>Project 1</b></a></li>
-                  <li><a href="http://rust-class.org/">&middot</a></li>
+                  <li><a href="/">&middot</a></li>
                   <li><a href="https://www.google.com/calendar/embed?src=rmjagdrnmu3a9h2q5199lg4t28%40group.calendar.google.com&ctz=America/New_York""><b>Calendar</b></a></li>
                   <li><a href="/pages/resources.html"><b>Resources</b></a></li>
 
@@ -201,14 +201,17 @@ bitcoin.</p>
 <p><div class="exercise">
 <b>Exercise 1.</b> Find the <span class="math"><em>y</em><sup>2</sup> = <em>x</em><sup>3</sup> + 7</span> curve in this code.
    </div></p>
-<p>Elliptic curves for cryptography needs really big numbers.  The modulus for the <code>secp256k1</code> curve is found on <a href="https://github.com/btcsuite/btcec/blob/master/btcec.go#L673">line 673</a>:</p>
-<div class="highlight"><pre>   <span class="n">secp256k1</span><span class="p">.</span><span class="n">N</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">new</span><span class="p">(</span><span class="n">big</span><span class="p">.</span><span class="n">Int</span><span class="p">).</span><span class="n">SetString</span><span class="p">(</span><span class="s">&quot;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<p>Elliptic curves for cryptography needs really big numbers.  The modulus for the <code>secp256k1</code> curve is found on <a href="https://github.com/btcsuite/btcec/blob/master/btcec.go#L672">line 672</a>:</p>
+<div class="highlight"><pre>   <span class="n">secp256k1</span><span class="p">.</span><span class="n">P</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">new</span><span class="p">(</span><span class="n">big</span><span class="p">.</span><span class="n">Int</span><span class="p">).</span><span class="n">SetString</span><span class="p">(</span><span class="s">&quot;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
 </pre></div>
 
 
 <p>This should be the value <span class="math">2<sup>256</sup> - 2<sup>32</sup> - 2<sup>9</sup> - 2<sup>8</sup> - 2<sup>7</sup> - 2<sup>6</sup> - 2<sup>4</sup> - 1.  </p>
+<p><div class="sidenote">
+Note: this has been corrected, see comments below.  Thanks to Ankit Gupta for noticing the mistake. 
+   </div></p>
 <p><div class="exercise">
-<b>Exercise 2.</b> Verify that the modulus used as <code>secp256k1.N</code> in <code>btcec.go</code> is correct.  You will need to use <a href="https://golang.org/pkg/math/big/">math/big</a>, Go's bit integer library to do computations on such large numbers.
+<b>Exercise 2.</b> Verify that the modulus used as <code>secp256k1.P</code> in <code>btcec.go</code> is correct.  You will need to use <a href="https://golang.org/pkg/math/big/">math/big</a>, Go's bit integer library to do computations on such large numbers.
    </div></p>
 <p><div class="challenge">
 <strong>Challenge.</strong> Make an improvement to the library code that is accepted by the btcec developers as a pull request.
