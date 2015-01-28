@@ -115,6 +115,7 @@
 <li> &nbsp;<a href="./class-2-cryptography.html">2: Cryptography</a>
 <li> &nbsp;<a href="./class-3-elliptic-curves.html">3: Elliptic Curves</a>
 <li> &nbsp;<a href="./class-4-verifiably-random.html">4: Verifiably Random</a>
+<li> &nbsp;<a href="./class-5-digicash.html">5: DigiCash</a>
 </ul>
 
 <p><br></br></p>
@@ -184,7 +185,6 @@ Hopefully, the player will be fixed someday. </div>
 messages would be expected to hash to a given value <span
 class="math"><em>x</em></span>?
 <div class="gap"></p>
-<h1></h1>
 </div>
 
 <h2>Signing Message Digests</h2>
@@ -194,26 +194,23 @@ class="math"><em>m</em></span>, and <span class="math"><em>S</em></span>, how do
 verify that <span class="math"><em>S</em></span> is a valid signature from
 Alice for <span class="math"><em>m</em></span>?</p>
 <div class="gap">
-#
+
 </div>
 
 <p>A bitcoin address for public key <em>K</em> is RIPEMD160(SHA256(<em>K</em>)) where both
 RIPEMD160 and SHA256 are cryptographic hash functions.  </p>
 <p>Is this more or less secure than just using <em>K</em>?<br />
 <div class="gap"></p>
-<h2></h2>
 </div>
 
 <p>Suppose someone finds a way to find collisions for RIPEMD160.  How
 serious of a risk would this pose to bitcoin?<br />
 <div class="gap"></p>
-<h2></h2>
 </div>
 
 <p>Suppose someone finds a way to find preimages for RIPEMD160.  How
 serious of a risk would this pose to bitcoin?
 <div class="gap"></p>
-<h2></h2>
 </div>
 
 <h2>Untraceable Electronic Cash</h2>

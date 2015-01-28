@@ -24,7 +24,6 @@ Hopefully, the player will be fixed someday. &lt;/div&gt;
 messages would be expected to hash to a given value &lt;span
 class="math"&gt;&lt;em&gt;x&lt;/em&gt;&lt;/span&gt;?
 &lt;div class="gap"&gt;&lt;/p&gt;
-&lt;h1&gt;&lt;/h1&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Signing Message Digests&lt;/h2&gt;
@@ -34,26 +33,23 @@ class="math"&gt;&lt;em&gt;m&lt;/em&gt;&lt;/span&gt;, and &lt;span class="math"&g
 verify that &lt;span class="math"&gt;&lt;em&gt;S&lt;/em&gt;&lt;/span&gt; is a valid signature from
 Alice for &lt;span class="math"&gt;&lt;em&gt;m&lt;/em&gt;&lt;/span&gt;?&lt;/p&gt;
 &lt;div class="gap"&gt;
-#
+
 &lt;/div&gt;
 
 &lt;p&gt;A bitcoin address for public key &lt;em&gt;K&lt;/em&gt; is RIPEMD160(SHA256(&lt;em&gt;K&lt;/em&gt;)) where both
 RIPEMD160 and SHA256 are cryptographic hash functions.  &lt;/p&gt;
 &lt;p&gt;Is this more or less secure than just using &lt;em&gt;K&lt;/em&gt;?&lt;br /&gt;
 &lt;div class="gap"&gt;&lt;/p&gt;
-&lt;h2&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Suppose someone finds a way to find collisions for RIPEMD160.  How
 serious of a risk would this pose to bitcoin?&lt;br /&gt;
 &lt;div class="gap"&gt;&lt;/p&gt;
-&lt;h2&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Suppose someone finds a way to find preimages for RIPEMD160.  How
 serious of a risk would this pose to bitcoin?
 &lt;div class="gap"&gt;&lt;/p&gt;
-&lt;h2&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Untraceable Electronic Cash&lt;/h2&gt;
