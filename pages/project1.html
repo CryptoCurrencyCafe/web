@@ -211,7 +211,7 @@ bitcoin.</p>
 Note: this has been corrected, see comments below.  Thanks to Ankit Gupta for noticing the mistake. 
    </div></p>
 <p><div class="exercise">
-<b>Exercise 2.</b> Verify that the modulus used as <code>secp256k1.P</code> in <code>btcec.go</code> is correct.  You will need to use <a href="https://golang.org/pkg/math/big/">math/big</a>, Go's bit integer library to do computations on such large numbers.
+<b>Exercise 2.</b> Verify that the modulus used as <code>secp256k1.P</code> in <code>btcec.go</code> is correct.  You can do this either using <a href="https://golang.org/pkg/math/big/">math/big</a>, Go's bit integer library to do computations on such large numbers, or by computing it by hand.
    </div></p>
 <p><div class="challenge">
 <strong>Challenge.</strong> Make an improvement to the library code that is accepted by the btcec developers as a pull request.
