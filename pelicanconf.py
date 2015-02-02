@@ -29,7 +29,7 @@ MENUITEMS = (
              ('&middot', '/'),
              ('PS0', '/pages/ps0.html'),
              ('<b>Project 1</b>', '/pages/project1.html'),
-             ('&middot', 'http://rust-class.org/'),
+             ('&middot', '/'),
              ('<b>Calendar</b>', 'https://www.google.com/calendar/embed?src=rmjagdrnmu3a9h2q5199lg4t28%40group.calendar.google.com&ctz=America/New_York"'),
              ('<b>Resources</b>', '/pages/resources.html'))
 # Blogroll

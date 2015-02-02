@@ -145,14 +145,18 @@ Examine the
 <b>Exercise 1.</b> Find the <span class="math">_y_<sup>2</sup> = _x_<sup>3</sup> + 7</span> curve in this code.
    </div>
 
-Elliptic curves for cryptography needs really big numbers.  The modulus for the `secp256k1` curve is found on [line 673](https://github.com/btcsuite/btcec/blob/master/btcec.go#L673):
+Elliptic curves for cryptography needs really big numbers.  The modulus for the `secp256k1` curve is found on [line 672](https://github.com/btcsuite/btcec/blob/master/btcec.go#L672):
 ```
-   secp256k1.N, _ = new(big.Int).SetString("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141", 16)
+ secp256k1.P, _ = new(big.Int).SetString("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F", 16)
 ```
 This should be the value <span class="math">2<sup>256</sup> - 2<sup>32</sup> - 2<sup>9</sup> - 2<sup>8</sup> - 2<sup>7</sup> - 2<sup>6</sup> - 2<sup>4</sup> - 1.  
 
+   <div class="sidenote">
+Note: this has been corrected, see comments below.  Thanks to Ankit Gupta for noticing the mistake. 
+   </div>
+
    <div class="exercise">
-<b>Exercise 2.</b> Verify that the modulus used as `secp256k1.N` in `btcec.go` is correct.  You will need to use [math/big](https://golang.org/pkg/math/big/), Go's bit integer library to do computations on such large numbers.
+<b>Exercise 2.</b> Verify that the modulus used as `secp256k1.P` in `btcec.go` is correct.  You can do this either using [math/big](https://golang.org/pkg/math/big/), Go's bit integer library to do computations on such large numbers, or by computing it by hand.
    </div>
 
    <div class="challenge">

@@ -2,7 +2,6 @@
 
 This is the web content for http://www.bitcoin-class.org.
 
-
 Followed directions from
 http://docs.getpelican.com/en/3.3.0/tips.html
 
