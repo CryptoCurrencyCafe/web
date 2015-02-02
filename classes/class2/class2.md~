@@ -1,5 +1,9 @@
 Title: Class 2: Cryptography
-Date: 2014-01-14
+Date: 2015-01-14
+
+   <div class="phighlight">
+   [PDF version for printing](|filename|./class2.pdf)
+   </div>
 
 ## Schedule 
 

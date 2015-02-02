@@ -1,4 +1,22 @@
 
+**Money for Developing World.** In their [2015 Annual
+  Letter](http://www.gatesnotes.com/2015-annual-letter?page=3&lang=en),
+  Bill and Melinda Gates call out the development of mobile banking as
+  one of the four key areas where breakthroughs over the next 15 years
+  will dramatically improve the lives of the poor.  Can cryptocurrencies
+  be part of the solution to financial challenges in low-income areas?
+  Compare existing approaches to mobile money such as
+  [M-Pesa](http://en.wikipedia.org/wiki/M-Pesa) (which charges
+  transaction fees of 0.16% to 0.66%) to what could be done with
+  cryptocurrency.  Is bitcoin a suitable cryptocurrency for this
+  purpose?  If not, what would work better?  
+
+**Weak Keys.** Examine transactions in the blockchain for weak keys or
+  mistakes in target addresses.  Joppe W. Bos, J. Alex Halderman, Nadia
+  Heninger, Jonathan Moore, Michael Naehrig, and Eric Wustrow.
+  [_Elliptic Curve Cryptography in
+  Practice_](https://eprint.iacr.org/2013/734.pdf), Financial Crypto
+  2014.
 
 **Predicting Bitcoin market price.** What factors impact the price of
 Bitcoin?  Devavrat Shah and Kang Zhang, [_Bayesian Regression and
