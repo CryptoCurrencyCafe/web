@@ -54,7 +54,7 @@ Hopefully, the player will be fixed someday. &lt;/div&gt;
 - moderately easy to compute
 - cannot be amortized 
 - computing &lt;span class="math"&gt;&lt;em&gt;f&lt;/em&gt;(&lt;em&gt;m&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;), ..., &lt;em&gt;f&lt;/em&gt;(&lt;em&gt;m&lt;/em&gt;&lt;sub&gt;l&lt;/sub&gt;)&lt;/span&gt; costs &lt;span class="math"&gt;&lt;em&gt;l&lt;/em&gt;&lt;/span&gt; times as much as computing &lt;span class="math"&gt;&lt;em&gt;f&lt;/em&gt;(&lt;em&gt;m&lt;/em&gt;&lt;sub&gt;i&lt;sub&gt;)&lt;/span&gt;. 
-- easily verified: given &lt;span class="math"&gt;&lt;em&gt;x&lt;/em&gt;&lt;/span&gt;$, &lt;span class="math"&gt;&lt;em&gt;y&lt;/em&gt;&lt;/span&gt; easy to check &lt;span class="math"&gt;&lt;em&gt;y&lt;/em&gt; = &lt;em&gt;f&lt;/em&gt;(&lt;em&gt;x&lt;/em&gt;)&lt;/span&gt;.&lt;/p&gt;
+- easily verified: given &lt;span class="math"&gt;&lt;em&gt;x&lt;/em&gt;&lt;/span&gt;, &lt;span class="math"&gt;&lt;em&gt;y&lt;/em&gt;&lt;/span&gt; easy to check &lt;span class="math"&gt;&lt;em&gt;y&lt;/em&gt; = &lt;em&gt;f&lt;/em&gt;(&lt;em&gt;x&lt;/em&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Adam Back. &lt;a href="http://www.hashcash.org/papers/announce.txt"&gt;&lt;em&gt;Hash Cash Postage Implementation&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Interactive Hashcash&lt;/strong&gt;:&lt;br /&gt;
 1. Sender to Receiver: &lt;code&gt;Hello&lt;/code&gt;&lt;br /&gt;
