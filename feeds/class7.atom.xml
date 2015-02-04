@@ -52,7 +52,7 @@ Hopefully, the player will be fixed someday. &lt;/div&gt;
 --&gt;
 
 &lt;h1&gt;Exploring Blocks&lt;/h1&gt;
-&lt;p&gt;|-|-|-|-|
+&lt;p&gt;|--|--|--|
 |&lt;strong&gt;Label&lt;/strong&gt;|&lt;strong&gt;Bytes&lt;/strong&gt;|&lt;strong&gt;Description&lt;/strong&gt;|
 |&lt;code&gt;version&lt;/code&gt;|4|Block version information|
 |&lt;code&gt;prev_block&lt;/code&gt;|32|Hash of the previous block|
