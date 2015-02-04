@@ -167,14 +167,47 @@ Hopefully, the player will be fixed someday. </div>
 -->
 
 <h1>Exploring Blocks</h1>
-<p>|--|--|--|
-|<strong>Label</strong>|<strong>Bytes</strong>|<strong>Description</strong>|
-|<code>version</code>|4|Block version information|
-|<code>prev_block</code>|32|Hash of the previous block|
-|<code>merkle_root</code>|32|Hash of Merkle tree of all transactions|
-|<code>timestamp</code>|4|When block was created (overflows in 2106)|
-|<code>bits</code>|4|Difficulty target used for this block|
-|<code>nonce</code>|4|Nonce found to generate this block|</p>
+<table>
+<thead>
+<tr>
+<th><strong>Label</strong></th>
+<th><strong>Bytes</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>4</td>
+<td>Block version information</td>
+</tr>
+<tr>
+<td><code>prev_block</code></td>
+<td>32</td>
+<td>Hash of the previous block</td>
+</tr>
+<tr>
+<td><code>merkle_root</code></td>
+<td>32</td>
+<td>Hash of Merkle tree of all transactions</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>4</td>
+<td>When block was created (overflows in 2106)</td>
+</tr>
+<tr>
+<td><code>bits</code></td>
+<td>4</td>
+<td>Difficulty target used for this block</td>
+</tr>
+<tr>
+<td><code>nonce</code></td>
+<td>4</td>
+<td>Nonce found to generate this block</td>
+</tr>
+</tbody>
+</table>
 <p><a href="http://blockexplorer.com/b/341537">Block 341537</a></p>
 <div class="highlight"><pre><span class="p">{</span>
   <span class="s2">&quot;hash&quot;</span><span class="o">:</span><span class="s2">&quot;000000000000000002b32e242989056214fef31c5aac08ae517840db3e3e7fd2&quot;</span><span class="p">,</span>

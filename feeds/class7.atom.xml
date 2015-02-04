@@ -52,14 +52,47 @@ Hopefully, the player will be fixed someday. &lt;/div&gt;
 --&gt;
 
 &lt;h1&gt;Exploring Blocks&lt;/h1&gt;
-&lt;p&gt;|--|--|--|
-|&lt;strong&gt;Label&lt;/strong&gt;|&lt;strong&gt;Bytes&lt;/strong&gt;|&lt;strong&gt;Description&lt;/strong&gt;|
-|&lt;code&gt;version&lt;/code&gt;|4|Block version information|
-|&lt;code&gt;prev_block&lt;/code&gt;|32|Hash of the previous block|
-|&lt;code&gt;merkle_root&lt;/code&gt;|32|Hash of Merkle tree of all transactions|
-|&lt;code&gt;timestamp&lt;/code&gt;|4|When block was created (overflows in 2106)|
-|&lt;code&gt;bits&lt;/code&gt;|4|Difficulty target used for this block|
-|&lt;code&gt;nonce&lt;/code&gt;|4|Nonce found to generate this block|&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Label&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Bytes&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;version&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Block version information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;prev_block&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;Hash of the previous block&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;merkle_root&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;Hash of Merkle tree of all transactions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;timestamp&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;When block was created (overflows in 2106)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;bits&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Difficulty target used for this block&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;nonce&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Nonce found to generate this block&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;&lt;a href="http://blockexplorer.com/b/341537"&gt;Block 341537&lt;/a&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="s2"&gt;&amp;quot;hash&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;000000000000000002b32e242989056214fef31c5aac08ae517840db3e3e7fd2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
