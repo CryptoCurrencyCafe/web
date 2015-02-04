@@ -5,6 +5,7 @@
 \usepackage{fancyhdr}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{ragged2e}
 \usepackage{mathpazo} % palatino math fonts
 \usepackage{utopia} % fourier
 \usepackage{helvet}
