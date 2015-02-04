@@ -9,6 +9,7 @@
 \usepackage{mathpazo} % palatino math fonts
 \usepackage{utopia} % fourier
 \usepackage{helvet}
+\usepackage{graphicx}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
