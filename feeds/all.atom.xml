@@ -13,13 +13,14 @@
   &lt;a href="https://github.com/PointCoin/pointcoind"&gt;PointCoin&lt;/a&gt;.  We'll talk more
   about this in class Monday and post a more detailed project
   descruption soon, but you should get started by setting up your
-  pointcoind node before class Monday.  Directions for getting your
+  pointcoind node before class Monday.  &lt;/p&gt;
+&lt;p&gt;Directions for getting your
   pointcoind node setup on a free EC2 instance are here: &lt;a href="https://github.com/PointCoin/pointcoind/wiki/Installing-PointCoin-on-AWS"&gt;Installing
   PointCoin on
-  AWS&lt;/a&gt;.
-  If you get stuck, we'll have time in class Monday to help, but you
+  AWS&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you get stuck, we'll have time in class Monday to help, but you
   should get as far as you can on your own before class Monday.  Feel
-  free to also post coments and questions here.  &lt;/p&gt;</summary></entry><entry><title>Class 7: Merkle Trees</title><link href="http://bitcoin-class.org/class-7-merkle-trees.html" rel="alternate"></link><updated>2015-02-04T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-04:class-7-merkle-trees.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
+  free to also post coments and questions here.&lt;/p&gt;</summary></entry><entry><title>Class 7: Merkle Trees</title><link href="http://bitcoin-class.org/class-7-merkle-trees.html" rel="alternate"></link><updated>2015-02-04T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-04:class-7-merkle-trees.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
    &lt;a href="http://bitcoin-class.org/classes/class7/class7.pdf"&gt;PDF version for printing&lt;/a&gt;
    &lt;/div&gt;&lt;/p&gt;
 &lt;h2&gt;Schedule&lt;/h2&gt;
