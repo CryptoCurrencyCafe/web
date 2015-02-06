@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-04T00:00:00-05:00</updated><entry><title>Class 7: Merkle Trees</title><link href="http://bitcoin-class.org/class-7-merkle-trees.html" rel="alternate"></link><updated>2015-02-04T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-04:class-7-merkle-trees.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-05T00:00:00-05:00</updated><entry><title>Starting Project 2</title><link href="http://bitcoin-class.org/starting-project-2.html" rel="alternate"></link><updated>2015-02-05T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-05:starting-project-2.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Project 1.&lt;/strong&gt; You should have received your Project 1 grade as a
+  transfer to your vanity address (on a 100,000 satoshi scale, so 0.001
+  BTC is full credit).  You should be able to see this in the blockchain
+  (e.g., by searching for your vanity address).  Note that this is
+  different from the address you used to create your initial wallet, so
+  you won't see it in your wallet unless you load the keys for your
+  vanity address into your wallet (see
+  &lt;a href="https://multibit.org/en/help/v0.5/help_importingPrivateKeys.html"&gt;https://multibit.org/en/help/v0.5/help_importingPrivateKeys.html&lt;/a&gt;
+  for how to import your vanity address private key into MultiBit).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Geting started on Project 2.&lt;/strong&gt; For project 2, you'll be implementing
+  and running a miner for a new cryptocurrency,
+  &lt;a href="https://github.com/PointCoin/pointcoind"&gt;PointCoin&lt;/a&gt;.  We'll talk more
+  about this in class Monday and post a more detailed project
+  descruption soon, but you should get started by setting up your
+  pointcoind node before class Monday.  Directions for getting your
+  pointcoind node setup on a free EC2 instance are here: &lt;a href="https://github.com/PointCoin/pointcoind/wiki/Installing-PointCoin-on-AWS"&gt;Installing
+  PointCoin on
+  AWS&lt;/a&gt;.
+  If you get stuck, we'll have time in class Monday to help, but you
+  should get as far as you can on your own before class Monday.  Feel
+  free to also post coments and questions here.  &lt;/p&gt;</summary></entry><entry><title>Class 7: Merkle Trees</title><link href="http://bitcoin-class.org/class-7-merkle-trees.html" rel="alternate"></link><updated>2015-02-04T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-04:class-7-merkle-trees.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
    &lt;a href="http://bitcoin-class.org/classes/class7/class7.pdf"&gt;PDF version for printing&lt;/a&gt;
    &lt;/div&gt;&lt;/p&gt;
 &lt;h2&gt;Schedule&lt;/h2&gt;
