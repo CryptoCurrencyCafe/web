@@ -121,12 +121,15 @@ func createMerkleRoot(txs []*btcwire.MsgTx) *btcwire.ShaHash {
 
 ### Creating a Block
 
-A block in PointCoin is similar to a block in bitcoin.  It contains:
+A block in PointCoin is similar to a block in bitcoin.  It contains a
+header consisting of:
 
 - The hash of the previous block
 - The hash of the Merkle tree of all the transactions
 - The difficulty
 - A nonce (32 bits)
+
+In addition to the header, it includes the list of transactions.
 
 We have provided the `CreateBlock` function in `support.go` to build a
 block given these inputs:
