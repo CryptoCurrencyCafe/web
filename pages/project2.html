@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Project 2 - Mining Points</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="David Evans">
+    <link rel="icon" type="image/png" href="http://www.rust-class.org/static/images/logo.png" />  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="http://bitcoin-class.org/theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+     .about {
+        font-size: 8pt;
+        font-color: "gray";
+     }
+    </style>
+    <link href="http://bitcoin-class.org/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="http://bitcoin-class.org/theme/css/font-awesome.css" rel="stylesheet">
+
+    <link href="http://bitcoin-class.org/theme/css/pygments.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://bitcoin-class.org/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="http://bitcoin-class.org/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://bitcoin-class.org/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://bitcoin-class.org/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="http://bitcoin-class.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Cryptocurrency Cafe ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="http://bitcoin-class.org/index.html">Cryptocurrency Cafe </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                  <li><a href="/pages/forum.html"><b>Forum</b></a></li>
+                  <li><a href="/">&middot</a></li>
+                  <li><a href="/pages/ps0.html">PS0</a></li>
+                  <li><a href="/pages/project1.html"><b>Project 1</b></a></li>
+                  <li><a href="/">&middot</a></li>
+                  <li><a href="https://www.google.com/calendar/embed?src=rmjagdrnmu3a9h2q5199lg4t28%40group.calendar.google.com&ctz=America/New_York""><b>Calendar</b></a></li>
+                  <li><a href="/pages/resources.html"><b>Resources</b></a></li>
+
+                          <ul class="nav pull-right">
+                                <li><a href="http://bitcoin-class.org/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+<section id="content" class="body">
+        <h1 class="entry-title">Project 2 - Mining Points</h1>
+        <p><div class="due">
+Part 1 Due: <strong>Sunday, 22 February</strong>; Part 2 Due: <strong>Thursday, 5 March</strong>
+   </div></p>
+<h2>Purpose</h2>
+<ul>
+<li>
+<p>Understand how cryptocurrency mining works by building and running a
+miner for a new cryptocurrency.  </p>
+</li>
+<li>
+<p>Explore some potential threats to bitcoin by attempting attacks on our
+class cryptocurrency.</p>
+</li>
+<li>
+<p>Get some experience using cloud computing resources and understanding 
+  computing costs in practice.</p>
+</li>
+</ul>
+<h3>Collaboration Policy</h3>
+<p>For Part 1 of this assignment, everyone should create and run their own
+PointCoin miner, and writeup their own answers to the questions.</p>
+<p>You may, and are encouraged to, discuss all of the problems with anyone
+else you want (both on-line using the course web site or any other means
+you choose, and in person), and it is okay to share code with others so
+long as you understand everything in all of the code you use.</p>
+<p>For Part 2, you may work with others in the class (indeed, part of your
+goal for part 2 is to form a mining coallition with enough power to
+disrupt the normal behavior of the network).  You should not start Part
+2 or make any attempts to (intentionally) disrupt the PointCoin network
+until the announced starting time for Part 2 (which will be announced
+later in class).</p>
+<h1>Part 1: Mining PointCoin</h1>
+<p><div class="exercise"> </p>
+<p><strong>Set up your pointcoind node.</strong> Following the
+instructions from <a href="http://bitcoin-class.org/starting-project-2.html">Starting Project
+2</a>, set up your pointcoind
+node and wallet.  After finishing this, <a href="http://bitcoin-class.org/pages/project-2-pointcoin-nodes.html">post a comment
+here</a> with the public IP address of your
+EC2 node.  </p>
+</div>
+
+<p>The main goal for this part is for everyone to write your own PointCoin
+miner.  We have provided some code in the <a href="https://github.com/CryptoCurrencyCafe/project2">Project 2
+repo</a> for you to get
+started:</p>
+<ul>
+<li><a href="https://github.com/CryptoCurrencyCafe/project2/blob/master/miner.go">miner.go</a> - an initial template for a PointCoin miner.
+  You will implement your miner by modifying this file.</li>
+<li><a href="https://github.com/CryptoCurrencyCafe/project2/blob/master/support.go">support.go</a> - some functions that you will find useful
+  in implementing your miner.  (You are not expected to change these
+  functions, but can change them if you want to.)</li>
+</ul>
+<p>Next, we provide some hints that may be helpful in building your miner.</p>
+<h3>Coinbase Transaction</h3>
+<p>Although some people might mine cryptocurrency for purely altruistic
+reasons, the main economic incentive for mining is that the miner who
+finds a new block can add a transaction to that block transfering the
+mining fee to their address.</p>
+<p>We have provided the <a href="https://github.com/CryptoCurrencyCafe/project2/blob/master/support.go#L84"><code>createCoinbaseTx</code></a> function in <code>support.go</code> to
+create this transaction.  In includes this code for setting up the
+inputs and outputs of the transaction:</p>
+<div class="highlight"><pre>        <span class="nx">tx</span><span class="p">.</span><span class="nx">AddTxIn</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">TxIn</span><span class="p">{</span>
+                <span class="c1">// Coinbase transactions have no inputs, so previous outpoint is</span>
+                <span class="c1">// zero hash and max index.</span>
+                <span class="nx">PreviousOutPoint</span><span class="p">:</span> <span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">NewOutPoint</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">ShaHash</span><span class="p">{},</span>
+                                                       <span class="nx">btcwire</span><span class="p">.</span><span class="nx">MaxPrevOutIndex</span><span class="p">),</span>
+                <span class="nx">SignatureScript</span><span class="p">:</span> <span class="nx">coinbaseScript</span><span class="p">,</span>
+                <span class="nx">Sequence</span><span class="p">:</span>        <span class="nx">btcwire</span><span class="p">.</span><span class="nx">MaxTxInSequenceNum</span><span class="p">,</span>
+        <span class="p">})</span>
+        <span class="nx">tx</span><span class="p">.</span><span class="nx">AddTxOut</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">TxOut</span><span class="p">{</span>
+                <span class="nx">Value</span><span class="p">:</span> <span class="nx">blockchain</span><span class="p">.</span><span class="nx">CalcBlockSubsidy</span><span class="p">(</span><span class="nx">nextBlockHeight</span><span class="p">,</span>
+                                                   <span class="o">&amp;</span><span class="nx">btcnet</span><span class="p">.</span><span class="nx">MainNetParams</span><span class="p">),</span>
+                <span class="nx">PkScript</span><span class="p">:</span> <span class="nx">pkScript</span><span class="p">,</span>
+        <span class="p">})</span>
+</pre></div>
+
+
+<p>In PointCoin, the mining reward is 1 pointcoin (see <a href="https://github.com/PointCoin/pointcoind/commit/5c81f47ea739baf7841cbc0e7b7c3aa06b986067">this
+commit</a>
+for how it was modified from how it is set in bitcoin).</p>
+<p>If you want to receive the rewards for your mining efforts, you need to
+set the address used in the coinbase transaction to be the address for
+your PointCoin wallet.</p>
+<h3>Merkle Root</h3>
+<p>The block header contains the Merkle Root of all the transactions in the
+block.  This should be all the valid transactions submitted to the
+network, with your coinbase transaction added.</p>
+<p>We have provided the <a href="https://github.com/CryptoCurrencyCafe/project2/blob/master/support.go#L196"><code>createMerkleRoot</code></a> function in <code>support.go</code> for
+computing the Merkle root of a list of transactions:</p>
+<div class="highlight"><pre><span class="kd">func</span> <span class="nx">createMerkleRoot</span><span class="p">(</span><span class="nx">txs</span> <span class="p">[]</span><span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">MsgTx</span><span class="p">)</span> <span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">ShaHash</span> <span class="p">{</span>
+    <span class="nx">txutil</span> <span class="o">:=</span> <span class="p">[]</span><span class="o">*</span><span class="nx">btcutil</span><span class="p">.</span><span class="nx">Tx</span><span class="p">{}</span>
+    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">tx</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">txs</span> <span class="p">{</span>
+        <span class="nx">convtx</span> <span class="o">:=</span> <span class="nx">btcutil</span><span class="p">.</span><span class="nx">NewTx</span><span class="p">(</span><span class="nx">tx</span><span class="p">)</span>
+        <span class="nx">txutil</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">txutil</span><span class="p">,</span> <span class="nx">convtx</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="nx">store</span> <span class="o">:=</span> <span class="nx">blockchain</span><span class="p">.</span><span class="nx">BuildMerkleTreeStore</span><span class="p">(</span><span class="nx">txutil</span><span class="p">)</span>
+    <span class="nx">merkleRoot</span> <span class="o">:=</span> <span class="nx">store</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nx">store</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nx">merkleRoot</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3>Creating a Block</h3>
+<p>A block in PointCoin is similar to a block in bitcoin.  It contains a
+header consisting of:</p>
+<ul>
+<li>The hash of the previous block</li>
+<li>The hash of the Merkle tree of all the transactions</li>
+<li>The difficulty</li>
+<li>A nonce (32 bits)</li>
+</ul>
+<p>In addition to the header, it includes the list of transactions.</p>
+<p>We have provided the <code>CreateBlock</code> function in <code>support.go</code> to build a
+block given these inputs:</p>
+<div class="highlight"><pre><span class="kd">func</span> <span class="nx">CreateBlock</span><span class="p">(</span><span class="nx">prevHash</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">merkleRoot</span> <span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">ShaHash</span><span class="p">,</span> <span class="nx">difficulty</span> <span class="nx">big</span><span class="p">.</span><span class="nx">Int</span><span class="p">,</span> 
+                 <span class="nx">nonce</span> <span class="kt">uint32</span><span class="p">,</span> <span class="nx">txs</span> <span class="p">[]</span><span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">MsgTx</span><span class="p">)</span> <span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">MsgBlock</span> <span class="p">{</span>
+    <span class="nx">prevH</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">btcwire</span><span class="p">.</span><span class="nx">NewShaHashFromStr</span><span class="p">(</span><span class="nx">prevHash</span><span class="p">)</span>
+    <span class="nx">d</span> <span class="o">:=</span> <span class="nx">blockchain</span><span class="p">.</span><span class="nx">BigToCompact</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">difficulty</span><span class="p">)</span>
+    <span class="nx">header</span> <span class="o">:=</span> <span class="nx">btcwire</span><span class="p">.</span><span class="nx">NewBlockHeader</span><span class="p">(</span><span class="nx">prevH</span><span class="p">,</span> <span class="nx">merkleRoot</span><span class="p">,</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">nonce</span><span class="p">)</span>
+
+    <span class="nx">msgBlock</span> <span class="o">:=</span> <span class="nx">btcwire</span><span class="p">.</span><span class="nx">NewMsgBlock</span><span class="p">(</span><span class="nx">header</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">tx</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">txs</span> <span class="p">{</span>
+        <span class="nx">msgBlock</span><span class="p">.</span><span class="nx">AddTransaction</span><span class="p">(</span><span class="nx">tx</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">msgBlock</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3>Mining a Block</h3>
+<p>Of course, the block you create is unlikely to be valid with a randomly
+selected nonce.  To find a valid block, it is necessary to find a nonce
+such that the hash of the block header (with that nonce included) is
+below the target difficulty.</p>
+<p>The block nonce is a uint32 in <code>block.Header.Nonce</code>.  You can update
+this value with a simple assignment to try a different nonce value.</p>
+<p>The function
+<a href="https://github.com/btcsuite/btcd/blob/master/wire/blockheader.go#L48"><code>BlockSha</code></a>
+returns the Double-SHA256 hash of the block header, so you can compute
+the hash of your block using <code>block.Header.BlockSha()</code>.</p>
+<p>Because of the different ways numbers and hashes are represented, the
+difficulty comparison is more awkward than one would like.  You can use
+the provided <code>lessThanDiff</code> function to check if the returned hash is
+less than the target difficulty:</p>
+<div class="highlight"><pre><span class="kd">func</span> <span class="nx">lessThanDiff</span><span class="p">(</span><span class="nx">hash</span> <span class="nx">btcwire</span><span class="p">.</span><span class="nx">ShaHash</span><span class="p">,</span> <span class="nx">difficulty</span> <span class="nx">big</span><span class="p">.</span><span class="nx">Int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+    <span class="nx">bigI</span> <span class="o">:=</span> <span class="nx">blockchain</span><span class="p">.</span><span class="nx">ShaHashToBig</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">hash</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">bigI</span><span class="p">.</span><span class="nx">Cmp</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">difficulty</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>If you've succeeded in finding a good nonce, submit the block!</p>
+<p>This code will submit the block (since <code>client</code> is setup as an RPC to
+the node running on your own instance, it is submitting it to your own
+node first, which, if the block is valid, will submit it to the rest of
+the network):</p>
+<div class="highlight"><pre>   <span class="nx">err</span> <span class="o">:=</span> <span class="nx">client</span><span class="p">.</span><span class="nx">SubmitBlock</span><span class="p">(</span><span class="nx">btcutil</span><span class="p">.</span><span class="nx">NewBlock</span><span class="p">(</span><span class="nx">block</span><span class="p">),</span> <span class="kc">nil</span><span class="p">)</span>
+   <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span> <span class="c1">// something failed</span>
+</pre></div>
+
+
+<p>Note that one reason your submission may fail is if the blockchain has
+already advanced.  This would happen if another miner found and
+submitted a block (that was received by your node) since the call you
+made to <code>client.GetBlockTemplate(&amp;btcjson.TemplateRequest{})</code> to obtain
+the previous block (used in the template header).</p>
+<h3>Becoming a PointCoin Tycoon</h3>
+<p>You should start by making your miner as simple as possible, and getting
+a simple miner working before attempting to do anything more
+complicated.  </p>
+<p>If you are ambitious, though, there are lots of ways to improve the
+performance of your miner (still running on the low-powered micro EC2
+node).</p>
+<p>Here are a few possibilities:</p>
+<ul>
+<li>
+<p>Explore the tradeoff between frequently checking the network to update
+  your block template, and computing lots of hashes (that might be
+  wasted if the blockchain has advanced).  Your miner will not perform
+  well if you update your template after every hash attempt, or if you
+  keep trying until you find a good block without ever updating your
+  template.  </p>
+</li>
+<li>
+<p>Even the micro instances have more than one core.  You are missing out
+  on a lot of potential mining power if you are only using one thread.</p>
+</li>
+</ul>
+<p><div class="problem"> 
+<strong>Problem 1.</strong> Use your miner to acquire PointCoin.  You will receive
+  full credit for acquiring at least 100 PointCoin.
+   </div></p>
+<p><div class="problem"> 
+<strong>Problem 2.</strong> Estimate the cost of mining PointCoin given the current
+difficulty level, and assuming you are using your mining code running on
+an EC2 node.  A good answer would include an analysis of the expected
+number of hashes that must be computed for a given difficulty level.<br />
+   </div></p>
+<p><div class="problem"> </p>
+<p><strong>Problem 3.</strong> What prevents a greedy miner from transfering more coin
+  to the miner's address in a newly found block by increasing the value
+  of the output of the coinbase transaction?</p>
+</div>
+
+<p><div class="problem"> </p>
+<p><strong>Problem 4.</strong> Why is there an extra nonce along with the next block
+  height included in the coinbase transaction?  (Hint: how is the
+  coinbase transaction different from normal transactions?)</p>
+</div>
+
+<p>Submit the <a href="http://goo.gl/forms/nz3WSwVPU4">Project 2/Part 1 Submission
+Form</a> (by 11:59pm on <strong>Sunday, 22
+February</strong>).  (You can submit your answers to Problems 1-4 above either
+by submitting text in the form, or submitting a link to a PDF containing
+all of your answers).</p>
+<h1>Part 2: Investigating Mining</h1>
+<p><div class="exercise">
+In Part 2, we'll explore attacked on the PointCoin network.  You should not attempt to actually launch any attacks until after class on <strong>Monday, 23 February</strong>.
+   </div></p>
+<p>In the second part of this project, you will explore ways to attack the
+PointCoin network.  For this part, you may collude with other students
+in the class and use any external resources you want.  </p>
+<p>The only rules are:</p>
+<ol>
+<li>
+<p>You must disclose honestly everything that you did when you submit
+the assignment (and in response to any questions before this).</p>
+</li>
+<li>
+<p>You may not do anything that violates any law or the University honor
+code.  This means you should not attempt to log into anyone elses
+computer and you should not attempt to distribute malware.  </p>
+</li>
+<li>
+<p>It is, however, considered fair (indeed, encouraged) to "lie" or
+"mislead" your fellow students regarding your mining behavior.  For
+example, it would be totally okay and encouraged for you to attempt to
+trick others into joining your mining pool by offering them a share of
+the points mined, but the not to deliver those points.  For the purposes
+of this assignment, you should consider your classmates to be mutually
+distrusting individuals.</p>
+</li>
+<li>
+<p>You should not do anything a reasonable person would consider
+unethical or in violation of the spirit of this assignment.  This is a
+very vague statement.  What it really means is that if you are uncertain
+about whether something you plan to do is consistent with the spirit of
+this project, you should consult with Dave before doing it.</p>
+</li>
+</ol>
+<p>Your goal for Part 2 is to acquire ownership of as many PointCoins as
+you can.  Your grade for this part will be based on (1) the number of
+PointCoins you control (you will prove control over your PointCoins by
+transferring them to a given address); and (2) your written description
+of the things you tried and what you learned from them.</p>
+<h3>Submission</h3>
+<p>Submit the <a href="http://goo.gl/forms/notyet">Project 2 Submission Form</a> (by
+11:59pm on <strong>Thursday, 5 March</strong>).</p>
+<!--
+<iframe src="https://docs.google.com/forms/d/1I2a2T9owqTvLx7GAT8EIVf-qAhR2NU2113cSvwVOOAE/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+-->
+
+<p><br></br></p>
+
+<div class="disqus">
+<div id="disqus_thread"></div>
+</div>
+</section>
+
+<script type="text/javascript">
+    var disqus_shortname = 'bitcoin-class';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+</script>
+
+      <hr>
+
+      <footer>
+	<div id="footer">
+        <address id="about">
+          <a href="/">Cryptocurrency Cafe</a>, Spring 2015<br>      
+          <a href="http://www.cs.virginia.edu">University of Virginia Computer Science</a><br>
+	  <p align="right"><font color="grey" size="-2"> Site built using <a href="http://pelican.notmyidea.org/">Pelican</a>.  Theme uses <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome</a>.</p>
+        </address><!-- /#about -->
+	</div>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-3775212-12']);
+_gaq.push(['_setDomainName', 'bitcoin-class.org']);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+  'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://bitcoin-class.org/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="http://bitcoin-class.org/theme/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1027,7 +1027,7 @@ necessary about (1) the keyspace and (2) the message space?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Encrypt:&lt;/strong&gt; &lt;span class="math"&gt;&lt;em&gt;E&lt;/em&gt;(&lt;em&gt;&lt;font color="green"&gt;KU&lt;sub&gt;X&lt;/sub&gt;&lt;/font&gt;&lt;/em&gt;: byte[], &lt;em&gt;m&lt;/em&gt;: byte[]) &amp;rarr; byte[]&lt;/span&gt;. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Decrypt:&lt;/strong&gt; &lt;span class="math"&gt;&lt;em&gt;D&lt;/em&gt;(&lt;em&gt;&lt;font color="red"&gt;KR&lt;sub&gt;X&lt;/sub&gt;&lt;/font&gt;, _c&lt;/em&gt;: byte[]) &amp;rarr; byte[]&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decrypt:&lt;/strong&gt; &lt;span class="math"&gt;&lt;em&gt;D&lt;/em&gt;(&lt;em&gt;&lt;font color="red"&gt;KR&lt;sub&gt;X&lt;/sub&gt;&lt;/font&gt;&lt;/em&gt;, &lt;em&gt;c&lt;/em&gt;: byte[]) &amp;rarr; byte[]&lt;/span&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Messages:&lt;/strong&gt; Sender encrypts a message with the recipient's public key.
