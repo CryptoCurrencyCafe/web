@@ -50,11 +50,13 @@ EC2 node.
    </div>
 
 The main goal for this part is for everyone to write your own PointCoin
-miner.  We have provided some code for you to get started:
+miner.  We have provided some code in the [Project 2
+repo](https://github.com/CryptoCurrencyCafe/project2) for you to get
+started:
 
-- [miner.go](TODO:github) - an initial template for a PointCoin miner.
+- [miner.go](https://github.com/CryptoCurrencyCafe/project2/blob/master/miner.go) - an initial template for a PointCoin miner.
   You will implement your miner by modifying this file.
-- [support.go](TODO:github) - some functions that you will find useful
+- [support.go](https://github.com/CryptoCurrencyCafe/project2/blob/master/support.go) - some functions that you will find useful
   in implementing your miner.  (You are not expected to change these
   functions, but can change them if you want to.)
 
@@ -67,7 +69,7 @@ reasons, the main economic incentive for mining is that the miner who
 finds a new block can add a transaction to that block transfering the
 mining fee to their address.
 
-We have provided the `createCoinbaseTx` function in `support.go` to
+We have provided the [`createCoinbaseTx`](https://github.com/CryptoCurrencyCafe/project2/blob/master/support.go#L84) function in `support.go` to
 create this transaction.  In includes this code for setting up the
 inputs and outputs of the transaction:
 
@@ -101,7 +103,7 @@ The block header contains the Merkle Root of all the transactions in the
 block.  This should be all the valid transactions submitted to the
 network, with your coinbase transaction added.
 
-We have provided the `createMerkleRoot` function in `support.go` for
+We have provided the [`createMerkleRoot`](https://github.com/CryptoCurrencyCafe/project2/blob/master/support.go#L196) function in `support.go` for
 computing the Merkle root of a list of transactions:
 
 ```go
@@ -219,22 +221,42 @@ Here are a few possibilities:
 
 
    <div class="problem"> 
-Use your miner to acquire 100 PointCoin.  If you are able to do this,
-you'll receive full credit for Part 1.
+**Problem 1.** Use your miner to acquire PointCoin.  You will receive
+  full credit for acquiring at least 100 PointCoin.
    </div>
 
-   <div class="exercise"> 
+   <div class="problem"> 
+**Problem 2.** Estimate the cost of mining PointCoin given the current
+difficulty level, and assuming you are using your mining code running on
+an EC2 node.  A good answer would include an analysis of the expected
+number of hashes that must be computed for a given difficulty level.  
+   </div>
 
-Estimate the cost of mining PointCoin given the current difficulty
-level, and assuming you are using your mining code running on an EC2
-node.  [Post your cost estimate and explanation of how you obtained it
-in the comments.](|filename|./pointcoin-cost.md) As time passes, of
-course, the mining difficult will increase, but other costs may also
-vary.
+
+   <div class="problem"> 
+
+**Problem 3.** What prevents a greedy miner from transfering more coin
+  to the miner's address in a newly found block by increasing the value
+  of the output of the coinbase transaction?
 
    </div>
+
+   <div class="problem"> 
+
+**Problem 4.** Why is there an extra nonce along with the next block
+  height included in the coinbase transaction?  (Hint: how is the
+  coinbase transaction different from normal transactions?)
+
+   </div>
+
+Submit the [Project 1 Submission Form](http://goo.gl/forms/notyet) (by
+11:59pm on **Sunday, 22 February**).
 
 # Part 2: Investigating Mining
+
+   <div class="exercise">
+In Part 2, we'll explore attacked on the PointCoin network.  You should not attempt to actually launch any attacks until after class on **Monday, 23 February**.
+   </div>
 
 In the second part of this project, you will explore ways to attack the
 PointCoin network.  For this part, you may collude with other students
