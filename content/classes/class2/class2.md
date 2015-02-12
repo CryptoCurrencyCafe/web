@@ -150,7 +150,7 @@ necessary about (1) the keyspace and (2) the message space?
 
 - **Encrypt:** <span class="math">_E_(_<font color="green">KU<sub>X</sub></font>_: byte[], _m_: byte[]) &rarr; byte[]</span>. 
 
-- **Decrypt:** <span class="math">_D_(_<font color="red">KR<sub>X</sub></font>, _c_: byte[]) &rarr; byte[]</span>.
+- **Decrypt:** <span class="math">_D_(_<font color="red">KR<sub>X</sub></font>_, _c_: byte[]) &rarr; byte[]</span>.
 
 **Messages:** Sender encrypts a message with the recipient's public key.
   Recipient decrypts the message using her private key.

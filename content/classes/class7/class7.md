@@ -40,20 +40,18 @@ you'd like discussed, you can post them in the comments for these notes (or emai
 
    </div>
 
-<!--
 <center> 
-<iframe src="//www.slideshare.net/slideshow/embed_code/43918186" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br>
+<iframe src="//www.slideshare.net/slideshow/embed_code/44277798" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 <div class="caption">Note: due to a bug in
 slideshare's updated player, ink markings no longer appear in the
 viewer.  <br>If you download the slides, they are present though.
 Hopefully, the player will be fixed someday. </div>
 </center>
--->
 
 # Exploring Blocks
 
-|-|-|-|-|
 |**Label**|**Bytes**|**Description**|
+|--|:--|--|
 |`version`|4|Block version information|
 |`prev_block`|32|Hash of the previous block|
 |`merkle_root`|32|Hash of Merkle tree of all transactions|
@@ -185,7 +183,7 @@ func BuildMerkleTreeStore(transactions []*btcutil.Tx) []*btcwire.ShaHash {
 
 <a href="/classes/class7/merkle.png"><img src="/classes/class7/merkle.png" width=600></a>
 
-What is needed to verify <span class="math">T<sub>2</sub></span> in <span class="math">H<sub>root</sub></span>$?
+What is needed to verify <span class="math">T<sub>2</sub></span> in <span class="math">H<sub>root</sub></span>?
 <div class="gap">
 
 </div>
