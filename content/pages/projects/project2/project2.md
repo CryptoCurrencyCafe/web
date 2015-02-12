@@ -2,19 +2,22 @@ Title: Project 2 - Mining Points
 Date: 2015-02-10
 Category: PS
 Tags: Problem Sets, mining
-Slug: project1
+Slug: project2
 
    <div class="due">
-Due: TODO
+Part 1 Due: **Sunday, 22 February**; Part 2 Due: **Thursday, 5 March**
    </div>
 
 ## Purpose
 
-Understand how cryptocurrency mining works by building and running a
+- Understand how cryptocurrency mining works by building and running a
 miner for a new cryptocurrency.  
 
-Explore some potential threats to bitcoin by attempting attacks on our
+- Explore some potential threats to bitcoin by attempting attacks on our
 class cryptocurrency.
+
+- Get some experience using cloud computing resources and understanding 
+  computing costs in practice.
 
 ### Collaboration Policy
 
@@ -35,12 +38,16 @@ later in class).
 
 # Part 1: Mining PointCoin
 
-<div class="exercise"> **Set up your pointcoind node.** Following the
+   <div class="exercise"> 
+
+**Set up your pointcoind node.** Following the
 instructions from [Starting Project
 2](|filename|../../../announcements/project2.md), set up your pointcoind
 node and wallet.  After finishing this, [post a comment
 here](|filename|./pointcoin-nodes.md) with the public IP address of your
-EC2 node.  </div>
+EC2 node.  
+
+   </div>
 
 The main goal for this part is for everyone to write your own PointCoin
 miner.  We have provided some code for you to get started:
@@ -80,8 +87,149 @@ inputs and outputs of the transaction:
         })
 ```
 
-In PointCoin, the 
+In PointCoin, the mining reward is 1 pointcoin (see [this
+commit](https://github.com/PointCoin/pointcoind/commit/5c81f47ea739baf7841cbc0e7b7c3aa06b986067)
+for how it was modified from how it is set in bitcoin).
 
+If you want to receive the rewards for your mining efforts, you need to
+set the address used in the coinbase transaction to be the address for
+your PointCoin wallet.
+
+### Merkle Root
+
+The block header contains the Merkle Root of all the transactions in the
+block.  This should be all the valid transactions submitted to the
+network, with your coinbase transaction added.
+
+We have provided the `createMerkleRoot` function in `support.go` for
+computing the Merkle root of a list of transactions:
+
+```go
+func createMerkleRoot(txs []*btcwire.MsgTx) *btcwire.ShaHash {
+	txutil := []*btcutil.Tx{}
+	for _, tx := range txs {
+		convtx := btcutil.NewTx(tx)
+		txutil = append(txutil, convtx)
+	}
+
+	store := blockchain.BuildMerkleTreeStore(txutil)
+	merkleRoot := store[len(store)-1]
+	return merkleRoot
+}
+```
+
+
+### Creating a Block
+
+A block in PointCoin is similar to a block in bitcoin.  It contains:
+
+- The hash of the previous block
+- The hash of the Merkle tree of all the transactions
+- The difficulty
+- A nonce (32 bits)
+
+We have provided the `CreateBlock` function in `support.go` to build a
+block given these inputs:
+
+```go
+func CreateBlock(prevHash string, merkleRoot *btcwire.ShaHash, difficulty big.Int, 
+                 nonce uint32, txs []*btcwire.MsgTx) *btcwire.MsgBlock {
+	prevH, _ := btcwire.NewShaHashFromStr(prevHash)
+	d := blockchain.BigToCompact(&difficulty)
+	header := btcwire.NewBlockHeader(prevH, merkleRoot, d, nonce)
+
+	msgBlock := btcwire.NewMsgBlock(header)
+	for _, tx := range txs {
+		msgBlock.AddTransaction(tx)
+	}
+
+	return msgBlock
+}
+```
+
+### Mining a Block
+
+Of course, the block you create is unlikely to be valid with a randomly
+selected nonce.  To find a valid block, it is necessary to find a nonce
+such that the hash of the block header (with that nonce included) is
+below the target difficulty.
+
+The block nonce is a uint32 in `block.Header.Nonce`.  You can update
+this value with a simple assignment to try a different nonce value.
+
+The function
+[`BlockSha`](https://github.com/btcsuite/btcd/blob/master/wire/blockheader.go#L48)
+returns the Double-SHA256 hash of the block header, so you can compute
+the hash of your block using `block.Header.BlockSha()`.
+
+Because of the different ways numbers and hashes are represented, the
+difficulty comparison is more awkward than one would like.  You can use
+the provided `lessThanDiff` function to check if the returned hash is
+less than the target difficulty:
+
+```go
+func lessThanDiff(hash btcwire.ShaHash, difficulty big.Int) bool {
+	bigI := blockchain.ShaHashToBig(&hash)
+	return bigI.Cmp(&difficulty) <= 0
+}
+```
+
+If you've succeeded in finding a good nonce, submit the block!
+
+This code will submit the block (since `client` is setup as an RPC to
+the node running on your own instance, it is submitting it to your own
+node first, which, if the block is valid, will submit it to the rest of
+the network):
+
+```go
+   err := client.SubmitBlock(btcutil.NewBlock(block), nil)
+   if err != nil { // something failed
+```
+
+Note that one reason your submission may fail is if the blockchain has
+already advanced.  This would happen if another miner found and
+submitted a block (that was received by your node) since the call you
+made to `client.GetBlockTemplate(&btcjson.TemplateRequest{})` to obtain
+the previous block (used in the template header).
+
+### Becoming a PointCoin Tycoon
+
+You should start by making your miner as simple as possible, and getting
+a simple miner working before attempting to do anything more
+complicated.  
+
+If you are ambitious, though, there are lots of ways to improve the
+performance of your miner (still running on the low-powered micro EC2
+node).
+
+Here are a few possibilities:
+
+- Explore the tradeoff between frequently checking the network to update
+  your block template, and computing lots of hashes (that might be
+  wasted if the blockchain has advanced).  Your miner will not perform
+  well if you update your template after every hash attempt, or if you
+  keep trying until you find a good block without ever updating your
+  template.  
+
+- Even the micro instances have more than one core.  You are missing out
+  on a lot of potential mining power if you are only using one thread.
+
+
+   <div class="problem"> 
+Use your miner to acquire 100 PointCoin.  If you are able to do this,
+you'll receive full credit for Part 1.
+   </div>
+
+   <div class="exercise"> 
+
+Estimate the cost of mining PointCoin given the current difficulty
+level, and assuming you are using your mining code running on an EC2
+node.  [Post your cost estimate and explanation of how you obtained it
+in the comments.](|filename|./pointcoin-cost.md) As time passes, of
+course, the mining difficult will increase, but other costs may also
+vary.
+
+   </div>
 
 # Part 2: Investigating Mining
 
@@ -96,13 +244,21 @@ the assignment (and in response to any questions before this).
 
 2. You may not do anything that violates any law or the University honor
 code.  This means you should not attempt to log into anyone elses
-computer and you should not attempt to distribute malware.
+computer and you should not attempt to distribute malware.  
 
-3. You should not do anything a reasonable person would consider
+3. It is, however, considered fair (indeed, encouraged) to "lie" or
+"mislead" your fellow students regarding your mining behavior.  For
+example, it would be totally okay and encouraged for you to attempt to
+trick others into joining your mining pool by offering them a share of
+the points mined, but the not to deliver those points.  For the purposes
+of this assignment, you should consider your classmates to be mutually
+distrusting individuals.
+
+4. You should not do anything a reasonable person would consider
 unethical or in violation of the spirit of this assignment.  This is a
-very vaugue statement.  What it really means is that if you are
-uncertain about whether something you plan to do is consistent with the
-spirit of this project, you should consult with Dave before doing it.
+very vague statement.  What it really means is that if you are uncertain
+about whether something you plan to do is consistent with the spirit of
+this project, you should consult with Dave before doing it.
 
 Your goal for Part 2 is to acquire ownership of as many PointCoins as
 you can.  Your grade for this part will be based on (1) the number of
@@ -110,13 +266,12 @@ PointCoins you control (you will prove control over your PointCoins by
 transferring them to a given address); and (2) your written description
 of the things you tried and what you learned from them.
 
-
 ### Submission
 
-<!-- 
-Submit the [Project 1 Submission Form](http://goo.gl/forms/kdIbZ33ryo) (by 11:59pm
-on **Friday, 30 January**):
+Submit the [Project 2 Submission Form](http://goo.gl/forms/notyet) (by
+11:59pm on **Thursday, 5 March**).
 
+<!--
 <iframe src="https://docs.google.com/forms/d/1I2a2T9owqTvLx7GAT8EIVf-qAhR2NU2113cSvwVOOAE/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 -->
 
