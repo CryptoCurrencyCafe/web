@@ -8,13 +8,7 @@ should aim to be a cooperative and honest pointcoin node and miner.)&lt;/p&gt;
 node, you should definitely get this done by the end of this week.
 (Note: Dave has office hours Thursday 4-5pm, and Nick/Alex has office
 hours Friday noon-2pm.  Please don't wait to get help if you are stuck
-on this!)&lt;/p&gt;</summary></entry><entry><title>Class 8: Review and Project 2</title><link href="http://bitcoin-class.org/class-8-review-and-project-2.html" rel="alternate"></link><updated>2015-02-09T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-09:class-8-review-and-project-2.html</id><summary type="html">&lt;!--
-   &lt;div class="phighlight"&gt;
-   [PDF version for printing](|filename|./class8.pdf)
-   &lt;/div&gt;
---&gt;
-
-&lt;h2&gt;Schedule&lt;/h2&gt;
+on this!)&lt;/p&gt;</summary></entry><entry><title>Class 8: Review and Project 2</title><link href="http://bitcoin-class.org/class-8-review-and-project-2.html" rel="alternate"></link><updated>2015-02-09T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-09:class-8-review-and-project-2.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;p&gt;&lt;div class="todo"&gt; &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -29,7 +23,9 @@ on this!)&lt;/p&gt;</summary></entry><entry><title>Class 8: Review and Project 2
     Wednesday), as well as specific questions to answer for Project 2.
    &lt;/div&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>Starting Project 2</title><link href="http://bitcoin-class.org/starting-project-2.html" rel="alternate"></link><updated>2015-02-05T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-05:starting-project-2.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Project 1.&lt;/strong&gt; You should have received your Project 1 grade as a
+&lt;/ul&gt;
+&lt;p&gt;(The are no notes or slides for this class, it was used to answer
+questions and provide help getting started on Project 2.)&lt;/p&gt;</summary></entry><entry><title>Starting Project 2</title><link href="http://bitcoin-class.org/starting-project-2.html" rel="alternate"></link><updated>2015-02-05T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-05:starting-project-2.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Project 1.&lt;/strong&gt; You should have received your Project 1 grade as a
   transfer to your vanity address (on a 100,000 satoshi scale, so 0.001
   BTC is full credit).  You should be able to see this in the blockchain
   (e.g., by searching for your vanity address).  Note that this is
@@ -274,6 +270,49 @@ published...").
 &lt;/div&gt;
 
 &lt;p&gt;How many SHA-256 hashes must be computed to verify &lt;a href="http://blockexplorer.com/b/341537"&gt;Block 341537&lt;/a&gt;?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;</summary></entry><entry><title>Class 9: Mining</title><link href="http://bitcoin-class.org/class-9-mining.html" rel="alternate"></link><updated>2015-02-04T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-04:class-9-mining.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
+&lt;p&gt;&lt;div class="todo"&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://bitcoin-class.org/pages/project2.html"&gt;Project 2&lt;/a&gt;, Part 1 is due &lt;strong&gt;Sunday, 22 February&lt;/strong&gt;.  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reading: finish reading through &lt;a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch08.asciidoc"&gt;&lt;em&gt;Chapter 8: Mining and Consensus&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;center&gt; 
+&lt;iframe src="//www.slideshare.net/slideshow/embed_code/44686287" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+&lt;div class="caption"&gt;Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  &lt;br&gt;If you download the slides, they are present though.
+Hopefully, the player will be fixed someday. &lt;/div&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;h1&gt;Quiz&lt;/h1&gt;
+&lt;p&gt;&lt;a href="http://bitcoin-class.org/classes/class9/quiz.pdf"&gt;Quiz 1&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Cost of Computation&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;gaussSum&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+   &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+       &lt;span class="n"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="p"&gt;}&lt;/span&gt;
+   &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;How would a cs2110/cs2150 student analyze the above code?&lt;br /&gt;
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When is asymptotic analysis appropriate, and when is it essentially useless?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What is the cost of executing this code in practice?&lt;br /&gt;
 &lt;div class="gap"&gt;&lt;/p&gt;
 &lt;/div&gt;</summary></entry><entry><title>Class 6: Proofs of Work</title><link href="http://bitcoin-class.org/class-6-proofs-of-work.html" rel="alternate"></link><updated>2015-02-02T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-02:class-6-proofs-of-work.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
    &lt;a href="http://bitcoin-class.org/classes/class6/class6.pdf"&gt;PDF version for printing&lt;/a&gt;

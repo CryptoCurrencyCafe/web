@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Cryptocurrency Cafe</title>
+    <title>Class 9: Mining
+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="David Evans">
@@ -86,40 +87,94 @@
 
     <div class="container-fluid">
 <section id="content">
-<h1>Archives for Cryptocurrency Cafe</h1>
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to Class 9: Mining">
+                                        Class 9: Mining
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-02-04T00:00:00-05:00">
+    Wed 04 February 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/class9.html"><i class="icon-folder-open"></i>class9</a>.
+-->
 
-<dl>
-	<dt>Wed 11 February 2015</dt>
-	<dd><a href='project-2.html'>Project 2</a></dd>
-	<dt>Mon 09 February 2015</dt>
-	<dd><a href='class-8-review-and-project-2.html'>Class 8: Review and Project 2</a></dd>
-	<dt>Thu 05 February 2015</dt>
-	<dd><a href='starting-project-2.html'>Starting Project 2</a></dd>
-	<dt>Wed 04 February 2015</dt>
-	<dd><a href='class-7-merkle-trees.html'>Class 7: Merkle Trees</a></dd>
-	<dt>Wed 04 February 2015</dt>
-	<dd><a href='class-9-mining.html'>Class 9: Mining</a></dd>
-	<dt>Mon 02 February 2015</dt>
-	<dd><a href='class-6-proofs-of-work.html'>Class 6: Proofs of Work</a></dd>
-	<dt>Thu 29 January 2015</dt>
-	<dd><a href='extra-office-hours.html'>Extra Office Hours</a></dd>
-	<dt>Wed 28 January 2015</dt>
-	<dd><a href='class-5-digicash.html'>Class 5: DigiCash</a></dd>
-	<dt>Mon 26 January 2015</dt>
-	<dd><a href='class-4-verifiably-random.html'>Class 4: Verifiably Random?</a></dd>
-	<dt>Sat 24 January 2015</dt>
-	<dd><a href='office-hours.html'>Office Hours</a></dd>
-	<dt>Fri 23 January 2015</dt>
-	<dd><a href='communication-in-cryptocurrency-cafe.html'>Communication in Cryptocurrency Cafe</a></dd>
-	<dt>Thu 22 January 2015</dt>
-	<dd><a href='key-chase.html'>Key Chase</a></dd>
-	<dt>Wed 21 January 2015</dt>
-	<dd><a href='class-3-elliptic-curves.html'>Class 3: Elliptic Curves</a></dd>
-	<dt>Wed 14 January 2015</dt>
-	<dd><a href='class-2-cryptography.html'>Class 2: Cryptography</a></dd>
-	<dt>Mon 12 January 2015</dt>
-	<dd><a href='class-1-why-are-these-buildings-burning-down.html'>Class 1: Why are these buildings burning down?</a></dd>
-</dl>
+<!--
+-->
+</footer><!-- /.post-info -->                </div>
+                <h2>Schedule</h2>
+<p><div class="todo"> </p>
+<ul>
+<li>
+<p><a href="http://bitcoin-class.org/pages/project2.html">Project 2</a>, Part 1 is due <strong>Sunday, 22 February</strong>.  </p>
+</li>
+<li>
+<p>Reading: finish reading through <a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch08.asciidoc"><em>Chapter 8: Mining and Consensus</em></a>.</p>
+</li>
+</ul>
+</div>
+
+<p><center> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/44686287" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</center>
+<div class="caption">Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you download the slides, they are present though.
+Hopefully, the player will be fixed someday. </div>
+</center></p>
+<h1>Quiz</h1>
+<p><a href="http://bitcoin-class.org/classes/class9/quiz.pdf">Quiz 1</a></p>
+<h1>Cost of Computation</h1>
+<div class="highlight"><pre><span class="kt">int</span> <span class="nf">gaussSum</span> <span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+       <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>How would a cs2110/cs2150 student analyze the above code?<br />
+<div class="gap"></p>
+</div>
+
+<p>When is asymptotic analysis appropriate, and when is it essentially useless?
+<div class="gap"></p>
+</div>
+
+<p>What is the cost of executing this code in practice?<br />
+<div class="gap"></p>
+</div>
+                </div><!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "class-9-mining.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'http://bitcoin-class.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
+                </div>
+        </article>
 </section>
 
 <script type="text/javascript">
