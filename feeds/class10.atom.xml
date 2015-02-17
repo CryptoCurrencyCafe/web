@@ -66,7 +66,7 @@ compute on SHA-256 hash?
   input &lt;span class="math"&gt;&lt;em&gt;x&lt;/em&gt;&lt;/span&gt; as drawing randomly from 2&lt;sup&gt;256&lt;/sup&gt; possible outputs:&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SHA-256(&lt;span class="math"&gt;&lt;em&gt;x&lt;/em&gt;) &amp;larr; [0, 2&lt;sup&gt;256&lt;/sup&gt;)&lt;/p&gt;
 &lt;p&gt;&lt;span class="math"&gt;Target = T&lt;sub&gt;max&lt;/sub&gt; / Difficulty&lt;/span&gt;&lt;br /&gt;
-&lt;span class="math"&gt;T&lt;sub&gt;max&lt;/sub&gt; = (2&lt;sup&gt;16&lt;/sub&gt; – 1)2&lt;sub&gt;256&lt;sub&gt; &amp;approx; 2&lt;sub&gt;224&lt;/sub&gt;&lt;/p&gt;
+&lt;span class="math"&gt;T&lt;sub&gt;max&lt;/sub&gt; = (2&lt;sup&gt;16&lt;/sup&gt; – 1)2&lt;sup&gt;256&lt;sup&gt; &amp;approx; 2&lt;sup&gt;224&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Current (15 Feb) Bitcoin Difficulty = 44,455,415,962&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="mi"&gt;224&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;44455415962&lt;/span&gt;
 &lt;span class="mi"&gt;606449092506427232846302685260647042725721699378946247123L&lt;/span&gt;
