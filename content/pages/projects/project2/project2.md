@@ -40,14 +40,20 @@ later in class).
 
    <div class="exercise"> 
 
-**Set up your pointcoind node.** Following the
-instructions from [Starting Project
-2](|filename|../../../announcements/project2.md), set up your pointcoind
-node and wallet.  After finishing this, [post a comment
-here](|filename|./pointcoin-nodes.md) with the public IP address of your
-EC2 node.  
+**Set up your pointcoind node.** Following the instructions below, set
+up your pointcoind node and wallet.  After finishing this, [post a
+comment here](|filename|./pointcoin-nodes.md) with the public IP address
+of your EC2 node.
 
    </div>
+
+To set up your pointcoind node:
+
+1. Setup an EC2 instance, install go and pointcoin following these directions: [Installing
+  PointCoin on
+  AWS](https://github.com/PointCoin/pointcoind/wiki/Installing-PointCoin-on-AWS).
+
+2. Setup your node and wallet: [Using PointCoin](https://github.com/PointCoin/pointcoind/wiki/Using-PointCoin-Binaries)
 
 The main goal for this part is for everyone to write your own PointCoin
 miner.  We have provided some code in the [Project 2
@@ -249,8 +255,11 @@ number of hashes that must be computed for a given difficulty level.
 
    </div>
 
-Submit the [Project 1 Submission Form](http://goo.gl/forms/notyet) (by
-11:59pm on **Sunday, 22 February**).
+Submit the [Project 2/Part 1 Submission
+Form](http://goo.gl/forms/nz3WSwVPU4) (by 11:59pm on **Sunday, 22
+February**).  (You can submit your answers to Problems 1-4 above either
+by submitting text in the form, or submitting a link to a PDF containing
+all of your answers).
 
 # Part 2: Investigating Mining
 
