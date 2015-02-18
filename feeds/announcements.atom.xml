@@ -26,7 +26,11 @@ opportunities to use it.&lt;/p&gt;
 &lt;p&gt;Thanks a bunch to Alex and Nick for tremendous work getting this
 working!  It seems to be stable, and our nodes (including nodes running
 on EC2 micro instances) have been stable (no crashes) for more than 24
-hours now, so we're optimistic there will not be further problems.&lt;/p&gt;</summary></entry><entry><title>Project 2</title><link href="http://bitcoin-class.org/project-2.html" rel="alternate"></link><updated>2015-02-11T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-11:project-2.html</id><summary type="html">&lt;p&gt;&lt;a href="http://bitcoin-class.org/pages/project2.html"&gt;Project 2&lt;/a&gt; is now
+hours now, so we're optimistic there will not be further problems.&lt;/p&gt;
+&lt;p&gt;I'm really sorry for the confusion and trouble this has caused, not to
+mention the PointCoins you've lost that you may have mined successfully
+on the original network.  I think we'll learn a lot from trying to
+launch a cryptocurrency, and there is plenty that can go wrong.&lt;/p&gt;</summary></entry><entry><title>Project 2</title><link href="http://bitcoin-class.org/project-2.html" rel="alternate"></link><updated>2015-02-11T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-11:project-2.html</id><summary type="html">&lt;p&gt;&lt;a href="http://bitcoin-class.org/pages/project2.html"&gt;Project 2&lt;/a&gt; is now
 posted.  The first part is due &lt;strong&gt;February 22&lt;/strong&gt;.  (After February 23, we
 will be encouraging you to try launching attacks on the PointCoin
 network, which is Part 2 of this project.  Until then, though, you
