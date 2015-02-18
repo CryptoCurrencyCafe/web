@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-11T00:00:00-05:00</updated><entry><title>Project 2</title><link href="http://bitcoin-class.org/project-2.html" rel="alternate"></link><updated>2015-02-11T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-11:project-2.html</id><summary type="html">&lt;p&gt;&lt;a href="http://bitcoin-class.org/pages/project2.html"&gt;Project 2&lt;/a&gt; is now
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-17T00:00:00-05:00</updated><entry><title>Project 2 - New Network Up</title><link href="http://bitcoin-class.org/project-2-new-network-up.html" rel="alternate"></link><updated>2015-02-17T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-17:project-2-new-network-up.html</id><summary type="html">&lt;p&gt;The new PointCoin network is now up!  This fixes the reset problem and
+some other issues that were discussed in Monday's class.  It also sets
+the expected block generating time to 10 minutes and the mining reward
+to 10 PointCoin.&lt;/p&gt;
+&lt;p&gt;To migrate your node to the PointCoin 0.2 network follow these directions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/PointCoin/pointcoind/wiki/Migration"&gt;Migration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you have your node running on the new network, add your public IP address here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/PointCoin/pointcoind/wiki/Publicly-Listed-IP-Address"&gt;Node Addresses&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is no automatic peering.  We believe this is a design decision in
+btcd (which pointcoind is forked from), to not trust any node that is
+not announced by multiple other nodes.&lt;/p&gt;
+&lt;p&gt;You can see the blockchain at:
+&lt;a href="http://blockexplorer.bitcoin-class.org/"&gt;&lt;em&gt;http://blockexplorer.bitcoin-class.org/&lt;/em&gt;&lt;/a&gt;.
+We will consider this the canonical PointCoin blockchain (at least until
+next Monday, when you can start launching attacks).&lt;/p&gt;
+&lt;p&gt;Because of the problems with the network, it is no longer necessary to
+acquire 100 PointCoin to earn full credit for Problem 1.  It is
+sufficient to successfully mine at least one block.  Earning more
+PointCoin will still be beneficial though!  You'll have other
+opportunities to use it.&lt;/p&gt;
+&lt;p&gt;Thanks a bunch to Alex and Nick for tremendous work getting this
+working!  It seems to be stable, and our nodes (including nodes running
+on EC2 micro instances) have been stable (no crashes) for more than 24
+hours now, so we're optimistic there will not be further problems.&lt;/p&gt;</summary></entry><entry><title>Project 2</title><link href="http://bitcoin-class.org/project-2.html" rel="alternate"></link><updated>2015-02-11T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-11:project-2.html</id><summary type="html">&lt;p&gt;&lt;a href="http://bitcoin-class.org/pages/project2.html"&gt;Project 2&lt;/a&gt; is now
 posted.  The first part is due &lt;strong&gt;February 22&lt;/strong&gt;.  (After February 23, we
 will be encouraging you to try launching attacks on the PointCoin
 network, which is Part 2 of this project.  Until then, though, you
