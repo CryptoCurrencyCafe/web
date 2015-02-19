@@ -151,6 +151,133 @@
 
         <div class="article">
  
+                   <h1><a href="http://bitcoin-class.org/class-11-pools-and-profits.html">Class 11: Pools and Profits</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-02-17T00:00:00-05:00">
+    Tue 17 February 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/class11.html"><i class="icon-folder-open"></i>class11</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><h2>Schedule</h2>
+<p><div class="todo"> </p>
+<ul>
+<li>
+<p><a href="http://bitcoin-class.org/pages/project2.html">Project 2</a>, Part 1 is due <strong>Sunday, 22 February</strong>.  </p>
+</li>
+<li>
+<p>Quiz 2 will be in class on <strong>Wednesday, 25 February</strong>.  It will be similar in length, format, and content to Quiz 1 (except will cover material from the beginning of the class through </p>
+</li>
+<li>
+<p>Continue thinking about project ideas! </p>
+</li>
+</ul>
+</div>
+
+<p><center> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/44858338" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<div class="caption">Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you <a href="http://bitcoin-class.org/classes/class11/class11-inked.pptx">download the slides</a>, they are present though.
+Hopefully, the player will be fixed someday. </div>
+</center></p>
+<h1>Mining Model</h1>
+<p>Mining Harware on the market today: <a href="http://www.spondoolies-tech.com/products/holiday-special-sp20-jackson-shipping-from-stock">Spondoolies SP20</a> (this is just an example, certainly not a commercial endorsement!)</p>
+<p><div class="indented">
+<strong>Cost:</strong> US$ 479<br />
+<strong>Hash rate:</strong> 1.7 TH/s<br />
+<strong>Power use:</strong> 1200 W<br />
+<strong><a href="https://encrypted.google.com/search?hl=en&amp;q=BTC%20to%20USD">BTC Price</a>:</strong> US$ 240<br />
+<strong>Difficulty:</strong> 44455415962 # from https://blockchain.info/stats, 18 Feb 2015
+    </div></p>
+<p><a href="https://docs.google.com/spreadsheet/ccc?key=0AiFMBvXvL2dtdEZkR2J4eU5rS3B4ei1iUmJxSWNlQ0E#gid=0">This
+spreadsheet</a>
+has lots of information about bitcoin difficulty over time.</p>
+<p><div class="warning">
+<strong>Please don't make any investment decisions based on any of these models!</strong>  Even the best one is still much simplified and with many guesses (e.g., assumption that BTC value will not change, slow increase in difficulty).
+   </div></p>
+<h3>Super Simple Model</h3>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">expected_hashes</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.7</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">12</span><span class="p">)</span>
+<span class="mf">112314445.6981567</span> <span class="c"># expected seconds to find block</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+<span class="mf">1299.935714099036</span> <span class="c"># days to find block</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">block_value</span> <span class="o">=</span> <span class="mi">240</span> <span class="o">*</span> <span class="mi">25</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">earnings_per_year</span> <span class="o">=</span> <span class="n">block_value</span> <span class="o">*</span> <span class="p">(</span><span class="mf">365.25</span> <span class="o">/</span> <span class="mi">1300</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">earnings_per_year</span>
+<span class="mf">1685.769230769231</span>
+<span class="sb">````</span>
+
+<span class="n">Why</span> <span class="ow">is</span> <span class="n">this</span> <span class="n">estimate</span> <span class="n">of</span> <span class="n">expected</span> <span class="n">earnings</span> <span class="n">totally</span> <span class="n">broken</span><span class="err">?</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s">&quot;gap&quot;</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+<span class="c">### Better Model</span>
+
+<span class="n">Python</span> <span class="n">code</span> <span class="p">(</span><span class="n">excerpted</span> <span class="n">below</span><span class="p">):</span> <span class="p">[</span><span class="n">mining</span><span class="o">.</span><span class="n">py</span><span class="p">](</span><span class="o">|</span><span class="n">filename</span><span class="o">|./</span><span class="n">mining</span><span class="o">-</span><span class="n">simple</span><span class="o">.</span><span class="n">py</span><span class="p">)</span>
+
+<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="k">def</span> <span class="nf">guess_difficulty</span><span class="p">(</span><span class="n">month</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">difficulty</span> <span class="o">*</span> <span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">rate_of_difficulty</span><span class="p">)</span> <span class="o">**</span> <span class="n">month</span><span class="p">)</span>
+
+<span class="n">hash_rate</span> <span class="o">=</span> <span class="mf">1.7</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">12</span> <span class="c"># 1.7 Th/s</span>
+<span class="n">hashes_in_month</span> <span class="o">=</span> <span class="n">hash_rate</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">ave_days_in_month</span>
+<span class="n">block_value</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">*</span> <span class="mi">240</span> <span class="c"># assumes fixed BTC value </span>
+<span class="n">electricity_cost</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.2</span> <span class="o">*</span> <span class="n">kWh</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">ave_days_in_month</span>
+
+<span class="k">def</span> <span class="nf">expected_revenue</span><span class="p">(</span><span class="n">month</span><span class="p">):</span>
+    <span class="n">success_probability</span> <span class="o">=</span> <span class="n">find_target</span><span class="p">(</span><span class="n">guess_difficulty</span><span class="p">(</span><span class="n">month</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span><span class="o">**</span><span class="mi">256</span> 
+    <span class="k">return</span> <span class="n">block_value</span> <span class="o">*</span> <span class="n">hashes_in_month</span> <span class="o">*</span> <span class="n">success_probability</span>
+
+<span class="k">def</span> <span class="nf">cumulative_income</span><span class="p">(</span><span class="n">months</span><span class="p">):</span>
+    <span class="n">income</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">months</span><span class="p">):</span>
+        <span class="n">income</span> <span class="o">+=</span> <span class="n">expected_revenue</span><span class="p">(</span><span class="n">month</span><span class="p">)</span> <span class="o">-</span> <span class="n">electricity_cost</span>
+    <span class="k">return</span> <span class="n">income</span>
+</pre></div>
+
+
+<p>Given this model, when should the miner be turned off and turned to scrap?
+<div class="gap"></p>
+</div>
+
+<p>Bitcoin core code: <a href="https://github.com/bitcoin/bitcoin/blob/175d86e633bedcfb642fb326f1ec0b43c14c4f3b/src/main.cpp#L1229">GetBlockValue</a>, <a href="https://github.com/bitcoin/bitcoin/blob/31dedb463b0ce77364e516239bf1b9c7eed5b3b0/src/chainparams.cpp">ChainParams</a></p>
+<p>What should happen to the bitcoin difficulty when subsidy is halved after block 420,000?
+(Current block is 344,044 so we should reach block 420,000 in (420000-34400 / (6 * 24)) = 527 days.)
+<div class="gap"></p>
+</div>
+
+<h1>Mining Pools</h1>
+<p>How can an open mining pool fairly determine miners share of the reward?  Why is it not sensible to use actual blocks mined to estminate pool share?
+<div class="gap"></p>
+</div>
+
+<p>What are the risks of a mining pool controlling a large fraction over
+the hashing power?  Does anything dramatic happen when that fraction
+exceeds 50%?</p>
+<div class="gap">
+
+</div>
+
+<h1>Links</h1>
+<p><a href="http://hackingdistributed.com/2014/06/13/time-for-a-hard-bitcoin-fork/"><em>What Happens At Armageddon?</em></a>
+(Ittay Eyal and Emin G&uuml;n Sirer, 13 June 2014)</p>
+<p><a href="https://bitcointalk.org/?topic=441465.msg7282674#msg7282674">Discussion about Eligius Block Witholding Attack</a></p></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/class-11-pools-and-profits.html#disqus_thread" data-disqus-identifier="class-11-pools-and-profits">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
                    <h1><a href="http://bitcoin-class.org/project-2-new-network-up.html">Project 2 - New Network Up</a></h1>
                    <div class="well small"><footer class="post-info">
 <span class="quietlabel">Posted: </span>
@@ -429,36 +556,11 @@ Hopefully, the player will be fixed someday. </div>
         </div>
 
         <div class="article">
- 
-                   <h1><a href="http://bitcoin-class.org/project-2.html">Project 2</a></h1>
-                   <div class="well small"><footer class="post-info">
-<span class="quietlabel">Posted: </span>
-<abbr class="published" title="2015-02-11T00:00:00-05:00">
-    Wed 11 February 2015
-</abbr>
-<!-- <span class="quietlabel">by</span>
-<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
--->
-<!--
-<span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/announcements.html"><i class="icon-folder-open"></i>announcements</a>.
--->
+                   <a href="http://bitcoin-class.org/project-2.html">Project 2</a> (Wed 11 February 2015)<br></br>
 
-<!--
--->
-</footer><!-- /.post-info --></div>
-                   <div class="content"><p><a href="http://bitcoin-class.org/pages/project2.html">Project 2</a> is now
-posted.  The first part is due <strong>February 22</strong>.  (After February 23, we
-will be encouraging you to try launching attacks on the PointCoin
-network, which is Part 2 of this project.  Until then, though, you
-should aim to be a cooperative and honest pointcoin node and miner.)</p>
-<p>If you haven't already got your pointcoin node up and running on an EC2
-node, you should definitely get this done by the end of this week.
-(Note: Dave has office hours Thursday 4-5pm, and Nick/Alex has office
-hours Friday noon-2pm.  Please don't wait to get help if you are stuck
-on this!)</p></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/project-2.html#disqus_thread" data-disqus-identifier="project-2">Comments</a></div>
-                   <hr />
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/project-2.html">More...</a>                      
+                   </div>-->
         </div>
 
         <div class="article">
@@ -498,14 +600,6 @@ on this!)</p></div>
 
  <!--                  <div class="summary">
                         <a class="btn primary xsmall" href="http://bitcoin-class.org/extra-office-hours.html">More...</a>                      
-                   </div>-->
-        </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/class-5-digicash.html">Class 5: DigiCash</a> (Wed 28 January 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-5-digicash.html">More...</a>                      
                    </div>-->
         </div>
         <hr />
