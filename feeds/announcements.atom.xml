@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-17T00:00:00-05:00</updated><entry><title>Project 2 - New Network Up</title><link href="http://bitcoin-class.org/project-2-new-network-up.html" rel="alternate"></link><updated>2015-02-17T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-17:project-2-new-network-up.html</id><summary type="html">&lt;p&gt;The new PointCoin network is now up!  This fixes the reset problem and
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-21T00:00:00-05:00</updated><entry><title>PointCoin Pizza</title><link href="http://bitcoin-class.org/pointcoin-pizza.html" rel="alternate"></link><updated>2015-02-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-21:pointcoin-pizza.html</id><summary type="html">&lt;p&gt;The PointCoin currency has now reached the level of stability and market
+acceptance, that merchants are beginning to accept it!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://pizza.bitcoin-class.com/"&gt;PointCoin Pizza&lt;/a&gt; is now open and
+accepting orders.  &lt;/p&gt;
+&lt;p&gt;Note that PointCoin Pizza's opening hours are unpredicatable and
+unannounced, so there is no guarantee that your pizza order will be
+delivered within a reasonable time, and the price of pizza may go up
+rapidly.&lt;/p&gt;
+&lt;p&gt;Spend your PointCoins carefully, though.  You don't want to be reading about
+&lt;a href="http://www.forbes.com/sites/ericmack/2013/12/23/the-bitcoin-pizza-purchase-thats-worth-7-million-today/"&gt;&lt;em&gt;The Bitcoin Pizza Purchase That's Worth $7 Million Today&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Project 2 - New Network Up</title><link href="http://bitcoin-class.org/project-2-new-network-up.html" rel="alternate"></link><updated>2015-02-17T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-17:project-2-new-network-up.html</id><summary type="html">&lt;p&gt;The new PointCoin network is now up!  This fixes the reset problem and
 some other issues that were discussed in Monday's class.  It also sets
 the expected block generating time to 10 minutes and the mining reward
 to 10 PointCoin.&lt;/p&gt;
