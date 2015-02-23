@@ -40,14 +40,20 @@ later in class).
 
    <div class="exercise"> 
 
-**Set up your pointcoind node.** Following the
-instructions from [Starting Project
-2](|filename|../../../announcements/project2.md), set up your pointcoind
-node and wallet.  After finishing this, [post a comment
-here](|filename|./pointcoin-nodes.md) with the public IP address of your
-EC2 node.  
+**Set up your pointcoind node.** Following the instructions below, set
+up your pointcoind node and wallet.  After finishing this, [post a
+comment here](|filename|./pointcoin-nodes.md) with the public IP address
+of your EC2 node.
 
    </div>
+
+To set up your pointcoind node:
+
+1. Setup an EC2 instance, install go and pointcoin following these directions: [Installing
+  PointCoin on
+  AWS](https://github.com/PointCoin/pointcoind/wiki/Installing-PointCoin-on-AWS).
+
+2. Setup your node and wallet: [Using PointCoin](https://github.com/PointCoin/pointcoind/wiki/Using-PointCoin-Binaries)
 
 The main goal for this part is for everyone to write your own PointCoin
 miner.  We have provided some code in the [Project 2
@@ -222,8 +228,14 @@ Here are a few possibilities:
 
    <div class="problem"> 
 **Problem 1.** Use your miner to acquire PointCoin.  You will receive
-  full credit for acquiring at least 100 PointCoin.
+  full credit for <strike>acquiring at least 100 PointCoin</strike> successfully mining at least one block.
    </div>
+
+(Note the revision to Problem 1.  The original target of acquiring 100
+PointCoin has been reduced because of the problems we had with the
+intial PointCoin network and need to relaunch.  It is sufficient now to
+mine one block successfully.  Earning more PointCoin will still be
+beneficial though!  You'll have other opportunities to use it.)
 
    <div class="problem"> 
 **Problem 2.** Estimate the cost of mining PointCoin given the current

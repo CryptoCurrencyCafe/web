@@ -320,11 +320,109 @@ by submitting text in the form, or submitting a link to a PDF containing
 all of your answers).</p>
 <h1>Part 2: Investigating Mining</h1>
 <p><div class="exercise">
-In Part 2, we'll explore attacked on the PointCoin network.  You should not attempt to actually launch any attacks until after class on <strong>Monday, 23 February</strong>.
+In Part 2, we'll explore attacks on the PointCoin network.  You should not attempt to actually launch any attacks until after class on <strong>Monday, 23 February</strong>.
    </div></p>
-<p>In the second part of this project, you will explore ways to attack the
-PointCoin network.  For this part, you may collude with other students
-in the class and use any external resources you want.  </p>
+<h3>Collaboration Policy</h3>
+<p>For Part 2 of this assignment, everyone should their own submission.
+You may work with others in the class (indeed, part of your goal for
+part 2 is to form a mining coallition with enough power to disrupt the
+normal behavior of the network).  For the written and coding problems,
+it is okay to collaborate with other students to write up one answer and
+submit the same answer so long as you clearly credit the students who
+you worked with, you fully contributed to the answer, and you fully
+understand everything in the answers you submit.</p>
+<p>You should write up answers to the questions below as a PDF file, and
+submit it using the <a href="http://NOTYETREADY">Project 2 - Part 2 Submissions
+Form</a>.</p>
+<h2>Analyzing the Double Spending Attack</h2>
+<p>For this problem, your goal is to analyze how much of a threat it is for
+one miner (or pool controlled by a single authority) to control a large
+faction of the hashing power.</p>
+<p>Assume the attacker's goal is to get a victim to accept a payment (e.g.,
+transfer pointcoin for cash-equivalent) that is valid in the (temporary)
+blockchain, and then release mined blocks to replace that blockchain
+with one that does not include the payment.  </p>
+<p>You may assume (inaccurately!) that there is no cost to the attacker to
+do the transaction.  That is, the attacker can create a transaction
+selling <em>P</em> pointcoin for US dollars, and inverse that transaction (sell
+the US dollars to buy pointcoin) at a future time, and end up with <em>P</em>
+pointcoin after the two transactions.  (Of course, in any real financial
+system, there are transaction costs.  A more realistic answer would
+include this in your analysis.)</p>
+<p>Your answer to problem 5 can either be a closed form mathematical equation, e.g.,
+   <div class="indented">
+<span class="math"><em>P</em>(<em>s</em>) = <em>f</em>(<em>s</em>)</span>
+   </div>
+giving the probability as a function of <span class="math"><em>s</em></span> (where you specify what the function <span class="math"><em>f</em></span> is, or a simulation in code (some procedure definition that can be called on a range of <em>s</em> values to give a good understanding of the success probability).</p>
+<p><div class="problem"> </p>
+<p><strong>Problem 5.</strong> Suppose an attacker has <em>s</em> fraction of the network's
+total hashing power.  What is the probability the attacker can
+successfully execute a "51% double-spending attack" (as a function of
+<em>s</em>) against a victim who accepts payment once the first block including
+the transaction is accepted by the network (one confirmation).</p>
+</div>
+
+<p><div class="problem"> </p>
+<p><strong>Problem 6.</strong> Suppose an attacker has <em>s</em> fraction of the network's
+total hashing power and the victim will accept a transaction only after
+<em>b</em> blocks.  What is the probability the attacker can successfully
+execute a "51% double-spending attack" (as a function of <em>s</em>) against a
+victim who accepts payment once the transaction is accepted by at least
+<em>b</em> network blocks?  (Note: for <em>b</em> = 1, this is the same as problem 5.
+For larger <em>b</em>, this should give insight into how long a more paranoid
+recipient should wait before accepting a transaction.)</p>
+</div>
+
+<h2>Forming Mining Pools</h2>
+<p>Your answers to problems 5 and 6 should convince you that it is unlikely
+that a single miner with less than 1/30 of the hashing power of the
+PointCoin network will have a good likelihood of successfully
+double-spending.</p>
+<p>Develop a strategy for forming a mining pool.  You may collaborate with
+as many students as you wish to develop your mining pool, but you should
+be mutually distrustful of each other and you are encouraged to find
+ways to take advantage of other students.  That is to say, the
+effectiveness of your mining pool cannot depend on everyone behaving
+honestly, but must take measures to prevent dishonest behavior in your
+mining pool.  You may, however, assume that everyone can only use the
+computing power of their own EC2 micro node for mining (and it would be
+considered cheating to use additional power for mining).</p>
+<p><div class="problem">
+<strong>Problem 7.</strong> Design a strategy for building a mining pool for
+  PointCoin.  Your strategy should explain how you would incentivize
+  others to contribute their mining power to you and ensure that they don't
+  cheat (e.g., claim to provide more mining power than they actually do).
+   </div></p>
+<p>To actually execute your strategy, you should make it as simple as
+possible (at least to get started), and then add more complexity only
+after successfully accompilshing the simplest possible start.</p>
+<p><div class="problem"> </p>
+<p><strong>Problem 8.</strong> Either implement your strategy for building a mining
+pool, or join someone else's mining pool.  Explain what you did, and how
+successful it was.  (We understand that actually building a successful
+mining pool is both a significant technical and social challenge, so
+don't worry if you are not able to do this, but you if not, should be
+able to write up something interesting describing what you attempted and
+what happened.)</p>
+</div>
+
+<h2>Free-for-All!</h2>
+<p>For the last problem, your goal is to attack the PointCoin network in a
+way that benefits yourself.  You can be creative on this and do not need
+to limit yourself to attacks suggested in class or this page, but should
+follow the rules below carefully and check with Dave before doing
+anything questionable.</p>
+<p><div class="problem"> </p>
+<p><strong>Problem 9.</strong> Attempt to attack PointCoin in ways that are profitable
+  to the attacker.  (Note that denial-of-service attacks should not be
+  attempted.)  Full credit would be awarded for successfully executing a
+  double-spending attack (against the only-a-little-bit-paranoid victim
+  who accepts transactions based on the first block), but other attacks
+  are valid and bonus credit will be due for any especially creative
+  attacks.  Describe what you did, and if it is successful include
+  evidence of the success.
+   </div></p>
+<h3>Rules</h3>
 <p>The only rules are:</p>
 <ol>
 <li>
@@ -333,34 +431,40 @@ the assignment (and in response to any questions before this).</p>
 </li>
 <li>
 <p>You may not do anything that violates any law or the University honor
-code.  This means you should not attempt to log into anyone elses
-computer and you should not attempt to distribute malware.  </p>
+code (although the normal "lying" and "stealing" provisions do not apply
+to your nodes' behavior in pointcoin protocols or things you tell other
+students in the class about your network activities).  It is considered
+fair (indeed, encouraged) to "lie" or "mislead" your fellow students
+regarding your mining behavior.  For example, it would be totally okay
+and encouraged for you to attempt to trick others into joining your
+mining pool by offering them a share of the points mined, but the not to
+deliver those points.  For the purposes of this assignment, you should
+consider your classmates to be mutually distrusting individuals.</p>
 </li>
 <li>
-<p>It is, however, considered fair (indeed, encouraged) to "lie" or
-"mislead" your fellow students regarding your mining behavior.  For
-example, it would be totally okay and encouraged for you to attempt to
-trick others into joining your mining pool by offering them a share of
-the points mined, but the not to deliver those points.  For the purposes
-of this assignment, you should consider your classmates to be mutually
-distrusting individuals.</p>
+<p>You should not use any computing resources for PointCoin mining other
+than your one micro EC2 node.  (You may use other computing resources
+for development, offline analysis, other computation, but not to
+directly mine PointCoin.)</p>
+</li>
+<li>
+<p>You should not do anything with your EC2 node that violates Amazon's
+<a href="http://aws.amazon.com/aup/">Acceptable Use Policy</a>.  In particular,
+this excludes denial of service attacks or both other students' nodes
+and the staff nodes.</p>
 </li>
 <li>
 <p>You should not do anything a reasonable person would consider
-unethical or in violation of the spirit of this assignment.  This is a
-very vague statement.  What it really means is that if you are uncertain
-about whether something you plan to do is consistent with the spirit of
-this project, you should consult with Dave before doing it.</p>
+harmful, unethical, or in violation of the spirit of this assignment.
+This is a very vague statement.  What it really means is that if you are
+uncertain about whether something you plan to do is consistent with the
+spirit of this project, you should consult with Dave before doing it.
+Examples of things that would be clearly unacceptable include installing
+malware on another student's computer or using physical access to their
+machine to copy or modify key files (or any other data) on their
+machine.</p>
 </li>
 </ol>
-<p>Your goal for Part 2 is to acquire ownership of as many PointCoins as
-you can.  Your grade for this part will be based on (1) the number of
-PointCoins you control (you will prove control over your PointCoins by
-transferring them to a given address); and (2) your written description
-of the things you tried and what you learned from them.</p>
-<h3>Submission</h3>
-<p>Submit the <a href="http://goo.gl/forms/notyet">Project 2 Submission Form</a> (by
-11:59pm on <strong>Thursday, 5 March</strong>).</p>
 <!--
 <iframe src="https://docs.google.com/forms/d/1I2a2T9owqTvLx7GAT8EIVf-qAhR2NU2113cSvwVOOAE/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 -->
