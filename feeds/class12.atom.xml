@@ -34,8 +34,9 @@ their miners working, and about how EC2 throttles micro instances:&lt;/p&gt;
 &lt;a href="http://blog.erratasec.com/2015/02/extracting-superfish-certificate.html"&gt;&lt;em&gt;Extracting the SuperFish certificate&lt;/em&gt;&lt;/a&gt;, Robert Graham&lt;br /&gt;
 &lt;a href="http://bitbanter.com/2015/02/20/lenovo-man-middle/"&gt;&lt;em&gt;Lenovo Under Sustained Man in Middle Management Attack&lt;/em&gt;&lt;/a&gt;, Josh Cincinatti&lt;br /&gt;
 &lt;a href="http://www.slate.com/articles/technology/bitwise/2015/02/lenovo_superfish_scandal_why_it_s_one_of_the_worst_consumer_computing_screw.html"&gt;&lt;em&gt;You Had One Job, Lenovo&lt;/em&gt;&lt;/a&gt;, David Auerbach, Slate  &lt;/p&gt;
+&lt;h2&gt;SSL Warings&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://research.google.com/pubs/AdrienneFelt.html"&gt;Adrienne Felt&lt;/a&gt;'s work on SSL warnings in Chrome browser:&lt;br /&gt;
 &lt;a href="https://docs.google.com/presentation/d/1TNFx6eaQVfe83PV80-FZ39QY1dSLGCWW8f2i5-NeJ48/edit#slide=id.p"&gt;&lt;em&gt;Improving SSL Warnings&lt;/em&gt;&lt;/a&gt; (talk slides)&lt;br /&gt;
 &lt;a href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/43265.pdf"&gt;&lt;em&gt;Improving SSL Warnings: Comprehension and Adherence&lt;/em&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;a href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41927.pdf"&gt;&lt;em&gt;Experimenting At Scale With Google Chrome's SSL Warning&lt;/em&gt;&lt;/a&gt;
+&lt;a href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41927.pdf"&gt;&lt;em&gt;Experimenting At Scale With Google Chrome's SSL Warning&lt;/em&gt;&lt;/a&gt;&lt;br /&gt;
 You can also see her old page about the work she did at UVa: &lt;a href="http://www.cs.virginia.edu/felt/privacy/"&gt;&lt;em&gt;Privacy Protection for Social Network APIs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</summary></entry></feed>
