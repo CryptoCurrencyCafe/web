@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-21T00:00:00-05:00</updated><entry><title>PointCoin Pizza</title><link href="http://bitcoin-class.org/pointcoin-pizza.html" rel="alternate"></link><updated>2015-02-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-21:pointcoin-pizza.html</id><summary type="html">&lt;p&gt;The PointCoin currency has now reached the level of stability and market
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-23T21:00:00-05:00</updated><entry><title>PointCoin Updates</title><link href="http://bitcoin-class.org/pointcoin-updates.html" rel="alternate"></link><updated>2015-02-23T21:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-23:pointcoin-updates.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Reminder:&lt;/strong&gt; We'll have a quiz in class Wednesday.  It will be similar
+  to the previous quiz, and focus on fundamental understanding on how
+  bitcoin works covering material from the beginning of the class
+  through &lt;a href="|filename|../classes/class10.md"&gt;Class 10&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You'll notice in the PointCoin blockchain that I'm now running an
+"unfair advantage" node, using a Medium instance on EC2.  This is at the
+insistance of the PointCoin Pizza purveyor, who is worried that it may
+be too easy for a single miner to obtain a high fraction of the
+processing power just by managing their EC2 micro instance credits
+carefully while everyone else's miner is throttled.  (You can see this
+in the blockchain when a new miner starts up, it will often win several
+blocks in a row, just because it has not yet hit the micro instance
+throttling level.)  (I may decide to turn off my "unfair advantage"
+miner at some later time, but for now I intend to leave it running to
+make it a difficult for a single miner to obtain control of a large
+fraction of the hashing power.)&lt;/p&gt;
+&lt;p&gt;There's an interesting security-related talk from &lt;a href="https://ericw.us/trow/"&gt;Eric
+Wustrow&lt;/a&gt; tomorrow: &lt;a href="http://www.cs.virginia.edu/events/colloquia/wustrow.html"&gt;&lt;em&gt;Anticensorship in the
+Network&lt;/em&gt;&lt;/a&gt;,
+10:45am in Rice 242.&lt;/p&gt;</summary></entry><entry><title>PointCoin Pizza</title><link href="http://bitcoin-class.org/pointcoin-pizza.html" rel="alternate"></link><updated>2015-02-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-21:pointcoin-pizza.html</id><summary type="html">&lt;p&gt;The PointCoin currency has now reached the level of stability and market
 acceptance, that merchants are beginning to accept it!&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://pizza.bitcoin-class.com/"&gt;&lt;strong&gt;PointCoin Pizza&lt;/strong&gt;&lt;/a&gt; is now open and
 accepting orders.  &lt;/p&gt;
