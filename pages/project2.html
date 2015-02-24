@@ -282,8 +282,17 @@ node).</p>
   template.  </p>
 </li>
 <li>
-<p>Even the micro instances have more than one core.  You are missing out
-  on a lot of potential mining power if you are only using one thread.</p>
+<p><strike>Even the micro instances have more than one core.  You are
+  missing out on a lot of potential mining power if you are only using
+  one thread.</strike> Actually, micro nodes do not even give you a full
+  core!  You will not get better performace on a micro node by using
+  multi-threading, since you only have access to a single CPU core.
+  Your EC2 node is actually being throttled by Amazon since it is
+  sharing a physical node with other VMs, and your compute use will be
+  throttled if it is excessive (which a running miner should be!).  You
+  may be able to use this to your advantage (since everyone elses miner
+  is also running on a micro node, except possible course staff miners
+  which get an unfair computing power advantage!)</p>
 </li>
 </ul>
 <p><div class="problem"> 
