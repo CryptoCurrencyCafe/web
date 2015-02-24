@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-23T21:00:00-05:00</updated><entry><title>PointCoin Updates</title><link href="http://bitcoin-class.org/pointcoin-updates.html" rel="alternate"></link><updated>2015-02-23T21:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-23:pointcoin-updates.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Reminder:&lt;/strong&gt; We'll have a quiz in class Wednesday.  It will be similar
   to the previous quiz, and focus on fundamental understanding on how
   bitcoin works covering material from the beginning of the class
-  through &lt;a href="|filename|../classes/class10.md"&gt;Class 10&lt;/a&gt;.&lt;/p&gt;
+  through &lt;a href="http://bitcoin-class.org/class-10-more-mining.html"&gt;Class 10&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You'll notice in the PointCoin blockchain that I'm now running an
 "unfair advantage" node, using a Medium instance on EC2.  This is at the
 insistance of the PointCoin Pizza purveyor, who is worried that it may
