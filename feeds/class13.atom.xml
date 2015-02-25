@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/class13.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-25T00:00:00-05:00</updated><entry><title>Class 13: Selfish Mining</title><link href="http://bitcoin-class.org/class-13-selfish-mining.html" rel="alternate"></link><updated>2015-02-25T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-25:class-13-selfish-mining.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
+&lt;p&gt;&lt;div class="todo"&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://bitcoin-class.org/pages/project2.html"&gt;Project 2 Part
+  2&lt;/a&gt; is due next
+  &lt;strong&gt;Thursday, 5 March.&lt;/strong&gt; If you want do to an alternative project, make
+  sure I know about it and have agreed that it is a good substitution by
+  this Friday (Feb 27).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!--
+&lt;center&gt; 
+&lt;iframe src="//www.slideshare.net/slideshow/embed_code/45046365" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"&gt;&lt;/iframe&gt;
+&lt;div class="caption"&gt;Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  &lt;br&gt;If you [download the slides](|filename|./class12-inked.pptx), they are present though.
+Hopefully, the player will be fixed someday. &lt;/div&gt;
+&lt;/center&gt;
+--&gt;
+
+&lt;h2&gt;Quiz 2&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://bitcoin-class.org/classes/class13/quiz2.pdf"&gt;Quiz 2&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Selfish Mining&lt;/h2&gt;
+&lt;p&gt;What are the risks and benefits of witholding a found block?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Based on the &lt;a href="http://www.submarinecablemap.com/"&gt;submarine cable map&lt;/a&gt;,
+where should you put your bitcoin mining operation?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Suppose you (and no other bitcoin nodes) had access to an under-Artic
+fiberoptic cable, providing faster than currently possible routes
+between Japan and Anchorage.  Would this provide a valuable advantage in
+bitcoin?  Would you prefer to have a fast microwave link between Japan
+and Finland?&lt;/p&gt;
+&lt;div class="gap"&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Ittay Eyal and Emin G&amp;uuml;n Sirer, &lt;a href="http://arxiv.org/pdf/1311.0243v5.pdf"&gt;&lt;em&gt;Majority is not Enough: Bitcoin
+Mining is Vulnerable&lt;/em&gt;&lt;/a&gt; (Nov 2013).&lt;/p&gt;</summary></entry></feed>

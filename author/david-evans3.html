@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Cryptocurrency Cafe - David Evans</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Bitcoin Class taught at University of Virginia">
+    <meta name="keywords" content="bitcoin,cryptocurrency,class,bitcoin mining,cryptocurrency course, bitcoin course, bitcoin class">
     <meta name="author" content="David Evans">
     <link rel="icon" type="image/png" href="http://www.rust-class.org/static/images/logo.png" />  
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
@@ -125,6 +126,7 @@
 <li> &nbsp;<a href="./class-9-mining.html">9: Mining</a>
 <li> &nbsp;<a href="./class-10-more-mining.html">10: More Mining</a>
 <li> &nbsp;<a href="./class-11-pools-and-profits.html">11: Pools and Profits</a>
+<li> &nbsp;<a href="./class-12-mostly-about-superfish.html">12: Superfish!</a>
 </ul>
 
 <p><br></br></p>
@@ -149,6 +151,359 @@
 </div>
 -->
 
+
+        <div class="article">
+ 
+                   <h1><a href="http://bitcoin-class.org/class-3-elliptic-curves.html">Class 3: Elliptic Curves</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-01-21T00:00:00-05:00">
+    Wed 21 January 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/class3.html"><i class="icon-folder-open"></i>class3</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><p><div class="phighlight">
+   <a href="http://bitcoin-class.org/classes/class3/class3.pdf">PDF version for printing</a>
+   </div></p>
+<h2>Schedule</h2>
+<p><div class="todo">
+<a href="http://bitcoin-class.org/pages/project1.html">Project 1</a> is due <strong>Friday, 30 January</strong>. </p>
+<p>Before the next class (Monday, Jan 26): </p>
+<ul>
+<li>
+<p><strong>Read:</strong> Satoshi Nakamoto, <a href="https://bitcoin.org/bitcoin.pdf"><em>Bitcoin: A Peer-to-Peer Electronic Cash
+System</em></a>, 2008.  The is the original
+bitcoin paper, which is quite readable.</p>
+</li>
+<li>
+<p><strong>Read:</strong> <a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch05.asciidoc"><em>Chapter 5:
+    Transactions</em></a>
+    from Andreas Antonopoulos' book.
+   </div></p>
+</li>
+</ul>
+<p><center> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/43761680" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br>
+<div class="caption">Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you download the slides, they are present though.
+Hopefully, the player will be fixed someday. </div>
+</center></p>
+<h3>Asymmetric Cryptosystems Recap</h3>
+<p>For asymmetric cryptography, we need a one-way function with a trapdoor:
+a function that can be easily inverted given a secret key, but is hard
+to invert without knowledge of that key.</p>
+<p><strong>Signatures:</strong> Signer encrypts a message with her own private key.
+  Verifier checks the message using the signer's public key.</p>
+<h2>Elliptic Curve Cryptography</h2>
+<p><strong>Elliptic curve:</strong> points satisfying an equation like <span
+class="math"><em>y</em><sup>2</sup> = <em>x</em><sup>3</sup> + 7</span> (this is the curve
+used in bitcoin).</p>
+<p>For real numbers, this is <a href="http://www.wolframalpha.com/input/?i=y%5E2+%3D+x%5E3+%2B+7">easy to solve</a>:
+<span class="math"><em>y</em> = sqrt(<em>x</em><sup>3</sup> + 7)</span>.</p>
+<p>In a finite field, it is complex enough to form the basis of cryptographic operations.</p>
+<h2>Crash Course in Group Theory</h2>
+<p><strong>Group:</strong> A group is a set, <span class="math"><em>G</em></span>, on which the operation <span class="math">&oplus;</span> is defined with the following properties:</p>
+<ol>
+<li>
+<p><em>Closure</em>: for all <span class="math"><em>a</em>, <em>b</em> &isin; <em>G</em></span>, <span class="math"><em>a</em> &oplus; <em>b</em> &isin; <em>G</em></span>.</p>
+</li>
+<li>
+<p><em>Associative</em>: for all <span class="math"><em>a</em>, <em>b</em>, <em>c</em> &isin; <em>G</em></span>, <span class="math">(<em>a</em> &oplus; <em>b</em>) &oplus; <em>c</em> = <em>a</em> &oplus; (<em>b</em> &oplus; <em>c</em>)</span>.</p>
+</li>
+<li>
+<p><em>Identity</em>: there is some element, <span class="math"><b>0</b> &isin; <em>G</em></span>, such that for all <span class="math">a &isin; <em>G</em></span>, <span class="math"><em>a</em> &oplus; <b>0</b> = <b>0</b> &oplus; <em>a</em> = <em>a</em><span>.</p>
+</li>
+<li>
+<p><em>Inverse</em>: for all <span class="math"><em>a</em> &isin; <em>G</em></span>, there exists an inverse, <span class="math">-<em>a</em> &isin; <em>G</em></span>, such that <span class="math"><em>a</em> &oplus; (-<em>a</em>) = <b>0</b></span>.</p>
+</li>
+</ol>
+<p><strong>Abelian Group:</strong> An abelian (or commutative) group has this additional property:</p>
+<ul>
+<li><em>Commutative</em>: for all <span class="math"><em>a</em>, <em>b</em> &isin; <em>G</em></span>, <span class="math"><em>a</em> &oplus; <em>b</em> = <em>b</em> &oplus; <em>a</em></span>.</li>
+</ul>
+<p>Are the integers and addition an abelian group?
+<div class="gap">
+</div></p>
+<p>Are the whole numbers and addition an abelian group?
+<div class="gap">
+</div></p>
+<p><strong>Finite Field:</strong> A finite field is a set <span class="math"><em>F</em></span> of <span class="math"><em>N</em> &ge; 2</span> elements on which the operators <span class="math">&oplus;</span> and <span class="math">&times;</span> are defined with these properties:</p>
+<ol>
+<li>
+<p><span class="math"><em>F</em></span> is an <em>abelian group</em> with identity <span class="math"><b>0</b></span> under the <span class="math">&oplus;</span> operation.  </p>
+</li>
+<li>
+<p>The set <span class="math"><em>F</em> - { 0 }</span> is an <em>abelian group</em> with identity <span class="math"><b>1</b></span> under the <span class="math">&times;</span> operation.</p>
+</li>
+<li>
+<p>Distributive: For all <span class="math"><em>a</em>, <em>b</em>, <em>c</em> &isin; <em>F</em></span>, <span class="math">(<em>a</em> &oplus; <em>b</em>) &times; <em>c</em> = (<em>a</em> &times; <em>c</em>) &oplus; (<em>b</em> &times; <em>c</em>)</span>.</p>
+</li>
+</ol>
+<p>(Note that this requires for all <span class="math"><em>a</em></span>, <span class="math"><em>a</em> &times; <b>0</b> = <b>0</b></span>.)</p>
+<p><strong>Prime Field Theorem:</strong> For every prime number <span
+  class="math"><em>p</em></span>, the set <span class="math">{ 0, 1, &hellip;, <em>p</em>
+  - 1 }</span> forms a finite field with the operations addition and
+  multiplication modulo <span class="math">p</span>.</p>
+<p>Demonstrate that <span class="math"><em>F</em><sub>3</sub></span> is a finite field.
+<div class="gap"></p>
+</div>
+
+<p>See <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-451-principles-of-digital-communication-ii-spring-2005/lecture-notes/chap7.pdf"><em>Introduction to Finite
+Fields</em></a>
+(notes from David Forney's <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-451-principles-of-digital-communication-ii-spring-2005/index.htm">MIT 6.451
+course</a>)
+for a proof that all prime fields, <span
+class="math">F<sub>p</sub></span> are finite fields, and more thorough
+introduction to finite fields.</p>
+<h2>Operations on Elliptic Curves</h2>
+<p>"Addition" on an elliptic curve is done by finding the a point on the
+line between the two inputs points, and reflecting that point over the
+x-axis.</p>
+<p>Here's what this looks like for real numbers (but don't be mislead
+&mdash; elliptic curves over finite fields do not look anything like
+these simple curves):</p>
+<p><center>
+   <img src="http://media.coindesk.com/2014/10/point-addition.png"><br>
+Image source: Eric Rykwalder, <a href="http://www.coindesk.com/math-behind-bitcoin/"><em>The Math Behind Bitcoin</em></a>.
+   </center></p>
+<p><span class="math"><em>P</em> + <em>Q</em> = <em>R</em></span></p>
+<p>Doing addition on elliptic curves over finite fields is more complex,
+and there has been a lot of research into how to do these operations
+efficiently.  See the
+<a href="https://github.com/btcsuite/btcec/blob/master/btcec.go#L431">btcec.Add</a>
+code for how it is done in the library.</p>
+<p>Doubling (e.g., <span class="math"><em>P</em> + <em>P</em> = <em>R</em></span>) is the same idea,
+except instead of finding the intersection of the line formed by the two
+addends (which doesn't exist for the single point), finds the
+intersection between the tangent of the curve.</p>
+<p>"Multiplication" is just repeated addition: <span class="math"><em>kP</em> = <em>P</em> +
+<em>P</em> + ... + <em>P</em></span>.</p>
+<p>Is there a more efficient way to compute <span class="math">9_P_</span> than using 8 additions?<br />
+<div class="gap"></p>
+</div></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/class-3-elliptic-curves.html#disqus_thread" data-disqus-identifier="class-3-elliptic-curves">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
+                   <h1><a href="http://bitcoin-class.org/class-2-cryptography.html">Class 2: Cryptography</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-01-14T00:00:00-05:00">
+    Wed 14 January 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/class2.html"><i class="icon-folder-open"></i>class2</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><p><div class="phighlight">
+   <a href="http://bitcoin-class.org/classes/class2/class2.pdf">PDF version for printing</a>
+   </div></p>
+<h2>Schedule</h2>
+<p><div class="todo">
+Before the next class (Wednesday, Jan 21):</p>
+<ol>
+<li>
+<p><strong>Read:</strong> 
+<a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch03.asciidoc"><em>Chapter 3: The Bitcoin Client</em></a>
+and
+<a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch04.asciidoc"><em>Chapter 4: Keys, Addresses, Wallets</em></a>
+from Andreas M. Antonopoulos, <a href="https://github.com/aantonop/bitcoinbook"><em>Mastering Bitcoin: Unlocking Digital
+Cryptocurrencies</em></a> book (also
+available <a href="http://www.amazon.com/Mastering-Bitcoin-Unlocking-Digital-Crypto-Currencies/dp/1449374042">in
+print</a>).  </p>
+</li>
+<li>
+<p>Pay attention to your email.  <strike>You should receive an email by Sunday,
+and it will include some other things to do before Wednesday's class.</strike> [Change in plans: I haven't sent out the email yet.  I expect to do this Tuesday, and there will not be anything new due on Wednesday. Sorry for the delay!]
+   </div></p>
+</li>
+</ol>
+<p><center> <iframe
+src="//www.slideshare.net/slideshow/embed_code/43552674" width="476"
+height="400" frameborder="0" marginwidth="0" marginheight="0"
+scrolling="no"></iframe><br> 
+<div class="caption"> Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you download the slides, they are present though.
+Hopefully, the player will be fixed someday.  </div></p>
+<p></center></p>
+<!--
+how is it possible to own something digital?
+
+- copyright!
+
+England
+
+1662 - Licensing of the Press Act
+
+guild of printers, "Stationer's Company" (formed in 1403, royal charter in 1557)
+granted monopoly on printing [cf. Chinese granting monopoly on salt production]
+exclusive right to print - responsible for censoring
+
+ended in 1694 - no restrictions        
+
+
+Act of Queen Anne
+-->
+
+<h2>Cryptography</h2>
+<p><em>kryptos</em> is a Greek root meaning hidden ("secret")</p>
+<p><em>crypto</em> + <em>graphy</em> = "secret writing"</p>
+<p><em>Decryption</em> is what the intended receiver does.<br />
+<em>Cryptanalysis</em> is what an attacker does.  </p>
+<p>How are cryptography and security related?
+<div class="gap"></p>
+</div>
+
+<h3>Simple Message Cryptosystem</h3>
+<p>Two functions:</p>
+<ul>
+<li>
+<p><strong>Encrypt:</strong> <span class="math"><em>E</em>(<em>m</em>: byte[]) &rarr; byte[]</span>.  The input is called the
+    <strong>plaintext</strong>; the output is called the <strong>ciphertext</strong>.</p>
+</li>
+<li>
+<p><strong>Decrypt:</strong> <span class="math"><em>D</em>(<em>c</em>: byte[]) &rarr; byte[]</span>.</p>
+</li>
+</ul>
+<p>Required properties:</p>
+<ul>
+<li><strong>Correctness:</strong> for all possible messages, <span class="math"><em>m</em>, <em>D</em>(<em>E</em>(<em>m</em>)) = <em>m</em></span></li>
+<li><strong>Security:</strong> given the output of <span class="math"><em>E</em>(<em>m</em>)</span>, it is "hard" to learn anything interesting about <span class="math"><em>m</em></span>.  </li>
+</ul>
+<p><a href="http://web.mit.edu/newsoffice/2013/goldwasser-and-micali-win-turing-award-0313.html"><em>Goldwasser and Micali win Turing Award: Team honored for
+‘revolutionizing the science of
+cryptography'</em></a>,
+MIT News, 13 March 2013. </p>
+<p>Their paper that introduced semantic security notions is:
+<a href="http://groups.csail.mit.edu/cis/pubs/shafi/1982-stoc.pdf"><em>Probabilistic Encryption and How to Play Mental Poker Keeping Secret
+All Partial
+Information</em></a>,
+ACM Symposium on Theory of Computing, 1982.  (We will not get into
+formal security definitions or proofs in this class, but you should take
+<a href="http://www.cs.virginia.edu/~mohammad/">Mohammad Mahmoody</a>'s class to
+learn them.)</p>
+<h3>Keyed Symmetric Cryptosystem</h3>
+<p>Claude Shannon, <a href="http://netlab.cs.ucla.edu/wiki/files/shannon1949.pdf"><em>Communication Theory of Secrecy Systems</em></a>, 1949 (work done during World War II, but declassified later).</p>
+<p>Two functions:</p>
+<ul>
+<li>
+<p><strong>Encrypt:</strong> <span class="math"><em>E</em>(<em><font color="red">k</font></em>: byte[], <em>m</em>: byte[]) &rarr; byte[]</span>. </p>
+</li>
+<li>
+<p><strong>Decrypt:</strong> <span class="math"><em>D</em>(<em><font color="red">k</font></em>, <em>c</em>: byte[]) &rarr; byte[]</span>.</p>
+</li>
+</ul>
+<p>Required properties:</p>
+<ul>
+<li><strong>Correctness:</strong> for all possible messages, <span class="math"><em>m</em></span>, and keys, <span class="math"><em>k</em></span>, <span class="math"><em>D</em>(<em><font color="red">k</font></em>, <em>E</em>(<em><font color="red">k</font></em>, <em>m</em>)) = <em>m</em></span>.</li>
+<li><strong>Security:</strong> given <span class="math"><em>E</em></span>, <span class="math"><em>D</em></span>, and the output of <span class="math"><em>E</em>(<font color="red"><em>k</em></font>, <em>m</em>)</span> it is "hard" to learn anything interesting about <span class="math"><em>m</em></span> (without knowing <span class="math"><font color="red"><em>k</em></font></span>).</li>
+</ul>
+<p>Are these properties enough to be secure against an active attacker?
+<div class="gap"></p>
+</div>
+
+<h3>Jefferson's Wheel Cipher</h3>
+<p>There are, of course, better ways to break a message encrypted using
+Jefferson's Wheel cipher than just trying all possible keys as in a
+brute force attack.  Here's how Geoff Stoker solved it: <a href="http://www.cs.virginia.edu/~evans/cs588-fall2001/challenges/wheel-solved.html"><em>Jefferson
+Wheel Challenge
+solved!</em></a>.</p>
+<p><strong>Keyspace:</strong> the set of all possible keys.  Assume (hopefully for
+  user!) that key is drawn randomly from this set.</p>
+<p><strong>Brute Force Attack:</strong> try for all possible keys, <span
+  class="math"><em>k<sub>i</sub></em></span>, computing <span
+  class="math"><em>D</em>(<em>k</em><sub>i</sub>)</span> and see if it looks like a
+  reasonable plaintext.  </p>
+<p>In order for a brute force attack to succeed, what properties are
+necessary about (1) the keyspace and (2) the message space?</p>
+<div class="gap">
+
+</div>
+
+<h3>Asymmetric Cryptosystems</h3>
+<p><strong>Asymmetric cryptosystems</strong> use <em>different functions</em> for encrypting
+  and decrypting, with the property that revealing the encryption
+  function does not reveal the decryption function.  With Kerckhoff's
+  Principle, this means there are different keys for encryption and
+  decryption.</p>
+<ul>
+<li>
+<p><strong>Generate:</strong> produce key pair, <span class="math">(<em><font color="green">KU<sub>X</sub></font></em>, <em><font color="red">KR<sub>X</sub></font></em>)</span>, and publish the public key, <span class="math"><em><font color="green">KU<sub>X</sub></font></em></span>.</p>
+</li>
+<li>
+<p><strong>Encrypt:</strong> <span class="math"><em>E</em>(<em><font color="green">KU<sub>X</sub></font></em>: byte[], <em>m</em>: byte[]) &rarr; byte[]</span>. </p>
+</li>
+<li>
+<p><strong>Decrypt:</strong> <span class="math"><em>D</em>(<em><font color="red">KR<sub>X</sub></font></em>, <em>c</em>: byte[]) &rarr; byte[]</span>.</p>
+</li>
+</ul>
+<p><strong>Messages:</strong> Sender encrypts a message with the recipient's public key.
+  Recipient decrypts the message using her private key.</p>
+<p><strong>Signatures:</strong> Signer encrypts a message with her own private key.
+  Verifier checks the message using the signer's public key.</p>
+<p>How can we use asymmetric cryptosystems to <em>prove</em> ownership?
+<div class="gap">
+</div></p>
+<p>How can we use asymmetric cryptosystems to <em>transfer</em> ownership?
+<div class="gap">
+</div></p>
+<p>Assuming we have a strong asymmetric cryptosystem, what hard problems are left
+to solve to make a cryptocurrency?</p>
+<div class="gap">
+</div>
+
+<h3>Martin Luther King at the University</h3>
+<p>There's no class on Monday to honor Martin Luther King day.  Students
+are encouraged to use the class time to read Paul Gaston's <a href="http://www.virginia.edu/woodson/pubs/aa.htm"><em>Honor to
+the Class of 1969</em></a> and to
+learn about <a href="https://web.archive.org/web/20100615104829/http://cti.itc.virginia.edu/~hius316/desegregation/deseghome50s.html"><em>Desegregation at the University of Virginia and its
+Surrounding
+Communities</em></a>
+(including <a href="https://web.archive.org/web/20070503051645/http://cti.itc.virginia.edu/~hius316/desegregation/pace1.html">President Darden's
+letter</a>).</p>
+<p>Why is <a href="http://www.nytimes.com/1997/08/26/us/e-f-shannon-jr-79-dies-forceful-chief-of-u-of-virginia.html">Edgar
+Shannon</a>
+the only past-president of UVa with nothing significant at the
+University named after him?  Why does the University still have
+courtyards and schools named after Colgate Darden and none for <a href="http://www.virginia.edu/woodson/projects/kenan/swanson/swanson.html">Gregory
+Swanson</a>
+or <a href="http://artsandsciences.virginia.edu/meredithwoo/blog/the-desegregated-heart/">Sarah Patton
+Boyle</a>?</p>
+<div class="gap">
+</div>
+
+<p>How do the actions of our current administration (especially in response
+to recent events) compare to those of the 1960s?  </p>
+<div class="gap">
+</div>
+
+<p>Will there be justification for an <em>Honor to the Class of
+2015/2016/2017/2018</em> essay?
+<div class="gap">
+</div></p></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/class-2-cryptography.html#disqus_thread" data-disqus-identifier="class-2-cryptography">Comments</a></div>
+                   <hr />
+        </div>
 
         <div class="article">
  
