@@ -30,7 +30,7 @@ from the Massachusetts Institute of Technology. Most of her research is
 about money and other networked communication technologies. She was
 published payment technologies such as a Diners' Club, the first third
 party charge card, and Bitcoin, the anarcho-capitalist cryptographic
-currency.&lt;/p&gt;</summary></entry><entry><title>Class 13: Selfish Mining</title><link href="http://bitcoin-class.org/class-13-selfish-mining.html" rel="alternate"></link><updated>2015-02-25T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-25:class-13-selfish-mining.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
+currency.&lt;/p&gt;</summary></entry><entry><title>Class 13: Quiz 2</title><link href="http://bitcoin-class.org/class-13-quiz-2.html" rel="alternate"></link><updated>2015-02-25T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-25:class-13-quiz-2.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;p&gt;&lt;div class="todo"&gt; &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://bitcoin-class.org/pages/project2.html"&gt;Project 2 Part
@@ -41,39 +41,17 @@ currency.&lt;/p&gt;</summary></entry><entry><title>Class 13: Selfish Mining</tit
 &lt;/ul&gt;
 &lt;/div&gt;
 
+&lt;p&gt;&lt;center&gt; 
 &lt;!--
-&lt;center&gt; 
 &lt;iframe src="//www.slideshare.net/slideshow/embed_code/45046365" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"&gt;&lt;/iframe&gt;
 &lt;div class="caption"&gt;Note: due to a bug in
 slideshare's updated player, ink markings no longer appear in the
-viewer.  &lt;br&gt;If you [download the slides](|filename|./class12-inked.pptx), they are present though.
+viewer.  &lt;br&gt;If you &lt;a href="|filename|./class12-inked.pptx"&gt;download the slides&lt;/a&gt;, they are present though.
 Hopefully, the player will be fixed someday. &lt;/div&gt;
 &lt;/center&gt;
---&gt;
-
+--&gt;&lt;/p&gt;
 &lt;h2&gt;Quiz 2&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://bitcoin-class.org/classes/class13/quiz2.pdf"&gt;Quiz 2&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Selfish Mining&lt;/h2&gt;
-&lt;p&gt;What are the risks and benefits of witholding a found block?
-&lt;div class="gap"&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Based on the &lt;a href="http://www.submarinecablemap.com/"&gt;submarine cable map&lt;/a&gt;,
-where should you put your bitcoin mining operation?
-&lt;div class="gap"&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Suppose you (and no other bitcoin nodes) had access to an under-Artic
-fiberoptic cable, providing faster than currently possible routes
-between Japan and Anchorage.  Would this provide a valuable advantage in
-bitcoin?  Would you prefer to have a fast microwave link between Japan
-and Finland?&lt;/p&gt;
-&lt;div class="gap"&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;Ittay Eyal and Emin G&amp;uuml;n Sirer, &lt;a href="http://arxiv.org/pdf/1311.0243v5.pdf"&gt;&lt;em&gt;Majority is not Enough: Bitcoin
-Mining is Vulnerable&lt;/em&gt;&lt;/a&gt; (Nov 2013).&lt;/p&gt;</summary></entry><entry><title>PointCoin Updates</title><link href="http://bitcoin-class.org/pointcoin-updates.html" rel="alternate"></link><updated>2015-02-23T21:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-23:pointcoin-updates.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Reminder:&lt;/strong&gt; We'll have a quiz in class Wednesday.  It will be similar
+&lt;p&gt;&lt;a href="http://bitcoin-class.org/classes/class13/quiz2.pdf"&gt;Quiz 2&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>PointCoin Updates</title><link href="http://bitcoin-class.org/pointcoin-updates.html" rel="alternate"></link><updated>2015-02-23T21:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-23:pointcoin-updates.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Reminder:&lt;/strong&gt; We'll have a quiz in class Wednesday.  It will be similar
   to the previous quiz, and focus on fundamental understanding on how
   bitcoin works covering material from the beginning of the class
   through &lt;a href="http://bitcoin-class.org/class-10-more-mining.html"&gt;Class 10&lt;/a&gt;.&lt;/p&gt;

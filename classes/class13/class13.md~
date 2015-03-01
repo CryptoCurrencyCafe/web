@@ -11,10 +11,9 @@ Date: 2015-02-25
   sure I know about it and have agreed that it is a good substitution by
   this Friday (Feb 27).
 
-Read the rules carefully to understand what is within scope for this, and please ask for clarifications before doing anything questionable.
-
    </div>
 
+<!--
 <center> 
 <iframe src="//www.slideshare.net/slideshow/embed_code/45046365" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 <div class="caption">Note: due to a bug in
@@ -22,35 +21,39 @@ slideshare's updated player, ink markings no longer appear in the
 viewer.  <br>If you [download the slides](|filename|./class12-inked.pptx), they are present though.
 Hopefully, the player will be fixed someday. </div>
 </center>
+-->
 
-## Difficulty
+## Quiz 2
 
-[Bitcoin Difficulty increased yesterday!](https://bitcoinwisdom.com/bitcoin/difficulty): 46684376316
+[Quiz 2](|filename|./quiz2.pdf)
 
-This invalidates our results from the previous class about the SP20
-miner being profitable (with our assumption about 5% difficulty increase
-per month). 
+## Selfish Mining
 
-PointCoin's difficulty rate reveals something about when students got
-their miners working, and about how EC2 throttles micro instances:
+What are the risks and benefits of witholding a found block?
+<div class="gap">
 
-<center>
-<a href="/classes/class12/pointcoin-difficulty.png"><img src="/classes/class12/pointcoin-difficulty.png" width=600></a>
-</center>
+</div>
 
-## Superfish
 
-Here are some articles about superfish:  
 
-[_Komodia/Superfish SSL Validation is Broken_](https://blog.filippo.io/komodia-superfish-ssl-validation-is-broken/), Filippo Valsorda  
-[_Extracting the SuperFish certificate_](http://blog.erratasec.com/2015/02/extracting-superfish-certificate.html), Robert Graham  
-[_Lenovo Under Sustained Man in Middle Management Attack_](http://bitbanter.com/2015/02/20/lenovo-man-middle/), Josh Cincinatti  
-[_You Had One Job, Lenovo_](http://www.slate.com/articles/technology/bitwise/2015/02/lenovo_superfish_scandal_why_it_s_one_of_the_worst_consumer_computing_screw.html), David Auerbach, Slate  
+Based on the [submarine cable map](http://www.submarinecablemap.com/),
+where should you put your bitcoin mining operation?
+<div class="gap">
 
-## SSL Warings
+</div>
 
-[Adrienne Felt](http://research.google.com/pubs/AdrienneFelt.html)'s work on SSL warnings in Chrome browser:  
-[_Improving SSL Warnings_](https://docs.google.com/presentation/d/1TNFx6eaQVfe83PV80-FZ39QY1dSLGCWW8f2i5-NeJ48/edit#slide=id.p) (talk slides)  
-[_Improving SSL Warnings: Comprehension and Adherence_](http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/43265.pdf)  
-[_Experimenting At Scale With Google Chrome's SSL Warning_](http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41927.pdf)  
-You can also see her old page about the work she did at UVa: [_Privacy Protection for Social Network APIs_](http://www.cs.virginia.edu/felt/privacy/).
+Suppose you (and no other bitcoin nodes) had access to an under-Artic
+fiberoptic cable, providing faster than currently possible routes
+between Japan and Anchorage.  Would this provide a valuable advantage in
+bitcoin?  Would you prefer to have a fast microwave link between Japan
+and Finland?
+
+<div class="gap">
+
+</div>
+
+
+
+
+Ittay Eyal and Emin G&uuml;n Sirer, [_Majority is not Enough: Bitcoin
+Mining is Vulnerable_](http://arxiv.org/pdf/1311.0243v5.pdf) (Nov 2013).
