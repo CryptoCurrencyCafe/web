@@ -1,4 +1,4 @@
-Title: Class 13: Selfish Mining
+Title: Class 13: Quiz 2
 Date: 2015-02-25 
 
 ## Schedule 
@@ -14,6 +14,7 @@ Date: 2015-02-25
    </div>
 
 <!--
+
 <center> 
 <iframe src="//www.slideshare.net/slideshow/embed_code/45046365" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 <div class="caption">Note: due to a bug in
@@ -27,33 +28,3 @@ Hopefully, the player will be fixed someday. </div>
 
 [Quiz 2](|filename|./quiz2.pdf)
 
-## Selfish Mining
-
-What are the risks and benefits of witholding a found block?
-<div class="gap">
-
-</div>
-
-
-
-Based on the [submarine cable map](http://www.submarinecablemap.com/),
-where should you put your bitcoin mining operation?
-<div class="gap">
-
-</div>
-
-Suppose you (and no other bitcoin nodes) had access to an under-Artic
-fiberoptic cable, providing faster than currently possible routes
-between Japan and Anchorage.  Would this provide a valuable advantage in
-bitcoin?  Would you prefer to have a fast microwave link between Japan
-and Finland?
-
-<div class="gap">
-
-</div>
-
-
-
-
-Ittay Eyal and Emin G&uuml;n Sirer, [_Majority is not Enough: Bitcoin
-Mining is Vulnerable_](http://arxiv.org/pdf/1311.0243v5.pdf) (Nov 2013).
