@@ -42,8 +42,8 @@ Hopefully, the player will be fixed someday. &lt;/div&gt;
 
 
 &lt;p&gt;Interestingly, the [first commit version of this code]
-(https://github.com/bitcoin/bitcoin/blob/4405b78d6059e536c36974088a8ed4d9f0f29898/main.cpp#L675) (&lt;/p&gt;
-&lt;p&gt;in github (29 August 2009) is: &lt;/p&gt;
+(https://github.com/bitcoin/bitcoin/blob/4405b78d6059e536c36974088a8ed4d9f0f29898/main.cpp#L675)
+in github (29 August 2009) is missing the &lt;code&gt;halvings &amp;gt;= 64&lt;/code&gt; line we talked about in class: &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;int64&lt;/span&gt; &lt;span class="n"&gt;CBlock&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;GetBlockValue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;int64&lt;/span&gt; &lt;span class="n"&gt;nFees&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="n"&gt;int64&lt;/span&gt; &lt;span class="n"&gt;nSubsidy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;COIN&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
