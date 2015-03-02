@@ -41,20 +41,23 @@ Hopefully, the player will be fixed someday. &lt;/div&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Interestingly, the &lt;a href="https://github.com/bitcoin/bitcoin/blob/84c3fb07b0b8199c7f85c5de280e7100bad0786f/src/main.cpp#L1087"&gt;earliest version of this code&lt;/a&gt; in github is: &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;int64&lt;/span&gt; &lt;span class="nf"&gt;GetBlockValue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;nHeight&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;int64&lt;/span&gt; &lt;span class="n"&gt;nFees&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;p&gt;Interestingly, the [first commit version of this code]
+(https://github.com/bitcoin/bitcoin/blob/4405b78d6059e536c36974088a8ed4d9f0f29898/main.cpp#L675) (&lt;/p&gt;
+&lt;p&gt;in github (29 August 2009) is: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;int64&lt;/span&gt; &lt;span class="n"&gt;CBlock&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;GetBlockValue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;int64&lt;/span&gt; &lt;span class="n"&gt;nFees&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="n"&gt;int64&lt;/span&gt; &lt;span class="n"&gt;nSubsidy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;COIN&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
     &lt;span class="c1"&gt;// Subsidy is cut in half every 4 years&lt;/span&gt;
-    &lt;span class="n"&gt;nSubsidy&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nHeight&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;210000&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;nSubsidy&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nBestHeight&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;210000&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;nSubsidy&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;nFees&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Will a node running the early version of this code ever compute a
+&lt;p&gt;Will a node running the early version of this code (assuming the global &lt;code&gt;nBestHeight&lt;/code&gt; is equal to &lt;code&gt;nHeight&lt;/code&gt;)
+ever compute a
 different block value than a node running the current version of the
 code?
 &lt;div class="gap"&gt;&lt;/p&gt;

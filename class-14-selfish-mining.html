@@ -158,20 +158,23 @@ Hopefully, the player will be fixed someday. </div>
 </pre></div>
 
 
-<p>Interestingly, the <a href="https://github.com/bitcoin/bitcoin/blob/84c3fb07b0b8199c7f85c5de280e7100bad0786f/src/main.cpp#L1087">earliest version of this code</a> in github is: </p>
-<div class="highlight"><pre><span class="n">int64</span> <span class="nf">GetBlockValue</span><span class="p">(</span><span class="kt">int</span> <span class="n">nHeight</span><span class="p">,</span> <span class="n">int64</span> <span class="n">nFees</span><span class="p">)</span>
+<p>Interestingly, the [first commit version of this code]
+(https://github.com/bitcoin/bitcoin/blob/4405b78d6059e536c36974088a8ed4d9f0f29898/main.cpp#L675) (</p>
+<p>in github (29 August 2009) is: </p>
+<div class="highlight"><pre><span class="n">int64</span> <span class="n">CBlock</span><span class="o">::</span><span class="n">GetBlockValue</span><span class="p">(</span><span class="n">int64</span> <span class="n">nFees</span><span class="p">)</span> <span class="k">const</span>
 <span class="p">{</span>
     <span class="n">int64</span> <span class="n">nSubsidy</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">COIN</span><span class="p">;</span>
 
     <span class="c1">// Subsidy is cut in half every 4 years</span>
-    <span class="n">nSubsidy</span> <span class="o">&gt;&gt;=</span> <span class="p">(</span><span class="n">nHeight</span> <span class="o">/</span> <span class="mi">210000</span><span class="p">);</span>
+    <span class="n">nSubsidy</span> <span class="o">&gt;&gt;=</span> <span class="p">(</span><span class="n">nBestHeight</span> <span class="o">/</span> <span class="mi">210000</span><span class="p">);</span>
 
     <span class="k">return</span> <span class="n">nSubsidy</span> <span class="o">+</span> <span class="n">nFees</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<p>Will a node running the early version of this code ever compute a
+<p>Will a node running the early version of this code (assuming the global <code>nBestHeight</code> is equal to <code>nHeight</code>)
+ever compute a
 different block value than a node running the current version of the
 code?
 <div class="gap"></p>
