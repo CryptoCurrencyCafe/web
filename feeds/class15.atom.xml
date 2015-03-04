@@ -117,6 +117,13 @@ otherwise, &lt;strong&gt;0&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class="gap"&gt;&lt;/p&gt;
 &lt;/div&gt;
 
+&lt;p&gt;&lt;code&gt;OP_HASH160&lt;/code&gt;&lt;br /&gt;
+[20-byte hash]&lt;br /&gt;
+&lt;code&gt;OP_EQUAL&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;What must be on the stack for the locking script above ("Pay-to-Script-Hash") to succeed?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;p&gt;According to &lt;a href="http://www.quantabytes.com/articles/a-survey-of-bitcoin-transaction-types"&gt;Most Popular Transaction
 Scripts&lt;/a&gt;
 (analysis of all transactions in first 290,000 blocks), the ninth most popular script is:
@@ -131,11 +138,25 @@ protected by this locking script?)
 &lt;div class="gap"&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h2&gt;Code&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/script.go#L723"&gt;Execute&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you are not clear on what Turing-complete means, see &lt;a href="http://www.dori-mic.org"&gt;&lt;em&gt;Dori-Mic and the Universal Machine!&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;BTCD Code&lt;/h2&gt;
+&lt;p&gt;Type: &lt;a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/script.go#L206"&gt;Script&lt;/a&gt; is the virtual machine the executes scripts (note that it has two Stacks) &lt;/p&gt;
+&lt;p&gt;Execute a script: &lt;a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/script.go#L723"&gt;Execute&lt;/a&gt;&lt;br /&gt;
+Execute one instruction: &lt;a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/script.go#L782"&gt;Step&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/opcode.go#L38"&gt;Opcodes&lt;/a&gt;&lt;br /&gt;
+&lt;a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/opcode.go#L971"&gt;exec&lt;/a&gt; function executes one instruction  &lt;/p&gt;
+&lt;p&gt;Some interesting opcode implementations:
+&lt;a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/opcode.go#L1143"&gt;OP_IF&lt;/a&gt;&lt;br /&gt;
+&lt;a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/opcode.go#L1235"&gt;OP_RETURN&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Bitcoin Core Code&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/bitcoin/bitcoin/blob/41e6e4caba9899ce7c165b0784461c55c867ee24/src/script/interpreter.cpp"&gt;script/interpreter.cpp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/bitcoin/bitcoin/blob/41e6e4caba9899ce7c165b0784461c55c867ee24/src/script/interpreter.cpp#L524"&gt;OP_DUP&lt;/a&gt;&lt;br /&gt;
+&lt;a href="https://github.com/bitcoin/bitcoin/blob/41e6e4caba9899ce7c165b0784461c55c867ee24/src/script/interpreter.cpp#L752"&gt;Crypto&lt;/a&gt;
+&lt;a href="https://github.com/bitcoin/bitcoin/blob/41e6e4caba9899ce7c165b0784461c55c867ee24/src/script/interpreter.cpp#L785"&gt;OP_CHECKSIG&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Links&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://www.crmarsh.com/script-playground/"&gt;Script Playground&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Some interesting things you can do with bitcoin scripts:&lt;br /&gt;
 &lt;a href="https://en.bitcoin.it/wiki/Contracts"&gt;Contracts&lt;/a&gt; (see also Nick Szabo's &lt;a href="http://szabo.best.vwh.net/formalize.html"&gt;&lt;em&gt;Formalizing and Securing Relationships on Public Networks&lt;/em&gt;&lt;/a&gt;&lt;br /&gt;
 &lt;a href="http://eprint.iacr.org/2013/784"&gt;Secure Multiparty Computations&lt;/a&gt; (to implement lotteries)  &lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;OP_RETURN&lt;/code&gt;/pasted script execution bug doesn't even make this list of &lt;a href="http://www.coindesk.com/9-biggest-screwups-bitcoin-history/"&gt;&lt;em&gt;The 9 Biggest Screwups in Bitcoin History&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;The &lt;code&gt;OP_RETURN&lt;/code&gt;/pasted script execution bug doesn't even make this list of &lt;a href="http://www.coindesk.com/9-biggest-screwups-bitcoin-history/"&gt;&lt;em&gt;The 9 Biggest Screwups in Bitcoin History&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blockexplorer.com/rawblock/00000000000997f9fd2fe1ee376293ef8c42ad09193a5d2086dddf8e5c426b56"&gt;Block 71036&lt;/a&gt;&lt;/p&gt;</summary></entry></feed>

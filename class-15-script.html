@@ -234,6 +234,13 @@ otherwise, <strong>0</strong>.</p>
 <div class="gap"></p>
 </div>
 
+<p><code>OP_HASH160</code><br />
+[20-byte hash]<br />
+<code>OP_EQUAL</code>  </p>
+<p>What must be on the stack for the locking script above ("Pay-to-Script-Hash") to succeed?
+<div class="gap"></p>
+</div>
+
 <p>According to <a href="http://www.quantabytes.com/articles/a-survey-of-bitcoin-transaction-types">Most Popular Transaction
 Scripts</a>
 (analysis of all transactions in first 290,000 blocks), the ninth most popular script is:
@@ -248,14 +255,28 @@ protected by this locking script?)
 <div class="gap"></p>
 </div>
 
-<h2>Code</h2>
-<p><a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/script.go#L723">Execute</a></p>
+<p>If you are not clear on what Turing-complete means, see <a href="http://www.dori-mic.org"><em>Dori-Mic and the Universal Machine!</em></a></p>
+<h2>BTCD Code</h2>
+<p>Type: <a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/script.go#L206">Script</a> is the virtual machine the executes scripts (note that it has two Stacks) </p>
+<p>Execute a script: <a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/script.go#L723">Execute</a><br />
+Execute one instruction: <a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/script.go#L782">Step</a>  </p>
+<p><a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/opcode.go#L38">Opcodes</a><br />
+<a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/opcode.go#L971">exec</a> function executes one instruction  </p>
+<p>Some interesting opcode implementations:
+<a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/opcode.go#L1143">OP_IF</a><br />
+<a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/opcode.go#L1235">OP_RETURN</a></p>
+<h2>Bitcoin Core Code</h2>
+<p><a href="https://github.com/bitcoin/bitcoin/blob/41e6e4caba9899ce7c165b0784461c55c867ee24/src/script/interpreter.cpp">script/interpreter.cpp</a></p>
+<p><a href="https://github.com/bitcoin/bitcoin/blob/41e6e4caba9899ce7c165b0784461c55c867ee24/src/script/interpreter.cpp#L524">OP_DUP</a><br />
+<a href="https://github.com/bitcoin/bitcoin/blob/41e6e4caba9899ce7c165b0784461c55c867ee24/src/script/interpreter.cpp#L752">Crypto</a>
+<a href="https://github.com/bitcoin/bitcoin/blob/41e6e4caba9899ce7c165b0784461c55c867ee24/src/script/interpreter.cpp#L785">OP_CHECKSIG</a></p>
 <h2>Links</h2>
 <p><a href="http://www.crmarsh.com/script-playground/">Script Playground</a></p>
 <p>Some interesting things you can do with bitcoin scripts:<br />
 <a href="https://en.bitcoin.it/wiki/Contracts">Contracts</a> (see also Nick Szabo's <a href="http://szabo.best.vwh.net/formalize.html"><em>Formalizing and Securing Relationships on Public Networks</em></a><br />
 <a href="http://eprint.iacr.org/2013/784">Secure Multiparty Computations</a> (to implement lotteries)  </p>
 <p>The <code>OP_RETURN</code>/pasted script execution bug doesn't even make this list of <a href="http://www.coindesk.com/9-biggest-screwups-bitcoin-history/"><em>The 9 Biggest Screwups in Bitcoin History</em></a>.</p>
+<p><a href="http://blockexplorer.com/rawblock/00000000000997f9fd2fe1ee376293ef8c42ad09193a5d2086dddf8e5c426b56">Block 71036</a></p>
                 </div><!-- /.entry-content -->
                 <div class="comments">
                 <h2>Comments</h2>
