@@ -1,0 +1,26 @@
+Title: Class 15: Selfish Mining
+Date: 2015-03-02 
+
+## Schedule
+
+   <div class="todo"> 
+
+- [Project 2 Part
+  2](|filename|../../pages/projects/project2/project2.md) is due next
+  **Thursday, 5 March.** Submission is by email, send a PDF with your
+  answers to questions 5-9.
+
+- Keep thinking about ideas for your project.  The first deliverable for
+  the project will be a preliminary proposal due on March 19.
+
+   </div>
+
+<center> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/45339406" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<div class="caption">Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you [download the slides](|filename|./class14-inked.pptx), they are present though.
+Hopefully, the player will be fixed someday. </div>
+</center>
+
+https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/script.go#L723

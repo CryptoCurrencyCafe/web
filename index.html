@@ -154,6 +154,171 @@
 
         <div class="article">
  
+                   <h1><a href="http://bitcoin-class.org/class-15-script.html">Class 15: Script</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-03-04T00:00:00-05:00">
+    Wed 04 March 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/class15.html"><i class="icon-folder-open"></i>class15</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><h2>Schedule</h2>
+<p><div class="todo"> </p>
+<ul>
+<li>
+<p><a href="http://bitcoin-class.org/pages/project2.html">Project 2 Part
+  2</a> is due <strong>tomorrow</strong> (Thursday, 5 March).<br />
+  Submission is by email, send a PDF with your
+  answers to questions 5-9.</p>
+</li>
+<li>
+<p>Keep thinking about ideas for your project.  The first deliverable for
+  the project will be a preliminary proposal due on March 19.</p>
+</li>
+<li>
+<p>Enjoy your Spring Break!
+   </div>
+<!--
+<center> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/45339406" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<div class="caption">Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you <a href="|filename|./class14-inked.pptx">download the slides</a>, they are present though.
+Hopefully, the player will be fixed someday. </div>
+</center>
+--></p>
+</li>
+</ul>
+<h1>Bitcoin Script</h1>
+<p>Transaction outputs in bitcoin are protected by <em>locking scripts</em>, and
+must be unlocked by <em>unlocking scripts</em>.  The scripts are written in a
+simple (compared to, say, the Java Virtual Machine language, but quite
+complex and poorly specified for what one might expect would be needed
+for bitcoin transactions) stack-based language.  A transaction output is
+not unlocked unless an unlocking script is provided such that the result
+of executing the unlocking script, followed by executing the locking
+script, is a stack with value True on top (and no invalid transaction
+results during the execution).</p>
+<p>Some script instructions:</p>
+<table>
+<thead>
+<tr>
+<th>Opcode</th>
+<th>Input</th>
+<th>Output</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OP_1</code></td>
+<td>-</td>
+<td><strong>1</strong></td>
+<td>Pushes a <strong>1</strong> (True) on the stack</td>
+</tr>
+<tr>
+<td><code>OP_DUP</code></td>
+<td><em>a</em></td>
+<td><em>a</em> <em>a</em></td>
+<td>Duplicates the top element of the stack</td>
+</tr>
+<tr>
+<td><code>OP_ADD</code></td>
+<td><em>a</em> <em>b</em></td>
+<td>(<em>a</em>+<em>b</em>)</td>
+<td>Pushes the sum of the top two elements.</td>
+</tr>
+<tr>
+<td><code>OP_EQUAL</code></td>
+<td><em>a</em> <em>b</em></td>
+<td><strong>0</strong> or <strong>1</strong></td>
+<td>Pushes <strong>1</strong> if the top two elements are exactly equal, otherwise <strong>0</strong>.</td>
+</tr>
+<tr>
+<td><code>OP_VERIFY</code></td>
+<td><em>a</em></td>
+<td>-</td>
+<td>If <em>a</em> is not <strong>True</strong> (<strong>1</strong>), terminates as Invalid.</td>
+</tr>
+<tr>
+<td><code>OP_RETURN</code></td>
+<td>-</td>
+<td>-</td>
+<td>Terminates as Invalid.</td>
+</tr>
+<tr>
+<td><code>OP_EQUALVERIFY</code></td>
+<td><em>a</em> <em>b</em></td>
+<td>-</td>
+<td>If <em>a</em> and <em>b</em> are not equal, terminates as Invalid.</td>
+</tr>
+<tr>
+<td><code>OP_HASH160</code></td>
+<td><em>a</em></td>
+<td>H(<em>a</em>)</td>
+<td>Pushes bitcoin address, RIPEMD(SHA256(<em>a</em>)).</td>
+</tr>
+</tbody>
+</table>
+<p>Some more complex instructions:</p>
+<p><code>OP_IF</code> [statements] <code>OP_ENDIF</code> - If the top of the stack is <strong>1</strong>, executes [statements].  Otherwise does nothing.</p>
+<p><code>OP_CHECKSIG</code> - Pops two items from the stack, <em>publickey</em> and <em>sig</em>.
+Verifies the entire transaction (known from node state, not the stack)
+using the <em>publickey</em> and <em>sig</em>.  If the signature is valid, push <strong>1</strong>;
+otherwise, <strong>0</strong>.</p>
+<p>\clearpage</p>
+<p><code>OP_1 OP_DUP OP_ADD OP_DUP OP_SUB OP_VERIFY</code>
+<div class="gap"></p>
+<h1></h1>
+<h1></h1>
+</div>
+
+<p>The most common locking script (send to public address):<br />
+<code>OP_DUP</code><br />
+<code>OP_HASH160</code><br />
+<code>OP_DATA20</code> <em>(bitcoin address)</em><br />
+<code>OP_EQUALVERIFY</code><br />
+<code>OP_CHECKSIG</code>  </p>
+<p>What must be on the stack for the locking script to succeed (end with <strong>1</strong> on top of stack)?
+<div class="gap"></p>
+</div>
+
+<p>According to <a href="http://www.quantabytes.com/articles/a-survey-of-bitcoin-transaction-types">Most Popular Transaction
+Scripts</a>
+(analysis of all transactions in first 290,000 blocks), the ninth most popular script is:
+<code>OP_RETURN OP_DATA_40</code></p>
+<p>What must be on the stack for the <code>OP_RETURN OP_DATA_40</code> locking script to succeed (end with
+<strong>1</strong> on top of stack)? (Trick question: what happens to the coin
+protected by this locking script?)
+<div class="gap"></p>
+</div>
+
+<p>Is the bitcoin scripting language Turing-complete?
+<div class="gap"></p>
+</div>
+
+<h2>Code</h2>
+<p><a href="https://github.com/btcsuite/btcd/blob/c153596542b3d87dd774c29aa5be5117ac01a234/txscript/script.go#L723">Execute</a></p>
+<h2>Links</h2>
+<p><a href="http://www.crmarsh.com/script-playground/">Script Playground</a></p>
+<p>Some interesting things you can do with bitcoin scripts:<br />
+<a href="https://en.bitcoin.it/wiki/Contracts">Contracts</a> (see also Nick Szabo's <a href="http://szabo.best.vwh.net/formalize.html"><em>Formalizing and Securing Relationships on Public Networks</em></a><br />
+<a href="http://eprint.iacr.org/2013/784">Secure Multiparty Computations</a> (to implement lotteries)  </p></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/class-15-script.html#disqus_thread" data-disqus-identifier="class-15-script">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
                    <h1><a href="http://bitcoin-class.org/class-14-selfish-mining.html">Class 14: Selfish Mining</a></h1>
                    <div class="well small"><footer class="post-info">
 <span class="quietlabel">Posted: </span>
@@ -383,47 +548,11 @@ Hopefully, the player will be fixed someday. </div>
         </div>
 
         <div class="article">
- 
-                   <h1><a href="http://bitcoin-class.org/pointcoin-updates.html">PointCoin Updates</a></h1>
-                   <div class="well small"><footer class="post-info">
-<span class="quietlabel">Posted: </span>
-<abbr class="published" title="2015-02-23T21:00:00-05:00">
-    Mon 23 February 2015
-</abbr>
-<!-- <span class="quietlabel">by</span>
-<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
--->
-<!--
-<span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/announcements.html"><i class="icon-folder-open"></i>announcements</a>.
--->
+                   <a href="http://bitcoin-class.org/pointcoin-updates.html">PointCoin Updates</a> (Mon 23 February 2015)<br></br>
 
-<!--
--->
-</footer><!-- /.post-info --></div>
-                   <div class="content"><p><strong>Reminder:</strong> We'll have a quiz in class Wednesday.  It will be similar
-  to the previous quiz, and focus on fundamental understanding on how
-  bitcoin works covering material from the beginning of the class
-  through <a href="http://bitcoin-class.org/class-10-more-mining.html">Class 10</a>.</p>
-<p><strong>Mining:</strong>
-You'll notice in the PointCoin blockchain that I'm now running an
-"unfair advantage" node, using a Medium instance on EC2.  This is at the
-insistance of the PointCoin Pizza purveyor, who is worried that it may
-be too easy for a single miner to obtain a high fraction of the
-processing power just by managing their EC2 micro instance credits
-carefully while everyone else's miner is throttled.  (You can see this
-in the blockchain when a new miner starts up, it will often win several
-blocks in a row, just because it has not yet hit the micro instance
-throttling level.)  (I may decide to turn off my "unfair advantage"
-miner at some later time, but for now I intend to leave it running to
-make it a difficult for a single miner to obtain control of a large
-fraction of the hashing power.)</p>
-<p><strong>Talk Tuesday!</strong>: There's an interesting security-related talk from <a href="https://ericw.us/trow/">Eric
-Wustrow</a> tomorrow: <a href="http://www.cs.virginia.edu/events/colloquia/wustrow.html"><em>Anticensorship in the
-Network</em></a>,
-10:45am in Rice 242.</p></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/pointcoin-updates.html#disqus_thread" data-disqus-identifier="pointcoin-updates">Comments</a></div>
-                   <hr />
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/pointcoin-updates.html">More...</a>                      
+                   </div>-->
         </div>
 
         <div class="article">
@@ -463,14 +592,6 @@ Network</em></a>,
 
  <!--                  <div class="summary">
                         <a class="btn primary xsmall" href="http://bitcoin-class.org/class-10-more-mining.html">More...</a>                      
-                   </div>-->
-        </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/class-9-mining.html">Class 9: Mining</a> (Wed 11 February 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-9-mining.html">More...</a>                      
                    </div>-->
         </div>
         <hr />
