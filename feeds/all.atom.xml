@@ -103,11 +103,8 @@ results during the execution).&lt;/p&gt;
 Verifies the entire transaction (known from node state, not the stack)
 using the &lt;em&gt;publickey&lt;/em&gt; and &lt;em&gt;sig&lt;/em&gt;.  If the signature is valid, push &lt;strong&gt;1&lt;/strong&gt;;
 otherwise, &lt;strong&gt;0&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;\clearpage&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;OP_1 OP_DUP OP_ADD OP_DUP OP_SUB OP_VERIFY&lt;/code&gt;
 &lt;div class="gap"&gt;&lt;/p&gt;
-&lt;h1&gt;&lt;/h1&gt;
-&lt;h1&gt;&lt;/h1&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The most common locking script (send to public address):&lt;br /&gt;
