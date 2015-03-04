@@ -14,18 +14,19 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Enjoy your Spring Break!
-   &lt;/div&gt;
+   &lt;/div&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;!--
 &lt;center&gt; 
 &lt;iframe src="//www.slideshare.net/slideshow/embed_code/45339406" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"&gt;&lt;/iframe&gt;
 &lt;div class="caption"&gt;Note: due to a bug in
 slideshare's updated player, ink markings no longer appear in the
-viewer.  &lt;br&gt;If you &lt;a href="|filename|./class14-inked.pptx"&gt;download the slides&lt;/a&gt;, they are present though.
+viewer.  &lt;br&gt;If you [download the slides](|filename|./class15-inked.pptx), they are present though.
 Hopefully, the player will be fixed someday. &lt;/div&gt;
 &lt;/center&gt;
---&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+--&gt;
+
 &lt;h1&gt;Bitcoin Script&lt;/h1&gt;
 &lt;p&gt;Transaction outputs in bitcoin are protected by &lt;em&gt;locking scripts&lt;/em&gt;, and
 must be unlocked by &lt;em&gt;unlocking scripts&lt;/em&gt;.  The scripts are written in a
