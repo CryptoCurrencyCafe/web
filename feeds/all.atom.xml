@@ -140,7 +140,8 @@ protected by this locking script?)
 &lt;p&gt;&lt;a href="http://www.crmarsh.com/script-playground/"&gt;Script Playground&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Some interesting things you can do with bitcoin scripts:&lt;br /&gt;
 &lt;a href="https://en.bitcoin.it/wiki/Contracts"&gt;Contracts&lt;/a&gt; (see also Nick Szabo's &lt;a href="http://szabo.best.vwh.net/formalize.html"&gt;&lt;em&gt;Formalizing and Securing Relationships on Public Networks&lt;/em&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;a href="http://eprint.iacr.org/2013/784"&gt;Secure Multiparty Computations&lt;/a&gt; (to implement lotteries)  &lt;/p&gt;</summary></entry><entry><title>Class 14: Selfish Mining</title><link href="http://bitcoin-class.org/class-14-selfish-mining.html" rel="alternate"></link><updated>2015-03-02T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-02:class-14-selfish-mining.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
+&lt;a href="http://eprint.iacr.org/2013/784"&gt;Secure Multiparty Computations&lt;/a&gt; (to implement lotteries)  &lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;OP_RETURN&lt;/code&gt;/pasted script execution bug doesn't even make this list of &lt;a href="http://www.coindesk.com/9-biggest-screwups-bitcoin-history/"&gt;&lt;em&gt;The 9 Biggest Screwups in Bitcoin History&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Class 14: Selfish Mining</title><link href="http://bitcoin-class.org/class-14-selfish-mining.html" rel="alternate"></link><updated>2015-03-02T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-02:class-14-selfish-mining.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;p&gt;&lt;div class="todo"&gt; &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
