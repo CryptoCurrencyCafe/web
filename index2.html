@@ -158,6 +158,50 @@
 
         <div class="article">
  
+                   <h1><a href="http://bitcoin-class.org/pointcoin-updates.html">PointCoin Updates</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-02-23T21:00:00-05:00">
+    Mon 23 February 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/announcements.html"><i class="icon-folder-open"></i>announcements</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><p><strong>Reminder:</strong> We'll have a quiz in class Wednesday.  It will be similar
+  to the previous quiz, and focus on fundamental understanding on how
+  bitcoin works covering material from the beginning of the class
+  through <a href="http://bitcoin-class.org/class-10-more-mining.html">Class 10</a>.</p>
+<p><strong>Mining:</strong>
+You'll notice in the PointCoin blockchain that I'm now running an
+"unfair advantage" node, using a Medium instance on EC2.  This is at the
+insistance of the PointCoin Pizza purveyor, who is worried that it may
+be too easy for a single miner to obtain a high fraction of the
+processing power just by managing their EC2 micro instance credits
+carefully while everyone else's miner is throttled.  (You can see this
+in the blockchain when a new miner starts up, it will often win several
+blocks in a row, just because it has not yet hit the micro instance
+throttling level.)  (I may decide to turn off my "unfair advantage"
+miner at some later time, but for now I intend to leave it running to
+make it a difficult for a single miner to obtain control of a large
+fraction of the hashing power.)</p>
+<p><strong>Talk Tuesday!</strong>: There's an interesting security-related talk from <a href="https://ericw.us/trow/">Eric
+Wustrow</a> tomorrow: <a href="http://www.cs.virginia.edu/events/colloquia/wustrow.html"><em>Anticensorship in the
+Network</em></a>,
+10:45am in Rice 242.</p></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/pointcoin-updates.html#disqus_thread" data-disqus-identifier="pointcoin-updates">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
                    <h1><a href="http://bitcoin-class.org/class-12-mostly-about-superfish.html">Class 12: Mostly About Superfish</a></h1>
                    <div class="well small"><footer class="post-info">
 <span class="quietlabel">Posted: </span>
@@ -381,58 +425,11 @@ exceeds 50%?</p>
         </div>
 
         <div class="article">
- 
-                   <h1><a href="http://bitcoin-class.org/project-2-new-network-up.html">Project 2 - New Network Up</a></h1>
-                   <div class="well small"><footer class="post-info">
-<span class="quietlabel">Posted: </span>
-<abbr class="published" title="2015-02-17T00:00:00-05:00">
-    Tue 17 February 2015
-</abbr>
-<!-- <span class="quietlabel">by</span>
-<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
--->
-<!--
-<span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/announcements.html"><i class="icon-folder-open"></i>announcements</a>.
--->
+                   <a href="http://bitcoin-class.org/project-2-new-network-up.html">Project 2 - New Network Up</a> (Tue 17 February 2015)<br></br>
 
-<!--
--->
-</footer><!-- /.post-info --></div>
-                   <div class="content"><p>The new PointCoin network is now up!  This fixes the reset problem and
-some other issues that were discussed in Monday's class.  It also sets
-the expected block generating time to 10 minutes and the mining reward
-to 10 PointCoin.</p>
-<p>To migrate your node to the PointCoin 0.2 network follow these directions:</p>
-<ul>
-<li><a href="https://github.com/PointCoin/pointcoind/wiki/Migration">Migration</a></li>
-</ul>
-<p>Once you have your node running on the new network, add your public IP address here:</p>
-<ul>
-<li><a href="https://github.com/PointCoin/pointcoind/wiki/Publicly-Listed-IP-Address">Node Addresses</a></li>
-</ul>
-<p>There is no automatic peering.  We believe this is a design decision in
-btcd (which pointcoind is forked from), to not trust any node that is
-not announced by multiple other nodes.</p>
-<p>You can see the blockchain at:
-<a href="http://blockexplorer.bitcoin-class.org/"><em>http://blockexplorer.bitcoin-class.org/</em></a>.
-We will consider this the canonical PointCoin blockchain (at least until
-next Monday, when you can start launching attacks).</p>
-<p>Because of the problems with the network, it is no longer necessary to
-acquire 100 PointCoin to earn full credit for Problem 1.  It is
-sufficient to successfully mine at least one block.  Earning more
-PointCoin will still be beneficial though!  You'll have other
-opportunities to use it.</p>
-<p>Thanks a bunch to Alex and Nick for tremendous work getting this
-working!  It seems to be stable, and our nodes (including nodes running
-on EC2 micro instances) have been stable (no crashes) for more than 24
-hours now, so we're optimistic there will not be further problems.</p>
-<p>I'm really sorry for the confusion and trouble this has caused, not to
-mention the PointCoins you've lost that you may have mined successfully
-on the original network.  I think we'll learn a lot from trying to
-launch a cryptocurrency, and there is plenty that can go wrong.</p></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/project-2-new-network-up.html#disqus_thread" data-disqus-identifier="project-2-new-network-up">Comments</a></div>
-                   <hr />
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/project-2-new-network-up.html">More...</a>                      
+                   </div>-->
         </div>
 
         <div class="article">
@@ -474,14 +471,6 @@ launch a cryptocurrency, and there is plenty that can go wrong.</p></div>
                         <a class="btn primary xsmall" href="http://bitcoin-class.org/starting-project-2.html">More...</a>                      
                    </div>-->
         </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/class-7-merkle-trees.html">Class 7: Merkle Trees</a> (Wed 04 February 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-7-merkle-trees.html">More...</a>                      
-                   </div>-->
-        </div>
         <hr />
 
         <div class="pagination">
@@ -490,6 +479,7 @@ launch a cryptocurrency, and there is plenty that can go wrong.</p></div>
                         <li class=""><a href="http://bitcoin-class.org/index.html">1</a></li>
                         <li class="active"><a href="http://bitcoin-class.org/index2.html">2</a></li>
                         <li class=""><a href="http://bitcoin-class.org/index3.html">3</a></li>
+                        <li class=""><a href="http://bitcoin-class.org/index4.html">4</a></li>
                         <li class="next"><a href="http://bitcoin-class.org/index3.html">Next &rarr;</a></li>
         </ul>
         </div>

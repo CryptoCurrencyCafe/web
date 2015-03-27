@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-03-25T00:00:00-04:00</updated><entry><title>Project Proposal Presentations</title><link href="http://bitcoin-class.org/project-proposal-presentations.html" rel="alternate"></link><updated>2015-03-25T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-25:project-proposal-presentations.html</id><summary type="html">&lt;p&gt;Next week, each team will present their idea for the project.  You
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-03-26T00:00:00-04:00</updated><entry><title>Fall 2015 Course</title><link href="http://bitcoin-class.org/fall-2015-course.html" rel="alternate"></link><updated>2015-03-26T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-26:fall-2015-course.html</id><summary type="html">&lt;p&gt;A similar course will be offered in Fall 2015.  It is listed as a cs4501
+(Special Topics in Computer Science) with class meetings Mondays and
+Wednesdays, 2-3:15pm in Olsson Hall 120.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="http://bitcoin-class.org/pages/syllabus.html"&gt;syllabus&lt;/a&gt; for this
+semester's course will change some for the next version of the course,
+but that page and the rest of the material on this site will give you a
+good idea what to expect.  The expected background for the Fall 2015
+course is having completed cs2150 and cs3102 (or equivalent experience
+and knowledge in some other way).  Exceptions will be made for students
+who bring some other interesting background or perspective to the class.&lt;/p&gt;</summary></entry><entry><title>Project Proposal Presentations</title><link href="http://bitcoin-class.org/project-proposal-presentations.html" rel="alternate"></link><updated>2015-03-25T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-25:project-proposal-presentations.html</id><summary type="html">&lt;p&gt;Next week, each team will present their idea for the project.  You
 should plan to have no more than 5-8 minutes to present your idea, and
 then there will be some time for questions and discussion.  You can use
 slides for your presentation (although it is fine is you want to present
