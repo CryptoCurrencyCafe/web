@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-03-30T00:00:00-04:00</updated><entry><title>Office Hours Today</title><link href="http://bitcoin-class.org/office-hours-today.html" rel="alternate"></link><updated>2015-03-30T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-30:office-hours-today.html</id><summary type="html">&lt;p&gt;Nick isn't able to hold his scheduled office hours today.  I (Dave) will
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-01T00:00:00-04:00</updated><entry><title>Some Interesting Links</title><link href="http://bitcoin-class.org/some-interesting-links.html" rel="alternate"></link><updated>2015-04-01T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-01:some-interesting-links.html</id><summary type="html">&lt;p&gt;Here's a few interesting links relevant to several of the projects that were discussed today:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.nytimes.com/2015/03/31/nyregion/silk-road-case-federal-agents-charges.html?_r=2"&gt;&lt;em&gt;2 Ex-Federal Agents in Silk Road Case Are Charged With
+Fraud&lt;/em&gt;&lt;/a&gt;, New York Times, 31 March 2015 --- the &lt;a href="https://s3.amazonaws.com/s3.documentcloud.org/documents/1697973/charges-against-former-federal-agents-in-silk.pdf"&gt;full
+charges&lt;/a&gt;
+are quite interesting reading, would be good to look for some of the
+transactions mentioned in them in the blockchain.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blogs.wsj.com/moneybeat/2015/03/29/interest-in-bitcoin-grows-on-wall-street/"&gt;&lt;em&gt;Interest in Bitcoin Grows on Wall Street&lt;/em&gt;&lt;/a&gt;, Wall Stree Journal, 29 March 2015.&lt;/p&gt;</summary></entry><entry><title>Office Hours Today</title><link href="http://bitcoin-class.org/office-hours-today.html" rel="alternate"></link><updated>2015-03-30T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-30:office-hours-today.html</id><summary type="html">&lt;p&gt;Nick isn't able to hold his scheduled office hours today.  I (Dave) will
 be available until 5pm today.  We'll have regular office hours later
 this week (4-5pm Thursday, Dave in Rice 507; noon-2pm Friday, Nick in
 HackCville).  You are welcome and encouraged to use office hours to
@@ -36,7 +42,7 @@ Merlin Zhang, Trisha Hajela&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Pointcoin Reddit Tip Bot&lt;/em&gt;&lt;br /&gt;
 Joey Weate, Charlie Harding&lt;/p&gt;
 &lt;h3&gt;Wednesday, 1 April&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;PointCoin Pizza &amp;mdash; Revamped&lt;/em&gt;&lt;br /&gt;
+&lt;p&gt;&lt;em&gt;PointCoin Pizza &amp;mdash; Revamped&lt;/em&gt; [&lt;a href="http://bitcoin-class.org/classes/class18/pizza.pptx"&gt;Slides&lt;/a&gt;]&lt;br /&gt;
 Kyle Angelotti and Michelle Wang&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;PointList: the PointCoin Marketplace&lt;/em&gt;&lt;br /&gt;
 Anat Gilboa, Benjamin Edgar&lt;/p&gt;
