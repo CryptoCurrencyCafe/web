@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-01T00:00:00-04:00</updated><entry><title>Bitcoin Panel</title><link href="http://bitcoin-class.org/bitcoin-panel.html" rel="alternate"></link><updated>2015-04-01T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-01:bitcoin-panel.html</id><summary type="html">&lt;p&gt;There will be a panel on "Bitcoins and Entrepreneurial and Career
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-06T00:00:00-04:00</updated><entry><title>Class 22: Subsidies, Ombuds, Melange</title><link href="http://bitcoin-class.org/class-22-subsidies-ombuds-melange.html" rel="alternate"></link><updated>2015-04-06T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-06:class-22-subsidies-ombuds-melange.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
+&lt;p&gt;If your group didn't already send me a project progress update, please
+remember to do so by midnight tonight.  Your update should either point
+to your first deliverable (as specified in your proposal), or explain
+what progress you've made and issues that have come up.  It does not
+need to be a long or formal report, but enough to see that you're making
+progress and raise any issues before it is too late to deal with them. &lt;/p&gt;
+&lt;p&gt;Thursday evening at 6pm in Comm School (RRH) room 223 there will be a
+bitcoin panel hosted by Carol Van Cleef, and including Alex Kuck, Nick
+Skelsey, Josh Cincinnati, David Evans, and Denis Nekipelov as panelists.
+Please fill in this form to make sure they order enough pizza:
+&lt;a href="http://goo.gl/forms/1LJyaR9nCV"&gt;http://goo.gl/forms/1LJyaR9nCV&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Recap&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Subsidy Studies&lt;/em&gt;&lt;br /&gt;
+Laurence Meyers, Jacob Rosenberg&lt;/p&gt;
+&lt;p&gt;Alex Kuck and Nick Skelsey presented about &lt;a href="http://soapbox.systems/"&gt;Ombuds&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://hunterleath.com/"&gt;Hunter Leath&lt;/a&gt; presented about &lt;a href="https://namecoin.info/"&gt;Namecoin&lt;/a&gt; and
+&lt;a href="http://www.getmelange.com/"&gt;Melange&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Reading&lt;/h2&gt;
+&lt;p&gt;Next class, we'll talk about sidechains:&lt;/p&gt;
+&lt;p&gt;Adam Back, Matt Corallo, Luke Dashjr, Mark Friedenbach, Gregory Maxwell, Andrew Miller, Andrew Poelstra, Jorge Timón, and Pieter Wuille.  &lt;a href="http://www.blockstream.com/sidechains.pdf"&gt;&lt;em&gt;Enabling Blockchain Innovations with Pegged Sidechains&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Bitcoin Panel</title><link href="http://bitcoin-class.org/bitcoin-panel.html" rel="alternate"></link><updated>2015-04-01T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-01:bitcoin-panel.html</id><summary type="html">&lt;p&gt;There will be a panel on "Bitcoins and Entrepreneurial and Career
 Ventures in the world of Digital Currency" next week Thursday, April 9
 at 6pm (location to be announced soon).  &lt;/p&gt;
 &lt;blockquote&gt;
@@ -29,27 +49,7 @@ Satoshi Nakamoto&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;A Decentralized Banking Scheme for Communal Funds&lt;/em&gt;&lt;br /&gt;
 Ori Shimony&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Bitcoin Market Price&lt;/em&gt;&lt;br /&gt;
-Oriana Ngo and Avinash Ramesh&lt;/p&gt;</summary></entry><entry><title>Class 22: Subsidies, Ombuds, Melange</title><link href="http://bitcoin-class.org/class-22-subsidies-ombuds-melange.html" rel="alternate"></link><updated>2015-04-01T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-01:class-22-subsidies-ombuds-melange.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
-&lt;p&gt;If your group didn't already send me a project progress update, please
-remember to do so by midnight tonight.  Your update should either point
-to your first deliverable (as specified in your proposal), or explain
-what progress you've made and issues that have come up.  It does not
-need to be a long or formal report, but enough to see that you're making
-progress and raise any issues before it is too late to deal with them. &lt;/p&gt;
-&lt;p&gt;Thursday evening at 6pm in Comm School (RRH) room 223 there will be a
-bitcoin panel hosted by Carol Van Cleef, and including Alex Kuck, Nick
-Skelsey, Josh Cincinnati, David Evans, and Denis Nekipelov as panelists.
-Please fill in this form to make sure they order enough pizza:
-&lt;a href="http://goo.gl/forms/1LJyaR9nCV"&gt;http://goo.gl/forms/1LJyaR9nCV&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Recap&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Subsidy Studies&lt;/em&gt;&lt;br /&gt;
-Laurence Meyers, Jacob Rosenberg&lt;/p&gt;
-&lt;p&gt;Alex Kuck and Nick Skelsey presented about &lt;a href="http://soapbox.systems/"&gt;Ombuds&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://hunterleath.com/"&gt;Hunter Leath&lt;/a&gt; presented about &lt;a href="https://namecoin.info/"&gt;Namecoin&lt;/a&gt; and
-&lt;a href="http://www.getmelange.com/"&gt;Melange&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Reading&lt;/h2&gt;
-&lt;p&gt;Next class, we'll talk about sidechains:&lt;/p&gt;
-&lt;p&gt;Adam Back, Matt Corallo, Luke Dashjr, Mark Friedenbach, Gregory Maxwell, Andrew Miller, Andrew Poelstra, Jorge Timón, and Pieter Wuille.  &lt;a href="http://www.blockstream.com/sidechains.pdf"&gt;&lt;em&gt;Enabling Blockchain Innovations with Pegged Sidechains&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Some Interesting Links</title><link href="http://bitcoin-class.org/some-interesting-links.html" rel="alternate"></link><updated>2015-04-01T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-01:some-interesting-links.html</id><summary type="html">&lt;p&gt;Here's a few interesting links relevant to several of the projects that were discussed today:&lt;/p&gt;
+Oriana Ngo and Avinash Ramesh&lt;/p&gt;</summary></entry><entry><title>Some Interesting Links</title><link href="http://bitcoin-class.org/some-interesting-links.html" rel="alternate"></link><updated>2015-04-01T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-01:some-interesting-links.html</id><summary type="html">&lt;p&gt;Here's a few interesting links relevant to several of the projects that were discussed today:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.nytimes.com/2015/03/31/nyregion/silk-road-case-federal-agents-charges.html?_r=2"&gt;&lt;em&gt;2 Ex-Federal Agents in Silk Road Case Are Charged With
 Fraud&lt;/em&gt;&lt;/a&gt;, New York Times, 31 March 2015 --- the &lt;a href="https://s3.amazonaws.com/s3.documentcloud.org/documents/1697973/charges-against-former-federal-agents-in-silk.pdf"&gt;full
 charges&lt;/a&gt;
