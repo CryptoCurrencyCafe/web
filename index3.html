@@ -158,7 +158,347 @@
 
         <div class="article">
  
-                   <h1><a href="http://bitcoin-class.org/project-2.html">Project 2</a></h1>
+                   <h1><a href="http://bitcoin-class.org/class-11-pools-and-profits.html">Class 11: Pools and Profits</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-02-18T00:00:00-05:00">
+    Wed 18 February 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/class11.html"><i class="icon-folder-open"></i>class11</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><h2>Schedule</h2>
+<p><div class="todo"> </p>
+<ul>
+<li>
+<p><a href="http://bitcoin-class.org/pages/project2.html">Project 2</a>, Part 1 is due <strong>Sunday, 22 February</strong>.  </p>
+</li>
+<li>
+<p>Quiz 2 will be in class on <strong>Wednesday, 25 February</strong>.  It will be similar in length, format, and content to Quiz 1 (except will cover material from the beginning of the class through </p>
+</li>
+<li>
+<p>Continue thinking about project ideas! </p>
+</li>
+</ul>
+</div>
+
+<p><center> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/44858338" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<div class="caption">Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you <a href="http://bitcoin-class.org/classes/class11/class11-inked.pptx">download the slides</a>, they are present though.
+Hopefully, the player will be fixed someday. </div>
+</center></p>
+<h1>Mining Model</h1>
+<p>Mining Harware on the market today: <a href="http://www.spondoolies-tech.com/products/holiday-special-sp20-jackson-shipping-from-stock">Spondoolies SP20</a> (this is just an example, certainly not a commercial endorsement!)</p>
+<p><div class="indented">
+<strong>Cost:</strong> US$ 479<br />
+<strong>Hash rate:</strong> 1.7 TH/s<br />
+<strong>Power use:</strong> 1200 W<br />
+<strong><a href="https://encrypted.google.com/search?hl=en&amp;q=BTC%20to%20USD">BTC Price</a>:</strong> US$ 240<br />
+<strong>Difficulty:</strong> 44455415962 # from https://blockchain.info/stats, 18 Feb 2015
+    </div></p>
+<p><a href="https://docs.google.com/spreadsheet/ccc?key=0AiFMBvXvL2dtdEZkR2J4eU5rS3B4ei1iUmJxSWNlQ0E#gid=0">This
+spreadsheet</a>
+has lots of information about bitcoin difficulty over time.</p>
+<p><div class="warning">
+<strong>Please don't make any investment decisions based on any of these models!</strong>  Even the best one is still much simplified and with many guesses (e.g., assumption that BTC value will not change, slow increase in difficulty).
+   </div></p>
+<h3>Super Simple Model</h3>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">expected_hashes</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.7</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">12</span><span class="p">)</span>
+<span class="mf">112314445.6981567</span> <span class="c"># expected seconds to find block</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+<span class="mf">1299.935714099036</span> <span class="c"># days to find block</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">block_value</span> <span class="o">=</span> <span class="mi">240</span> <span class="o">*</span> <span class="mi">25</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">earnings_per_year</span> <span class="o">=</span> <span class="n">block_value</span> <span class="o">*</span> <span class="p">(</span><span class="mf">365.25</span> <span class="o">/</span> <span class="mi">1300</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">earnings_per_year</span>
+<span class="mf">1685.769230769231</span>
+<span class="sb">````</span>
+
+<span class="n">Why</span> <span class="ow">is</span> <span class="n">this</span> <span class="n">estimate</span> <span class="n">of</span> <span class="n">expected</span> <span class="n">earnings</span> <span class="n">totally</span> <span class="n">broken</span><span class="err">?</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s">&quot;gap&quot;</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+<span class="c">### Better Model</span>
+
+<span class="n">Python</span> <span class="n">code</span> <span class="p">(</span><span class="n">excerpted</span> <span class="n">below</span><span class="p">):</span> <span class="p">[</span><span class="n">mining</span><span class="o">.</span><span class="n">py</span><span class="p">](</span><span class="o">|</span><span class="n">filename</span><span class="o">|./</span><span class="n">mining</span><span class="o">-</span><span class="n">simple</span><span class="o">.</span><span class="n">py</span><span class="p">)</span>
+
+<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="k">def</span> <span class="nf">guess_difficulty</span><span class="p">(</span><span class="n">month</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">difficulty</span> <span class="o">*</span> <span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">rate_of_difficulty</span><span class="p">)</span> <span class="o">**</span> <span class="n">month</span><span class="p">)</span>
+
+<span class="n">hash_rate</span> <span class="o">=</span> <span class="mf">1.7</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">12</span> <span class="c"># 1.7 Th/s</span>
+<span class="n">hashes_in_month</span> <span class="o">=</span> <span class="n">hash_rate</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">ave_days_in_month</span>
+<span class="n">block_value</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">*</span> <span class="mi">240</span> <span class="c"># assumes fixed BTC value </span>
+<span class="n">electricity_cost</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.2</span> <span class="o">*</span> <span class="n">kWh</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">ave_days_in_month</span>
+
+<span class="k">def</span> <span class="nf">expected_revenue</span><span class="p">(</span><span class="n">month</span><span class="p">):</span>
+    <span class="n">success_probability</span> <span class="o">=</span> <span class="n">find_target</span><span class="p">(</span><span class="n">guess_difficulty</span><span class="p">(</span><span class="n">month</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span><span class="o">**</span><span class="mi">256</span> 
+    <span class="k">return</span> <span class="n">block_value</span> <span class="o">*</span> <span class="n">hashes_in_month</span> <span class="o">*</span> <span class="n">success_probability</span>
+
+<span class="k">def</span> <span class="nf">cumulative_income</span><span class="p">(</span><span class="n">months</span><span class="p">):</span>
+    <span class="n">income</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">months</span><span class="p">):</span>
+        <span class="n">income</span> <span class="o">+=</span> <span class="n">expected_revenue</span><span class="p">(</span><span class="n">month</span><span class="p">)</span> <span class="o">-</span> <span class="n">electricity_cost</span>
+    <span class="k">return</span> <span class="n">income</span>
+</pre></div>
+
+
+<p>Given this model, when should the miner be turned off and turned to scrap?
+<div class="gap"></p>
+</div>
+
+<p>Bitcoin core code: <a href="https://github.com/bitcoin/bitcoin/blob/175d86e633bedcfb642fb326f1ec0b43c14c4f3b/src/main.cpp#L1229">GetBlockValue</a>, <a href="https://github.com/bitcoin/bitcoin/blob/31dedb463b0ce77364e516239bf1b9c7eed5b3b0/src/chainparams.cpp">ChainParams</a></p>
+<p>What should happen to the bitcoin difficulty when subsidy is halved after block 420,000?
+(Current block is 344,044 so we should reach block 420,000 in (420000-34400 / (6 * 24)) = 527 days.)
+<div class="gap"></p>
+</div>
+
+<h1>Mining Pools</h1>
+<p>How can an open mining pool fairly determine miners share of the reward?  Why is it not sensible to use actual blocks mined to estminate pool share?
+<div class="gap"></p>
+</div>
+
+<p>What are the risks of a mining pool controlling a large fraction over
+the hashing power?  Does anything dramatic happen when that fraction
+exceeds 50%?</p>
+<div class="gap">
+
+</div>
+
+<h1>Links</h1>
+<p><a href="http://hackingdistributed.com/2014/06/13/time-for-a-hard-bitcoin-fork/"><em>What Happens At Armageddon?</em></a>
+(Ittay Eyal and Emin G&uuml;n Sirer, 13 June 2014)</p>
+<p><a href="https://bitcointalk.org/?topic=441465.msg7282674#msg7282674">Discussion about Eligius Block Witholding Attack</a></p></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/class-11-pools-and-profits.html#disqus_thread" data-disqus-identifier="class-11-pools-and-profits">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
+                   <h1><a href="http://bitcoin-class.org/project-2-new-network-up.html">Project 2 - New Network Up</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-02-17T00:00:00-05:00">
+    Tue 17 February 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/announcements.html"><i class="icon-folder-open"></i>announcements</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><p>The new PointCoin network is now up!  This fixes the reset problem and
+some other issues that were discussed in Monday's class.  It also sets
+the expected block generating time to 10 minutes and the mining reward
+to 10 PointCoin.</p>
+<p>To migrate your node to the PointCoin 0.2 network follow these directions:</p>
+<ul>
+<li><a href="https://github.com/PointCoin/pointcoind/wiki/Migration">Migration</a></li>
+</ul>
+<p>Once you have your node running on the new network, add your public IP address here:</p>
+<ul>
+<li><a href="https://github.com/PointCoin/pointcoind/wiki/Publicly-Listed-IP-Address">Node Addresses</a></li>
+</ul>
+<p>There is no automatic peering.  We believe this is a design decision in
+btcd (which pointcoind is forked from), to not trust any node that is
+not announced by multiple other nodes.</p>
+<p>You can see the blockchain at:
+<a href="http://blockexplorer.bitcoin-class.org/"><em>http://blockexplorer.bitcoin-class.org/</em></a>.
+We will consider this the canonical PointCoin blockchain (at least until
+next Monday, when you can start launching attacks).</p>
+<p>Because of the problems with the network, it is no longer necessary to
+acquire 100 PointCoin to earn full credit for Problem 1.  It is
+sufficient to successfully mine at least one block.  Earning more
+PointCoin will still be beneficial though!  You'll have other
+opportunities to use it.</p>
+<p>Thanks a bunch to Alex and Nick for tremendous work getting this
+working!  It seems to be stable, and our nodes (including nodes running
+on EC2 micro instances) have been stable (no crashes) for more than 24
+hours now, so we're optimistic there will not be further problems.</p>
+<p>I'm really sorry for the confusion and trouble this has caused, not to
+mention the PointCoins you've lost that you may have mined successfully
+on the original network.  I think we'll learn a lot from trying to
+launch a cryptocurrency, and there is plenty that can go wrong.</p></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/project-2-new-network-up.html#disqus_thread" data-disqus-identifier="project-2-new-network-up">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
+                   <h1><a href="http://bitcoin-class.org/class-10-more-mining.html">Class 10: More Mining</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-02-16T00:00:00-05:00">
+    Mon 16 February 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/class10.html"><i class="icon-folder-open"></i>class10</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><h2>Schedule</h2>
+<p><div class="todo"> </p>
+<ul>
+<li>
+<p><a href="http://bitcoin-class.org/pages/project2.html">Project 2</a>, Part 1 is due <strong>Sunday, 22 February</strong>.  Part 2 will begin afte class on Monday, 23 February and is due on Thursday, 5 March.</p>
+</li>
+<li>
+<p>Start (continue!) thinking of ideas for your final project.  I've posted a few starting ideas <a href="http://bitcoin-class.org/pages/project-ideas.html">on the course site</a>.  The first major deliverable for the final project will be a project proposal (due <strong>20 March</strong>)</p>
+</li>
+<li>
+<p>Reading: finish reading through <a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch08.asciidoc"><em>Chapter 8: Mining and Consensus</em></a>.</p>
+</li>
+</ul>
+</div>
+
+<p><center> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/44794648" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<div class="caption">Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you <a href="http://bitcoin-class.org/classes/class10/class10-inked.pptx">download the slides</a>, they are present though.
+Hopefully, the player will be fixed someday. </div>
+</center></p>
+<h1>Final Project</h1>
+<p>Your main assignment after finishing Project 2 will be an open-ended
+project.  You can work on anything you want that is related to
+cryptocurrency (loosely defined), so long as you can convince me it will
+be interesting and worthwhile.  My hope is everyone will do a project
+that will have significant value beyond just our class.</p>
+<p>You can work alone or in a team of any size.  The impressiveness of your
+project should scale with the size of your team (but not linearly, since
+there is added communication overhead as your team size increases).  It
+should scale as at least <span class="math"><em>N</em><sup>2/3</sup></span>
+where <span class="math"><em>N</em></span> is the number of students in the
+course on your team.  (You are welcome to enlist help from people not in
+the class, and they don't count towards your <span
+class="math"><em>N</em></span> value.)</p>
+<h1>Forking PointCoin</h1>
+<p>What causes a blockchain to fork?
+<div class="gap"></p>
+</div>
+
+<p>If all the trans-pacific network cables (there are <a href="http://www.submarinecablemap.com/">only about
+12</a>) were cut, what would happen to
+the bitcoin blockchain?
+<div class="gap"></p>
+</div>
+
+<h1>Asymptotic Analysis</h1>
+<p>When is asymptotic analysis useful?
+<div class="gap">
+</div></p>
+<p>When is asymptotic analysis useless?
+<div class="gap">
+</div></p>
+<p>The measured time to compute one SHA-256 hash on my EC2 node (2.5 GHz
+processor) is 750 ns.  Approximately how many instructions execute to
+compute on SHA-256 hash?
+<div class="gap"></p>
+</div>
+
+<h1>Mining Cost</h1>
+<p><strong>Assumption.</strong> SHA-256 produces a uniform random output.  (We know this
+  is not really true, but it is a reasonable approximation, and
+  necessary for the analysis.)  So, we can model SHA-256 on any (new)
+  input <span class="math"><em>x</em></span> as drawing randomly from 2<sup>256</sup> possible outputs:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHA-256(<span class="math"><em>x</em>) &larr; [0, 2<sup>256</sup>)</p>
+<p><span class="math">Target = T<sub>max</sub> / Difficulty</span><br />
+<span class="math">T<sub>max</sub> = (2<sup>16</sup> – 1)2<sup>256<sup> &approx; 2<sup>224</sup></p>
+<p>Current (15 Feb) Bitcoin Difficulty = 44,455,415,962</p>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">target</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">224</span> <span class="o">/</span> <span class="mi">44455415962</span>
+<span class="mi">606449092506427232846302685260647042725721699378946247123L</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">success_probability</span> <span class="o">=</span> <span class="n">target</span> <span class="o">/</span> <span class="mi">2</span><span class="o">**</span><span class="mi">256</span>
+<span class="mf">5.237396582969569e-21</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">expected_hashes</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">success_probability</span>
+<span class="mf">1.9093455768686638e+20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nanos_needed</span> <span class="o">=</span> <span class="n">expected_hashes</span> <span class="o">*</span> <span class="mi">760</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">seconds_needed</span> <span class="o">=</span> <span class="n">nanos_needed</span> <span class="o">/</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span>
+<span class="mf">145110263842018.44</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">days</span> <span class="o">=</span> <span class="n">seconds_needed</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>
+<span class="mf">1679516942.6159542</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">years</span> <span class="o">=</span> <span class="n">days</span> <span class="o">/</span> <span class="mi">365</span>
+<span class="mf">4601416.2811396</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">years</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="o">~</span> <span class="mf">9.2</span> <span class="n">M</span> <span class="n">years</span> <span class="n">to</span> <span class="n">find</span> <span class="n">one</span> <span class="n">block</span> <span class="n">on</span> <span class="n">EC2</span> <span class="p">(</span><span class="n">assuming</span> <span class="n">difficulty</span> <span class="n">doesn</span><span class="err">’</span><span class="n">t</span> <span class="n">increase</span><span class="p">)</span>
+</pre></div>
+
+
+<h1>Energy</h1>
+<p>Why is energy/hash so much less for custom ASICs? 
+<div class="gap"></p>
+</div>
+
+<p>In an ASIC, it is possible to build an XOR using 4 transistors.  How
+many transistors have to flip to do an XOR on a general purpose
+processor like an Intel i7?
+<div class="gap"></p>
+</div>
+
+<p><a href="https://en.bitcoin.it/wiki/Mining_hardware_comparison">Mining Hardware</a>
+- current ASIC miners achive &gt;5 Billion hashes per seconds and over 1500
+Million hashes per Joule (the energy required to lift an apple one
+meter).</p>
+<p><a href="http://www.thecoinsman.com/2014/08/bitcoin/inside-chinese-bitcoin-mine/"><em>Inside a Chinese Bitcoin Mine</em></a>, The Coinsman, 11 August 2014.</p>
+<blockquote>
+<p>The first thing you notice as you approach the warehouse is the noise. It begins as soon as you step out of the car, at which point it sounds like massive swarm of angry bees droning away somewhere off in the distance. It becomes louder and louder the closer you get to the building, and as you step through the doors it becomes a deafening and steady roar...</p>
+</blockquote>
+<p>Estimate for total energy use of bitcoin network with current hashrate:</p>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">expected_hashes</span>
+<span class="mf">1.9093455768686638e+20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hashes_per_second</span> <span class="o">=</span> <span class="n">expected_hashes</span> <span class="o">/</span> <span class="mi">600</span>
+<span class="mf">3.18224262811444e+17</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">309384699.96</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span> <span class="err">#</span> <span class="n">according</span> <span class="n">to</span> <span class="n">blockchain</span><span class="p">.</span><span class="n">info</span><span class="o">:</span> <span class="mi">309</span><span class="p">,</span><span class="mi">384</span><span class="p">,</span><span class="mf">699.96</span> <span class="n">GH</span><span class="o">/</span><span class="n">s</span>
+<span class="mf">3.0938469996e+17</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">/</span> <span class="n">hashes_per_second</span>
+<span class="mf">0.9722222222361415</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Mhash_per_J</span> <span class="o">=</span> <span class="mi">1500</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Mhash_per_second</span> <span class="o">=</span> <span class="n">hashes_per_second</span> <span class="o">/</span> <span class="mi">10</span><span class="o">**</span><span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">J</span> <span class="o">=</span> <span class="n">Mhash_per_second</span> <span class="o">/</span> <span class="n">Mhash_per_J</span>
+<span class="mf">212149508.54096264</span>
+</pre></div>
+
+
+<p>212 MJ per second = 212 MW</p>
+<p>Our nearest nuclear plant, the <a href="https://www.dom.com/corporate/what-we-do/electricity/generation/nuclear/north-anna-power-station">North Anna Power
+Station</a>
+(Lake Anna) generates 1892 MW, "enough to power 450,000 homes" or about
+9x the amount needed to power the current bitcoin network (only counting
+the miners themselves; additional power needed for cooling, etc.)</p>
+<p>How does the energy use of bitcoin compare to what is used by the
+current financial infrastructure for comparable service?  (This is a
+very difficult question to answer, would be a good project idea, not
+something to answer in the blank below!)</p>
+<div class="gap">
+
+</div></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/class-10-more-mining.html#disqus_thread" data-disqus-identifier="class-10-more-mining">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
+                   <h1><a href="http://bitcoin-class.org/class-9-mining.html">Class 9: Mining</a></h1>
                    <div class="well small"><footer class="post-info">
 <span class="quietlabel">Posted: </span>
 <abbr class="published" title="2015-02-11T00:00:00-05:00">
@@ -169,40 +509,7 @@
 -->
 <!--
 <span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/announcements.html"><i class="icon-folder-open"></i>announcements</a>.
--->
-
-<!--
--->
-</footer><!-- /.post-info --></div>
-                   <div class="content"><p><a href="http://bitcoin-class.org/pages/project2.html">Project 2</a> is now
-posted.  The first part is due <strong>February 22</strong>.  (After February 23, we
-will be encouraging you to try launching attacks on the PointCoin
-network, which is Part 2 of this project.  Until then, though, you
-should aim to be a cooperative and honest pointcoin node and miner.)</p>
-<p>If you haven't already got your pointcoin node up and running on an EC2
-node, you should definitely get this done by the end of this week.
-(Note: Dave has office hours Thursday 4-5pm, and Nick/Alex has office
-hours Friday noon-2pm.  Please don't wait to get help if you are stuck
-on this!)</p></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/project-2.html#disqus_thread" data-disqus-identifier="project-2">Comments</a></div>
-                   <hr />
-        </div>
-
-        <div class="article">
- 
-                   <h1><a href="http://bitcoin-class.org/class-8-review-and-project-2.html">Class 8: Review and Project 2</a></h1>
-                   <div class="well small"><footer class="post-info">
-<span class="quietlabel">Posted: </span>
-<abbr class="published" title="2015-02-09T00:00:00-05:00">
-    Mon 09 February 2015
-</abbr>
-<!-- <span class="quietlabel">by</span>
-<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
--->
-<!--
-<span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/class8.html"><i class="icon-folder-open"></i>class8</a>.
+<a href="http://bitcoin-class.org/category/class9.html"><i class="icon-folder-open"></i>class9</a>.
 -->
 
 <!--
@@ -212,316 +519,79 @@ on this!)</p></div>
 <p><div class="todo"> </p>
 <ul>
 <li>
-<p><strong>Quiz</strong>: We'll have a short quiz in class on Wednesday, 11
-    <strong>February</strong>.  The quiz will be closed resources, except for your course notes (things you have on paper, not using the electronic resources).  The point of the quiz is to see how well people are <strong>understanding the core ideas we've covered</strong>.  It covers the material from Classes 1-7, Project 1, and the readings from Antonopoulos' book Chapters 1-7 and Satoshi's paper.</p>
+<p><a href="http://bitcoin-class.org/pages/project2.html">Project 2</a>, Part 1 is due <strong>Sunday, 22 February</strong>.  </p>
 </li>
 <li>
-<p><strong>Project 2</strong>: Our goal is to have everyone in the class have a
-    PointCoin node up an running on an EC2 node by the end of today's
-    class.  After that, your task for Project 2 is to create a PointCoin
-    miner.  We will provide some more guidance on this (posted by
-    Wednesday), as well as specific questions to answer for Project 2.
-   </div></p>
-</li>
-</ul>
-<p>(The are no notes or slides for this class, it was used to answer
-questions and provide help getting started on Project 2.)</p></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/class-8-review-and-project-2.html#disqus_thread" data-disqus-identifier="class-8-review-and-project-2">Comments</a></div>
-                   <hr />
-        </div>
-
-        <div class="article">
- 
-                   <h1><a href="http://bitcoin-class.org/starting-project-2.html">Starting Project 2</a></h1>
-                   <div class="well small"><footer class="post-info">
-<span class="quietlabel">Posted: </span>
-<abbr class="published" title="2015-02-05T00:00:00-05:00">
-    Thu 05 February 2015
-</abbr>
-<!-- <span class="quietlabel">by</span>
-<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
--->
-<!--
-<span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/announcements.html"><i class="icon-folder-open"></i>announcements</a>.
--->
-
-<!--
--->
-</footer><!-- /.post-info --></div>
-                   <div class="content"><p><strong>Project 1.</strong> You should have received your Project 1 grade as a
-  transfer to your vanity address (on a 100,000 satoshi scale, so 0.001
-  BTC is full credit).  You should be able to see this in the blockchain
-  (e.g., by searching for your vanity address).  Note that this is
-  different from the address you used to create your initial wallet, so
-  you won't see it in your wallet unless you load the keys for your
-  vanity address into your wallet (see
-  <a href="https://multibit.org/en/help/v0.5/help_importingPrivateKeys.html">https://multibit.org/en/help/v0.5/help_importingPrivateKeys.html</a>
-  for how to import your vanity address private key into MultiBit).</p>
-<p><strong>Geting started on Project 2.</strong> For project 2, you'll be implementing
-  and running a miner for a new cryptocurrency,
-  <a href="https://github.com/PointCoin/pointcoind">PointCoin</a>.  We'll talk more
-  about this in class Monday and post a more detailed project
-  descruption soon, but you should get started by setting up your
-  pointcoind node before class Monday.  </p>
-<p>Directions for getting your
-  pointcoind node setup on a free EC2 instance are here: <a href="https://github.com/PointCoin/pointcoind/wiki/Installing-PointCoin-on-AWS">Installing
-  PointCoin on
-  AWS</a>.</p>
-<p>If you get stuck, we'll have time in class Monday to help, but you
-  should get as far as you can on your own before class Monday.  Feel
-  free to also post coments and questions here.</p></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/starting-project-2.html#disqus_thread" data-disqus-identifier="starting-project-2">Comments</a></div>
-                   <hr />
-        </div>
-
-        <div class="article">
- 
-                   <h1><a href="http://bitcoin-class.org/class-7-merkle-trees.html">Class 7: Merkle Trees</a></h1>
-                   <div class="well small"><footer class="post-info">
-<span class="quietlabel">Posted: </span>
-<abbr class="published" title="2015-02-04T00:00:00-05:00">
-    Wed 04 February 2015
-</abbr>
-<!-- <span class="quietlabel">by</span>
-<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
--->
-<!--
-<span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/class7.html"><i class="icon-folder-open"></i>class7</a>.
--->
-
-<!--
--->
-</footer><!-- /.post-info --></div>
-                   <div class="content"><p><div class="phighlight">
-   <a href="http://bitcoin-class.org/classes/class7/class7.pdf">PDF version for printing</a>
-   </div></p>
-<h2>Schedule</h2>
-<p><div class="todo"> </p>
-<ul>
-<li>
-<p>If you didn’t get full credit for Project 1 because of failure to post
-  something interesting, you can (and should!) redeem yourself and earn
-  full credit by <strong>posting an interesting comment by Thursday</strong>.  It can
-  be on (1) Discussion questions from Project 1 (2) notes from classes,
-  or (3) general forum.</p>
-</li>
-<li>
-<p><strong>Quiz</strong>: We'll have a short, closed resources quiz in class on
-    <strong>Wednesday, 11 February</strong>.  The point of the quiz is to see how
-    well people are understanding the core ideas we've covered so far
-    (including today).</p>
-</li>
-<li>
-<p><strong>Read</strong> (by Monday): <a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch06.asciidoc"><em>Chapter 6: The Bitcoin
-Network</em></a>,
-<a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch07.asciidoc"><em>Chapter 7: The
-Blockchain</em></a>
-from Andreas Antonopoulos' book.</p>
-</li>
-<li>
-<p>I am away the rest of this week, so will not have office hours on
-  Thursday.  (I am, of course, still available by email and course web
-  site.)</p>
-</li>
-<li>
-<p>In Monday's class, Nick and Alex will explain what is provided and
-what you need to do for project 2.  You should at least set up your node
-for project 2 before class Monday (details will be posted tomorrow).
-You will also have an opportunity to ask questions about anything we
-have covered so far.  If you have questions you want answered, or topics
-you'd like discussed, you can post them in the comments for these notes (or email me directly).</p>
+<p>Reading: finish reading through <a href="https://github.com/aantonop/bitcoinbook/blob/develop/ch08.asciidoc"><em>Chapter 8: Mining and Consensus</em></a>.</p>
 </li>
 </ul>
 </div>
 
 <p><center> 
-<iframe src="//www.slideshare.net/slideshow/embed_code/44277798" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<iframe src="//www.slideshare.net/slideshow/embed_code/44686287" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 <div class="caption">Note: due to a bug in
 slideshare's updated player, ink markings no longer appear in the
-viewer.  <br>If you download the slides, they are present though.
+viewer.  <br>If you <a href="http://bitcoin-class.org/classes/class9/class9-inked.pptx">download the slides</a>, they are present though.
 Hopefully, the player will be fixed someday. </div>
 </center></p>
-<h1>Exploring Blocks</h1>
-<table>
-<thead>
-<tr>
-<th><strong>Label</strong></th>
-<th align="left"><strong>Bytes</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>version</code></td>
-<td align="left">4</td>
-<td>Block version information</td>
-</tr>
-<tr>
-<td><code>prev_block</code></td>
-<td align="left">32</td>
-<td>Hash of the previous block</td>
-</tr>
-<tr>
-<td><code>merkle_root</code></td>
-<td align="left">32</td>
-<td>Hash of Merkle tree of all transactions</td>
-</tr>
-<tr>
-<td><code>timestamp</code></td>
-<td align="left">4</td>
-<td>When block was created (overflows in 2106)</td>
-</tr>
-<tr>
-<td><code>bits</code></td>
-<td align="left">4</td>
-<td>Difficulty target used for this block</td>
-</tr>
-<tr>
-<td><code>nonce</code></td>
-<td align="left">4</td>
-<td>Nonce found to generate this block</td>
-</tr>
-</tbody>
-</table>
-<p><a href="http://blockexplorer.com/b/341537">Block 341537</a></p>
-<div class="highlight"><pre><span class="p">{</span>
-  <span class="s2">&quot;hash&quot;</span><span class="o">:</span><span class="s2">&quot;000000000000000002b32e242989056214fef31c5aac08ae517840db3e3e7fd2&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;ver&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
-  <span class="s2">&quot;prev_block&quot;</span><span class="o">:</span><span class="s2">&quot;000000000000000014a97984448f2b3e5b8582ece719be1a1ea7db1d1fce5561&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;mrkl_root&quot;</span><span class="o">:</span><span class="s2">&quot;d634ceec0d9a8b065ad3203555b74877d0476e0b302972be41671a6b92a0a066&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;time&quot;</span><span class="o">:</span><span class="mi">1422830051</span><span class="p">,</span>
-  <span class="s2">&quot;bits&quot;</span><span class="o">:</span><span class="mi">404399040</span><span class="p">,</span>
-  <span class="s2">&quot;nonce&quot;</span><span class="o">:</span><span class="mi">527809407</span><span class="p">,</span>
-  <span class="s2">&quot;n_tx&quot;</span><span class="o">:</span><span class="mi">1511</span><span class="p">,</span>
-  <span class="s2">&quot;size&quot;</span><span class="o">:</span><span class="mi">760657</span><span class="p">,</span>
-  <span class="s2">&quot;tx&quot;</span><span class="o">:</span><span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;hash&quot;</span><span class="o">:</span><span class="s2">&quot;57db55dadb51ceeee6417af30946f234b2f77613e40586a2c03ce5e3a2be8bbb&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;ver&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
-      <span class="p">...</span>
-      <span class="s2">&quot;size&quot;</span><span class="o">:</span><span class="mi">3533</span><span class="p">,</span>
-      <span class="s2">&quot;in&quot;</span><span class="o">:</span><span class="p">[</span>
-        <span class="p">{</span>
-          <span class="s2">&quot;prev_out&quot;</span><span class="o">:</span><span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="o">:</span><span class="s2">&quot;0000000000000000000000000000000000000000000000000000000000000000&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;n&quot;</span><span class="o">:</span><span class="mi">4294967295</span>
-          <span class="p">},</span> <span class="p">...</span>
-      <span class="p">],</span>
-      <span class="s2">&quot;out&quot;</span><span class="o">:</span><span class="p">[</span>
-        <span class="p">{</span>
-          <span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="s2">&quot;1.00076629&quot;</span><span class="p">,</span> <span class="p">...</span>
-   <span class="p">},</span>
-   <span class="p">{</span>
-      <span class="s2">&quot;hash&quot;</span><span class="o">:</span><span class="s2">&quot;675e40df163d5ae4556774b325cdd7b0885d552bf7989d5e24f7039fce315a5b&quot;</span><span class="p">,</span>
-      <span class="p">...</span>
-      <span class="s2">&quot;in&quot;</span><span class="o">:</span><span class="p">[</span>
-        <span class="p">{</span>
-          <span class="s2">&quot;prev_out&quot;</span><span class="o">:</span><span class="p">{</span>
-            <span class="s2">&quot;hash&quot;</span><span class="o">:</span><span class="s2">&quot;04e9c75d42093094a486a1c898527f4b50e1788fe4fda3ecb2574662b75b6f90&quot;</span><span class="p">,</span>
-        <span class="p">...</span>
-        <span class="p">}</span>
-      <span class="p">],</span>
-      <span class="s2">&quot;out&quot;</span><span class="o">:</span><span class="p">[</span>
-        <span class="p">{</span>
-          <span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="s2">&quot;0.00100000&quot;</span><span class="p">,</span>
-          <span class="s2">&quot;scriptPubKey&quot;</span><span class="o">:</span><span class="s2">&quot;OP_DUP OP_HASH160 9e21abc1748a1df63b4016ac313c0f88e557d5fd ...&quot;</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-          <span class="s2">&quot;value&quot;</span><span class="o">:</span><span class="s2">&quot;0.00710182&quot;</span><span class="p">,</span>
-          <span class="s2">&quot;scriptPubKey&quot;</span><span class="o">:</span><span class="s2">&quot;OP_DUP OP_HASH160 e37cd341540dd1e912568ae5b004d62422bd6b38 ...&quot;</span>
-        <span class="p">}</span>
-      <span class="p">]</span>
-    <span class="p">},</span>     
-    <span class="p">...</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;mrkl_tree&quot;</span><span class="o">:</span><span class="p">[</span>
-    <span class="s2">&quot;57db55dadb51ceeee6417af30946f234b2f77613e40586a2c03ce5e3a2be8bbb&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;66a3eea4610dfb7d7987ad4fc22392c7964340d21006c1eea4c88174fd660c58&quot;</span><span class="p">,</span>
-    <span class="p">...</span>
-    <span class="s2">&quot;675e40df163d5ae4556774b325cdd7b0885d552bf7989d5e24f7039fce315a5b&quot;</span><span class="p">,</span>
-    <span class="p">...</span>
-  <span class="p">]</span>
+<h1>Quiz</h1>
+<p><a href="http://bitcoin-class.org/classes/class9/quiz.pdf">Quiz 1</a></p>
+<h1>Cost of Computation</h1>
+<div class="highlight"><pre><span class="kt">int</span> <span class="nf">gaussSum</span> <span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+       <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<!-- # Merkle's Puzzles
-
-Ralph Merkle, [_Publishing a New Idea_](http://merkle.com/1974/).
-Includes his [cs244 project
-proposal](http://merkle.com/1974/FirstCS244projectProposal.pdf)
-("Discussion: No, I am not joking.") and [ACM rejection
-letter](http://merkle.com/1974/ExpertLetter.pdf) ("I am sorry to have to
-inform you that the paper is not in the main stream of present
-cryptography thinking and I would not recommend that it be
-published...").
-
-**Construction.**
--->
-
-<h1>Merkle Trees</h1>
-<p><a href="https://github.com/btcsuite/btcd/blob/master/blockchain/merkle.go">https://github.com/btcsuite/btcd/blob/master/blockchain/merkle.go</a> (some comments removed)</p>
-<div class="highlight"><pre><span class="c1">// HashMerkleBranches takes two hashes, treated as the left and right tree</span>
-<span class="c1">// nodes, and returns the hash of their concatenation. </span>
-<span class="kd">func</span> <span class="nx">HashMerkleBranches</span><span class="p">(</span><span class="nx">left</span> <span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">ShaHash</span><span class="p">,</span> <span class="nx">right</span> <span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">ShaHash</span><span class="p">)</span> <span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">ShaHash</span> <span class="p">{</span>
-   <span class="kd">var</span> <span class="nx">sha</span> <span class="p">[</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">HashSize</span> <span class="o">*</span> <span class="mi">2</span><span class="p">]</span><span class="kt">byte</span>
-   <span class="nb">copy</span><span class="p">(</span><span class="nx">sha</span><span class="p">[:</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">HashSize</span><span class="p">],</span> <span class="nx">left</span><span class="p">.</span><span class="nx">Bytes</span><span class="p">())</span>
-   <span class="nb">copy</span><span class="p">(</span><span class="nx">sha</span><span class="p">[</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">HashSize</span><span class="p">:],</span> <span class="nx">right</span><span class="p">.</span><span class="nx">Bytes</span><span class="p">())</span>
-   <span class="nx">newSha</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">btcwire</span><span class="p">.</span><span class="nx">NewShaHash</span><span class="p">(</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">DoubleSha256</span><span class="p">(</span><span class="nx">sha</span><span class="p">[:]))</span>
-   <span class="k">return</span> <span class="nx">newSha</span>
-<span class="p">}</span>
-
-<span class="kd">func</span> <span class="nx">BuildMerkleTreeStore</span><span class="p">(</span><span class="nx">transactions</span> <span class="p">[]</span><span class="o">*</span><span class="nx">btcutil</span><span class="p">.</span><span class="nx">Tx</span><span class="p">)</span> <span class="p">[]</span><span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">ShaHash</span> <span class="p">{</span>
-    <span class="nx">nextPoT</span> <span class="o">:=</span> <span class="nx">nextPowerOfTwo</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">transactions</span><span class="p">))</span>
-    <span class="nx">arraySize</span> <span class="o">:=</span> <span class="nx">nextPoT</span><span class="o">*</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="nx">merkles</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="o">*</span><span class="nx">btcwire</span><span class="p">.</span><span class="nx">ShaHash</span><span class="p">,</span> <span class="nx">arraySize</span><span class="p">)</span>
-
-    <span class="c1">// Create the base transaction shas and populate the array with them.</span>
-    <span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">tx</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">transactions</span> <span class="p">{</span> <span class="nx">merkles</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">Sha</span><span class="p">()</span> <span class="p">}</span>
-
-    <span class="c1">// Start the array offset after the last transaction and adjusted to the</span>
-    <span class="c1">// next power of two.</span>
-    <span class="nx">offset</span> <span class="o">:=</span> <span class="nx">nextPoT</span>
-    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">arraySize</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">2</span> <span class="p">{</span>
-        <span class="k">switch</span> <span class="p">{</span>
-           <span class="k">case</span> <span class="nx">merkles</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">:</span> 
-              <span class="nx">merkles</span><span class="p">[</span><span class="nx">offset</span><span class="p">]</span> <span class="p">=</span> <span class="kc">nil</span>
-
-           <span class="k">case</span> <span class="nx">merkles</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">:</span>
-              <span class="nx">newSha</span> <span class="o">:=</span> <span class="nx">HashMerkleBranches</span><span class="p">(</span><span class="nx">merkles</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">merkles</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
-              <span class="nx">merkles</span><span class="p">[</span><span class="nx">offset</span><span class="p">]</span> <span class="p">=</span> <span class="nx">newSha</span>
-
-           <span class="k">default</span><span class="p">:</span>
-              <span class="nx">newSha</span> <span class="o">:=</span> <span class="nx">HashMerkleBranches</span><span class="p">(</span><span class="nx">merkles</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">merkles</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
-              <span class="nx">merkles</span><span class="p">[</span><span class="nx">offset</span><span class="p">]</span> <span class="p">=</span> <span class="nx">newSha</span>
-       <span class="p">}</span>
-       <span class="nx">offset</span><span class="o">++</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="nx">merkles</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p><a href="/classes/class7/merkle.png"><img src="/classes/class7/merkle.png" width=600></a></p>
-<p>What is needed to verify <span class="math">T<sub>2</sub></span> in <span class="math">H<sub>root</sub></span>?
+<p>How would a cs2110/cs2150 student analyze the above code?<br />
 <div class="gap"></p>
 </div>
 
-<p>What must be recomputed if <span class="math">T<sub>3</sub></span> is replaced?
+<p>When is asymptotic analysis appropriate, and when is it essentially useless?
 <div class="gap"></p>
 </div>
 
-<p>What must be computed if a new node, <span class="math">T<sub>5</sub></span>, is added?
-<div class="gap"></p>
-</div>
-
-<p>How many SHA-256 hashes must be computed to verify <a href="http://blockexplorer.com/b/341537">Block 341537</a>?
+<p>What is the cost of executing this code in practice?<br />
 <div class="gap"></p>
 </div></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/class-7-merkle-trees.html#disqus_thread" data-disqus-identifier="class-7-merkle-trees">Comments</a></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/class-9-mining.html#disqus_thread" data-disqus-identifier="class-9-mining">Comments</a></div>
                    <hr />
+        </div>
+
+        <div class="article">
+                   <a href="http://bitcoin-class.org/project-2.html">Project 2</a> (Wed 11 February 2015)<br></br>
+
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/project-2.html">More...</a>                      
+                   </div>-->
+        </div>
+
+        <div class="article">
+                   <a href="http://bitcoin-class.org/class-8-review-and-project-2.html">Class 8: Review and Project 2</a> (Mon 09 February 2015)<br></br>
+
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-8-review-and-project-2.html">More...</a>                      
+                   </div>-->
+        </div>
+
+        <div class="article">
+                   <a href="http://bitcoin-class.org/starting-project-2.html">Starting Project 2</a> (Thu 05 February 2015)<br></br>
+
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/starting-project-2.html">More...</a>                      
+                   </div>-->
+        </div>
+
+        <div class="article">
+                   <a href="http://bitcoin-class.org/class-7-merkle-trees.html">Class 7: Merkle Trees</a> (Wed 04 February 2015)<br></br>
+
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-7-merkle-trees.html">More...</a>                      
+                   </div>-->
         </div>
 
         <div class="article">
@@ -537,38 +607,6 @@ published...").
 
  <!--                  <div class="summary">
                         <a class="btn primary xsmall" href="http://bitcoin-class.org/extra-office-hours.html">More...</a>                      
-                   </div>-->
-        </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/class-5-digicash.html">Class 5: DigiCash</a> (Wed 28 January 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-5-digicash.html">More...</a>                      
-                   </div>-->
-        </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/class-4-verifiably-random.html">Class 4: Verifiably Random?</a> (Mon 26 January 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-4-verifiably-random.html">More...</a>                      
-                   </div>-->
-        </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/office-hours.html">Office Hours</a> (Sat 24 January 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/office-hours.html">More...</a>                      
-                   </div>-->
-        </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/communication-in-cryptocurrency-cafe.html">Communication in Cryptocurrency Cafe</a> (Fri 23 January 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/communication-in-cryptocurrency-cafe.html">More...</a>                      
                    </div>-->
         </div>
         <hr />

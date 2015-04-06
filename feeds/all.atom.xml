@@ -16,13 +16,59 @@ Josh Cincinnati (Entrepreneur)&lt;br /&gt;
 David Evans (Computer Science)&lt;br /&gt;
 Denis Nekipelov (Economics)&lt;br /&gt;
 Alex Kuck (student - Bitcoin Entrepreneur)&lt;br /&gt;
-Nick Skelsey (student - Bitcoin Entrepreneur)&lt;/p&gt;</summary></entry><entry><title>Some Interesting Links</title><link href="http://bitcoin-class.org/some-interesting-links.html" rel="alternate"></link><updated>2015-04-01T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-01:some-interesting-links.html</id><summary type="html">&lt;p&gt;Here's a few interesting links relevant to several of the projects that were discussed today:&lt;/p&gt;
+Nick Skelsey (student - Bitcoin Entrepreneur)&lt;/p&gt;</summary></entry><entry><title>Class 21: Project Proposal Presentations 2</title><link href="http://bitcoin-class.org/class-21-project-proposal-presentations-2.html" rel="alternate"></link><updated>2015-04-01T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-01:class-21-project-proposal-presentations-2.html</id><summary type="html">&lt;p&gt;&lt;em&gt;PointCoin Pizza &amp;mdash; Revamped&lt;/em&gt; [&lt;a href="|filename|../classes/class18/pizza.pptx"&gt;Slides&lt;/a&gt;]&lt;br /&gt;
+Kyle Angelotti and Michelle Wang&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PointList: the PointCoin Marketplace&lt;/em&gt;&lt;br /&gt;
+Anat Gilboa, Benjamin Edgar&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Kickstarting PointCoin&lt;/em&gt;&lt;br /&gt;
+Jake Shankman&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Studying Coinbase Reserves as a means of Predicting Market Price&lt;/em&gt;&lt;br /&gt;
+Alex Coffin, Ankit Gupta, Tara Raj, Corrigan Blanchfield&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Anonymity in Practice&lt;/em&gt;&lt;br /&gt;
+Satoshi Nakamoto&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A Decentralized Banking Scheme for Communal Funds&lt;/em&gt;&lt;br /&gt;
+Ori Shimony&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Bitcoin Market Price&lt;/em&gt;&lt;br /&gt;
+Oriana Ngo and Avinash Ramesh&lt;/p&gt;</summary></entry><entry><title>Class 22: Subsidies, Ombuds, Melange</title><link href="http://bitcoin-class.org/class-22-subsidies-ombuds-melange.html" rel="alternate"></link><updated>2015-04-01T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-01:class-22-subsidies-ombuds-melange.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
+&lt;p&gt;If your group didn't already send me a project progress update, please
+remember to do so by midnight tonight.  Your update should either point
+to your first deliverable (as specified in your proposal), or explain
+what progress you've made and issues that have come up.  It does not
+need to be a long or formal report, but enough to see that you're making
+progress and raise any issues before it is too late to deal with them. &lt;/p&gt;
+&lt;p&gt;Thursday evening at 6pm in Comm School (RRH) room 223 there will be a
+bitcoin panel hosted by Carol Van Cleef, and including Alex Kuck, Nick
+Skelsey, Josh Cincinnati, David Evans, and Denis Nekipelov as panelists.
+Please fill in this form to make sure they order enough pizza:
+&lt;a href="http://goo.gl/forms/1LJyaR9nCV"&gt;http://goo.gl/forms/1LJyaR9nCV&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Recap&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Subsidy Studies&lt;/em&gt;&lt;br /&gt;
+Laurence Meyers, Jacob Rosenberg&lt;/p&gt;
+&lt;p&gt;Alex Kuck and Nick Skelsey presented about &lt;a href="http://soapbox.systems/"&gt;Ombuds&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://hunterleath.com/"&gt;Hunter Leath&lt;/a&gt; presented about &lt;a href="https://namecoin.info/"&gt;Namecoin&lt;/a&gt; and
+&lt;a href="http://www.getmelange.com/"&gt;Melange&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Reading&lt;/h2&gt;
+&lt;p&gt;Next class, we'll talk about sidechains:&lt;/p&gt;
+&lt;p&gt;Adam Back, Matt Corallo, Luke Dashjr, Mark Friedenbach, Gregory Maxwell, Andrew Miller, Andrew Poelstra, Jorge Timón, and Pieter Wuille.  &lt;a href="http://www.blockstream.com/sidechains.pdf"&gt;&lt;em&gt;Enabling Blockchain Innovations with Pegged Sidechains&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Some Interesting Links</title><link href="http://bitcoin-class.org/some-interesting-links.html" rel="alternate"></link><updated>2015-04-01T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-01:some-interesting-links.html</id><summary type="html">&lt;p&gt;Here's a few interesting links relevant to several of the projects that were discussed today:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.nytimes.com/2015/03/31/nyregion/silk-road-case-federal-agents-charges.html?_r=2"&gt;&lt;em&gt;2 Ex-Federal Agents in Silk Road Case Are Charged With
 Fraud&lt;/em&gt;&lt;/a&gt;, New York Times, 31 March 2015 --- the &lt;a href="https://s3.amazonaws.com/s3.documentcloud.org/documents/1697973/charges-against-former-federal-agents-in-silk.pdf"&gt;full
 charges&lt;/a&gt;
 are quite interesting reading, would be good to look for some of the
 transactions mentioned in them in the blockchain.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blogs.wsj.com/moneybeat/2015/03/29/interest-in-bitcoin-grows-on-wall-street/"&gt;&lt;em&gt;Interest in Bitcoin Grows on Wall Street&lt;/em&gt;&lt;/a&gt;, Wall Stree Journal, 29 March 2015.&lt;/p&gt;</summary></entry><entry><title>Office Hours Today</title><link href="http://bitcoin-class.org/office-hours-today.html" rel="alternate"></link><updated>2015-03-30T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-30:office-hours-today.html</id><summary type="html">&lt;p&gt;Nick isn't able to hold his scheduled office hours today.  I (Dave) will
+&lt;p&gt;&lt;a href="http://blogs.wsj.com/moneybeat/2015/03/29/interest-in-bitcoin-grows-on-wall-street/"&gt;&lt;em&gt;Interest in Bitcoin Grows on Wall Street&lt;/em&gt;&lt;/a&gt;, Wall Stree Journal, 29 March 2015.&lt;/p&gt;</summary></entry><entry><title>Class 20: Project Proposal Presentations 1</title><link href="http://bitcoin-class.org/class-20-project-proposal-presentations-1.html" rel="alternate"></link><updated>2015-03-30T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-30:class-20-project-proposal-presentations-1.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Universal Coin Converter&lt;/em&gt;&lt;br /&gt;
+Sam Abbate&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Script Analysis in the Blockchain&lt;/em&gt;&lt;br /&gt;
+Saba Eskandarian&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;An Analysis and Breakdown of SHA Hashing in Bitcoin&lt;/em&gt; [&lt;a href="|filename|../classes/class18/jeremy.pptx"&gt;Slides&lt;/a&gt;]&lt;br /&gt;
+Jeremy Gabalski&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Multisignature Mobile Wallets&lt;/em&gt;&lt;br /&gt;
+William Emmanuel and Kevin Hoffman &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Examining Anonymous Marketplaces&lt;/em&gt;&lt;br /&gt;
+Max Serpe, Peter Gregrowski&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Financial Markets, Game Theory, and Self-Regulation&lt;/em&gt;&lt;br /&gt;
+Merlin Zhang, Trisha Hajela&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pointcoin Reddit Tip Bot&lt;/em&gt;&lt;br /&gt;
+Joey Weate, Charlie Harding&lt;/p&gt;</summary></entry><entry><title>Office Hours Today</title><link href="http://bitcoin-class.org/office-hours-today.html" rel="alternate"></link><updated>2015-03-30T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-30:office-hours-today.html</id><summary type="html">&lt;p&gt;Nick isn't able to hold his scheduled office hours today.  I (Dave) will
 be available until 5pm today.  We'll have regular office hours later
 this week (4-5pm Thursday, Dave in Rice 507; noon-2pm Friday, Nick in
 HackCville).  You are welcome and encouraged to use office hours to
@@ -35,7 +81,10 @@ but that page and the &lt;a href="http://bitcoin-class.org"&gt;rest of the mater
 good idea what to expect.  The expected background for the Fall 2015
 course is having completed cs2150 and cs3102 (or equivalent experience
 and knowledge in some other way).  Exceptions will be made for students
-who bring some other interesting background or perspective to the class.&lt;/p&gt;</summary></entry><entry><title>Project Proposal Presentations</title><link href="http://bitcoin-class.org/project-proposal-presentations.html" rel="alternate"></link><updated>2015-03-25T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-25:project-proposal-presentations.html</id><summary type="html">&lt;p&gt;Next week, each team will present their idea for the project.  You
+who bring some other interesting background or perspective to the class.&lt;/p&gt;</summary></entry><entry><title>Class 19: Josh Cincinnati Visit</title><link href="http://bitcoin-class.org/class-19-josh-cincinnati-visit.html" rel="alternate"></link><updated>2015-03-25T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-25:class-19-josh-cincinnati-visit.html</id><summary type="html">&lt;p&gt;&lt;a href="http://bitbanter.com/"&gt;Josh Cincinnati&lt;/a&gt; visited the class and talked
+about entrepreneurship connected to bitcoin.  You can follow Josh on
+Twitter as &lt;a href="https://twitter.com/acityinohio"&gt;@acityinohio&lt;/a&gt;.  Also see
+&lt;a href="http://www.blockcypher.com/"&gt;http://www.blockcypher.com&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Project Proposal Presentations</title><link href="http://bitcoin-class.org/project-proposal-presentations.html" rel="alternate"></link><updated>2015-03-25T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-25:project-proposal-presentations.html</id><summary type="html">&lt;p&gt;Next week, each team will present their idea for the project.  You
 should plan to have no more than 5-8 minutes to present your idea, and
 then there will be some time for questions and discussion.  You can use
 slides for your presentation (although it is fine is you want to present
