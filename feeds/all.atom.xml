@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-06T00:00:00-04:00</updated><entry><title>Class 22: Subsidies, Ombuds, Melange</title><link href="http://bitcoin-class.org/class-22-subsidies-ombuds-melange.html" rel="alternate"></link><updated>2015-04-06T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-06:class-22-subsidies-ombuds-melange.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-08T00:00:00-04:00</updated><entry><title>Class 23: Sidechains</title><link href="http://bitcoin-class.org/class-23-sidechains.html" rel="alternate"></link><updated>2015-04-08T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-08:class-23-sidechains.html</id><summary type="html">&lt;h1&gt;Schedule&lt;/h1&gt;
+&lt;p&gt;Each team will have an opportunity to present their project the last
+three classes (April 20, 22 and 27).  Teams will sign up for
+presentation slots at Monday's class.  Final projects are due by 11:59pm
+on Sunday, 3 May.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Thursday, 6pm Commerce School 223&lt;/strong&gt;.  &lt;em&gt;Entrepreneurial and Career
+  Ventures in the world of Digital Currency&lt;/em&gt; Panel.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Friday, 10:45am Rice 242&lt;/strong&gt;.  Suman Jana, &lt;em&gt;Rise of the Planet of the
+  Apps: Security and Privacy in the Age of Bad Code&lt;/em&gt;.&lt;/p&gt;
+&lt;h1&gt;Bloom Filters&lt;/h1&gt;
+&lt;p&gt;Burton Bloom, &lt;a href="http://bitcoin-class.org/classes/class23/bloom.pdf"&gt;&lt;em&gt;Space/Time Trade-offs in Hash Coding with Allowable
+Errors&lt;/em&gt;&lt;/a&gt;, Communications of the ACM, July 1970.&lt;/p&gt;
+&lt;h3&gt;Conventional Hash Table&lt;/h3&gt;
+&lt;p&gt;Store collection of $N$ $b$-bit elements, using $k &amp;gt; N$ cells.&lt;/p&gt;
+&lt;p&gt;$H$ is pseudorandom function, $H(x) \leftarrow [0, k)$.&lt;/p&gt;
+&lt;div class="gap"&gt;
+
+&lt;/div&gt;
+
+&lt;h3&gt;Bloom Filter&lt;/h3&gt;
+&lt;p&gt;Tradeoff: shrink size of array to store, accept false matches.  &lt;/p&gt;
+&lt;p&gt;$m$ = number of bits in array&lt;br /&gt;
+$k$ = number of hash functions&lt;br /&gt;
+$n$ = number of elements&lt;/p&gt;
+&lt;p&gt;What is the probability a given element of the array is not selected by a particular hash function?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What is the probability a given element of the array is not selected for
+a particular element by any of the $k$ hash functions?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After $n$ elements, what is the probability that an array bit is 0?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Probability of false match:&lt;/p&gt;
+&lt;p&gt;$$
+(1 - (1 - 1/m)^{kn})^k
+$$&lt;/p&gt;
+&lt;p&gt;How big should $m$ be to have less than 0.01\% false positive rate for a block with 1000 addresses?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;How much privacy does using a bloom filter provide to an SPV wallet?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h1&gt;Merged Mining&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://en.bitcoin.it/wiki/Merged_mining_specification"&gt;Merged Mining Specification&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;How can Namecoin leverage Bitcoin mining power while maintaining its own blockchain and difficulty level?
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What are the advantages of enabing bitcoin miners to also mine namecoin?&lt;br /&gt;
+&lt;div class="gap"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Bug: &lt;a href="https://bitcointalk.org/index.php?topic=310954"&gt;&lt;em&gt;Namecoin was stillborn, I had to switch off life-support&lt;/em&gt;&lt;/a&gt;&lt;br /&gt;
+Patch: &lt;a href="https://github.com/namecoin/namecoin/commit/d70d01ff77310d3755891cb43cb2700b553019f4"&gt;https://github.com/namecoin/namecoin/commit/d70d01ff77310d3755891cb43cb2700b553019f4&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Side Chains&lt;/h1&gt;
+&lt;p&gt;Why is it so hard to evolve bitcoin?
+&lt;div class="gap"&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Adam Back, Matt Corallo, Luke Dashjr, Mark Friedenbach, Gregory Maxwell, Andrew Miller, Andrew Poelstra, Jorge Timón, and Pieter Wuille.  &lt;a href="http://www.blockstream.com/sidechains.pdf"&gt;&lt;em&gt;Enabling Blockchain Innovations with Pegged Sidechains&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blockstream.com/"&gt;Blockstream&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Class 22: Subsidies, Ombuds, Melange</title><link href="http://bitcoin-class.org/class-22-subsidies-ombuds-melange.html" rel="alternate"></link><updated>2015-04-06T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-06:class-22-subsidies-ombuds-melange.html</id><summary type="html">&lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;p&gt;If your group didn't already send me a project progress update, please
 remember to do so by midnight tonight.  Your update should either point
 to your first deliverable (as specified in your proposal), or explain
