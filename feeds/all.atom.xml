@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-08T00:00:00-04:00</updated><entry><title>Class 23: Sidechains</title><link href="http://bitcoin-class.org/class-23-sidechains.html" rel="alternate"></link><updated>2015-04-08T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-08:class-23-sidechains.html</id><summary type="html">&lt;h1&gt;Schedule&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-08T00:00:00-04:00</updated><entry><title>Class 23: Sidechains</title><link href="http://bitcoin-class.org/class-23-sidechains.html" rel="alternate"></link><updated>2015-04-08T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-08:class-23-sidechains.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
+   &lt;a href="http://bitcoin-class.org/classes/class23/class23.pdf"&gt;PDF version for printing&lt;/a&gt;
+   &lt;/div&gt;&lt;/p&gt;
+&lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;p&gt;Each team will have an opportunity to present their project the last
 three classes (April 20, 22 and 27).  Teams will sign up for
 presentation slots at Monday's class.  Final projects are due by 11:59pm
@@ -28,19 +31,16 @@ Errors&lt;/em&gt;&lt;/a&gt;, Communications of the ACM, July 1970.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;What is the probability a given element of the array is not selected for
-a particular element by any of the $k$ hash functions?
+a particular element by any of the &lt;em&gt;k&lt;/em&gt; hash functions?
 &lt;div class="gap"&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;After $n$ elements, what is the probability that an array bit is 0?
+&lt;p&gt;After &lt;em&gt;n&lt;/em&gt; elements, what is the probability that an array bit is 0?
 &lt;div class="gap"&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Probability of false match:&lt;/p&gt;
-&lt;p&gt;$$
-(1 - (1 - 1/m)^{kn})^k
-$$&lt;/p&gt;
-&lt;p&gt;How big should $m$ be to have less than 0.01\% false positive rate for a block with 1000 addresses?
+&lt;p&gt;Probability of false match: (1 - (1 - 1/&lt;em&gt;m&lt;/em&gt;)&lt;sup&gt;&lt;em&gt;kn&lt;/em&gt;&lt;/sup&gt;)&lt;sup&gt;&lt;em&gt;k&lt;/em&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;How big should &lt;em&gt;m&lt;/em&gt; be to have less than 0.01% false positive rate for a block with 1000 addresses?
 &lt;div class="gap"&gt;&lt;/p&gt;
 &lt;/div&gt;
 
