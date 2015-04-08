@@ -12,17 +12,17 @@ on Sunday, 3 May.&lt;/p&gt;
 &lt;p&gt;Burton Bloom, &lt;a href="http://bitcoin-class.org/classes/class23/bloom.pdf"&gt;&lt;em&gt;Space/Time Trade-offs in Hash Coding with Allowable
 Errors&lt;/em&gt;&lt;/a&gt;, Communications of the ACM, July 1970.&lt;/p&gt;
 &lt;h3&gt;Conventional Hash Table&lt;/h3&gt;
-&lt;p&gt;Store collection of $N$ $b$-bit elements, using $k &amp;gt; N$ cells.&lt;/p&gt;
-&lt;p&gt;$H$ is pseudorandom function, $H(x) \leftarrow [0, k)$.&lt;/p&gt;
+&lt;p&gt;Store collection of &lt;em&gt;N&lt;/em&gt; &lt;em&gt;b&lt;/em&gt;-bit elements, using &lt;em&gt;k&lt;/em&gt; &amp;gt; &lt;em&gt;N&lt;/em&gt; cells.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;H&lt;/em&gt; is pseudorandom function, &lt;em&gt;H&lt;/em&gt;(&lt;em&gt;x&lt;/em&gt;) &amp;larr; [0, &lt;em&gt;k&lt;/em&gt;).&lt;/p&gt;
 &lt;div class="gap"&gt;
 
 &lt;/div&gt;
 
 &lt;h3&gt;Bloom Filter&lt;/h3&gt;
 &lt;p&gt;Tradeoff: shrink size of array to store, accept false matches.  &lt;/p&gt;
-&lt;p&gt;$m$ = number of bits in array&lt;br /&gt;
-$k$ = number of hash functions&lt;br /&gt;
-$n$ = number of elements&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;m&lt;/em&gt; = number of bits in array&lt;br /&gt;
+&lt;em&gt;k&lt;/em&gt; = number of hash functions&lt;br /&gt;
+&lt;em&gt;n&lt;/em&gt; = number of elements&lt;/p&gt;
 &lt;p&gt;What is the probability a given element of the array is not selected by a particular hash function?
 &lt;div class="gap"&gt;&lt;/p&gt;
 &lt;/div&gt;
