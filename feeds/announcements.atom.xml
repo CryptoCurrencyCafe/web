@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-09T00:00:00-04:00</updated><entry><title>Rest of Semester Survey</title><link href="http://bitcoin-class.org/rest-of-semester-survey.html" rel="alternate"></link><updated>2015-04-09T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-09:rest-of-semester-survey.html</id><summary type="html">&lt;p&gt;Please submit this form to provide some guidance on the rest of the semester: &lt;a href="http://goo.gl/forms/2jL6DWkI36"&gt;http://goo.gl/forms/2jL6DWkI36&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-13T00:00:00-04:00</updated><entry><title>Final Presentations</title><link href="http://bitcoin-class.org/final-presentations.html" rel="alternate"></link><updated>2015-04-13T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-13:final-presentations.html</id><summary type="html">&lt;p&gt;The schedule for final project presentations is below.  Each group will
+have 15 minutes total to present, including time for questions (so you
+should plan to present for 10-12 minutes).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monday, 20 April&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;An Analysis and Breakdown of SHA Hashing in Bitcoin&lt;/em&gt; [&lt;a href="http://bitcoin-class.org/classes/class18/jeremy.pptx"&gt;Slides&lt;/a&gt;]&lt;br /&gt;
+Jeremy Gabalski&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Financial Markets, Game Theory, and Self-Regulation&lt;/em&gt;&lt;br /&gt;
+Merlin Zhang, Trisha Hajela&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Kickstarting PointCoin&lt;/em&gt;&lt;br /&gt;
+Jake Shankman&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Studying Coinbase Reserves as a means of Predicting Market Price&lt;/em&gt;&lt;br /&gt;
+Alex Coffin, Ankit Gupta, Tara Raj, Corrigan Blanchfield&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Subsidy Studies&lt;/em&gt;&lt;br /&gt;
+Laurence Meyers, Jacob Rosenberg&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wednesday, 22 April&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Universal Coin Converter&lt;/em&gt;&lt;br /&gt;
+Sam Abbate&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Multisignature Mobile Wallets&lt;/em&gt;&lt;br /&gt;
+William Emmanuel and Kevin Hoffman &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Bitcoin Market Price&lt;/em&gt;&lt;br /&gt;
+Oriana Ngo and Avinash Ramesh&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A Decentralized Banking Scheme for Communal Funds&lt;/em&gt;&lt;br /&gt;
+Ori Shimony&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PointList: the PointCoin Marketplace&lt;/em&gt;&lt;br /&gt;
+Anat Gilboa, Benjamin Edgar&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monday, April 27&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PointCoin Pizza &amp;mdash; Revamped&lt;/em&gt; [&lt;a href="http://bitcoin-class.org/classes/class18/pizza.pptx"&gt;Slides&lt;/a&gt;]&lt;br /&gt;
+Kyle Angelotti and Michelle Wang&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pointcoin Reddit Tip Bot&lt;/em&gt;&lt;br /&gt;
+Joey Weate, Charlie Harding&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Examining Anonymous Marketplaces&lt;/em&gt;&lt;br /&gt;
+Max Serpe, Peter Gregrowski&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Script Analysis in the Blockchain&lt;/em&gt;&lt;br /&gt;
+Saba Eskandarian&lt;/p&gt;</summary></entry><entry><title>Rest of Semester Survey</title><link href="http://bitcoin-class.org/rest-of-semester-survey.html" rel="alternate"></link><updated>2015-04-09T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-09:rest-of-semester-survey.html</id><summary type="html">&lt;p&gt;Please submit this form to provide some guidance on the rest of the semester: &lt;a href="http://goo.gl/forms/2jL6DWkI36"&gt;http://goo.gl/forms/2jL6DWkI36&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Mainly I need help on deciding how to schedule the final presentation
 (over the last three scheduled courses, or during the final exam time on
 April 30) and what topics there is the most interest in for the
