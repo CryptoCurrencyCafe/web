@@ -164,6 +164,51 @@
 
         <div class="article">
  
+                   <h1><a href="http://bitcoin-class.org/starting-project-2.html">Starting Project 2</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-02-05T00:00:00-05:00">
+    Thu 05 February 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/announcements.html"><i class="icon-folder-open"></i>announcements</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><p><strong>Project 1.</strong> You should have received your Project 1 grade as a
+  transfer to your vanity address (on a 100,000 satoshi scale, so 0.001
+  BTC is full credit).  You should be able to see this in the blockchain
+  (e.g., by searching for your vanity address).  Note that this is
+  different from the address you used to create your initial wallet, so
+  you won't see it in your wallet unless you load the keys for your
+  vanity address into your wallet (see
+  <a href="https://multibit.org/en/help/v0.5/help_importingPrivateKeys.html">https://multibit.org/en/help/v0.5/help_importingPrivateKeys.html</a>
+  for how to import your vanity address private key into MultiBit).</p>
+<p><strong>Geting started on Project 2.</strong> For project 2, you'll be implementing
+  and running a miner for a new cryptocurrency,
+  <a href="https://github.com/PointCoin/pointcoind">PointCoin</a>.  We'll talk more
+  about this in class Monday and post a more detailed project
+  descruption soon, but you should get started by setting up your
+  pointcoind node before class Monday.  </p>
+<p>Directions for getting your
+  pointcoind node setup on a free EC2 instance are here: <a href="https://github.com/PointCoin/pointcoind/wiki/Installing-PointCoin-on-AWS">Installing
+  PointCoin on
+  AWS</a>.</p>
+<p>If you get stuck, we'll have time in class Monday to help, but you
+  should get as far as you can on your own before class Monday.  Feel
+  free to also post coments and questions here.</p></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/starting-project-2.html#disqus_thread" data-disqus-identifier="starting-project-2">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
                    <h1><a href="http://bitcoin-class.org/class-7-merkle-trees.html">Class 7: Merkle Trees</a></h1>
                    <div class="well small"><footer class="post-info">
 <span class="quietlabel">Posted: </span>
@@ -634,131 +679,11 @@ Hopefully, the player will be fixed someday. </div>
         </div>
 
         <div class="article">
- 
-                   <h1><a href="http://bitcoin-class.org/class-5-digicash.html">Class 5: DigiCash</a></h1>
-                   <div class="well small"><footer class="post-info">
-<span class="quietlabel">Posted: </span>
-<abbr class="published" title="2015-01-28T00:00:00-05:00">
-    Wed 28 January 2015
-</abbr>
-<!-- <span class="quietlabel">by</span>
-<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
--->
-<!--
-<span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/class5.html"><i class="icon-folder-open"></i>class5</a>.
--->
+                   <a href="http://bitcoin-class.org/class-5-digicash.html">Class 5: DigiCash</a> (Wed 28 January 2015)<br></br>
 
-<!--
--->
-</footer><!-- /.post-info --></div>
-                   <div class="content"><p><div class="phighlight">
-   <a href="http://bitcoin-class.org/classes/class5/class5.pdf">PDF version for printing</a>
-   </div></p>
-<h2>Schedule</h2>
-<p><div class="todo">
-<a href="http://bitcoin-class.org/pages/project1.html">Project 1</a> is due <strong>Friday, 30 January</strong> (11:59pm).</p>
-<p><strong>Upcoming office hours:</strong>  Thursday 4-5pm (Dave, Rice 507); Friday (Nick, noon-2pm in Hackcville).
-   </div></p>
-<p><center> 
-<iframe src="//www.slideshare.net/slideshow/embed_code/44010587" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br>
-<div class="caption">Note: due to a bug in
-slideshare's updated player, ink markings no longer appear in the
-viewer.  <br>If you download the slides, they are present though.
-Hopefully, the player will be fixed someday. </div>
-</center></p>
-<h2>Cryptographic Hash Functions</h2>
-<p>A <em>cryptographic hash function</em>, <span class="math"><em>H</em>(<em>x</em>)</span>, must satisfy these two properties:</p>
-<ul>
-<li><strong>one-way</strong> (preimage resistance): given <span class="math"><em>h</em>= <em>H</em>(<em>x</em>)</span> it is hard to find preimage <span class="math"><em>x</em></span>.</li>
-<li><strong>strong collision-resistance</strong>: hard to find any pair <span class="math"><em>x</em></span> and <span class="math"><em>y</em></span> where <span class="math"><em>H</em>(<em>x</em>) = <em>H</em>(<em>y</em>)</span></li>
-</ul>
-<p>If we use SHA-256 for <span class="math"><em>H</em></span>, how many 258-bit
-messages would be expected to hash to a given value <span
-class="math"><em>x</em></span>?
-<div class="gap"></p>
-</div>
-
-<h2>Signing Message Digests</h2>
-<p><strong>Sign:</strong> Sign(<span class="math">m</span>) = <span class="math"><em>E</em>(<em>KR</em><sub>A</sub>, <em>H</em>(<em>m</em>))</span></p>
-<p>Given <span class="math"><em>KU</em><sub>A</sub></span>, <span
-class="math"><em>m</em></span>, and <span class="math"><em>S</em></span>, how does Bob
-verify that <span class="math"><em>S</em></span> is a valid signature from
-Alice for <span class="math"><em>m</em></span>?</p>
-<div class="gap">
-
-</div>
-
-<p>A bitcoin address for public key <em>K</em> is RIPEMD160(SHA256(<em>K</em>)) where both
-RIPEMD160 and SHA256 are cryptographic hash functions.  </p>
-<p>Is this more or less secure than just using <em>K</em>?<br />
-<div class="gap"></p>
-</div>
-
-<p>Suppose someone finds a way to find collisions for RIPEMD160.  How
-serious of a risk would this pose to bitcoin?<br />
-<div class="gap"></p>
-</div>
-
-<p>Suppose someone finds a way to find preimages for RIPEMD160.  How
-serious of a risk would this pose to bitcoin?
-<div class="gap"></p>
-</div>
-
-<h2>Untraceable Electronic Cash</h2>
-<p><a href="https://www.fdic.gov/bank/individual/failed/hightrust.html">High Trust Bank</a> must be trusty!</p>
-<p>David Chaum, Amos Fiat, and Moni Naor.  <a href="http://bitcoin-class.org/classes/class5/ecash.pdf"><em>Untraceable Electronic
-Cash</em></a>.  CRYPTO 1988.</p>
-<p><strong>Simple RSA Signatures</strong><br />
-Public Key = <span class="math">(<em>e</em>, <em>n</em>)</span>
-Private Key = <span class="math"><em>d</em></span></p>
-<p>Identity: <span class="math"><em>M</em><sup><em>de</em></sup> = <em>M</em> mod <em>n</em></span></p>
-<p><span class="math">Sign(<em>m</em>) = <em>m</em><sup><em>d</em></sup> mod <em>n</em></span></p>
-<p><strong>Blind Signatures</strong>
-Alice picks random <span class="math"><em>k</em></span> in <span class="math">[1, <em>n</em>)</span><br />
-<span class="math"><em>t</em> = <em>mk</em><sup><em>e</em></sup> mod <em>n</em></span><br />
-Sends <span class="math"><em>t</em></span> to signer.</p>
-<p>Signer returns <span class="math"><em>t</em><sup><em>d</em></sub></span>.</p>
-<p>Signer returns <span class="math"><em>t</em><sup><em>d</em></sup></span>.</p>
-<p><span class="math"><em>t</em><sup><em>d</em></sup> = (<em>mk</em><sup><em>e</em></sup> mod <em>n</em>)<sup><em>d</em></sup> mod <em>n</em></span><br />
-&nbsp;&nbsp;&nbsp; <span class="math">= <em>m</em><sup><em>d</em></sup><em>k</em><sup><em>ed</em></sup> mod <em>n</em></span><br />
-&nbsp;&nbsp;&nbsp; <span class="math">= <em>m</em><sup><em>d</em></sup><em>k</em> mod <em>n</em></span>  </p>
-<p>Dividing by <span class="math"><em>k</em></span> gives <span class="math">Sign(<em>m</em>) = <em>m</em><sup><em>d</em></sup> mod <em>n</em></span>.</p>
-<p>What should a signer know before signing a random-looking string?
-<div class="gap"></p>
-<h1></h1>
-<h1></h1>
-</div>
-
-<p><strong>Cut-and-Choose</strong></p>
-<p>Suppose Alice sends 256 copies and the Bank checks 255 of them.  What is the probability Alice can cheat without getting caught?
-<div class="gap"></p>
-<h1></h1>
-</div>
-
-<p>What should the maximimum bill size be to prevent cheating?
-<div class="gap"></p>
-<h1></h1>
-</div>
-
-<h3>Identity Strings</h3>
-<p><em>I</em> = "alice@alice.org"  </p>
-<p><span class="math"><em>M</em><sub><em>i</em></sub></span> = "Bill #[r<sub>i</sub>] : Bear’s Turns Bank owes the holder of this message $100."<br />
-&nbsp;&nbsp;&nbsp; + identity strings:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="math"><em>I</em><sub>1</sub> = (<em>h</em>(<em>I</em><sub>1L</sub>), <em>h</em>(<em>I</em><sub>1R</sub>)), ..., <em>I</em><sub><em>n</em></sub> = (<em>h</em>(<em>I</em><sub>nL</sub>), <em>h</em>(<em>I</em><sub>nR</sub>))</span><br />
-&nbsp;&nbsp;&nbsp; where <span class="math"><em>h</em></span> is a one-way hash function and each <span class="math"><em>I</em><sub>iL</sub> &oplus; <em>I</em><sub>iR</sub> = <em>I</em></span> (but <span class="math"><em>I</em><sub>iL</sub> is choosen randomly).</p>
-<p>To spend a bill, the reciever chooses either L or R for each pair for spender to open.</p>
-<p>What is the probability Alice can spend a bill twice without revealing her identity?
-<div class="gap"></p>
-<h1></h1>
-</div>
-
-<p><a href="http://globalcryptonews.com/before-bitcoin-the-rise-and-fall-of-digicash/">Before Bitcoin: The Rise and Fall of DigiCash</a></p>
-<blockquote>
-<p><em>By all accounts Chaum was a charismatic leader with an interesting management style, but he refused to compromise his artistic vision in any area against the best advice of his employees. He was suspicious of everyone and 'paranoid' with a habit of suddenly changing his mind without warning. At one time, Microsoft had offered DigiCash $180 million to allow them to preinstall Ecash software on Windows computers and the deal was on the verge of completion, but Chaum suddenly decided that his product was worth more and the deal collapsed. If the deal had gone through, cryptocurrency would now be as ubiquitous as Internet Explorer.</em></p>
-</blockquote></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/class-5-digicash.html#disqus_thread" data-disqus-identifier="class-5-digicash">Comments</a></div>
-                   <hr />
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-5-digicash.html">More...</a>                      
+                   </div>-->
         </div>
 
         <div class="article">
@@ -798,14 +723,6 @@ Sends <span class="math"><em>t</em></span> to signer.</p>
 
  <!--                  <div class="summary">
                         <a class="btn primary xsmall" href="http://bitcoin-class.org/class-3-elliptic-curves.html">More...</a>                      
-                   </div>-->
-        </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/class-2-cryptography.html">Class 2: Cryptography</a> (Wed 14 January 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-2-cryptography.html">More...</a>                      
                    </div>-->
         </div>
         <hr />
