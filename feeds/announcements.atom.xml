@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-13T00:00:00-04:00</updated><entry><title>Final Presentations</title><link href="http://bitcoin-class.org/final-presentations.html" rel="alternate"></link><updated>2015-04-13T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-13:final-presentations.html</id><summary type="html">&lt;p&gt;The schedule for final project presentations is below.  Each group will
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-17T00:00:00-04:00</updated><entry><title>Final Presentations</title><link href="http://bitcoin-class.org/final-presentations.html" rel="alternate"></link><updated>2015-04-17T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-17:final-presentations.html</id><summary type="html">&lt;p&gt;The schedule for final project presentations is below.  Each group will
 have 15 minutes total to present, including time for questions (so you
 should plan to present for 10-12 minutes).&lt;/p&gt;
+&lt;p&gt;[&lt;strong&gt;Note:&lt;/strong&gt; the schedule has been updated (April 17), but all people
+impacted have been notified already.]&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Monday, 20 April&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;An Analysis and Breakdown of SHA Hashing in Bitcoin&lt;/em&gt; [&lt;a href="http://bitcoin-class.org/classes/class18/jeremy.pptx"&gt;Slides&lt;/a&gt;]&lt;br /&gt;
+&lt;p&gt;&lt;em&gt;An Analysis and Breakdown of SHA Hashing in Bitcoin&lt;/em&gt;&lt;br /&gt;
 Jeremy Gabalski&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Financial Markets, Game Theory, and Self-Regulation&lt;/em&gt;&lt;br /&gt;
 Merlin Zhang, Trisha Hajela&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Bitcoin Price History&lt;/em&gt;&lt;br /&gt;
+Oriana Ngo&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Kickstarting PointCoin&lt;/em&gt;&lt;br /&gt;
 Jake Shankman&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Studying Coinbase Reserves as a means of Predicting Market Price&lt;/em&gt;&lt;br /&gt;
 Alex Coffin, Ankit Gupta, Tara Raj, Corrigan Blanchfield&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Subsidy Studies&lt;/em&gt;&lt;br /&gt;
-Laurence Meyers, Jacob Rosenberg&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Wednesday, 22 April&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Universal Coin Converter&lt;/em&gt;&lt;br /&gt;
 Sam Abbate&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Subsidy Studies&lt;/em&gt;&lt;br /&gt;
+Laurence Meyers, Jacob Rosenberg&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Multisignature Mobile Wallets&lt;/em&gt;&lt;br /&gt;
 William Emmanuel and Kevin Hoffman &lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Bitcoin Market Price&lt;/em&gt;&lt;br /&gt;
-Oriana Ngo and Avinash Ramesh&lt;/p&gt;
+Avinash Ramesh&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;A Decentralized Banking Scheme for Communal Funds&lt;/em&gt;&lt;br /&gt;
 Ori Shimony&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;PointList: the PointCoin Marketplace&lt;/em&gt;&lt;br /&gt;
 Anat Gilboa, Benjamin Edgar&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Monday, April 27&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;PointCoin Pizza &amp;mdash; Revamped&lt;/em&gt; [&lt;a href="http://bitcoin-class.org/classes/class18/pizza.pptx"&gt;Slides&lt;/a&gt;]&lt;br /&gt;
+&lt;p&gt;&lt;em&gt;PointCoin Pizza &amp;mdash; Revamped&lt;/em&gt;&lt;br /&gt;
 Kyle Angelotti and Michelle Wang&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Pointcoin Reddit Tip Bot&lt;/em&gt;&lt;br /&gt;
 Joey Weate, Charlie Harding&lt;/p&gt;
