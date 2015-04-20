@@ -164,6 +164,134 @@
 
         <div class="article">
  
+                   <h1><a href="http://bitcoin-class.org/class-14-selfish-mining.html">Class 14: Selfish Mining</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-03-02T00:00:00-05:00">
+    Mon 02 March 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/class14.html"><i class="icon-folder-open"></i>class14</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><h2>Schedule</h2>
+<p><div class="todo"> </p>
+<ul>
+<li>
+<p><a href="http://bitcoin-class.org/pages/project2.html">Project 2 Part
+  2</a> is due next
+  <strong>Thursday, 5 March.</strong> Submission is by email, send a PDF with your
+  answers to questions 5-9.</p>
+</li>
+<li>
+<p>Keep thinking about ideas for your project.  The first deliverable for
+  the project will be a preliminary proposal due on March 19.</p>
+</li>
+</ul>
+</div>
+
+<p><center> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/45339406" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<div class="caption">Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you <a href="http://bitcoin-class.org/classes/class14/class14-inked.pptx">download the slides</a>, they are present though.
+Hopefully, the player will be fixed someday. </div>
+</center></p>
+<h2>Mining the Last Bitcoin</h2>
+<p><a href="https://github.com/bitcoin/bitcoin/blob/59310f1c02673c3ee068cd82f8654bed9b757889/src/main.cpp#L1229">Computing the block value:</a></p>
+<div class="highlight"><pre><span class="n">CAmount</span> <span class="nf">GetBlockValue</span><span class="p">(</span><span class="kt">int</span> <span class="n">nHeight</span><span class="p">,</span> <span class="k">const</span> <span class="n">CAmount</span><span class="o">&amp;</span> <span class="n">nFees</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">CAmount</span> <span class="n">nSubsidy</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">COIN</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">halvings</span> <span class="o">=</span> <span class="n">nHeight</span> <span class="o">/</span> <span class="n">Params</span><span class="p">().</span><span class="n">SubsidyHalvingInterval</span><span class="p">();</span>
+
+    <span class="c1">// Force block reward to zero when right shift is undefined.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">halvings</span> <span class="o">&gt;=</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nFees</span><span class="p">;</span>
+
+    <span class="c1">// Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.</span>
+    <span class="n">nSubsidy</span> <span class="o">&gt;&gt;=</span> <span class="n">halvings</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">nSubsidy</span> <span class="o">+</span> <span class="n">nFees</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Interestingly, the <a href="https://github.com/bitcoin/bitcoin/blob/4405b78d6059e536c36974088a8ed4d9f0f29898/main.cpp#L675">first commit version of this code</a>
+in github (29 August 2009) is missing the <code>halvings &gt;= 64</code> line we talked about in class: </p>
+<div class="highlight"><pre><span class="n">int64</span> <span class="n">CBlock</span><span class="o">::</span><span class="n">GetBlockValue</span><span class="p">(</span><span class="n">int64</span> <span class="n">nFees</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+    <span class="n">int64</span> <span class="n">nSubsidy</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">COIN</span><span class="p">;</span>
+
+    <span class="c1">// Subsidy is cut in half every 4 years</span>
+    <span class="n">nSubsidy</span> <span class="o">&gt;&gt;=</span> <span class="p">(</span><span class="n">nBestHeight</span> <span class="o">/</span> <span class="mi">210000</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="n">nSubsidy</span> <span class="o">+</span> <span class="n">nFees</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Will a node running the early version of this code (assuming the global <code>nBestHeight</code> is equal to <code>nHeight</code>)
+ever compute a
+different block value than a node running the current version of the
+code?
+<div class="gap"></p>
+</div>
+
+<p>Python code for estimating block time: <a href="http://bitcoin-class.org/classes/class14/subsidy.py">subsidy.py</a></p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="n">expect_block</span><span class="p">(</span><span class="mi">6929999</span><span class="p">)</span>
+<span class="mi">2132</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">19</span> <span class="mo">00</span><span class="o">:</span><span class="mi">50</span><span class="o">:</span><span class="mf">38.200000</span>
+</pre></div>
+
+
+<p>Why is it likely that the expected final bitcoin generation block is
+found in 2132 instead of 2140 (as estimated by 10 minute expected block
+generation rate)?</p>
+<div class="gap">
+
+</div>
+
+<h2>Selfish Mining</h2>
+<p>What are the risks and benefits of witholding a found block?
+<div class="gap"></p>
+</div>
+
+<p>Based on the <a href="http://www.submarinecablemap.com/">submarine cable map</a>,
+where should you put your bitcoin mining operation?
+<div class="gap"></p>
+</div>
+
+<p>Suppose you (and no other bitcoin nodes) had access to an under-Artic
+fiberoptic cable, providing faster than currently possible routes
+between Japan and Anchorage.  Would this provide a valuable advantage in
+bitcoin?  Would you prefer to have a fast microwave link between Japan
+and Finland?</p>
+<div class="gap">
+
+</div>
+
+<p>This is the paper about selfish mining: Ittay Eyal and Emin G&uuml;n
+Sirer, <a href="http://arxiv.org/pdf/1311.0243v5.pdf"><em>Majority is not Enough: Bitcoin Mining is
+Vulnerable</em></a> (Nov 2013).  There
+has been a lot of debate about this paper and the claim that rational
+miners will behave selfishly:</p>
+<ul>
+<li><a href="https://freedom-to-tinker.com/blog/felten/game-theory-and-bitcoin/">Game Theory and Bitcoin</a> (Ed Felten)</li>
+<li><a href="http://hackingdistributed.com/2013/11/14/response-to-feedback-on-selfish-mining/#id10">Response to Feedback on Selfish Mining</a> (Eyal and Sirer's response to Felten's post and other arguments; read Felten's responses in the comments)</li>
+<li><a href="http://hackingdistributed.com/2013/11/05/faq-selfish-mining/">Some Frequently Asked Questions on Selfish Mining</a> (includes Simpson's clip)</li>
+</ul></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/class-14-selfish-mining.html#disqus_thread" data-disqus-identifier="class-14-selfish-mining">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
                    <h1><a href="http://bitcoin-class.org/bitcoin-anthropology-talk.html">Bitcoin Anthropology Talk</a></h1>
                    <div class="well small"><footer class="post-info">
 <span class="quietlabel">Posted: </span>
@@ -309,67 +437,11 @@ Network</em></a>,
         </div>
 
         <div class="article">
- 
-                   <h1><a href="http://bitcoin-class.org/class-12-mostly-about-superfish.html">Class 12: Mostly About Superfish</a></h1>
-                   <div class="well small"><footer class="post-info">
-<span class="quietlabel">Posted: </span>
-<abbr class="published" title="2015-02-23T19:00:00-05:00">
-    Mon 23 February 2015
-</abbr>
-<!-- <span class="quietlabel">by</span>
-<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
--->
-<!--
-<span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/class12.html"><i class="icon-folder-open"></i>class12</a>.
--->
+                   <a href="http://bitcoin-class.org/class-12-mostly-about-superfish.html">Class 12: Mostly About Superfish</a> (Mon 23 February 2015)<br></br>
 
-<!--
--->
-</footer><!-- /.post-info --></div>
-                   <div class="content"><h2>Schedule</h2>
-<p><div class="todo"> </p>
-<ul>
-<li>
-<p>Quiz 2 will be in class on <strong>Wednesday, 25 February</strong>.  It will be similar in length, format, and content to Quiz 1 (except will cover material from the beginning of the class through <a href="http://bitcoin-class.org/class-10-more-mining.html">Class 10</a>).</p>
-</li>
-<li>
-<p><a href="http://bitcoin-class.org/pages/project2.html">Project 2 Part 2</a> starts now!  Read the rules carefully to understand what is within scope for this, and please ask for clarifications before doing anything questionable.</p>
-</li>
-</ul>
-</div>
-
-<p><center> 
-<iframe src="//www.slideshare.net/slideshow/embed_code/45046365" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-<div class="caption">Note: due to a bug in
-slideshare's updated player, ink markings no longer appear in the
-viewer.  <br>If you <a href="http://bitcoin-class.org/classes/class12/class12-inked.pptx">download the slides</a>, they are present though.
-Hopefully, the player will be fixed someday. </div>
-</center></p>
-<h2>Difficulty</h2>
-<p><a href="https://bitcoinwisdom.com/bitcoin/difficulty">Bitcoin Difficulty increased yesterday!</a>: 46684376316</p>
-<p>This invalidates our results from the previous class about the SP20
-miner being profitable (with our assumption about 5% difficulty increase
-per month). </p>
-<p>PointCoin's difficulty rate reveals something about when students got
-their miners working, and about how EC2 throttles micro instances:</p>
-<p><center>
-<a href="/classes/class12/pointcoin-difficulty.png"><img src="/classes/class12/pointcoin-difficulty.png" width=600></a>
-</center></p>
-<h2>Superfish</h2>
-<p>Here are some articles about superfish:  </p>
-<p><a href="https://blog.filippo.io/komodia-superfish-ssl-validation-is-broken/"><em>Komodia/Superfish SSL Validation is Broken</em></a>, Filippo Valsorda<br />
-<a href="http://blog.erratasec.com/2015/02/extracting-superfish-certificate.html"><em>Extracting the SuperFish certificate</em></a>, Robert Graham<br />
-<a href="http://bitbanter.com/2015/02/20/lenovo-man-middle/"><em>Lenovo Under Sustained Man in Middle Management Attack</em></a>, Josh Cincinatti<br />
-<a href="http://www.slate.com/articles/technology/bitwise/2015/02/lenovo_superfish_scandal_why_it_s_one_of_the_worst_consumer_computing_screw.html"><em>You Had One Job, Lenovo</em></a>, David Auerbach, Slate  </p>
-<h2>SSL Warings</h2>
-<p><a href="http://research.google.com/pubs/AdrienneFelt.html">Adrienne Felt</a>'s work on SSL warnings in Chrome browser:<br />
-<a href="https://docs.google.com/presentation/d/1TNFx6eaQVfe83PV80-FZ39QY1dSLGCWW8f2i5-NeJ48/edit#slide=id.p"><em>Improving SSL Warnings</em></a> (talk slides)<br />
-<a href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/43265.pdf"><em>Improving SSL Warnings: Comprehension and Adherence</em></a><br />
-<a href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41927.pdf"><em>Experimenting At Scale With Google Chrome's SSL Warning</em></a><br />
-You can also see her old page about the work she did at UVa: <a href="http://www.cs.virginia.edu/felt/privacy/"><em>Privacy Protection for Social Network APIs</em></a>.</p></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/class-12-mostly-about-superfish.html#disqus_thread" data-disqus-identifier="class-12-mostly-about-superfish">Comments</a></div>
-                   <hr />
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-12-mostly-about-superfish.html">More...</a>                      
+                   </div>-->
         </div>
 
         <div class="article">
@@ -409,14 +481,6 @@ You can also see her old page about the work she did at UVa: <a href="http://www
 
  <!--                  <div class="summary">
                         <a class="btn primary xsmall" href="http://bitcoin-class.org/class-9-mining.html">More...</a>                      
-                   </div>-->
-        </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/project-2.html">Project 2</a> (Wed 11 February 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/project-2.html">More...</a>                      
                    </div>-->
         </div>
         <hr />
