@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-20T00:00:00-04:00</updated><entry><title>Class 26: Presentations 1</title><link href="http://bitcoin-class.org/class-26-presentations-1.html" rel="alternate"></link><updated>2015-04-20T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-20:class-26-presentations-1.html</id><summary type="html">&lt;h1&gt;Project Presentations&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-22T00:00:00-04:00</updated><entry><title>Class 27: Presentations 2</title><link href="http://bitcoin-class.org/class-27-presentations-2.html" rel="alternate"></link><updated>2015-04-22T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-22:class-27-presentations-2.html</id><summary type="html">&lt;h1&gt;Project Presentations&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Wednesday, 22 April&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Universal Coin Converter&lt;/h3&gt;
+&lt;p&gt;Sam Abbate&lt;/p&gt;
+&lt;h3&gt;Subsidy Studies&lt;/h3&gt;
+&lt;p&gt;Laurence Meyers, Jacob Rosenberg&lt;/p&gt;
+&lt;h3&gt;Multisignature Mobile Wallets&lt;/h3&gt;
+&lt;p&gt;William Emmanuel and Kevin Hoffman &lt;/p&gt;
+&lt;h3&gt;Bitcoin Market Price&lt;/h3&gt;
+&lt;p&gt;Avinash Ramesh&lt;/p&gt;
+&lt;h3&gt;A Decentralized Banking Scheme for Communal Funds&lt;/h3&gt;
+&lt;p&gt;Ori Shimony&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://prezi.com/-pn4ksh5yfha/cryptokupa/"&gt;Presentation (Prezi)&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;PointList: the PointCoin Marketplace&lt;/h3&gt;
+&lt;p&gt;Anat Gilboa, Benjamin Edgar&lt;/p&gt;</summary></entry><entry><title>Class 26: Presentations 1</title><link href="http://bitcoin-class.org/class-26-presentations-1.html" rel="alternate"></link><updated>2015-04-20T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-20:class-26-presentations-1.html</id><summary type="html">&lt;h1&gt;Project Presentations&lt;/h1&gt;
 &lt;h3&gt;An Analysis and Breakdown of SHA Hashing in Bitcoin&lt;/h3&gt;
 &lt;p&gt;Jeremy Gabalski&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://bitcoin-class.org/classes/class26/jeremy.pptx"&gt;Slides (PPTX)&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Financial Markets, Game Theory, and Self-Regulation&lt;/h3&gt;
 &lt;p&gt;Merlin Zhang, Trisha Hajela&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://bitcoin-class.org/classes/class26/merlintrisha.pptx"&gt;Slides (PPTX)&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Bitcoin Price History&lt;/h3&gt;
+&lt;h3&gt;Bitcoin Market Price History&lt;/h3&gt;
 &lt;p&gt;Oriana Ngo&lt;/p&gt;
 &lt;p&gt;Presentation Links:&lt;br /&gt;
 &lt;a href="http://prezi.com/zi0kbca2bc3z/?utm_campaign=share&amp;amp;utm_medium=copy"&gt;#1 (Prezi)&lt;/a&gt;&lt;br /&gt;
