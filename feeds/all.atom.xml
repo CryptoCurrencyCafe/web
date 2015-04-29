@@ -1,11 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-27T00:00:00-04:00</updated><entry><title>Class 28: Presentations 3</title><link href="http://bitcoin-class.org/class-28-presentations-3.html" rel="alternate"></link><updated>2015-04-27T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-27:class-28-presentations-3.html</id><summary type="html">&lt;h3&gt;PointList: the PointCoin Marketplace&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-29T00:00:00-04:00</updated><entry><title>Final Projects</title><link href="http://bitcoin-class.org/final-projects.html" rel="alternate"></link><updated>2015-04-29T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-29:final-projects.html</id><summary type="html">&lt;h2&gt;Final Project Submissions&lt;/h2&gt;
+&lt;p&gt;Your final project submissions are due on &lt;strong&gt;Sunday, 3 May&lt;/strong&gt; at
+&lt;strong&gt;11:59pm&lt;/strong&gt;.  If you anticipate any problems submitting your final
+project on time, please contact me by Friday to discuss.&lt;/p&gt;
+&lt;p&gt;For most teams, I hope your final project submission will be an email
+containing:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;A title for your project (this is the title I will use on the public
+page listing all the projects).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A one-sentence description of your project.  This should be a clear,
+well-written sentence that will be enough for someone to understand what
+you did and why.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A URL that points to a publicly-viewable web page that describes your
+project.  The linked page can (and probably should) contain links to
+other pages (e.g., a website that is your actual project or a github
+repo with your project code).  For example, the link you send could be a
+link to &lt;em&gt;http://my-project-site.org/about.html&lt;/em&gt; or
+&lt;em&gt;https://github.com/your-repo/README.md&lt;/em&gt;, which is a page describing
+your project, as well as containing links to the main project site.
+Please try to put your project site somewhere that will not expire when
+you graduate from UVa, but that can survive forever.  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It is not necessary to submit a separate PDF report, but you may do so
+if there are things you do not want to put on a public website, or that
+you think benefit from being written in a more formal way.&lt;/p&gt;
+&lt;h2&gt;Course Feedback&lt;/h2&gt;
+&lt;p&gt;Since I'll be offering a new version of this course in the fall, I would
+much appreciate your feedback. Indeed, you already agreed to this on the
+&lt;a href="http://bitcoin-class.org/pages/syllabus.html"&gt;course syllabus&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;b&gt;I will provide useful feedback.&lt;/b&gt; I realize that this is a new and
+ experimental course, and it is important that I let the course staff
+ know what they need to improve the course. I will not wait until the
+ end of the course to make the course staff aware of any problems. I
+ will provide feedback either anonymously or by contacting the course
+ staff directly. &lt;b&gt;I will fill out all requested surveys honestly and
+ thoroughly&lt;/b&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There are three possible ways for you to do this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Arrange (by email or finding me in person) a time to meet with me for
+coffee/lunch (I'll buy).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fill out this survey (which can be done anonymously): &lt;a href="http://goo.gl/forms/UigYUO4U8K"&gt;&lt;em&gt;http://goo.gl/forms/UigYUO4U8K&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Send me an email with your thoughts (including at least one concrete
+suggestion for what to do next semester).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(You are welcome to do more than one of these, but everyone should do at
+least one of them!)&lt;/p&gt;
+&lt;p&gt;Thanks again for all of your contributions to the class, and I look
+forward to seeing your final projects.&lt;/p&gt;
+&lt;p&gt;--- Dave&lt;/p&gt;</summary></entry><entry><title>Class 28: Presentations 3</title><link href="http://bitcoin-class.org/class-28-presentations-3.html" rel="alternate"></link><updated>2015-04-27T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-27:class-28-presentations-3.html</id><summary type="html">&lt;h3&gt;PointList: the PointCoin Marketplace&lt;/h3&gt;
 &lt;p&gt;Anat Gilboa, Benjamin Edgar&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://docs.google.com/a/virginia.edu/presentation/d/1NbO1gX0S29MI52p7YxykxJL6bqR__RYOjoriyaqhsps/edit?usp=sharing"&gt;Presentation (Google Slides)&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;PointCoin Pizza &amp;mdash; Revamped&lt;/h3&gt;
 &lt;p&gt;Kyle Angelotti and Michelle Wang&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://bitcoin-class.org/classes/class28/pizza.pptx"&gt;Slides (PPTX)&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Pointcoin Reddit Tip Bot&lt;/h3&gt;
+&lt;h3&gt;Remembar&lt;/h3&gt;
 &lt;p&gt;Joey Weate, Charlie Harding&lt;/p&gt;
 &lt;h3&gt;Examining Anonymous Marketplaces&lt;/h3&gt;
 &lt;p&gt;Max Serpe, Peter Gregrowski&lt;/p&gt;
