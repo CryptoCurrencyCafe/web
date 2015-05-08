@@ -164,6 +164,30 @@
 
         <div class="article">
  
+                   <h1><a href="http://bitcoin-class.org/class-17-project-discussion.html">Class 17: Project Discussion</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-03-18T00:00:00-04:00">
+    Wed 18 March 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/class17.html"><i class="icon-folder-open"></i>class17</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><p>Welcome <a href="http://goo.gl/NwvPMA">Maxwell</a>!</p></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/class-17-project-discussion.html#disqus_thread" data-disqus-identifier="class-17-project-discussion">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
                    <h1><a href="http://bitcoin-class.org/class-16-alternate-cryptocurrencies.html">Class 16: Alternate Cryptocurrencies</a></h1>
                    <div class="well small"><footer class="post-info">
 <span class="quietlabel">Posted: </span>
@@ -471,131 +495,11 @@ Execute one instruction: <a href="https://github.com/btcsuite/btcd/blob/c1535965
         </div>
 
         <div class="article">
- 
-                   <h1><a href="http://bitcoin-class.org/class-14-selfish-mining.html">Class 14: Selfish Mining</a></h1>
-                   <div class="well small"><footer class="post-info">
-<span class="quietlabel">Posted: </span>
-<abbr class="published" title="2015-03-02T00:00:00-05:00">
-    Mon 02 March 2015
-</abbr>
-<!-- <span class="quietlabel">by</span>
-<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
--->
-<!--
-<span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/class14.html"><i class="icon-folder-open"></i>class14</a>.
--->
+                   <a href="http://bitcoin-class.org/class-14-selfish-mining.html">Class 14: Selfish Mining</a> (Mon 02 March 2015)<br></br>
 
-<!--
--->
-</footer><!-- /.post-info --></div>
-                   <div class="content"><h2>Schedule</h2>
-<p><div class="todo"> </p>
-<ul>
-<li>
-<p><a href="http://bitcoin-class.org/pages/project2.html">Project 2 Part
-  2</a> is due next
-  <strong>Thursday, 5 March.</strong> Submission is by email, send a PDF with your
-  answers to questions 5-9.</p>
-</li>
-<li>
-<p>Keep thinking about ideas for your project.  The first deliverable for
-  the project will be a preliminary proposal due on March 19.</p>
-</li>
-</ul>
-</div>
-
-<p><center> 
-<iframe src="//www.slideshare.net/slideshow/embed_code/45339406" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-<div class="caption">Note: due to a bug in
-slideshare's updated player, ink markings no longer appear in the
-viewer.  <br>If you <a href="http://bitcoin-class.org/classes/class14/class14-inked.pptx">download the slides</a>, they are present though.
-Hopefully, the player will be fixed someday. </div>
-</center></p>
-<h2>Mining the Last Bitcoin</h2>
-<p><a href="https://github.com/bitcoin/bitcoin/blob/59310f1c02673c3ee068cd82f8654bed9b757889/src/main.cpp#L1229">Computing the block value:</a></p>
-<div class="highlight"><pre><span class="n">CAmount</span> <span class="nf">GetBlockValue</span><span class="p">(</span><span class="kt">int</span> <span class="n">nHeight</span><span class="p">,</span> <span class="k">const</span> <span class="n">CAmount</span><span class="o">&amp;</span> <span class="n">nFees</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">CAmount</span> <span class="n">nSubsidy</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">COIN</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">halvings</span> <span class="o">=</span> <span class="n">nHeight</span> <span class="o">/</span> <span class="n">Params</span><span class="p">().</span><span class="n">SubsidyHalvingInterval</span><span class="p">();</span>
-
-    <span class="c1">// Force block reward to zero when right shift is undefined.</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">halvings</span> <span class="o">&gt;=</span> <span class="mi">64</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">nFees</span><span class="p">;</span>
-
-    <span class="c1">// Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.</span>
-    <span class="n">nSubsidy</span> <span class="o">&gt;&gt;=</span> <span class="n">halvings</span><span class="p">;</span>
-
-    <span class="k">return</span> <span class="n">nSubsidy</span> <span class="o">+</span> <span class="n">nFees</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>Interestingly, the <a href="https://github.com/bitcoin/bitcoin/blob/4405b78d6059e536c36974088a8ed4d9f0f29898/main.cpp#L675">first commit version of this code</a>
-in github (29 August 2009) is missing the <code>halvings &gt;= 64</code> line we talked about in class: </p>
-<div class="highlight"><pre><span class="n">int64</span> <span class="n">CBlock</span><span class="o">::</span><span class="n">GetBlockValue</span><span class="p">(</span><span class="n">int64</span> <span class="n">nFees</span><span class="p">)</span> <span class="k">const</span>
-<span class="p">{</span>
-    <span class="n">int64</span> <span class="n">nSubsidy</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">COIN</span><span class="p">;</span>
-
-    <span class="c1">// Subsidy is cut in half every 4 years</span>
-    <span class="n">nSubsidy</span> <span class="o">&gt;&gt;=</span> <span class="p">(</span><span class="n">nBestHeight</span> <span class="o">/</span> <span class="mi">210000</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="n">nSubsidy</span> <span class="o">+</span> <span class="n">nFees</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>Will a node running the early version of this code (assuming the global <code>nBestHeight</code> is equal to <code>nHeight</code>)
-ever compute a
-different block value than a node running the current version of the
-code?
-<div class="gap"></p>
-</div>
-
-<p>Python code for estimating block time: <a href="http://bitcoin-class.org/classes/class14/subsidy.py">subsidy.py</a></p>
-<div class="highlight"><pre><span class="o">&gt;</span> <span class="n">expect_block</span><span class="p">(</span><span class="mi">6929999</span><span class="p">)</span>
-<span class="mi">2132</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">19</span> <span class="mo">00</span><span class="o">:</span><span class="mi">50</span><span class="o">:</span><span class="mf">38.200000</span>
-</pre></div>
-
-
-<p>Why is it likely that the expected final bitcoin generation block is
-found in 2132 instead of 2140 (as estimated by 10 minute expected block
-generation rate)?</p>
-<div class="gap">
-
-</div>
-
-<h2>Selfish Mining</h2>
-<p>What are the risks and benefits of witholding a found block?
-<div class="gap"></p>
-</div>
-
-<p>Based on the <a href="http://www.submarinecablemap.com/">submarine cable map</a>,
-where should you put your bitcoin mining operation?
-<div class="gap"></p>
-</div>
-
-<p>Suppose you (and no other bitcoin nodes) had access to an under-Artic
-fiberoptic cable, providing faster than currently possible routes
-between Japan and Anchorage.  Would this provide a valuable advantage in
-bitcoin?  Would you prefer to have a fast microwave link between Japan
-and Finland?</p>
-<div class="gap">
-
-</div>
-
-<p>This is the paper about selfish mining: Ittay Eyal and Emin G&uuml;n
-Sirer, <a href="http://arxiv.org/pdf/1311.0243v5.pdf"><em>Majority is not Enough: Bitcoin Mining is
-Vulnerable</em></a> (Nov 2013).  There
-has been a lot of debate about this paper and the claim that rational
-miners will behave selfishly:</p>
-<ul>
-<li><a href="https://freedom-to-tinker.com/blog/felten/game-theory-and-bitcoin/">Game Theory and Bitcoin</a> (Ed Felten)</li>
-<li><a href="http://hackingdistributed.com/2013/11/14/response-to-feedback-on-selfish-mining/#id10">Response to Feedback on Selfish Mining</a> (Eyal and Sirer's response to Felten's post and other arguments; read Felten's responses in the comments)</li>
-<li><a href="http://hackingdistributed.com/2013/11/05/faq-selfish-mining/">Some Frequently Asked Questions on Selfish Mining</a> (includes Simpson's clip)</li>
-</ul></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/class-14-selfish-mining.html#disqus_thread" data-disqus-identifier="class-14-selfish-mining">Comments</a></div>
-                   <hr />
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-14-selfish-mining.html">More...</a>                      
+                   </div>-->
         </div>
 
         <div class="article">
@@ -635,14 +539,6 @@ miners will behave selfishly:</p>
 
  <!--                  <div class="summary">
                         <a class="btn primary xsmall" href="http://bitcoin-class.org/pointcoin-pizza.html">More...</a>                      
-                   </div>-->
-        </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/class-11-pools-and-profits.html">Class 11: Pools and Profits</a> (Wed 18 February 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-11-pools-and-profits.html">More...</a>                      
                    </div>-->
         </div>
         <hr />

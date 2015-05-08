@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-04-29T00:00:00-04:00</updated><entry><title>Final Projects</title><link href="http://bitcoin-class.org/final-projects.html" rel="alternate"></link><updated>2015-04-29T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-29:final-projects.html</id><summary type="html">&lt;h2&gt;Final Project Submissions&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/all.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-05-04T00:00:00-04:00</updated><entry><title>Cryptocurrency Projects</title><link href="http://bitcoin-class.org/cryptocurrency-projects.html" rel="alternate"></link><updated>2015-05-04T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-05-04:cryptocurrency-projects.html</id><summary type="html">&lt;p&gt;The final projects are now all posted here: &lt;a href="http://bitcoin-class.org/pages/final-projects.html"&gt;Final
+Projects&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lots of cool projects to look at and try!  I hope many of these will
+continue to be developed over the summer.&lt;/p&gt;</summary></entry><entry><title>Final Projects</title><link href="http://bitcoin-class.org/final-projects.html" rel="alternate"></link><updated>2015-04-29T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-04-29:final-projects.html</id><summary type="html">&lt;h2&gt;Final Project Submissions&lt;/h2&gt;
 &lt;p&gt;Your final project submissions are due on &lt;strong&gt;Sunday, 3 May&lt;/strong&gt; at
 &lt;strong&gt;11:59pm&lt;/strong&gt;.  If you anticipate any problems submitting your final
 project on time, please contact me by Friday to discuss.&lt;/p&gt;
@@ -139,9 +142,9 @@ William Emmanuel and Kevin Hoffman &lt;/p&gt;
 Avinash Ramesh&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;A Decentralized Banking Scheme for Communal Funds&lt;/em&gt;&lt;br /&gt;
 Ori Shimony&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monday, April 27&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;PointList: the PointCoin Marketplace&lt;/em&gt;&lt;br /&gt;
 Anat Gilboa, Benjamin Edgar&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Monday, April 27&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;PointCoin Pizza &amp;mdash; Revamped&lt;/em&gt;&lt;br /&gt;
 Kyle Angelotti and Michelle Wang&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Pointcoin Reddit Tip Bot&lt;/em&gt;&lt;br /&gt;
