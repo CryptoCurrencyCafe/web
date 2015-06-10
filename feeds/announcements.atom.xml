@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-05-04T00:00:00-04:00</updated><entry><title>Cryptocurrency Projects</title><link href="http://bitcoin-class.org/cryptocurrency-projects.html" rel="alternate"></link><updated>2015-05-04T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-05-04:cryptocurrency-projects.html</id><summary type="html">&lt;p&gt;The final projects are now all posted below.  Lots of cool projects to
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/announcements.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-06-09T00:00:00-04:00</updated><entry><title>Fall 2015 Cryptocurrency Cabal Course</title><link href="http://bitcoin-class.org/fall-2015-cryptocurrency-cabal-course.html" rel="alternate"></link><updated>2015-06-09T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-06-09:fall-2015-cryptocurrency-cabal-course.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Cryptocurrency Cabal&lt;/em&gt; will be offered in Fall 2015.  It is listed as a
+cs4501 (Special Topics in Computer Science) with class meetings Mondays
+and Wednesdays, 2:00-3:15pm in Olsson Hall 120.
+The expected background for the Fall 2015 course is having completed
+cs2150 and cs3102 (or equivalent experience and knowledge in some other
+way).  Exceptions will be made for students who bring some other
+interesting background or perspective to the class.&lt;/p&gt;
+&lt;p&gt;This site is all the materials from the Spring 2015 course.  The
+&lt;a href="http://bitcoin-class.org/pages/syllabus.html"&gt;syllabus&lt;/a&gt; for this
+semester's course will change some for the next version of the course,
+but that page and the &lt;a href="http://bitcoin-class.org"&gt;rest of the material on this
+site&lt;/a&gt; will give you a good idea what to
+expect.  &lt;/p&gt;
+&lt;p&gt;If you are interested in joining the course, contact &lt;a href="http://www.cs.virginia.edu/evans"&gt;David Evans&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Cryptocurrency Projects</title><link href="http://bitcoin-class.org/cryptocurrency-projects.html" rel="alternate"></link><updated>2015-05-04T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-05-04:cryptocurrency-projects.html</id><summary type="html">&lt;p&gt;The final projects are now all posted below.  Lots of cool projects to
 look at and try!  I hope many of these will continue to be developed
 over the summer.&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;

@@ -172,6 +172,103 @@
 
         <div class="article">
  
+                   <h1><a href="http://bitcoin-class.org/class-23-sidechains.html">Class 23: Sidechains</a></h1>
+                   <div class="well small"><footer class="post-info">
+<span class="quietlabel">Posted: </span>
+<abbr class="published" title="2015-04-08T00:00:00-04:00">
+    Wed 08 April 2015
+</abbr>
+<!-- <span class="quietlabel">by</span>
+<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
+-->
+<!--
+<span class="label">Category</span>
+<a href="http://bitcoin-class.org/category/class23.html"><i class="icon-folder-open"></i>class23</a>.
+-->
+
+<!--
+-->
+</footer><!-- /.post-info --></div>
+                   <div class="content"><p><div class="phighlight">
+   <a href="http://bitcoin-class.org/classes/class23/class23.pdf">PDF version for printing</a>
+   </div></p>
+<h2>Schedule</h2>
+<p>Each team will have an opportunity to present their project the last
+three classes (April 20, 22 and 27).  Teams will sign up for
+presentation slots at Monday's class.  Final projects are due by 11:59pm
+on Sunday, 3 May.</p>
+<p><strong>Thursday, 6pm Commerce School 223</strong>.  <em>Entrepreneurial and Career
+  Ventures in the world of Digital Currency</em> Panel.</p>
+<p><strong>Friday, 10:45am Rice 242</strong>.  Suman Jana, <em>Rise of the Planet of the
+  Apps: Security and Privacy in the Age of Bad Code</em>.</p>
+<p><center> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/46953167" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<div class="caption">Note: due to a bug in
+slideshare's updated player, ink markings no longer appear in the
+viewer.  <br>If you <a href="http://bitcoin-class.org/classes/class23/class23-inked.pptx">download the slides</a>, they are present though.
+Hopefully, the player will be fixed someday. </div>
+</center></p>
+<h1>Bloom Filters</h1>
+<p>Burton Bloom, <a href="http://bitcoin-class.org/classes/class23/bloom.pdf"><em>Space/Time Trade-offs in Hash Coding with Allowable
+Errors</em></a>, Communications of the ACM, July 1970.</p>
+<h3>Conventional Hash Table</h3>
+<p>Store collection of <em>N</em> <em>b</em>-bit elements, using <em>k</em> &gt; <em>N</em> cells.</p>
+<p><em>H</em> is pseudorandom function, <em>H</em>(<em>x</em>) &larr; [0, <em>k</em>).</p>
+<div class="gap">
+
+</div>
+
+<h3>Bloom Filter</h3>
+<p>Tradeoff: shrink size of array to store, accept false matches.  </p>
+<p><em>m</em> = number of bits in array<br />
+<em>k</em> = number of hash functions<br />
+<em>n</em> = number of elements</p>
+<p>What is the probability a given element of the array is not selected by a particular hash function?
+<div class="gap"></p>
+</div>
+
+<p>What is the probability a given element of the array is not selected for
+a particular element by any of the <em>k</em> hash functions?
+<div class="gap"></p>
+</div>
+
+<p>After <em>n</em> elements, what is the probability that an array bit is 0?
+<div class="gap"></p>
+</div>
+
+<p>Probability of false match: (1 - (1 - 1/<em>m</em>)<sup><em>kn</em></sup>)<sup><em>k</em></sup></p>
+<p>How big should <em>m</em> be to have less than 0.01% false positive rate for a block with 1000 addresses?
+<div class="gap"></p>
+</div>
+
+<p>How much privacy does using a bloom filter provide to an SPV wallet?
+<div class="gap"></p>
+</div>
+
+<h1>Merged Mining</h1>
+<p><a href="https://en.bitcoin.it/wiki/Merged_mining_specification">Merged Mining Specification</a></p>
+<p>How can Namecoin leverage Bitcoin mining power while maintaining its own blockchain and difficulty level?
+<div class="gap"></p>
+</div>
+
+<p>What are the advantages of enabing bitcoin miners to also mine namecoin?<br />
+<div class="gap"></p>
+</div>
+
+<p>Bug: <a href="https://bitcointalk.org/index.php?topic=310954"><em>Namecoin was stillborn, I had to switch off life-support</em></a><br />
+Patch: <a href="https://github.com/namecoin/namecoin/commit/d70d01ff77310d3755891cb43cb2700b553019f4">https://github.com/namecoin/namecoin/commit/d70d01ff77310d3755891cb43cb2700b553019f4</a></p>
+<h1>Side Chains</h1>
+<p>Why is it so hard to evolve bitcoin?
+<div class="gap">
+</div></p>
+<p>Adam Back, Matt Corallo, Luke Dashjr, Mark Friedenbach, Gregory Maxwell, Andrew Miller, Andrew Poelstra, Jorge Timón, and Pieter Wuille.  <a href="http://www.blockstream.com/sidechains.pdf"><em>Enabling Blockchain Innovations with Pegged Sidechains</em></a>.</p>
+<p><a href="http://blockstream.com/">Blockstream</a></p></div>
+<div class="commentstag"><a href="http://bitcoin-class.org/class-23-sidechains.html#disqus_thread" data-disqus-identifier="class-23-sidechains">Comments</a></div>
+                   <hr />
+        </div>
+
+        <div class="article">
+ 
                    <h1><a href="http://bitcoin-class.org/class-22-subsidies-ombuds-melange.html">Class 22: Subsidies, Ombuds, Melange</a></h1>
                    <div class="well small"><footer class="post-info">
 <span class="quietlabel">Posted: </span>
@@ -293,33 +390,11 @@ Oriana Ngo and Avinash Ramesh</p></div>
         </div>
 
         <div class="article">
- 
-                   <h1><a href="http://bitcoin-class.org/some-interesting-links.html">Some Interesting Links</a></h1>
-                   <div class="well small"><footer class="post-info">
-<span class="quietlabel">Posted: </span>
-<abbr class="published" title="2015-04-01T00:00:00-04:00">
-    Wed 01 April 2015
-</abbr>
-<!-- <span class="quietlabel">by</span>
-<a href="http://bitcoin-class.org/author/david-evans.html">David Evans</a>
--->
-<!--
-<span class="label">Category</span>
-<a href="http://bitcoin-class.org/category/announcements.html"><i class="icon-folder-open"></i>announcements</a>.
--->
+                   <a href="http://bitcoin-class.org/some-interesting-links.html">Some Interesting Links</a> (Wed 01 April 2015)<br></br>
 
-<!--
--->
-</footer><!-- /.post-info --></div>
-                   <div class="content"><p>Here's a few interesting links relevant to several of the projects that were discussed today:</p>
-<p><a href="http://www.nytimes.com/2015/03/31/nyregion/silk-road-case-federal-agents-charges.html?_r=2"><em>2 Ex-Federal Agents in Silk Road Case Are Charged With
-Fraud</em></a>, New York Times, 31 March 2015 --- the <a href="https://s3.amazonaws.com/s3.documentcloud.org/documents/1697973/charges-against-former-federal-agents-in-silk.pdf">full
-charges</a>
-are quite interesting reading, would be good to look for some of the
-transactions mentioned in them in the blockchain.</p>
-<p><a href="http://blogs.wsj.com/moneybeat/2015/03/29/interest-in-bitcoin-grows-on-wall-street/"><em>Interest in Bitcoin Grows on Wall Street</em></a>, Wall Stree Journal, 29 March 2015.</p></div>
-<div class="commentstag"><a href="http://bitcoin-class.org/some-interesting-links.html#disqus_thread" data-disqus-identifier="some-interesting-links">Comments</a></div>
-                   <hr />
+ <!--                  <div class="summary">
+                        <a class="btn primary xsmall" href="http://bitcoin-class.org/some-interesting-links.html">More...</a>                      
+                   </div>-->
         </div>
 
         <div class="article">
@@ -359,14 +434,6 @@ transactions mentioned in them in the blockchain.</p>
 
  <!--                  <div class="summary">
                         <a class="btn primary xsmall" href="http://bitcoin-class.org/project-proposal-presentations.html">More...</a>                      
-                   </div>-->
-        </div>
-
-        <div class="article">
-                   <a href="http://bitcoin-class.org/class-18-useful-proofs-of-work.html">Class 18: Useful Proofs-of-Work</a> (Mon 23 March 2015)<br></br>
-
- <!--                  <div class="summary">
-                        <a class="btn primary xsmall" href="http://bitcoin-class.org/class-18-useful-proofs-of-work.html">More...</a>                      
                    </div>-->
         </div>
         <hr />
