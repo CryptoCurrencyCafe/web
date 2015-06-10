@@ -1,7 +1,16 @@
 Title: Final Projects
 Date: 2015-05-07
 
+   <center>
+[ <b><a href="#bitcoin">Analyzing Bitcoin in Practice</a></b> |
+  <b><a href="#applications">Bitcoin Applications</a></b> |
+  <b><a href="#pointcoin">PointCoin Projects</a></b>
+]
+   </center>
+
+   <a name="bitcoin">
 # Analyzing Bitcoin in Practice
+   </a>
 
 ## Inside Bitcoin Exchanges
 Alex Coffin, Ankit Gupta, Corrigan Blanchfield, and Tara Raj
@@ -11,7 +20,7 @@ Alex Coffin, Ankit Gupta, Corrigan Blanchfield, and Tara Raj
 
 <center>
 <a href="http://visualize.bitcoin-class.org:8000/">
-![Bitcoin Address-to-Address Visualizer](|filename|./visualizer-small.png)
+![Bitcoin Address-to-Address Visualizer](|filename|../projects/visualizer-small.png)
 </a>
 </center>
 
@@ -22,6 +31,15 @@ exchanges operate to better invest in Bitcoin.
 In our project we explore strategies such as transaction visualization,
 taint analysis, fulfillment processes, and pricing models to create an
 evaluation methodology.
+
+## Examining Anonymous Market Places
+Max Serpe and Peter Gregrowski
+
+In order to better understand anonymous market places and how they work,
+we conducted research and hands-on transactions on the Agora Dark
+Market.
+
+[Project (github)](https://github.com/rmserp12/projectCrypto/blob/master/README.md)
 
 ## Analysis of Locking Scripts in the Blockchain
 Saba Eskandarian
@@ -64,8 +82,24 @@ This part also serves as a prediction for the next halving.
 
 <iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="550" height="400" src="https://prezi.com/embed/zi0kbca2bc3z/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0#"></iframe>
 
-Report: [PDF](|filename|./ngo.pdf)
+Report: [PDF](|filename|../projects/ngo.pdf)
 
+## Cryptocurrency Survival: A Price Analysis of Bitcoin
+Avinash Ramesh
+
+[Project Site](https://btcpriceanalysis.wordpress.com/)
+
+This project aimed to understand the factors that affect Bitcoin's 
+price, as well as to examine and understand whether Bitcoin will be 
+adopted in the future.
+
+## Subsidy Studies
+Jacob Rosenberg and Laurence Meyers
+
+An examination of the economic impact that halving the mining subsidy
+will have on the popularity and price of Bitcoin.  
+
+[Presentation (Slides)](https://docs.google.com/presentation/d/1QEHnTUDciIchYAopERUmiwY39IfP3yyxrn8VZ9cXwSc/edit?usp=sharing)
 
 ## Bitcoin Arbitrage
 Sam Abbate
@@ -85,14 +119,16 @@ An Analysis of SHA256 and the use of ASIC Hashing Hardware on Bitcoin
 [Presentation (Slides)](https://docs.google.com/presentation/d/10dsWd85N-PjWefId25ZtqdDkB0CmqAdWLchiCAN6GSY/edit?usp=sharing)
 
 
-## Subsidy Studies
-Jacob Rosenberg and Laurence Meyers
+   <a name="applications">
+# Bitcoin Applications
+   </a>
 
-An examination of the economic impact that halving the mining subsidy
-will have on the popularity and price of Bitcoin.  
+## CryptoKupa
+Ori Shimony
 
-[Presentation (Slides)](https://docs.google.com/presentation/d/1QEHnTUDciIchYAopERUmiwY39IfP3yyxrn8VZ9cXwSc/edit?usp=sharing)
+A scheme for decentralized communal funds on the blockchain.
 
+[Paper (PDF)](|filename|../projects/CryptoKupa.pdf)
 
 ## Loans and Financial Instruments in the Bitcoin Marketplace
 
@@ -101,9 +137,29 @@ propose changes to the current system, and analyze the application of
 the Credit Default Swap as a solution to keeping Bitcoin lending
 anonymous.
 
-[Report (PDF)](|filename|./trisha-merlin.pdf)
+[Report (PDF)](|filename|../projects/trisha-merlin.pdf)
 
+## Mobile Multisignature Wallet
+Will Emmanuel and Kevin Hoffman
+
+The first multi-signature Bitcoin wallet for iOS. 
+
+[Project (github)](https://github.com/willemmanuel/MultiSig)
+
+## Scro - An Escrow Service
+Kyle Angelotti and Michelle Wang
+
+Scro is an escrow wallet service that aims to make a safer marketplace
+for merchants.
+
+[Project Link](http://ec2-54-187-58-176.us-west-2.compute.amazonaws.com/)  
+[Report](|filename|../projects/michelle-kyle.pdf)  
+[Code (github)](https://github.com/kangelot/PointPies)
+
+
+   <a name="pointcoin">
 # PointCoin Projects
+   </a>
 
 ## Kickstarting PointCoin
 Jake Shankman 
@@ -126,48 +182,7 @@ Remembar is a Google Chrome Extension that saves your PointCoin address and gene
 [Project (github)](https://github.com/JoeWeate/PointCoinExtension)
 
 
-## Mobile Multisignature Wallet
-Will Emmanuel and Kevin Hoffman
 
-The first multi-signature Bitcoin wallet for iOS. 
-
-[Project (github)](https://github.com/willemmanuel/MultiSig)
-
-## Scro - An Escrow Service
-Kyle Angelotti and Michelle Wang
-
-Scro is an escrow wallet service that aims to make a safer marketplace
-for merchants.
-
-[Project Link](http://ec2-54-187-58-176.us-west-2.compute.amazonaws.com/)  
-[Report](|filename|./michelle-kyle.pdf)  
-[Code (github)](https://github.com/kangelot/PointPies)
-
-## Cryptocurrency Survival: A Price Analysis of Bitcoin
-Avinash Ramesh
-
-[Project Site](https://btcpriceanalysis.wordpress.com/)
-
-This project aimed to understand the factors that affect Bitcoin's 
-price, as well as to examine and understand whether Bitcoin will be 
-adopted in the future.
-
-
-## Examining Anonymous Market Places
-Max Serpe and Peter Gregrowski
-
-In order to better understand anonymous market places and how they work,
-we conducted research and hands-on transactions on the Agora Dark
-Market.
-
-[Project (github)](https://github.com/rmserp12/projectCrypto/blob/master/README.md)
-
-## CryptoKupa
-Ori Shimony
-
-A scheme for decentralized communal funds on the blockchain.
-
-[Paper (PDF)](|filename|../projects/CryptoKupa.pdf)
 
 ## Pointlist
 Anat Gilboa and Benjamin Edgar
