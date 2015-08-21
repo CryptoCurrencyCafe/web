@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/class6.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-02T00:00:00-05:00</updated><entry><title>Class 6: Proofs of Work</title><link href="http://bitcoin-class.org/class-6-proofs-of-work.html" rel="alternate"></link><updated>2015-02-02T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-02:class-6-proofs-of-work.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
-   &lt;a href="http://bitcoin-class.org/classes/class6/class6.pdf"&gt;PDF version for printing&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/0/" rel="alternate"></link><link href="http://bitcoin-class.org/0/feeds/class6.atom.xml" rel="self"></link><id>http://bitcoin-class.org/0/</id><updated>2015-02-02T00:00:00-05:00</updated><entry><title>Class 6: Proofs of Work</title><link href="http://bitcoin-class.org/0/class-6-proofs-of-work.html" rel="alternate"></link><updated>2015-02-02T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-02:0/class-6-proofs-of-work.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
+   &lt;a href="http://bitcoin-class.org/0/classes/class6/class6.pdf"&gt;PDF version for printing&lt;/a&gt;
    &lt;/div&gt;&lt;/p&gt;
 &lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;div class="todo"&gt;
@@ -49,7 +49,7 @@ Hopefully, the player will be fixed someday. &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h1&gt;Proof-of-Work&lt;/h1&gt;
-&lt;p&gt;Cynthia Dwork and Moni Naor.  &lt;a href="http://bitcoin-class.org/classes/class6/pvp.pdf"&gt;&lt;em&gt;Pricing via Processing or Combatting Junk Mail&lt;/em&gt;&lt;/a&gt;, CRYPTO 1992.&lt;/p&gt;
+&lt;p&gt;Cynthia Dwork and Moni Naor.  &lt;a href="http://bitcoin-class.org/0/classes/class6/pvp.pdf"&gt;&lt;em&gt;Pricing via Processing or Combatting Junk Mail&lt;/em&gt;&lt;/a&gt;, CRYPTO 1992.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Pricing Function&lt;/strong&gt;: (&lt;span class="math"&gt;&lt;em&gt;f&lt;/em&gt;&lt;/span&gt;)
 - moderately easy to compute
 - cannot be amortized 

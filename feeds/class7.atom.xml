@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/class7.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-02-04T00:00:00-05:00</updated><entry><title>Class 7: Merkle Trees</title><link href="http://bitcoin-class.org/class-7-merkle-trees.html" rel="alternate"></link><updated>2015-02-04T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-04:class-7-merkle-trees.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
-   &lt;a href="http://bitcoin-class.org/classes/class7/class7.pdf"&gt;PDF version for printing&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/0/" rel="alternate"></link><link href="http://bitcoin-class.org/0/feeds/class7.atom.xml" rel="self"></link><id>http://bitcoin-class.org/0/</id><updated>2015-02-04T00:00:00-05:00</updated><entry><title>Class 7: Merkle Trees</title><link href="http://bitcoin-class.org/0/class-7-merkle-trees.html" rel="alternate"></link><updated>2015-02-04T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-02-04:0/class-7-merkle-trees.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
+   &lt;a href="http://bitcoin-class.org/0/classes/class7/class7.pdf"&gt;PDF version for printing&lt;/a&gt;
    &lt;/div&gt;&lt;/p&gt;
 &lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;p&gt;&lt;div class="todo"&gt; &lt;/p&gt;
