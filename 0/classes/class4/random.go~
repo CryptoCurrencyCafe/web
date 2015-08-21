@@ -1,0 +1,8 @@
+package main
+import "fmt"
+import "math/rand"
+
+func main() {
+   s := rand.NewSource(4501)
+   r := rand.New(s)
+   v :=    Uint32()

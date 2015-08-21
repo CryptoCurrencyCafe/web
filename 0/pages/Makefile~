@@ -1,0 +1,5 @@
+all:
+	pandoc --template=default.latex class[X]-latex.md -o class[X].pdf
+
+%.pdf: %.md
+	pandoc --template=default.latex $< -o $@

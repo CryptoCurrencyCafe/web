@@ -1,0 +1,14 @@
+Permacoin
+
+
+"Scratch Off Puzzle":
+
+Guess(puz) \rarr; ticket
+
+IsWinningTicket(puz, $Z$, ticket) \rarr; $\{0, 1\}$.  Outputs 1 if ticket is a value solution to puz at difficulty level $Z$.
+
+Bitcoin Design Requirements for SOP:
+
+1. Predictable effort - vary $Z$ to increase effort in a predictable (probabilistic) way.
+
+2. Easy to verify: 
