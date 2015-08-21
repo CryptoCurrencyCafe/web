@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/0/" rel="alternate"></link><link href="http://bitcoin-class.org/0/feeds/class3.atom.xml" rel="self"></link><id>http://bitcoin-class.org/0/</id><updated>2015-01-21T00:00:00-05:00</updated><entry><title>Class 3: Elliptic Curves</title><link href="http://bitcoin-class.org/0/class-3-elliptic-curves.html" rel="alternate"></link><updated>2015-01-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-01-21:0/class-3-elliptic-curves.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
-   &lt;a href="http://bitcoin-class.org/0/classes/class3/class3.pdf"&gt;PDF version for printing&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/class3.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-01-21T00:00:00-05:00</updated><entry><title>Class 3: Elliptic Curves</title><link href="http://bitcoin-class.org/class-3-elliptic-curves.html" rel="alternate"></link><updated>2015-01-21T00:00:00-05:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-01-21:class-3-elliptic-curves.html</id><summary type="html">&lt;p&gt;&lt;div class="phighlight"&gt;
+   &lt;a href="http://bitcoin-class.org/classes/class3/class3.pdf"&gt;PDF version for printing&lt;/a&gt;
    &lt;/div&gt;&lt;/p&gt;
 &lt;h2&gt;Schedule&lt;/h2&gt;
 &lt;p&gt;&lt;div class="todo"&gt;
-&lt;a href="http://bitcoin-class.org/0/pages/project1.html"&gt;Project 1&lt;/a&gt; is due &lt;strong&gt;Friday, 30 January&lt;/strong&gt;. &lt;/p&gt;
+&lt;a href="http://bitcoin-class.org/pages/project1.html"&gt;Project 1&lt;/a&gt; is due &lt;strong&gt;Friday, 30 January&lt;/strong&gt;. &lt;/p&gt;
 &lt;p&gt;Before the next class (Monday, Jan 26): &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;

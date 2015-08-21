@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/0/" rel="alternate"></link><link href="http://bitcoin-class.org/0/feeds/class16.atom.xml" rel="self"></link><id>http://bitcoin-class.org/0/</id><updated>2015-03-15T00:00:00-04:00</updated><entry><title>Class 16: Alternate Cryptocurrencies</title><link href="http://bitcoin-class.org/0/class-16-alternate-cryptocurrencies.html" rel="alternate"></link><updated>2015-03-15T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-15:0/class-16-alternate-cryptocurrencies.html</id><summary type="html">&lt;h2&gt;Project Proposals&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Cryptocurrency Cafe</title><link href="http://bitcoin-class.org/" rel="alternate"></link><link href="http://bitcoin-class.org/feeds/class16.atom.xml" rel="self"></link><id>http://bitcoin-class.org/</id><updated>2015-03-15T00:00:00-04:00</updated><entry><title>Class 16: Alternate Cryptocurrencies</title><link href="http://bitcoin-class.org/class-16-alternate-cryptocurrencies.html" rel="alternate"></link><updated>2015-03-15T00:00:00-04:00</updated><author><name>David Evans</name></author><id>tag:bitcoin-class.org,2015-03-15:class-16-alternate-cryptocurrencies.html</id><summary type="html">&lt;h2&gt;Project Proposals&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Project Proposals&lt;/strong&gt; are due &lt;strong&gt;Thursday, 19 March&lt;/strong&gt; (11:59pm).  Send
   your proposal by email to &lt;a
   href="mailto:evans@virginia.edu"&gt;&lt;em&gt;evans@virginia.edu&lt;/em&gt;&lt;/a&gt; with
@@ -31,7 +31,7 @@ project idea, come to my office hours after class today if possible.&lt;/p&gt;
 &lt;iframe src="//www.slideshare.net/slideshow/embed_code/45906874" width="670" height="380" frameborder="2" marginwidth="0" marginheight="0" scrolling="no"&gt;&lt;/iframe&gt;
 &lt;div class="caption"&gt;Note: due to a bug in
 slideshare's updated player, ink markings no longer appear in the
-viewer.  &lt;br&gt;If you &lt;a href="http://bitcoin-class.org/0/classes/class16/class16-inked.pptx"&gt;download the slides&lt;/a&gt;, they are present though.
+viewer.  &lt;br&gt;If you &lt;a href="http://bitcoin-class.org/classes/class16/class16-inked.pptx"&gt;download the slides&lt;/a&gt;, they are present though.
 Hopefully, the player will be fixed someday. &lt;/div&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;h2&gt;Alternate Cryptocurrencies&lt;/h2&gt;
@@ -56,7 +56,7 @@ Hopefully, the player will be fixed someday. &lt;/div&gt;
 &lt;div class="gap"&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Colin Percival, &lt;a href="http://bitcoin-class.org/0/classes/class16/scrypt.pdf"&gt;&lt;em&gt;Stronger Key Derivation via Sequential
+&lt;p&gt;Colin Percival, &lt;a href="http://bitcoin-class.org/classes/class16/scrypt.pdf"&gt;&lt;em&gt;Stronger Key Derivation via Sequential
 Memory-Hard Functions&lt;/em&gt;&lt;/a&gt;, 2009. &lt;a href="http://www.daemonology.net/papers/scrypt-slides.pdf"&gt;presentation slides&lt;/a&gt; including &lt;a href="http://xkcd.com/538/"&gt;XKCD 538&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;What is a &lt;em&gt;memory-hard&lt;/em&gt; algorithm?
 &lt;div class="gap"&gt;&lt;/p&gt;
@@ -68,7 +68,7 @@ than a compute-intensive one like SHA-256?
 &lt;/div&gt;
 
 &lt;p&gt;Andrew Miller, Ari Juels, Elaine Shi, Bryan Parno, and Jonathan
-Katz. &lt;a href="http://bitcoin-class.org/0/classes/class16/permacoin.pdf"&gt;&lt;em&gt;Permacoin: Repurposing Bitcoin Work for Data
+Katz. &lt;a href="http://bitcoin-class.org/classes/class16/permacoin.pdf"&gt;&lt;em&gt;Permacoin: Repurposing Bitcoin Work for Data
 Preservation&lt;/em&gt;&lt;/a&gt;.  IEEE Security and Privacy
 ("Oakland") 2014.&lt;/p&gt;
 &lt;h4&gt;Interesting Video&lt;/h4&gt;
