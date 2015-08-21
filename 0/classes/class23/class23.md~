@@ -1,0 +1,101 @@
+Title: Class 23: Sidechains
+Date: 2015-04-08
+
+   <div class="phighlight">
+   [PDF version for printing](|filename|./class23.pdf)
+   </div>
+
+## Schedule
+
+Each team will have an opportunity to present their project the last
+three classes (April 20, 22 and 27).  Teams will sign up for
+presentation slots at Monday's class.  Final projects are due by 11:59pm
+on Sunday, 3 May.
+
+**Thursday, 6pm Commerce School 223**.  _Entrepreneurial and Career
+  Ventures in the world of Digital Currency_ Panel.
+
+**Friday, 10:45am Rice 242**.  Suman Jana, _Rise of the Planet of the
+  Apps: Security and Privacy in the Age of Bad Code_.
+
+# Bloom Filters
+
+Burton Bloom, [_Space/Time Trade-offs in Hash Coding with Allowable
+Errors_](|filename|./bloom.pdf), Communications of the ACM, July 1970.
+
+### Conventional Hash Table
+
+Store collection of _N_ _b_-bit elements, using _k_ &gt; _N_ cells.
+
+_H_ is pseudorandom function, _H_(_x_) &larr; [0, _k_).
+
+<div class="gap">
+
+</div>
+
+### Bloom Filter
+
+Tradeoff: shrink size of array to store, accept false matches.  
+
+_m_ = number of bits in array  
+_k_ = number of hash functions  
+_n_ = number of elements
+
+What is the probability a given element of the array is not selected by a particular hash function?
+<div class="gap">
+
+</div>
+
+What is the probability a given element of the array is not selected for
+a particular element by any of the _k_ hash functions?
+<div class="gap">
+
+</div>
+
+After _n_ elements, what is the probability that an array bit is 0?
+<div class="gap">
+
+</div>
+
+Probability of false match: (1 - (1 - 1/_m_)<sup>_kn_</sup>)<sup>_k_</sup>
+
+
+How big should _m_ be to have less than 0.01% false positive rate for a block with 1000 addresses?
+<div class="gap">
+
+</div>
+
+How much privacy does using a bloom filter provide to an SPV wallet?
+<div class="gap">
+
+</div>
+
+# Merged Mining
+
+[Merged Mining Specification](https://en.bitcoin.it/wiki/Merged_mining_specification)
+
+How can Namecoin leverage Bitcoin mining power while maintaining its own blockchain and difficulty level?
+<div class="gap">
+
+
+</div>
+
+What are the advantages of enabing bitcoin miners to also mine namecoin?  
+<div class="gap">
+
+
+</div>
+
+Bug: [_Namecoin was stillborn, I had to switch off life-support_](https://bitcointalk.org/index.php?topic=310954)  
+Patch: [https://github.com/namecoin/namecoin/commit/d70d01ff77310d3755891cb43cb2700b553019f4](https://github.com/namecoin/namecoin/commit/d70d01ff77310d3755891cb43cb2700b553019f4)
+
+# Side Chains
+
+Why is it so hard to evolve bitcoin?
+<div class="gap">
+</div>
+
+Adam Back, Matt Corallo, Luke Dashjr, Mark Friedenbach, Gregory Maxwell, Andrew Miller, Andrew Poelstra, Jorge Timón, and Pieter Wuille.  [_Enabling Blockchain Innovations with Pegged Sidechains_](http://www.blockstream.com/sidechains.pdf).
+
+[Blockstream](http://blockstream.com/)
+

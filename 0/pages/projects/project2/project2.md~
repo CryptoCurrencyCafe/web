@@ -1,0 +1,463 @@
+Title: Project 2 - Mining Points
+Date: 2015-02-10
+Category: PS
+Tags: Problem Sets, mining
+Slug: project2
+
+   <div class="due">
+Part 1 Due: **Sunday, 22 February**; Part 2 Due: **Thursday, 5 March**
+   </div>
+
+## Purpose
+
+- Understand how cryptocurrency mining works by building and running a
+miner for a new cryptocurrency.  
+
+- Explore some potential threats to bitcoin by attempting attacks on our
+class cryptocurrency.
+
+- Get some experience using cloud computing resources and understanding 
+  computing costs in practice.
+
+### Collaboration Policy
+
+For Part 1 of this assignment, everyone should create and run their own
+PointCoin miner, and writeup their own answers to the questions.
+
+You may, and are encouraged to, discuss all of the problems with anyone
+else you want (both on-line using the course web site or any other means
+you choose, and in person), and it is okay to share code with others so
+long as you understand everything in all of the code you use.
+
+For Part 2, you may work with others in the class (indeed, part of your
+goal for part 2 is to form a mining coallition with enough power to
+disrupt the normal behavior of the network).  You should not start Part
+2 or make any attempts to (intentionally) disrupt the PointCoin network
+until the announced starting time for Part 2 (which will be announced
+later in class).
+
+# Part 1: Mining PointCoin
+
+   <div class="exercise"> 
+
+**Set up your pointcoind node.** Following the instructions below, set
+up your pointcoind node and wallet.  After finishing this, [post a
+comment here](|filename|./pointcoin-nodes.md) with the public IP address
+of your EC2 node.
+
+   </div>
+
+To set up your pointcoind node:
+
+1. Setup an EC2 instance, install go and pointcoin following these directions: [Installing
+  PointCoin on
+  AWS](https://github.com/PointCoin/pointcoind/wiki/Installing-PointCoin-on-AWS).
+
+2. Setup your node and wallet: [Using PointCoin](https://github.com/PointCoin/pointcoind/wiki/Using-PointCoin-Binaries)
+
+The main goal for this part is for everyone to write your own PointCoin
+miner.  We have provided some code in the [Project 2
+repo](https://github.com/CryptoCurrencyCafe/project2) for you to get
+started:
+
+- [miner.go](https://github.com/CryptoCurrencyCafe/project2/blob/master/miner.go) - an initial template for a PointCoin miner.
+  You will implement your miner by modifying this file.
+- [support.go](https://github.com/CryptoCurrencyCafe/project2/blob/master/support.go) - some functions that you will find useful
+  in implementing your miner.  (You are not expected to change these
+  functions, but can change them if you want to.)
+
+Next, we provide some hints that may be helpful in building your miner.
+
+### Coinbase Transaction
+
+Although some people might mine cryptocurrency for purely altruistic
+reasons, the main economic incentive for mining is that the miner who
+finds a new block can add a transaction to that block transfering the
+mining fee to their address.
+
+We have provided the [`createCoinbaseTx`](https://github.com/CryptoCurrencyCafe/project2/blob/master/support.go#L84) function in `support.go` to
+create this transaction.  In includes this code for setting up the
+inputs and outputs of the transaction:
+
+```go
+        tx.AddTxIn(&btcwire.TxIn{
+                // Coinbase transactions have no inputs, so previous outpoint is
+                // zero hash and max index.
+                PreviousOutPoint: *btcwire.NewOutPoint(&btcwire.ShaHash{},
+                                                       btcwire.MaxPrevOutIndex),
+                SignatureScript: coinbaseScript,
+                Sequence:        btcwire.MaxTxInSequenceNum,
+        })
+        tx.AddTxOut(&btcwire.TxOut{
+                Value: blockchain.CalcBlockSubsidy(nextBlockHeight,
+                                                   &btcnet.MainNetParams),
+                PkScript: pkScript,
+        })
+```
+
+In PointCoin, the mining reward is 1 pointcoin (see [this
+commit](https://github.com/PointCoin/pointcoind/commit/5c81f47ea739baf7841cbc0e7b7c3aa06b986067)
+for how it was modified from how it is set in bitcoin).
+
+If you want to receive the rewards for your mining efforts, you need to
+set the address used in the coinbase transaction to be the address for
+your PointCoin wallet.
+
+### Merkle Root
+
+The block header contains the Merkle Root of all the transactions in the
+block.  This should be all the valid transactions submitted to the
+network, with your coinbase transaction added.
+
+We have provided the [`createMerkleRoot`](https://github.com/CryptoCurrencyCafe/project2/blob/master/support.go#L196) function in `support.go` for
+computing the Merkle root of a list of transactions:
+
+```go
+func createMerkleRoot(txs []*btcwire.MsgTx) *btcwire.ShaHash {
+	txutil := []*btcutil.Tx{}
+	for _, tx := range txs {
+		convtx := btcutil.NewTx(tx)
+		txutil = append(txutil, convtx)
+	}
+
+	store := blockchain.BuildMerkleTreeStore(txutil)
+	merkleRoot := store[len(store)-1]
+	return merkleRoot
+}
+```
+
+
+### Creating a Block
+
+A block in PointCoin is similar to a block in bitcoin.  It contains a
+header consisting of:
+
+- The hash of the previous block
+- The hash of the Merkle tree of all the transactions
+- The difficulty
+- A nonce (32 bits)
+
+In addition to the header, it includes the list of transactions.
+
+We have provided the `CreateBlock` function in `support.go` to build a
+block given these inputs:
+
+```go
+func CreateBlock(prevHash string, merkleRoot *btcwire.ShaHash, difficulty big.Int, 
+                 nonce uint32, txs []*btcwire.MsgTx) *btcwire.MsgBlock {
+	prevH, _ := btcwire.NewShaHashFromStr(prevHash)
+	d := blockchain.BigToCompact(&difficulty)
+	header := btcwire.NewBlockHeader(prevH, merkleRoot, d, nonce)
+
+	msgBlock := btcwire.NewMsgBlock(header)
+	for _, tx := range txs {
+		msgBlock.AddTransaction(tx)
+	}
+
+	return msgBlock
+}
+```
+
+### Mining a Block
+
+Of course, the block you create is unlikely to be valid with a randomly
+selected nonce.  To find a valid block, it is necessary to find a nonce
+such that the hash of the block header (with that nonce included) is
+below the target difficulty.
+
+The block nonce is a uint32 in `block.Header.Nonce`.  You can update
+this value with a simple assignment to try a different nonce value.
+
+The function
+[`BlockSha`](https://github.com/btcsuite/btcd/blob/master/wire/blockheader.go#L48)
+returns the Double-SHA256 hash of the block header, so you can compute
+the hash of your block using `block.Header.BlockSha()`.
+
+Because of the different ways numbers and hashes are represented, the
+difficulty comparison is more awkward than one would like.  You can use
+the provided `lessThanDiff` function to check if the returned hash is
+less than the target difficulty:
+
+```go
+func lessThanDiff(hash btcwire.ShaHash, difficulty big.Int) bool {
+	bigI := blockchain.ShaHashToBig(&hash)
+	return bigI.Cmp(&difficulty) <= 0
+}
+```
+
+If you've succeeded in finding a good nonce, submit the block!
+
+This code will submit the block (since `client` is setup as an RPC to
+the node running on your own instance, it is submitting it to your own
+node first, which, if the block is valid, will submit it to the rest of
+the network):
+
+```go
+   err := client.SubmitBlock(btcutil.NewBlock(block), nil)
+   if err != nil { // something failed
+```
+
+Note that one reason your submission may fail is if the blockchain has
+already advanced.  This would happen if another miner found and
+submitted a block (that was received by your node) since the call you
+made to `client.GetBlockTemplate(&btcjson.TemplateRequest{})` to obtain
+the previous block (used in the template header).
+
+### Becoming a PointCoin Tycoon
+
+You should start by making your miner as simple as possible, and getting
+a simple miner working before attempting to do anything more
+complicated.  
+
+If you are ambitious, though, there are lots of ways to improve the
+performance of your miner (still running on the low-powered micro EC2
+node).
+
+Here are a few possibilities:
+
+- Explore the tradeoff between frequently checking the network to update
+  your block template, and computing lots of hashes (that might be
+  wasted if the blockchain has advanced).  Your miner will not perform
+  well if you update your template after every hash attempt, or if you
+  keep trying until you find a good block without ever updating your
+  template.  
+
+- <strike>Even the micro instances have more than one core.  You are
+  missing out on a lot of potential mining power if you are only using
+  one thread.</strike> Actually, micro nodes do not even give you a full
+  core!  You will not get better performace on a micro node by using
+  multi-threading, since you only have access to a single CPU core.
+  Your EC2 node is actually being throttled by Amazon since it is
+  sharing a physical node with other VMs, and your compute use will be
+  throttled if it is excessive (which a running miner should be!).  You
+  may be able to use this to your advantage (since everyone elses miner
+  is also running on a micro node, except possible course staff miners
+  which get an unfair computing power advantage!)
+
+
+   <div class="problem"> 
+**Problem 1.** Use your miner to acquire PointCoin.  You will receive
+  full credit for <strike>acquiring at least 100 PointCoin</strike> successfully mining at least one block.
+   </div>
+
+(Note the revision to Problem 1.  The original target of acquiring 100
+PointCoin has been reduced because of the problems we had with the
+intial PointCoin network and need to relaunch.  It is sufficient now to
+mine one block successfully.  Earning more PointCoin will still be
+beneficial though!  You'll have other opportunities to use it.)
+
+   <div class="problem"> 
+**Problem 2.** Estimate the cost of mining PointCoin given the current
+difficulty level, and assuming you are using your mining code running on
+an EC2 node.  A good answer would include an analysis of the expected
+number of hashes that must be computed for a given difficulty level.  
+   </div>
+
+
+   <div class="problem"> 
+
+**Problem 3.** What prevents a greedy miner from transfering more coin
+  to the miner's address in a newly found block by increasing the value
+  of the output of the coinbase transaction?
+
+   </div>
+
+   <div class="problem"> 
+
+**Problem 4.** Why is there an extra nonce along with the next block
+  height included in the coinbase transaction?  (Hint: how is the
+  coinbase transaction different from normal transactions?)
+
+   </div>
+
+Submit the [Project 2/Part 1 Submission
+Form](http://goo.gl/forms/nz3WSwVPU4) (by 11:59pm on **Sunday, 22
+February**).  (You can submit your answers to Problems 1-4 above either
+by submitting text in the form, or submitting a link to a PDF containing
+all of your answers).
+
+# Part 2: Investigating Mining
+
+   <div class="exercise">
+In Part 2, we'll explore attacks on the PointCoin network.  You should not attempt to actually launch any attacks until after class on **Monday, 23 February**.
+   </div>
+
+### Collaboration Policy
+
+For Part 2 of this assignment, everyone should their own submission.
+You may work with others in the class (indeed, part of your goal for
+part 2 is to form a mining coallition with enough power to disrupt the
+normal behavior of the network).  For the written and coding problems,
+it is okay to collaborate with other students to write up one answer and
+submit the same answer so long as you clearly credit the students who
+you worked with, you fully contributed to the answer, and you fully
+understand everything in the answers you submit.
+
+You should write up answers to the questions 5-9 as a PDF file, and
+submit it by sending an email to 
+<a href="mailto:evans@cs.virginia.edu"><em>evans@cs.virginia.edu</em></a>
+with subject line `Project 2 Submission`.
+
+## Analyzing the Double Spending Attack
+
+For this problem, your goal is to analyze how much of a threat it is for
+one miner (or pool controlled by a single authority) to control a large
+faction of the hashing power.
+
+Assume the attacker's goal is to get a victim to accept a payment (e.g.,
+transfer pointcoin for cash-equivalent) that is valid in the (temporary)
+blockchain, and then release mined blocks to replace that blockchain
+with one that does not include the payment.  
+
+You may assume (inaccurately!) that there is no cost to the attacker to
+do the transaction.  That is, the attacker can create a transaction
+selling _P_ pointcoin for US dollars, and inverse that transaction (sell
+the US dollars to buy pointcoin) at a future time, and end up with _P_
+pointcoin after the two transactions.  (Of course, in any real financial
+system, there are transaction costs.  A more realistic answer would
+include this in your analysis.)
+
+Your answer to problem 5 can either be a closed form mathematical equation, e.g.,
+   <div class="indented">
+<span class="math">_P_(_s_) = _f_(_s_)</span>
+   </div>
+giving the probability as a function of <span class="math">_s_</span> (where you specify what the function <span class="math">_f_</span> is, or a simulation in code (some procedure definition that can be called on a range of _s_ values to give a good understanding of the success probability).
+
+   <div class="problem"> 
+
+**Problem 5.** Suppose an attacker has _s_ fraction of the network's
+total hashing power.  What is the probability the attacker can
+successfully execute a "51% double-spending attack" (as a function of
+_s_) against a victim who accepts payment once the first block including
+the transaction is accepted by the network (one confirmation).
+
+   </div>
+
+   <div class="problem"> 
+
+**Problem 6.** Suppose an attacker has _s_ fraction of the network's
+total hashing power and the victim will accept a transaction only after
+_b_ blocks.  What is the probability the attacker can successfully
+execute a "51% double-spending attack" (as a function of _s_) against a
+victim who accepts payment once the transaction is accepted by at least
+_b_ network blocks?  (Note: for _b_ = 1, this is the same as problem 5.
+For larger _b_, this should give insight into how long a more paranoid
+recipient should wait before accepting a transaction.)
+
+   </div>
+
+## Forming Mining Pools
+
+Your answers to problems 5 and 6 should convince you that it is unlikely
+that a single miner with less than 1/30 of the hashing power of the
+PointCoin network will have a good likelihood of successfully
+double-spending.
+
+Develop a strategy for forming a mining pool.  You may collaborate with
+as many students as you wish to develop your mining pool, but you should
+be mutually distrustful of each other and you are encouraged to find
+ways to take advantage of other students.  That is to say, the
+effectiveness of your mining pool cannot depend on everyone behaving
+honestly, but must take measures to prevent dishonest behavior in your
+mining pool.  You may, however, assume that everyone can only use the
+computing power of their own EC2 micro node for mining (and it would be
+considered cheating to use additional power for mining).
+
+   <div class="problem">
+**Problem 7.** Design a strategy for building a mining pool for
+  PointCoin.  Your strategy should explain how you would incentivize
+  others to contribute their mining power to you and ensure that they don't
+  cheat (e.g., claim to provide more mining power than they actually do).
+   </div>
+
+To actually execute your strategy, you should make it as simple as
+possible (at least to get started), and then add more complexity only
+after successfully accompilshing the simplest possible start.
+
+   <div class="problem"> 
+
+**Problem 8.** Either implement your strategy for building a mining
+pool, or join someone else's mining pool.  Explain what you did, and how
+successful it was.  (We understand that actually building a successful
+mining pool is both a significant technical and social challenge, so
+don't worry if you are not able to do this, but you if not, should be
+able to write up something interesting describing what you attempted and
+what happened.)
+
+   </div>
+
+## Free-for-All!
+
+For the last problem, your goal is to attack the PointCoin network in a
+way that benefits yourself.  You can be creative on this and do not need
+to limit yourself to attacks suggested in class or this page, but should
+follow the rules below carefully and check with Dave before doing
+anything questionable.
+
+
+   <div class="problem"> 
+
+**Problem 9.** Attempt to attack PointCoin in ways that are profitable
+  to the attacker.  (Note that denial-of-service attacks should not be
+  attempted.)  Full credit would be awarded for successfully executing a
+  double-spending attack (against the only-a-little-bit-paranoid victim
+  who accepts transactions based on the first block), but other attacks
+  are valid and bonus credit will be due for any especially creative
+  attacks.  Describe what you did, and if it is successful include
+  evidence of the success.
+   </div>
+
+
+### Rules
+
+The only rules are:
+
+1. You must disclose honestly everything that you did when you submit
+the assignment (and in response to any questions before this).
+
+2. You may not do anything that violates any law or the University honor
+code (although the normal "lying" and "stealing" provisions do not apply
+to your nodes' behavior in pointcoin protocols or things you tell other
+students in the class about your network activities).  It is considered
+fair (indeed, encouraged) to "lie" or "mislead" your fellow students
+regarding your mining behavior.  For example, it would be totally okay
+and encouraged for you to attempt to trick others into joining your
+mining pool by offering them a share of the points mined, but the not to
+deliver those points.  For the purposes of this assignment, you should
+consider your classmates to be mutually distrusting individuals.
+
+3. You should not use any computing resources for PointCoin mining other
+than your one micro EC2 node.  (You may use other computing resources
+for development, offline analysis, other computation, but not to
+directly mine PointCoin.)
+
+4. You should not do anything with your EC2 node that violates Amazon's
+[Acceptable Use Policy](http://aws.amazon.com/aup/).  In particular,
+this excludes denial of service attacks or both other students' nodes
+and the staff nodes.
+
+5. You should not do anything a reasonable person would consider
+harmful, unethical, or in violation of the spirit of this assignment.
+This is a very vague statement.  What it really means is that if you are
+uncertain about whether something you plan to do is consistent with the
+spirit of this project, you should consult with Dave before doing it.
+Examples of things that would be clearly unacceptable include installing
+malware on another student's computer or using physical access to their
+machine to copy or modify key files (or any other data) on their
+machine.
+
+
+### Submission
+
+Submit your answers to questions 5-9 as a PDF file attachment in an
+email to <a
+href="mailto:evans@cs.virginia.edu><em>evans@cs.virginia.edu</em></a>
+with subject line `Project 2 Submission` by **11:59pm** on **Thursday, 5
+March**.  
+
+
+<p><br></br></p>
+
+<div class="disqus">
+<div id="disqus_thread"></div>
+</div>

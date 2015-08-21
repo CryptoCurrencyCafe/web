@@ -1,0 +1,10 @@
+Title: Project 2 - PointCoin Nodes
+Date: 2015-02-11
+
+Once you have a pointcoin node running on an EC2 instance, post the
+public IP address of your EC2 instance below.  (Until we have a solution
+to the peer adding, you can manually add other nodes by 
+
+<div class="disqus">
+<div id="disqus_thread"></div>
+</div>
