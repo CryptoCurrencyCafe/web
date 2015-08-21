@@ -811,3 +811,11 @@ section#sidebar li{margin:0;padding:0px 0 0px;line-height:11px;font-size:10px;co
    font-weight:bold; padding-top: 5px; padding-bottom: 5px;
 }
 
+.whighlight {
+   font-size: 12px; background-color: #FCA; text-align: center; margin-left: 60px; margin-right: 60\
+px; margin-top: 0px; margin-bottom: 5px; border-style:solid; border-width:2px; border-color: #000; \
+padding-top: 1px; padding-bottom: 1px;
+}
+
+
+
